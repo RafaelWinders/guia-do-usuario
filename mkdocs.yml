@@ -1,0 +1,60 @@
+site_name: SGI - Guia do Usuário
+site_description: Guia completo do Sistema de Gestão Inteligente
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: pt-BR
+  logo: images/logo.png
+  favicon: images/favicon.png
+  palette:
+    - scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+    - scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+  features:
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+
+nav:
+  - Início: index.md
+  - Português (BR):
+    - Chat com IA: chat.md
+    - Projetos: projetos.md
+    - Estoque: estoque.md
+    - Usuários e Habilidades: usuarios.md
+    - Diversos: diversos.md
+  - English:
+    - AI Chat: chat-en.md
+    - Projects: projects.md
+    - Inventory: inventory.md
+    - Users and Skills: users.md
+    - Miscellaneous: miscellaneous.md
+
+markdown_extensions:
+  - tables
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+
+extra:
+  generator: false
+
+extra_css:
+  - stylesheets/custom.css
+
+exclude_docs: |
+  site/

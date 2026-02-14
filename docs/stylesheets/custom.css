@@ -1,0 +1,39 @@
+/* SGI Zent IA Theme - Dark Mode (default) */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #4db8c7;
+  --md-primary-bg-color: #0c0e1f;
+  --md-accent-fg-color: #5ec4d4;
+  --md-default-bg-color: #12152e;
+  --md-default-fg-color: hsla(0, 0%, 100%, 0.87);
+  --md-typeset-a-color: #5ec4d4;
+}
+
+[data-md-color-scheme="slate"] .md-header,
+[data-md-color-scheme="slate"] .md-tabs {
+  background-color: #0c0e1f;
+}
+
+/* Logo - 4x bigger */
+.md-header__button.md-logo img,
+.md-header .md-logo img {
+  height: 4rem !important;
+  width: auto !important;
+}
+
+.md-header__button.md-logo,
+.md-header .md-logo {
+  padding: 0.2rem;
+}
+
+/* Hide generator footer */
+.md-footer-meta {
+  display: none !important;
+}
+
+/* SGI Zent IA Theme - Light Mode */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1a9db8;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #1a9db8;
+  --md-typeset-a-color: #1a9db8;
+}
