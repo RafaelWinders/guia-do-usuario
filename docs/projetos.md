@@ -251,6 +251,21 @@ Aqui voce ve todos os custos registrados neste projeto.
 - Somente custos com status **"Aprovado"** sao somados no "Gasto Atual" do orcamento
 - Custos pendentes ou rejeitados **nao afetam** o orcamento
 
+```mermaid
+flowchart TD
+    A[Usuario adiciona custo] --> B{Quem adicionou?}
+    B -->|Admin/Super Admin| C[Status: approved automatico]
+    B -->|Funcionario com canApproveCosts| D[Status: approved automatico]
+    B -->|Funcionario padrao| E[Status: pending_approval]
+    E --> F[Admin revisa]
+    F -->|Aprova| G[Status: approved]
+    F -->|Rejeita| H[Status: rejected]
+    C --> I[Contabilizado no orcamento]
+    D --> I
+    G --> I
+    H --> J[Nao conta no orcamento]
+```
+
 #### Custos de Estoque
 
 Alem de custos manuais, voce tambem pode adicionar custos a partir do **Estoque** do sistema. Ao retirar itens do estoque para um projeto, o valor e registrado automaticamente como custo.
@@ -293,15 +308,23 @@ Cada evento mostra a data, hora e quem realizou a acao.
 
 ---
 
-### Aba: Escopo
+### Aba: Work Order (Escopo Profissional)
 
-O escopo do projeto e o detalhamento do trabalho que precisa ser feito.
+O escopo do projeto agora e chamado **Work Order** - uma ordem de servico profissional completa com header, cliente, categorias e items detalhados.
 
-![Aba Escopo](images/project-detail-scope.png)
+<!-- TODO: screenshot de WorkOrderView completo. Arquivo: images/work-order-view.png. Capturar: categorias expandidas com items e valores -->
+![Aba Work Order](images/work-order-view.png){ .placeholder-image }
 
-O escopo e criado atraves do **Chat** com a inteligencia artificial do sistema. Quando voce conversa no Chat sobre um projeto, a IA pode gerar uma Work Order (ordem de servico) com todos os detalhes do trabalho.
+A Work Order e gerada atraves do **Chat com IA** (a partir de texto, foto, audio ou video) **ou** importada de um **PDF externo**. Ela contem:
 
-> Este recurso sera explicado em detalhes no **Guia do Chat**.
+- **Header:** numero da WO, numero do job, cliente, endereco do trabalho
+- **16 categorias profissionais** (Framing, Electrical, Drywall, Plumbing, etc.)
+- **Items detalhados** com task, acao, tipo, quantidade, unidade, comodo
+- **Precos** (visiveis apenas para administradores)
+- **Status formal** (Draft → Ready for Review → Approved → In Progress → Completed)
+- **Export em PDF** para envio ao cliente
+
+📖 **Consulte o [Guia de Work Order](work-order.md)** para documentacao completa do sistema.
 
 ---
 
@@ -311,9 +334,27 @@ Mostra o historico de relatorios diarios de progresso do projeto.
 
 ![Aba Relatorios](images/project-detail-reports.png)
 
-Os relatorios sao criados pelos funcionarios atraves do **Chat** ou da tela de **Relatorios Diarios**. Eles servem para acompanhar o andamento do trabalho no dia a dia.
+Os relatorios sao criados pelos funcionarios atraves do **Chat com IA**. Nao ha botao "Criar Relatorio" nesta aba - todos os relatorios vem do Chat.
 
-> Este recurso sera explicado em detalhes no **Guia do Chat** e no **Guia de Relatorios Diarios**.
+📖 Veja os guias [Chat com IA](chat.md) e [Relatorios Diarios](relatorios-diarios.md) para o fluxo completo.
+
+---
+
+### Aba: Fotos do Projeto
+
+<!-- TODO: screenshot de PhotosTab com PhotoGrid. Arquivo: images/project-photos-tab.png. Capturar: grid de miniaturas + botao de upload -->
+![Aba Fotos](images/project-photos-tab.png){ .placeholder-image }
+
+A aba **Fotos** permite anexar imagens ao projeto (progresso do trabalho, danos, vistorias, etc.). Inclui:
+
+- Upload de multiplas fotos (ate 50MB cada)
+- Metadados: descricao, tags, data da captura
+- Comentarios por foto (colaborativo)
+
+!!! warning "Permissao necessaria"
+    A aba "Fotos" **so aparece** para usuarios com a permissao `canViewProjectPhotos`. Para fazer upload/editar/deletar, precisa tambem de `canEditProjectPhotos`.
+
+📖 Veja o [Guia de Fotos do Projeto](fotos-de-projeto.md) para instrucoes completas.
 
 ---
 
@@ -366,11 +407,81 @@ O modo Kanban e ideal para gerenciar o status dos projetos de forma visual.
 
 | Status | Significado | Quando usar |
 |--------|-------------|-------------|
-| **Pendente** | O projeto foi criado e esta pronto para comecar | Projetos novos ou aprovados |
-| **Em Andamento** | O trabalho esta sendo executado | Quando a equipe comecou o servico |
-| **Em Espera** | O projeto esta pausado | Quando ha um impedimento temporario |
-| **Aguardando Informacao** | Falta uma informacao para continuar | Quando precisa de dados do cliente ou fornecedor |
-| **Concluido** | O projeto foi finalizado | Quando todo o servico foi entregue |
+| **Pendente** (`pending`) | O projeto foi criado e esta pronto para comecar | Projetos novos ou aprovados |
+| **Em Andamento** (`active`) | O trabalho esta sendo executado | Quando a equipe comecou o servico |
+| **Em Espera** (`on_hold`) | O projeto esta pausado | Quando ha um impedimento temporario |
+| **Aguardando Informacao** (`awaiting_input`) | Falta uma informacao para continuar | Quando precisa de dados do cliente ou fornecedor |
+| **Concluido** (`completed`) | O projeto foi finalizado | Quando todo o servico foi entregue |
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> pending: Projeto criado
+    pending --> active: Equipe inicia trabalho
+    active --> on_hold: Bloqueador temporario
+    active --> awaiting_input: Falta info cliente
+    on_hold --> active: Retomar
+    awaiting_input --> active: Info recebida
+    active --> completed: Trabalho entregue
+    completed --> [*]
+```
+
+!!! warning "Motivo obrigatorio em `on_hold` e `awaiting_input`"
+    Quando voce muda um projeto para **Em Espera** ou **Aguardando Informacao**, o sistema abre um modal pedindo o **motivo** (campo `statusReason`, ate 500 caracteres). Sem motivo, a mudanca **nao e salva**.
+
+    Esse motivo aparece na Timeline do projeto e ajuda a equipe a entender por que o trabalho parou.
+
+!!! note "Mudanca de status: apenas admins"
+    Apenas **Super Admin** e **Admin** podem mudar o status de um projeto. Funcionarios nao tem acesso ao Kanban drag-and-drop nem aos botoes de status.
+
+---
+
+## Regras Importantes
+
+### Campos obrigatórios e limites
+
+| Campo | Obrigatório | Min | Max | Observação |
+|-------|:---:|:---:|:---:|---|
+| `projectName` | Sim | 3 chars | 100 chars | - |
+| `address` | Sim | 5 chars | - | - |
+| `clientName` | Sim | 3 chars | - | - |
+| `clientGroupId` | Não | - | - | Deve existir se informado |
+| `budget` | Sim | 0 | - | Pode ser 0 (não definido) |
+| `budgetAlertThreshold` | Não | 0 | 1 | Padrão: 0.8 (80%) |
+| `assignedUsers` | Não | - | - | Array vazio se nenhum |
+| `statusReason` | Condicional | - | 500 chars | **Obrigatório** ao mudar para `on_hold` ou `awaiting_input` |
+
+### Permissões necessárias
+
+| Operação | Super Admin | Admin | Funcionário com permissão | Funcionário padrão |
+|----------|:---:|:---:|:---:|:---:|
+| Ver todos os projetos | Sim | Sim | `canViewAllProjects` | Só atribuídos |
+| Criar projeto | Sim | Sim | `canCreateProjects` | Não |
+| Editar projeto | Sim | Sim | `canEditProjects` | Não |
+| Deletar projeto | Sim | Sim | `canDeleteProjects` | Não |
+| Mudar status (Kanban) | Sim | Sim | Não (reservado admins) | Não |
+| Adicionar custo | Sim | Sim | `canAddCosts` | Não |
+| Aprovar custo | Sim | Sim | `canApproveCosts` | Não |
+
+### Validações que bloqueiam
+
+!!! warning "Motivo obrigatório"
+    Mudar projeto para `on_hold` ou `awaiting_input` sem preencher `statusReason` bloqueia a operação.
+
+!!! note "Deletar projeto não bloqueia"
+    O sistema **permite** deletar projeto mesmo com custos, agendamentos, fotos, daily reports. **Todos os dados relacionados são perdidos** (cascade delete das fotos, outros ficam órfãos). Seja cuidadoso.
+
+### Defaults do sistema
+
+| Configuração | Padrão |
+|---|---|
+| Status inicial | `pending` |
+| `budgetAlertThreshold` | 0.8 (80%) |
+| `assignedUsers` | [] (vazio) |
+| `clientGroupId` | null (sem grupo) |
+| Vista inicial da lista | Grid |
+| Itens por página | 20 (infinite scroll) |
+| Ordenação | Mais recentes primeiro |
 
 ---
 

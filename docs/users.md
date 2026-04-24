@@ -87,6 +87,28 @@ Basic system access:
 | **Administrator** | Only Employee |
 | **Employee** | No one |
 
+### Hierarchy diagram
+
+```mermaid
+flowchart TB
+    SA[Super Administrator] -->|Can invite| SA2[Super Admin]
+    SA -->|Can invite| A[Administrator]
+    SA -->|Can invite| E[Employee]
+    A -->|Can invite| E
+    E -.X.->|Cannot invite| NA[Nobody]
+
+    SA -->|Manages| A
+    SA -->|Manages| E
+    A -->|Manages| E
+
+    classDef superClass fill:#4db8c7,stroke:#fff,color:#000
+    classDef adminClass fill:#5ec4d4,stroke:#fff,color:#000
+    classDef empClass fill:#1a9db8,stroke:#fff,color:#fff
+    class SA superClass
+    class A adminClass
+    class E empClass
+```
+
 ---
 
 ## 4. Inviting a new user
@@ -167,16 +189,29 @@ Shows the user's personal information:
 
 ![Permissions tab](images/users-detail-permissions.png)
 
-Shows the 6 user permissions with toggles (on/off):
+Shows **10 granular permissions** with toggles (on/off). These are configured individually, regardless of the default role:
 
 | Permission | What it controls |
 |-----------|-----------------|
-| **Pode criar projetos (Can create projects)** | Allows creating new projects in the system |
-| **Pode editar projetos (Can edit projects)** | Allows changing data of existing projects |
-| **Pode deletar projetos (Can delete projects)** | Allows deleting projects |
-| **Pode adicionar custos (Can add costs)** | Allows recording costs in projects |
-| **Pode aprovar custos (Can approve costs)** | Allows managing the status of recorded costs |
-| **Pode ver todos os projetos (Can view all projects)** | Allows viewing all projects, not just assigned ones |
+| **Pode criar projetos** (`canCreateProjects`) | Allows creating new projects |
+| **Pode editar projetos** (`canEditProjects`) | Allows changing data of existing projects |
+| **Pode deletar projetos** (`canDeleteProjects`) | Allows deleting projects |
+| **Pode ver todos os projetos** (`canViewAllProjects`) | View all projects, not just assigned ones |
+| **Pode adicionar custos** (`canAddCosts`) | Record costs (app or chat) |
+| **Pode aprovar custos** (`canApproveCosts`) | Manage status of recorded costs |
+| **Pode deletar tarefas** (`canDeleteTasks`) | Delete task items |
+| **Pode criar agendamentos** (`canCreateSchedules`) | Create/edit schedules, Google Calendar sync |
+| **Pode visualizar fotos de projeto** (`canViewProjectPhotos`) | View "Photos" tab with metadata |
+| **Pode editar fotos de projeto** (`canEditProjectPhotos`) | Upload, delete, edit metadata, and comment on photos |
+
+!!! note "Employees with `canApproveCosts`"
+    Despite the name "Employee" suggesting limited permissions, **an employee with the `canApproveCosts` permission enabled can also approve costs**, not only admins. Useful to delegate responsibilities to team managers.
+
+!!! warning "Last administrator cannot be deactivated"
+    The system **blocks** deactivation of the last active Super Admin or last Admin. If you try to deactivate the only remaining admin, you will see the error:
+    `Cannot deactivate the last active admin/superadmin`
+
+    To resolve: first promote another user to admin, then deactivate the former admin.
 
 ### Tab: Skills
 
@@ -232,7 +267,7 @@ The edit dialog has 3 tabs:
 
 ### Tab: Permissoes (Permissions)
 
-- Checkboxes for each of the 6 permissions
+- Checkboxes for each of the **10 permissions**
 - Allows adjusting permissions individually, regardless of the default role
 
 After making changes, click **"Salvar Alteracoes"** (Save Changes).
@@ -273,16 +308,20 @@ Filter by specific skill. Select one or more skills from the dropdown to see onl
 | **Create projects** | Click "+ Novo Projeto" and create projects | Does not see the create project button |
 | **Edit projects** | Change name, address, budget, team | Does not see the "Edit" button on projects |
 | **Delete projects** | Permanently delete projects | Does not see the "Delete" button on projects |
-| **Add costs** | Record expenses in projects | Cannot add costs (via app or chat) |
-| **Approve costs** | Manage the status of costs recorded in projects | Cannot change the status of costs |
 | **View all projects** | View all projects in the system | Only sees projects they are assigned to |
+| **Add costs** | Record expenses in projects (app or chat) | Cannot add costs |
+| **Approve costs** | Manage status of recorded costs | Cannot change status of costs |
+| **Delete tasks** | Delete task items | "Delete" button disabled on tasks |
+| **Create schedules** | Create/edit schedules, Google Calendar sync | Does not see "New Schedule" button |
+| **View project photos** | See "Photos" tab on project details | "Photos" tab does not appear |
+| **Edit project photos** | Upload, delete, edit metadata, comment | "Photos" tab appears but is read-only |
 
 ### Default permissions by role
 
 When a user is created, they receive the default permissions for their role:
 
-- **Super Admin and Admin:** All 6 permissions enabled
-- **Employee:** Granular permissions configured by the administrator
+- **Super Admin and Admin:** **All 10 permissions** enabled by default
+- **Employee:** All permissions **disabled** by default. The administrator configures granularly as needed.
 
 ### How to adjust an employee's permissions
 
@@ -387,6 +426,63 @@ The **"Estatisticas"** (Statistics) tab in the user panel shows numbers about th
 | **Aprovados (Approved)** | Costs that have been approved |
 
 These numbers help track the productivity and participation of each team member.
+
+---
+
+## Important Rules
+
+### Required fields and limits
+
+| Field | Required | Min | Max | Note |
+|-------|:---:|:---:|:---:|---|
+| `displayName` | Yes | 3 chars | - | Full name |
+| `email` | Yes | - | - | **Immutable** after registration |
+| `role` | Yes | - | - | superadmin / admin / employee |
+| `password` | Yes | **6 chars** | - | No mandatory complexity |
+| `phoneNumber` | No | - | - | Free format |
+
+### Invitation validity
+
+| Item | Value |
+|------|-------|
+| **Duration** | 7 days |
+| **On expiration** | Status becomes `expired`, link no longer works |
+| **Resend** | Admin needs to create a new invitation |
+
+### Required permissions
+
+| Operation | Super Admin | Admin | Employee |
+|-----------|:---:|:---:|:---:|
+| View users | Yes | Yes | No |
+| Invite user | Yes (any role) | Yes (employees only) | No |
+| Edit user | Yes (all) | Yes (employees only) | Only own profile |
+| Change role | Yes | **Only promote/demote employees** | No |
+| Promote to admin/superadmin | **Yes** | **No** | No |
+| Deactivate user | Yes | Yes | No |
+| Reactivate user | Yes | Yes | No |
+| Manage skills | Yes | Yes | No |
+
+### Validations that block
+
+!!! danger "Last admin cannot be deactivated"
+    The system blocks deactivation of the last active super admin OR last active admin. Returns error: `Cannot deactivate the last active {role}`. Promote another user first.
+
+!!! warning "Email is immutable"
+    After the invitation is accepted, the email can no longer be changed. If you need to change it, deactivate and recreate.
+
+!!! note "Skills are soft-deleted"
+    When you "delete" a skill, it is marked as `isActive: false` but historical records keep the reference. Deactivated skills don't appear in assignment dropdowns.
+
+### System defaults
+
+| Setting | Default |
+|---|---|
+| Initial status | `Active` |
+| Initial locale | Defined at invitation |
+| 10 permissions (employee) | All `false` |
+| 10 permissions (admin/superadmin) | All `true` |
+| Invitation validity | 7 days |
+| Initial theme | `dark` |
 
 ---
 

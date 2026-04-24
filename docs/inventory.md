@@ -347,19 +347,20 @@ SGI's inventory is directly connected to project costs. Here's how this integrat
 
 ### Complete flow
 
-```
-Inventory Page (/inventory)
-        |
-        | Allocate to Project
-        |
-        v
-Item stock decreases
-        |
-        | Automatically
-        |
-        v
-Cost added to the project's Costs tab
-(Status: Approved | Value: average price x quantity)
+```mermaid
+flowchart TB
+    A[Inventory page] --> B[Allocate to Project]
+    B --> C[Validates available quantity]
+    C --> D{Quantity OK?}
+    D -->|No| E[Error: insufficient stock]
+    D -->|Yes| F[Calculates current average price]
+    F --> G[Reduces inventory quantity and value]
+    G --> H[Creates CostLog in project]
+    H --> I[Status: approved automatically]
+    I --> J[Logs transaction to history]
+    J --> K[Checks low stock alert]
+    K -->|Low| L[Generates low_stock_alert notification]
+    K -->|OK| M[No notification]
 ```
 
 ### Key points
@@ -380,6 +381,59 @@ Cost added to the project's Costs tab
    - "Cimento CP-II 50kg - Retirada de Estoque (20 unidades)"
    - Value: R$ 900.00 (20 x R$ 45.00)
    - Status: Approved
+
+---
+
+## Important Rules
+
+### Required fields and limits
+
+| Field | Required | Min | Max | Note |
+|-------|:---:|:---:|:---:|---|
+| `name` | Yes | 2 chars | 100 chars | - |
+| `description` | No | - | 500 chars | - |
+| `unit` | Yes | 1 char | 20 chars | E.g.: kg, liters, units |
+| `category` | No | - | 50 chars | Free text |
+| `initialQuantity` | No | 0 | - | Default: 0 |
+| `initialValue` | No | 0 | - | Default: 0 |
+| `minQuantity` | No | 0 | - | For low stock alert |
+| **Entry** `totalValue` OR `unitValue` | Yes (one or the other) | - | - | **XOR** - exactly one required |
+
+!!! warning "Entry: XOR mode"
+    When adding stock, you must provide **EITHER** `totalValue` **OR** `unitValue` — never both together nor neither. The system blocks if both or neither are sent.
+
+### Required permissions
+
+| Operation | Super Admin | Admin | Employee |
+|-----------|:---:|:---:|:---:|
+| View inventory | Yes | Yes | Yes |
+| Create item | Yes | Yes | No |
+| Edit item | Yes | Yes | No |
+| Add stock (entry) | Yes | Yes | No |
+| Allocate to project | Yes | Yes | No |
+| Reverse withdrawal | Yes | Yes | No |
+| Delete item | Yes | Yes | No |
+
+### Validations that block
+
+!!! danger "Cannot delete with quantity > 0"
+    The delete button is disabled while `currentQuantity > 0`. Allocate all stock before deleting.
+
+!!! warning "Allocation cannot exceed available"
+    When allocating to a project, the quantity cannot be greater than `currentQuantity`. The system returns an error.
+
+!!! note "Withdrawal reversal"
+    Admins can reverse an allocation made by mistake. Creates a compensating transaction (with `isReversal: true`) and adds the quantity back to the stock. The original transaction is marked with `reversedAt` and `reversedBy`.
+
+### System defaults
+
+| Setting | Default |
+|---|---|
+| Initial `currentQuantity` | `initialQuantity` or 0 |
+| Initial `totalValue` | `initialValue` or 0 |
+| `minQuantity` | Not configured (no alert) |
+| Average price | Automatically recalculated on each entry |
+| Allocation status | `approved` (no manual approval needed) |
 
 ---
 

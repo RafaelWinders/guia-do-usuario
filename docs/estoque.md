@@ -347,19 +347,20 @@ O estoque do SGI esta diretamente conectado aos custos dos projetos. Veja como f
 
 ### Fluxo completo
 
-```
-Pagina de Estoque (/inventory)
-        |
-        | Alocar em Projeto
-        |
-        v
-Estoque do item diminui
-        |
-        | Automaticamente
-        |
-        v
-Custo adicionado na aba Custos do projeto
-(Status: Aprovado | Valor: preco medio x quantidade)
+```mermaid
+flowchart TB
+    A[Pagina de Estoque] --> B[Alocar em Projeto]
+    B --> C[Valida quantidade disponivel]
+    C --> D{Quantidade OK?}
+    D -->|Nao| E[Erro: estoque insuficiente]
+    D -->|Sim| F[Calcula preco medio atual]
+    F --> G[Reduz quantidade e valor no estoque]
+    G --> H[Cria CostLog no projeto]
+    H --> I[Status: approved automatico]
+    I --> J[Registra transaction no historico]
+    J --> K[Verifica alerta de estoque baixo]
+    K -->|Baixo| L[Gera notificacao low_stock_alert]
+    K -->|OK| M[Sem notificacao]
 ```
 
 ### Pontos importantes
@@ -380,6 +381,59 @@ Custo adicionado na aba Custos do projeto
    - "Cimento CP-II 50kg - Retirada de Estoque (20 unidades)"
    - Valor: R$ 900,00 (20 x R$ 45,00)
    - Status: Aprovado
+
+---
+
+## Regras Importantes
+
+### Campos obrigatórios e limites
+
+| Campo | Obrigatório | Min | Max | Observação |
+|-------|:---:|:---:|:---:|---|
+| `name` | Sim | 2 chars | 100 chars | - |
+| `description` | Não | - | 500 chars | - |
+| `unit` | Sim | 1 char | 20 chars | Ex: kg, litros, unidades |
+| `category` | Não | - | 50 chars | Texto livre |
+| `initialQuantity` | Não | 0 | - | Padrão: 0 |
+| `initialValue` | Não | 0 | - | Padrão: 0 |
+| `minQuantity` | Não | 0 | - | Para alerta de estoque baixo |
+| **Entrada** `totalValue` OU `unitValue` | Sim (um ou outro) | - | - | **XOR** - exatamente um obrigatório |
+
+!!! warning "Entrada: modo XOR"
+    Ao adicionar estoque, você deve informar **OU** `totalValue` **OU** `unitValue` — nunca os dois juntos nem nenhum. O sistema bloqueia se ambos ou nenhum forem enviados.
+
+### Permissões necessárias
+
+| Operação | Super Admin | Admin | Funcionário |
+|----------|:---:|:---:|:---:|
+| Ver estoque | Sim | Sim | Sim |
+| Criar item | Sim | Sim | Não |
+| Editar item | Sim | Sim | Não |
+| Adicionar estoque (entrada) | Sim | Sim | Não |
+| Alocar em projeto | Sim | Sim | Não |
+| Reverter retirada | Sim | Sim | Não |
+| Deletar item | Sim | Sim | Não |
+
+### Validações que bloqueiam
+
+!!! danger "Não pode deletar com quantidade > 0"
+    Botão de deletar fica desabilitado enquanto `currentQuantity > 0`. Aloque todo o estoque antes de deletar.
+
+!!! warning "Alocação não pode exceder disponível"
+    Ao alocar em projeto, quantidade não pode ser maior que `currentQuantity`. Sistema retorna erro.
+
+!!! note "Reversão de retirada"
+    Admins podem reverter uma alocação feita por engano. Cria transação compensatória (com `isReversal: true`) e adiciona quantidade de volta ao estoque. A transação original fica marcada com `reversedAt` e `reversedBy`.
+
+### Defaults do sistema
+
+| Configuração | Padrão |
+|---|---|
+| `currentQuantity` inicial | `initialQuantity` ou 0 |
+| `totalValue` inicial | `initialValue` ou 0 |
+| `minQuantity` | Não configurado (sem alerta) |
+| Preço médio | Recalculado automaticamente a cada entrada |
+| Status de alocação | `approved` (não precisa aprovação manual) |
 
 ---
 

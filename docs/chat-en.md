@@ -23,7 +23,8 @@ You don't need to choose any "mode" or "function". The AI automatically understa
 
 The conversation adapts: if you start talking about costs and then switch to scheduling, the AI follows naturally. Everything works in the same chat, without needing to switch screens.
 
-> **Testing phase:** Currently the Chat works through the App (PWA). After testing, it will also work through WhatsApp with the same logic - only the text input changes.
+!!! note "Current availability"
+    The Chat works through the App (PWA) on all devices (desktop, tablet, mobile). WhatsApp support is planned for future releases, but is not yet available.
 
 ---
 
@@ -63,16 +64,34 @@ The text below the "Assistente SGI" name changes automatically based on what the
 
 At the bottom of the screen, you will find:
 
+**Desktop:** Individual buttons for each attachment type.
+
 | Element | What it does |
 |---------|-------------|
-| **Text field** | "Digite sua mensagem..." - where you type |
+| **Text field** | "Digite sua mensagem..." - where you type (up to 2000 characters) |
 | **Image button** | Send photos (invoices, work site, documents) |
-| **Microphone button** | Record voice audio directly |
+| **Microphone button** | Record voice audio directly in the app (with waveform) |
 | **Audio button** | Send a pre-recorded audio file |
-| **Video button** | Send inspection or walkthrough video |
+| **Video button (camera)** | Record video up to 30s directly in the app |
+| **Video button (upload)** | Send pre-recorded video |
+| **PDF button** | Send PDF file (up to 10MB) - useful for importing Work Orders |
 | **Send button** | Send the message (or press Enter) |
 
-> **Tip:** Press **Enter** to send the message. Use **Shift+Enter** to add a new line without sending.
+**Mobile:** A single **"+"** button opens a WhatsApp-style menu with all options (photo, audio, video, PDF).
+
+<!-- TODO: screenshot of ChatInputBar mobile with attachments menu open. File: images/chat-mobile-menu.png. Capture: Popover menu with Photo/Record Audio/Upload Audio/Record Video/Upload Video/Upload PDF options -->
+![Mobile attachments menu](images/chat-mobile-menu.png){ .placeholder-image }
+
+!!! tip "Keyboard shortcuts"
+    - **Enter** - Send the message
+    - **Shift+Enter** - New line without sending
+
+!!! note "Chat limits"
+    - **Text:** up to 2000 characters per message (counter shows when you pass 80%)
+    - **PDF:** up to 10 MB per file
+    - **Image/audio/video:** up to 50 MB per file
+    - **Video recorded in app:** maximum 30 seconds
+    - **Session:** expires automatically (1 day for most flows, 7 days for specific cases). After expiration, the AI no longer remembers the context of that conversation.
 
 ---
 
@@ -705,29 +724,118 @@ Administrators can create and manage projects directly through Chat.
 
 ## 19. Accepted input types
 
-The Chat accepts 4 input types, and you can combine text with any of them:
+The Chat accepts **5 input types**, and you can combine text with any of them:
 
-| Type | Formats | Main use |
-|------|---------|----------|
-| **Text** | Typed in the field | All commands and conversations |
-| **Image** | JPG, PNG, HEIC | Invoices (OCR), site photos, documents |
-| **Audio** | MP3, OGG, AAC, WAV | Verbal scope description, field inspections |
-| **Video** | MP4, MOV | Site walkthroughs, complete inspections |
+| Type | Formats | Main use | Limit |
+|------|---------|----------|-------|
+| **Text** | Typed in the field | All commands and conversations | 2000 chars |
+| **Image** | JPG, PNG, HEIC, WebP | Invoices (OCR), site photos, documents | 50 MB |
+| **Audio** | MP3, OGG, AAC, WAV, WebM | Verbal scope description, field inspections | 50 MB |
+| **Video** | MP4, MOV, WebM | Site walkthroughs, complete inspections | 50 MB |
+| **PDF** | PDF | **Import Work Orders** from other systems | 10 MB |
 
 ### Which functions accept which types
 
-| Function | Text | Image | Audio | Video |
-|----------|:---:|:---:|:---:|:---:|
-| Generate scopes | Yes | Yes | Yes | Yes* |
-| Register costs | Yes | Yes (OCR) | Yes | - |
-| Schedule visits | Yes | - | Yes | - |
-| Daily reports | Yes | Yes | Yes | Yes* |
-| Manage inventory | Yes | - | Yes | - |
-| Manage projects | Yes | - | Yes | - |
+| Function | Text | Image | Audio | Video | PDF |
+|----------|:---:|:---:|:---:|:---:|:---:|
+| Generate scopes (Work Orders) | Yes | Yes | Yes | Yes* | **Yes (import)** |
+| Register costs | Yes | Yes (OCR) | Yes | - | - |
+| Schedule visits | Yes | - | Yes | - | - |
+| Daily reports | Yes | Yes | Yes | Yes* | - |
+| Manage inventory | Yes | - | Yes | - | - |
+| Manage projects | Yes | - | Yes | - | - |
 
-> **Audio in all functions:** You can use audio in any Chat function. The AI automatically transcribes what you say and interprets the intent. For example, record an audio saying "I spent 500 on materials" and the AI registers the cost.
+!!! tip "Audio works in all functions"
+    You can use audio in any Chat function. The AI automatically transcribes what you say and interprets the intent. For example, record an audio saying "I spent 500 on materials" and the AI registers the cost.
+
+!!! warning "Video in testing phase"
+    Video upload functionality is in **testing phase**. We strongly recommend sending **short videos** (up to 1-2 minutes) for best results. Very long videos may take longer to process or have less accurate results.
+
+---
+
+## 19.1 Importing Work Orders from external PDFs
+
+If your company receives **ready Work Orders** from other systems (clients, partners, estimating software), you can import them directly into SGI through the Chat.
+
+### How it works
+
+1. Click the **PDF** button (desktop) or the **"+"** menu → **PDF** (mobile)
+2. Select the external Work Order PDF file (up to 10 MB)
+3. Send the message
+4. The AI analyzes the PDF and **automatically extracts**:
+   - **Header:** Work Order number, Job number, Project Manager, date
+   - **Customer:** name, address, phone, email
+   - **Job address:** street, city, state, ZIP
+   - **Items:** organized in the 16 professional categories
+   - **Prices:** unit and total (if present in the PDF)
+
+5. The AI presents a **structured preview** with:
+   - Detected format (**SGI**, **external**, or **unknown**)
+   - **Confidence score** (0 to 1) indicating extraction quality
+   - **Warnings** if there is missing or questionable data
+
+6. You **review** and can adjust before confirming
+7. After confirming, the Work Order is **created automatically** in the project
+
+### Example conversation
+
+> **You:** [Sends PDF "WO-2024-589-Rabiee.pdf"]
 >
-> **\*Video in testing phase:** Video upload functionality is in **testing phase**. We strongly recommend sending **short videos** (up to 1-2 minutes) for best results. Very long videos may take longer to process or have less accurate results.
+> **AI:** "Analyzed the PDF (format detected: `external`, confidence: 0.87). Extracted:
+>
+> **Header:**
+> - WO Number: WO0001-14547
+> - Job Number: 25-1959-RPR
+> - Job Name: 590 Indigo Drive - Rabiee, Sarah
+> - Project Manager: John Smith
+>
+> **Customer:** Sarah Rabiee - 590 Indigo Drive, Orlando FL 32828
+>
+> **Items extracted:** 24 items in 8 categories
+> - DRY (Drywall): 8 items, 450 SF total
+> - PNT (Painting): 6 items, 1,200 SF total
+> - FCW (Floor Covering): 4 items
+> - ... (others)
+>
+> **Warnings:** 2 items without room defined. Want to review before importing?"
+>
+> **You:** "Yes, show me the items without room"
+>
+> **AI:** [lists items and lets you assign rooms before saving]
+
+!!! tip "SGI format recognized"
+    If the PDF was generated by SGI itself (via export), extraction has **high confidence (>0.95)** and practically needs no adjustments. For PDFs from other systems, quality varies according to the original document layout.
+
+📖 See the [Work Order Guide](work-order-en.md) for more details about the Work Order system.
+
+---
+
+## 19.2 How the AI picks the right action (masterAgentRouter)
+
+The AI uses an intelligent router that detects the intent of your message and sends it to the right specialized agent.
+
+```mermaid
+flowchart TB
+    A[You send a message in the Chat] --> B[masterAgentRouter analyzes]
+    B --> C{What's the intent?}
+    C -->|Mentions scope, WO, categories| D[workOrderFlow]
+    C -->|Mentions amount, spent, invoice| E[costFlow]
+    C -->|Mentions schedule, visit, time| F[schedulingFlow]
+    C -->|Mentions arrived, progress, finished| G[dailyReportingFlow]
+    C -->|Mentions inventory, materials, withdrawal| H[inventoryFlow]
+    C -->|Mentions create project, change status| I[projectFlow]
+    C -->|Greeting, general question| J[generalAssistantFlow]
+    D --> K[Executes action via backend]
+    E --> K
+    F --> K
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    K --> L[AI responds with result]
+```
+
+This is why the **status indicator** in the Chat header changes as you talk - it reflects which agent is active.
 
 ---
 
@@ -772,6 +880,56 @@ Within the same conversation, you don't need to repeat information. If you alrea
 ### You can mix languages
 
 The AI understands Portuguese and English. You can say "I need 100 SF of drywall in the banheiro" and it works perfectly.
+
+---
+
+## Important Rules
+
+### Size limits
+
+| Type | Limit |
+|------|-------|
+| Text per message | **2000 characters** |
+| Image | 50 MB |
+| Audio | 50 MB |
+| Video | 50 MB |
+| PDF | 10 MB |
+| Video recorded in app | 30 seconds |
+
+### Required permissions
+
+| Operation | Super Admin | Admin | Employee |
+|-----------|:---:|:---:|:---:|
+| Use Chat | Yes | Yes | Yes |
+| Generate scope/WO | Yes | Yes | Yes (if assigned to project) |
+| Record cost | Yes | Yes | `canAddCosts` |
+| Schedule visit | Yes | Yes | `canCreateSchedules` |
+| Create project | Yes | Yes | `canCreateProjects` |
+| Manage inventory | Yes | Yes | No |
+
+### Validations and behaviors
+
+!!! warning "Session expires automatically"
+    - **1 day** for most flows (chat, cost, scheduling)
+    - **7 days** for special flows
+    - After expiration, the AI no longer remembers the context. Use **"Nova Conversa"** (New Conversation) to start fresh.
+
+!!! note "Automatic compaction"
+    Very long conversations go through compaction: older messages are summarized to free up space. Very old details may be lost. For critical information from past conversations, repeat it in the current conversation.
+
+!!! tip "Mix languages"
+    The AI understands PT and EN. "Preciso 100 SF of drywall in the bathroom" works perfectly.
+
+### System defaults
+
+| Setting | Default |
+|---|---|
+| Text limit | 2000 characters |
+| Default session TTL | 1 day |
+| service_catalog TTL | 7 days |
+| Default max file size | 50 MB |
+| Recorded video max | 30 seconds |
+| Accepted languages | PT and EN (mixed OK) |
 
 ---
 

@@ -251,6 +251,21 @@ Here you see all costs recorded for this project.
 - Only costs with **"Approved"** status are added to the "Current Spending" of the budget
 - Pending or rejected costs **do not affect** the budget
 
+```mermaid
+flowchart TD
+    A[User adds cost] --> B{Who added?}
+    B -->|Admin/Super Admin| C[Status: approved automatico]
+    B -->|Employee with canApproveCosts| D[Status: approved automatico]
+    B -->|Default employee| E[Status: pending_approval]
+    E --> F[Admin reviews]
+    F -->|Approves| G[Status: approved]
+    F -->|Rejects| H[Status: rejected]
+    C --> I[Counted in budget]
+    D --> I
+    G --> I
+    H --> J[Not counted]
+```
+
 #### Inventory Costs
 
 In addition to manual costs, you can also add costs from the system's **Inventory**. When you withdraw items from inventory for a project, the value is automatically recorded as a cost.
@@ -293,15 +308,23 @@ Each event shows the date, time, and who performed the action.
 
 ---
 
-### Tab: Escopo (Scope)
+### Tab: Work Order (Professional Scope)
 
-The project scope is the detailed description of the work that needs to be done.
+The project scope is now called **Work Order** - a complete professional service order with header, customer info, categories and detailed items.
 
-![Scope tab](images/project-detail-scope.png)
+<!-- TODO: screenshot of WorkOrderView complete. File: images/work-order-view.png. Capture: expanded categories with items and values -->
+![Work Order Tab](images/work-order-view.png){ .placeholder-image }
 
-The scope is created through the **Chat** with the system's artificial intelligence. When you chat about a project, the AI can generate a Work Order with all the work details.
+The Work Order is generated through the **AI Chat** (from text, photo, audio or video) **or** imported from an **external PDF**. It contains:
 
-> This feature will be explained in detail in the **Chat Guide**.
+- **Header:** WO number, job number, customer, job address
+- **16 professional categories** (Framing, Electrical, Drywall, Plumbing, etc.)
+- **Detailed items** with task, action, type, quantity, unit, room
+- **Prices** (visible only to administrators)
+- **Formal status** (Draft → Ready for Review → Approved → In Progress → Completed)
+- **PDF export** to send to the client
+
+📖 **See the [Work Order Guide](work-order-en.md)** for complete system documentation.
 
 ---
 
@@ -311,9 +334,27 @@ Shows the history of daily progress reports for the project.
 
 ![Reports tab](images/project-detail-reports.png)
 
-Reports are created by employees through **Chat** or the **Daily Reports** screen. They are used to track work progress on a daily basis.
+Reports are created by employees through **AI Chat**. There is no "Create Report" button on this tab - all reports come from the Chat.
 
-> This feature will be explained in detail in the **Chat Guide** and **Daily Reports Guide**.
+📖 See the [AI Chat](chat-en.md) and [Daily Reports](daily-reports.md) guides for the full flow.
+
+---
+
+### Tab: Project Photos
+
+<!-- TODO: screenshot of PhotosTab with PhotoGrid. File: images/project-photos-tab.png. Capture: grid of thumbnails + upload button -->
+![Photos Tab](images/project-photos-tab.png){ .placeholder-image }
+
+The **Photos** tab allows attaching images to the project (work progress, damages, inspections, etc.). Features:
+
+- Upload multiple photos (up to 50MB each)
+- Metadata: description, tags, capture date
+- Per-photo comments (collaborative)
+
+!!! warning "Permission required"
+    The "Photos" tab **only appears** for users with the `canViewProjectPhotos` permission. To upload/edit/delete, you also need `canEditProjectPhotos`.
+
+📖 See the [Project Photos Guide](project-photos.md) for full instructions.
 
 ---
 
@@ -366,11 +407,81 @@ The Kanban mode is ideal for visually managing project status.
 
 | Status | Meaning | When to use |
 |--------|---------|-------------|
-| **Pendente (Pending)** | The project was created and is ready to start | New or approved projects |
-| **Em Andamento (In Progress)** | Work is being done | When the team started the service |
-| **Em Espera (On Hold)** | The project is paused | When there is a temporary blocker |
-| **Aguardando Informacao (Awaiting Info)** | Missing information to continue | When you need data from the client or supplier |
-| **Concluido (Completed)** | The project is finished | When all work has been delivered |
+| **Pendente** (`pending`) | The project was created and is ready to start | New or approved projects |
+| **Em Andamento** (`active`) | Work is being done | When the team started the service |
+| **Em Espera** (`on_hold`) | The project is paused | When there is a temporary blocker |
+| **Aguardando Informacao** (`awaiting_input`) | Missing information to continue | When you need data from the client or supplier |
+| **Concluido** (`completed`) | The project is finished | When all work has been delivered |
+
+```mermaid
+stateDiagram-v2
+    direction LR
+    [*] --> pending: Project created
+    pending --> active: Team starts work
+    active --> on_hold: Temporary blocker
+    active --> awaiting_input: Missing client info
+    on_hold --> active: Resume
+    awaiting_input --> active: Info received
+    active --> completed: Work delivered
+    completed --> [*]
+```
+
+!!! warning "Reason required for `on_hold` and `awaiting_input`"
+    When you change a project to **On Hold** or **Awaiting Info**, the system opens a modal asking for the **reason** (`statusReason` field, up to 500 characters). Without a reason, the change is **not saved**.
+
+    This reason appears in the project Timeline and helps the team understand why work stopped.
+
+!!! note "Status change: admin only"
+    Only **Super Admin** and **Admin** can change project status. Employees do not have access to Kanban drag-and-drop or status buttons.
+
+---
+
+## Important Rules
+
+### Required fields and limits
+
+| Field | Required | Min | Max | Note |
+|-------|:---:|:---:|:---:|---|
+| `projectName` | Yes | 3 chars | 100 chars | - |
+| `address` | Yes | 5 chars | - | - |
+| `clientName` | Yes | 3 chars | - | - |
+| `clientGroupId` | No | - | - | Must exist if provided |
+| `budget` | Yes | 0 | - | Can be 0 (not defined) |
+| `budgetAlertThreshold` | No | 0 | 1 | Default: 0.8 (80%) |
+| `assignedUsers` | No | - | - | Empty array if none |
+| `statusReason` | Conditional | - | 500 chars | **Required** when changing to `on_hold` or `awaiting_input` |
+
+### Required permissions
+
+| Operation | Super Admin | Admin | Employee with permission | Default employee |
+|-----------|:---:|:---:|:---:|:---:|
+| View all projects | Yes | Yes | `canViewAllProjects` | Assigned only |
+| Create project | Yes | Yes | `canCreateProjects` | No |
+| Edit project | Yes | Yes | `canEditProjects` | No |
+| Delete project | Yes | Yes | `canDeleteProjects` | No |
+| Change status (Kanban) | Yes | Yes | No (admins only) | No |
+| Add cost | Yes | Yes | `canAddCosts` | No |
+| Approve cost | Yes | Yes | `canApproveCosts` | No |
+
+### Blocking validations
+
+!!! warning "Reason required"
+    Changing a project to `on_hold` or `awaiting_input` without filling in `statusReason` blocks the operation.
+
+!!! note "Deleting a project is not blocked"
+    The system **allows** deleting a project even with costs, schedules, photos, and daily reports. **All related data is lost** (cascade delete for photos, others become orphaned). Be careful.
+
+### System defaults
+
+| Setting | Default |
+|---|---|
+| Initial status | `pending` |
+| `budgetAlertThreshold` | 0.8 (80%) |
+| `assignedUsers` | [] (empty) |
+| `clientGroupId` | null (no group) |
+| Initial list view | Grid |
+| Items per page | 20 (infinite scroll) |
+| Sort order | Most recent first |
 
 ---
 

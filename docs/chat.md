@@ -23,7 +23,8 @@ Voce nao precisa escolher nenhum "modo" ou "funcao". A IA entende automaticament
 
 A conversa se adapta: se voce comeca falando sobre custos e depois muda para agendamento, a IA acompanha naturalmente. Tudo funciona no mesmo chat, sem precisar trocar de tela.
 
-> **Fase de testes:** Atualmente o Chat funciona pelo App (PWA). Apos os testes, funcionara tambem pelo WhatsApp com a mesma logica - so muda a entrada de texto.
+!!! note "Disponibilidade atual"
+    O Chat funciona pelo App (PWA) em todos os dispositivos (desktop, tablet, mobile). Suporte via WhatsApp esta previsto para versoes futuras, mas ainda nao esta disponivel.
 
 ---
 
@@ -63,16 +64,34 @@ O texto abaixo do nome "Assistente SGI" muda automaticamente conforme o que a IA
 
 Na parte inferior da tela, voce encontra:
 
+**Desktop:** Botoes individuais para cada tipo de anexo.
+
 | Elemento | O que faz |
 |----------|----------|
-| **Campo de texto** | "Digite sua mensagem..." - onde voce escreve |
+| **Campo de texto** | "Digite sua mensagem..." - onde voce escreve (ate 2000 caracteres) |
 | **Botao de imagem** | Envia fotos (notas fiscais, local de trabalho, documentos) |
-| **Botao de microfone** | Grava audio de voz diretamente |
+| **Botao de microfone** | Grava audio de voz diretamente no app (com waveform) |
 | **Botao de audio** | Envia arquivo de audio ja gravado |
-| **Botao de video** | Envia video de vistoria ou walkthrough |
+| **Botao de video (camera)** | Grava video de ate 30s diretamente no app |
+| **Botao de video (upload)** | Envia video ja gravado |
+| **Botao de PDF** | Envia arquivo PDF (ate 10MB) - util para importar Work Orders |
 | **Botao enviar** | Envia a mensagem (ou pressione Enter) |
 
-> **Dica:** Pressione **Enter** para enviar a mensagem. Use **Shift+Enter** para pular uma linha sem enviar.
+**Mobile:** Um unico botao **"+"** abre um menu estilo WhatsApp com todas as opcoes (foto, audio, video, PDF).
+
+<!-- TODO: screenshot de ChatInputBar mobile com menu de anexos aberto. Arquivo: images/chat-mobile-menu.png. Capturar: menu Popover com opcoes Photo/Record Audio/Upload Audio/Record Video/Upload Video/Upload PDF -->
+![Menu de anexos mobile](images/chat-mobile-menu.png){ .placeholder-image }
+
+!!! tip "Atalhos de teclado"
+    - **Enter** - Envia a mensagem
+    - **Shift+Enter** - Pula uma linha sem enviar
+
+!!! note "Limites do Chat"
+    - **Texto:** ate 2000 caracteres por mensagem (contador aparece quando voce passa de 80%)
+    - **PDF:** ate 10 MB por arquivo
+    - **Imagem/audio/video:** ate 50 MB por arquivo
+    - **Video gravado no app:** maximo 30 segundos
+    - **Sessao:** expira automaticamente (1 dia para a maioria dos fluxos, 7 dias para casos especificos). Apos expirar, a IA nao lembra mais do contexto daquela conversa.
 
 ---
 
@@ -705,29 +724,118 @@ Administradores podem criar e gerenciar projetos diretamente pelo Chat.
 
 ## 19. Tipos de entrada aceitos
 
-O Chat aceita 4 tipos de entrada, e voce pode combinar texto com qualquer um deles:
+O Chat aceita **5 tipos de entrada**, e voce pode combinar texto com qualquer um deles:
 
-| Tipo | Formatos | Uso principal |
-|------|----------|---------------|
-| **Texto** | Digitado no campo | Todos os comandos e conversas |
-| **Imagem** | JPG, PNG, HEIC | Notas fiscais (OCR), fotos do local, documentos |
-| **Audio** | MP3, OGG, AAC, WAV | Descricao verbal de escopos, vistorias no campo |
-| **Video** | MP4, MOV | Walkthrough de locais, vistorias completas |
+| Tipo | Formatos | Uso principal | Limite |
+|------|----------|---------------|--------|
+| **Texto** | Digitado no campo | Todos os comandos e conversas | 2000 chars |
+| **Imagem** | JPG, PNG, HEIC, WebP | Notas fiscais (OCR), fotos do local, documentos | 50 MB |
+| **Audio** | MP3, OGG, AAC, WAV, WebM | Descricao verbal de escopos, vistorias no campo | 50 MB |
+| **Video** | MP4, MOV, WebM | Walkthrough de locais, vistorias completas | 50 MB |
+| **PDF** | PDF | **Importar Work Orders** de outros sistemas | 10 MB |
 
 ### Quais funcoes aceitam quais tipos
 
-| Funcao | Texto | Imagem | Audio | Video |
-|--------|:---:|:---:|:---:|:---:|
-| Gerar escopos | Sim | Sim | Sim | Sim* |
-| Registrar custos | Sim | Sim (OCR) | Sim | - |
-| Agendar visitas | Sim | - | Sim | - |
-| Relatorios diarios | Sim | Sim | Sim | Sim* |
-| Gerenciar estoque | Sim | - | Sim | - |
-| Gerenciar projetos | Sim | - | Sim | - |
+| Funcao | Texto | Imagem | Audio | Video | PDF |
+|--------|:---:|:---:|:---:|:---:|:---:|
+| Gerar escopos (Work Orders) | Sim | Sim | Sim | Sim* | **Sim (import)** |
+| Registrar custos | Sim | Sim (OCR) | Sim | - | - |
+| Agendar visitas | Sim | - | Sim | - | - |
+| Relatorios diarios | Sim | Sim | Sim | Sim* | - |
+| Gerenciar estoque | Sim | - | Sim | - | - |
+| Gerenciar projetos | Sim | - | Sim | - | - |
 
-> **Audio em todas as funcoes:** Voce pode usar audio em qualquer funcao do Chat. A IA transcreve automaticamente o que voce fala e interpreta a intencao. Por exemplo, grave um audio dizendo "gastei 500 reais em material" e a IA registra o custo.
+!!! tip "Audio funciona em todas as funcoes"
+    Voce pode usar audio em qualquer funcao do Chat. A IA transcreve automaticamente o que voce fala e interpreta a intencao. Por exemplo, grave um audio dizendo "gastei 500 reais em material" e a IA registra o custo.
+
+!!! warning "Videos em fase de testes"
+    A funcionalidade de envio de videos esta em **fase de testes**. Recomendamos fortemente enviar **videos curtos** (ate 1-2 minutos) para melhores resultados. Videos muito longos podem demorar para processar ou ter resultados menos precisos.
+
+---
+
+## 19.1 Importando Work Order de PDF externo
+
+Se sua empresa recebe **Work Orders prontas** de outros sistemas (clientes, parceiros, softwares de orcamento), voce pode importa-las direto no SGI atraves do Chat.
+
+### Como funciona
+
+1. Clique no botao **PDF** (desktop) ou no menu **"+"** → **PDF** (mobile)
+2. Selecione o arquivo PDF da Work Order externa (ate 10 MB)
+3. Envie a mensagem
+4. A IA analisa o PDF e **extrai automaticamente**:
+   - **Header:** Work Order number, Job number, Project Manager, data
+   - **Cliente:** nome, endereco, telefone, email
+   - **Endereco do trabalho:** rua, cidade, estado, CEP
+   - **Items:** organizados nas 16 categorias profissionais
+   - **Precos:** unitarios e totais (se presentes no PDF)
+
+5. A IA apresenta um **preview estruturado** com:
+   - Formato detectado (**SGI**, **external** ou **unknown**)
+   - **Score de confianca** (0 a 1) indicando qualidade da extracao
+   - **Warnings** se houver dados faltando ou duvidosos
+
+6. Voce **revisa** e pode ajustar antes de confirmar
+7. Apos confirmar, a Work Order e **criada automaticamente** no projeto
+
+### Exemplo de conversa
+
+> **Voce:** [Envia PDF "WO-2024-589-Rabiee.pdf"]
 >
-> **\*Videos em fase de testes:** A funcionalidade de envio de videos esta em **fase de testes**. Recomendamos fortemente enviar **videos curtos** (ate 1-2 minutos) para melhores resultados. Videos muito longos podem demorar para processar ou ter resultados menos precisos.
+> **IA:** "Analisei o PDF (formato detectado: `external`, confianca: 0.87). Extrai:
+>
+> **Header:**
+> - WO Number: WO0001-14547
+> - Job Number: 25-1959-RPR
+> - Job Name: 590 Indigo Drive - Rabiee, Sarah
+> - Project Manager: John Smith
+>
+> **Cliente:** Sarah Rabiee - 590 Indigo Drive, Orlando FL 32828
+>
+> **Items extraidos:** 24 items em 8 categorias
+> - DRY (Drywall): 8 items, 450 SF total
+> - PNT (Painting): 6 items, 1,200 SF total
+> - FCW (Floor Covering): 4 items
+> - ... (outros)
+>
+> **Warnings:** 2 items sem comodo definido. Deseja revisar antes de importar?"
+>
+> **Voce:** "Sim, me mostra os items sem comodo"
+>
+> **IA:** [lista os items e permite voce atribuir comodos antes de salvar]
+
+!!! tip "Formato SGI reconhecido"
+    Se o PDF foi gerado pelo proprio SGI (via export), a extracao tem **confianca alta (>0.95)** e praticamente nao precisa ajustes. Para PDFs de outros sistemas, a qualidade varia conforme o layout do documento original.
+
+📖 Veja o [Guia de Work Order](work-order.md) para mais detalhes sobre o sistema de Work Orders.
+
+---
+
+## 19.2 Como a IA decide a acao certa (masterAgentRouter)
+
+A IA usa um roteador inteligente que detecta a intencao da sua mensagem e envia para o agente especializado certo.
+
+```mermaid
+flowchart TB
+    A[Voce envia mensagem no Chat] --> B[masterAgentRouter analisa]
+    B --> C{Qual a intencao?}
+    C -->|Menciona escopo, WO, categorias| D[workOrderFlow]
+    C -->|Menciona valor R$, gastei, nota fiscal| E[costFlow]
+    C -->|Menciona agendar, visita, horario| F[schedulingFlow]
+    C -->|Menciona cheguei, progresso, terminei| G[dailyReportingFlow]
+    C -->|Menciona estoque, materiais, retirada| H[inventoryFlow]
+    C -->|Menciona criar projeto, mudar status| I[projectFlow]
+    C -->|Saudacao, duvida geral| J[generalAssistantFlow]
+    D --> K[Executa acao via backend]
+    E --> K
+    F --> K
+    G --> K
+    H --> K
+    I --> K
+    J --> K
+    K --> L[IA responde com resultado]
+```
+
+Essa e a razao do **indicador de status** no cabecalho do Chat mudar conforme voce fala - ele reflete qual agente esta ativo.
 
 ---
 
@@ -772,6 +880,56 @@ Dentro da mesma conversa, voce nao precisa repetir informacoes. Se voce ja selec
 ### Pode misturar idiomas
 
 A IA entende portugues e ingles. Voce pode dizer "Preciso de 100 SF de drywall no bathroom" e funciona perfeitamente.
+
+---
+
+## Regras Importantes
+
+### Limites de tamanho
+
+| Tipo | Limite |
+|------|--------|
+| Texto por mensagem | **2000 caracteres** |
+| Imagem | 50 MB |
+| Áudio | 50 MB |
+| Vídeo | 50 MB |
+| PDF | 10 MB |
+| Vídeo gravado no app | 30 segundos |
+
+### Permissões necessárias
+
+| Operação | Super Admin | Admin | Funcionário |
+|----------|:---:|:---:|:---:|
+| Usar Chat | Sim | Sim | Sim |
+| Gerar escopo/WO | Sim | Sim | Sim (se projeto atribuído) |
+| Registrar custo | Sim | Sim | `canAddCosts` |
+| Agendar visita | Sim | Sim | `canCreateSchedules` |
+| Criar projeto | Sim | Sim | `canCreateProjects` |
+| Gerenciar estoque | Sim | Sim | Não |
+
+### Validações e comportamentos
+
+!!! warning "Sessão expira automaticamente"
+    - **1 dia** para a maioria dos fluxos (chat, custo, agendamento)
+    - **7 dias** para fluxos especiais
+    - Após expirar, a IA não lembra mais do contexto. Use **"Nova Conversa"** para começar do zero.
+
+!!! note "Compactação automática"
+    Conversas muito longas passam por compactação: mensagens antigas são resumidas para liberar espaço. Detalhes muito antigos podem se perder. Para informação crítica de conversas passadas, repita na conversa atual.
+
+!!! tip "Misture idiomas"
+    A IA entende PT e EN. "Preciso 100 SF de drywall no bathroom" funciona perfeitamente.
+
+### Defaults do sistema
+
+| Configuração | Padrão |
+|---|---|
+| Limite de texto | 2000 caracteres |
+| TTL sessão padrão | 1 dia |
+| TTL service_catalog | 7 dias |
+| Arquivo padrão max | 50 MB |
+| Video gravado max | 30 segundos |
+| Idiomas aceitos | PT e EN (misturados OK) |
 
 ---
 

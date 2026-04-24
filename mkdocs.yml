@@ -1,5 +1,6 @@
 site_name: SGI - Guia do Usuário
 site_description: Guia completo do Sistema de Gestão Inteligente
+site_url: https://docs.sgiflow.com
 docs_dir: docs
 site_dir: site
 
@@ -25,30 +26,82 @@ theme:
     - navigation.sections
     - navigation.expand
     - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.tracking
+    - content.code.copy
     - search.highlight
     - search.suggest
+    - search.share
 
 nav:
   - Início: index.md
   - Português (BR):
     - Chat com IA: chat.md
-    - Projetos: projetos.md
+    - Projetos:
+      - Visão geral: projetos.md
+      - Work Order: work-order.md
+      - Fotos do Projeto: fotos-de-projeto.md
     - Estoque: estoque.md
-    - Usuários e Habilidades: usuarios.md
-    - Diversos: diversos.md
+    - Equipe:
+      - Usuários e Permissões: usuarios.md
+      - Grupos de Clientes: grupos-de-clientes.md
+    - Financeiro:
+      - Pagamentos: pagamentos.md
+      - Relatórios e Analytics: relatorios-analytics.md
+    - Operações:
+      - Dashboard: dashboard.md
+      - Agendamentos: agendamentos.md
+      - Relatórios Diários: relatorios-diarios.md
+      - Notificações: notificacoes.md
+    - Administração:
+      - Configurações: configuracoes.md
+      - Emergência: emergencia.md
   - English:
     - AI Chat: chat-en.md
-    - Projects: projects.md
+    - Projects:
+      - Overview: projects.md
+      - Work Order: work-order-en.md
+      - Project Photos: project-photos.md
     - Inventory: inventory.md
-    - Users and Skills: users.md
-    - Miscellaneous: miscellaneous.md
+    - Team:
+      - Users & Permissions: users.md
+      - Client Groups: client-groups.md
+    - Finance:
+      - Payments: payments.md
+      - Reports & Analytics: reports-analytics.md
+    - Operations:
+      - Dashboard: dashboard-en.md
+      - Scheduling: scheduling.md
+      - Daily Reports: daily-reports.md
+      - Notifications: notifications.md
+    - Administration:
+      - Settings: settings.md
+      - Emergency: emergency.md
 
 markdown_extensions:
   - tables
   - admonition
   - attr_list
+  - md_in_html
   - toc:
       permalink: true
+      toc_depth: 3
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.caret
+  - pymdownx.tilde
 
 extra:
   generator: false
@@ -56,5 +109,9 @@ extra:
 extra_css:
   - stylesheets/custom.css
 
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
 exclude_docs: |
-  site/
+  _sandbox.md

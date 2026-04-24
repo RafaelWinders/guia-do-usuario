@@ -1,4 +1,8 @@
-/* SGI Zent IA Theme - Dark Mode (default) */
+/* =============================================
+   SGI Zent IA Theme
+   ============================================= */
+
+/* --- Dark Mode (default) --- */
 [data-md-color-scheme="slate"] {
   --md-primary-fg-color: #4db8c7;
   --md-primary-bg-color: #0c0e1f;
@@ -13,7 +17,18 @@
   background-color: #0c0e1f;
 }
 
-/* Logo - 4x bigger */
+/* --- Light Mode --- */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1a9db8;
+  --md-primary-bg-color: #ffffff;
+  --md-accent-fg-color: #1a9db8;
+  --md-typeset-a-color: #1a9db8;
+}
+
+/* =============================================
+   Logo and layout
+   ============================================= */
+
 .md-header__button.md-logo img,
 .md-header .md-logo img {
   height: 4rem !important;
@@ -25,15 +40,131 @@
   padding: 0.2rem;
 }
 
-/* Hide generator footer */
 .md-footer-meta {
   display: none !important;
 }
 
-/* SGI Zent IA Theme - Light Mode */
-[data-md-color-scheme="default"] {
-  --md-primary-fg-color: #1a9db8;
-  --md-primary-bg-color: #ffffff;
-  --md-accent-fg-color: #1a9db8;
-  --md-typeset-a-color: #1a9db8;
+/* =============================================
+   Placeholder images (TODO screenshots)
+   ============================================= */
+
+.md-typeset img.placeholder-image {
+  border: 2px dashed var(--md-primary-fg-color);
+  background: rgba(77, 184, 199, 0.08);
+  padding: 1.5rem;
+  display: block;
+  min-height: 120px;
+  width: 100%;
+  max-width: 600px;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+/* Marker visual while screenshot is pending */
+.md-typeset p:has(img.placeholder-image)::after {
+  content: "📷 Screenshot pendente - veja TODO-SCREENSHOTS.md";
+  display: block;
+  text-align: center;
+  color: var(--md-primary-fg-color);
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-top: 0.5rem;
+}
+
+/* =============================================
+   Admonitions - enhanced contrast for dark mode
+   ============================================= */
+
+[data-md-color-scheme="slate"] .md-typeset .admonition,
+[data-md-color-scheme="slate"] .md-typeset details {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.note,
+[data-md-color-scheme="slate"] .md-typeset details.note {
+  border-color: #5ec4d4;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.tip,
+[data-md-color-scheme="slate"] .md-typeset details.tip {
+  border-color: #00bfa5;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.warning,
+[data-md-color-scheme="slate"] .md-typeset details.warning {
+  border-color: #ffa726;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.danger,
+[data-md-color-scheme="slate"] .md-typeset details.danger {
+  border-color: #ef5350;
+}
+
+[data-md-color-scheme="slate"] .md-typeset .admonition.example,
+[data-md-color-scheme="slate"] .md-typeset details.example {
+  border-color: #ab47bc;
+}
+
+/* =============================================
+   Mermaid diagrams
+   ============================================= */
+
+.md-typeset .mermaid {
+  text-align: center;
+  background: transparent;
+  margin: 1rem 0;
+}
+
+/* Make mermaid readable in dark mode */
+[data-md-color-scheme="slate"] .mermaid svg {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+/* =============================================
+   Tables - better readability
+   ============================================= */
+
+.md-typeset table:not([class]) {
+  font-size: 0.8rem;
+}
+
+.md-typeset table:not([class]) th {
+  background-color: var(--md-primary-fg-color);
+  color: #ffffff;
+}
+
+/* =============================================
+   Cards on landing page (md_in_html)
+   ============================================= */
+
+.landing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.landing-card {
+  border: 1px solid var(--md-primary-fg-color);
+  border-radius: 0.5rem;
+  padding: 1.25rem;
+  background: rgba(77, 184, 199, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.landing-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(77, 184, 199, 0.2);
+}
+
+.landing-card h3 {
+  margin-top: 0;
+  color: var(--md-primary-fg-color);
+}
+
+.landing-card p {
+  margin-bottom: 0.5rem;
 }

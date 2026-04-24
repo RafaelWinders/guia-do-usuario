@@ -87,6 +87,28 @@ Acesso basico ao sistema:
 | **Administrador** | Apenas Funcionario |
 | **Funcionario** | Ninguem |
 
+### Diagrama de hierarquia
+
+```mermaid
+flowchart TB
+    SA[Super Administrador] -->|Pode convidar| SA2[Super Admin]
+    SA -->|Pode convidar| A[Administrador]
+    SA -->|Pode convidar| E[Funcionario]
+    A -->|Pode convidar| E
+    E -.X.->|Nao pode convidar| NA[Ninguem]
+
+    SA -->|Gerencia| A
+    SA -->|Gerencia| E
+    A -->|Gerencia| E
+
+    classDef superClass fill:#4db8c7,stroke:#fff,color:#000
+    classDef adminClass fill:#5ec4d4,stroke:#fff,color:#000
+    classDef empClass fill:#1a9db8,stroke:#fff,color:#fff
+    class SA superClass
+    class A adminClass
+    class E empClass
+```
+
 ---
 
 ## 4. Convidando um novo usuario
@@ -167,16 +189,29 @@ Mostra as informacoes pessoais do usuario:
 
 ![Aba Permissoes](images/users-detail-permissions.png)
 
-Mostra as 6 permissoes do usuario com toggles (ligado/desligado):
+Mostra **10 permissoes granulares** do usuario com toggles (ligado/desligado). Estas sao as permissoes configuradas individualmente, independente do cargo padrao:
 
 | Permissao | O que controla |
 |-----------|---------------|
-| **Pode criar projetos** | Permite criar novos projetos no sistema |
-| **Pode editar projetos** | Permite alterar dados de projetos existentes |
-| **Pode deletar projetos** | Permite excluir projetos |
-| **Pode adicionar custos** | Permite registrar custos em projetos |
-| **Pode aprovar custos** | Permite gerenciar o status dos custos registrados |
-| **Pode ver todos os projetos** | Permite visualizar todos os projetos, nao apenas os atribuidos |
+| **Pode criar projetos** (`canCreateProjects`) | Permite criar novos projetos no sistema |
+| **Pode editar projetos** (`canEditProjects`) | Permite alterar dados de projetos existentes |
+| **Pode deletar projetos** (`canDeleteProjects`) | Permite excluir projetos |
+| **Pode ver todos os projetos** (`canViewAllProjects`) | Permite visualizar todos os projetos, nao apenas os atribuidos |
+| **Pode adicionar custos** (`canAddCosts`) | Permite registrar custos em projetos (via app ou chat) |
+| **Pode aprovar custos** (`canApproveCosts`) | Permite gerenciar o status dos custos registrados nos projetos |
+| **Pode deletar tarefas** (`canDeleteTasks`) | Permite excluir tarefas/itens |
+| **Pode criar agendamentos** (`canCreateSchedules`) | Permite criar e editar agendamentos (inclui sync com Google Calendar) |
+| **Pode visualizar fotos de projeto** (`canViewProjectPhotos`) | Permite ver a aba "Fotos" com metadados |
+| **Pode editar fotos de projeto** (`canEditProjectPhotos`) | Permite upload, edicao, deletar e comentar fotos |
+
+!!! note "Funcionarios com `canApproveCosts`"
+    Apesar do nome "Funcionario" sugerir permissoes limitadas, **um funcionario com a permissao `canApproveCosts` ativa tambem pode aprovar custos**, nao apenas admins. Util para delegar responsabilidades a gerentes de equipe.
+
+!!! warning "Ultimo administrador nao pode ser desativado"
+    O sistema **bloqueia** a desativacao do ultimo Super Administrador ou ultimo Administrador ativo. Se voce tentar desativar o unico admin restante, recebera o erro:
+    `Cannot deactivate the last active admin/superadmin`
+
+    Para resolver: primeiro promova outro usuario para admin, depois desative o antigo.
 
 ### Aba: Skills
 
@@ -273,16 +308,20 @@ Filtre por habilidade especifica. Selecione uma ou mais skills no dropdown para 
 | **Criar projetos** | Clicar em "+ Novo Projeto" e criar projetos | Nao ve o botao de criar projeto |
 | **Editar projetos** | Alterar nome, endereco, orcamento, equipe | Nao ve o botao "Editar" no projeto |
 | **Deletar projetos** | Excluir projetos permanentemente | Nao ve o botao "Excluir" no projeto |
-| **Adicionar custos** | Registrar despesas nos projetos | Nao pode adicionar custos (via app ou chat) |
-| **Aprovar custos** | Gerenciar o status dos custos registrados nos projetos | Nao pode alterar o status dos custos |
 | **Ver todos os projetos** | Visualizar todos os projetos do sistema | Ve apenas projetos onde esta atribuido |
+| **Adicionar custos** | Registrar despesas nos projetos (inclui o Chat) | Nao pode adicionar custos (app ou chat) |
+| **Aprovar custos** | Mudar status de custos para "aprovado" ou "rejeitado" | Nao pode alterar status dos custos |
+| **Deletar tarefas** | Excluir itens de tarefa | Botao "Excluir" desabilitado em tarefas |
+| **Criar agendamentos** | Criar/editar agendamentos, sincronizar com Google Calendar | Nao ve botao "Novo Agendamento" |
+| **Visualizar fotos de projeto** | Ver aba "Fotos" no detalhe do projeto | Aba "Fotos" nao aparece |
+| **Editar fotos de projeto** | Upload, deletar, editar metadados, comentar | Aba "Fotos" aparece mas e somente leitura |
 
 ### Permissoes padrao por cargo
 
 Quando um usuario e criado, ele recebe as permissoes padrao do cargo:
 
-- **Super Admin e Admin:** Todas as 6 permissoes habilitadas
-- **Funcionario:** Permissoes granulares configuradas pelo administrador
+- **Super Admin e Admin:** **Todas as 10 permissoes** habilitadas por padrao
+- **Funcionario:** Todas as permissoes **desligadas** por padrao. O administrador configura granularmente conforme a necessidade.
 
 ### Como ajustar permissoes de um funcionario
 
@@ -387,6 +426,63 @@ A aba **"Estatisticas"** no painel do usuario mostra numeros sobre a participaca
 | **Aprovados** | Custos que ja foram aprovados |
 
 Esses numeros ajudam a acompanhar a produtividade e participacao de cada membro da equipe.
+
+---
+
+## Regras Importantes
+
+### Campos obrigatórios e limites
+
+| Campo | Obrigatório | Min | Max | Observação |
+|-------|:---:|:---:|:---:|---|
+| `displayName` | Sim | 3 chars | - | Nome completo |
+| `email` | Sim | - | - | **Imutável** após cadastro |
+| `role` | Sim | - | - | superadmin / admin / employee |
+| `password` | Sim | **6 chars** | - | Sem complexidade obrigatória |
+| `phoneNumber` | Não | - | - | Formato livre |
+
+### Validade do convite
+
+| Item | Valor |
+|------|-------|
+| **Duração** | 7 dias |
+| **Ao expirar** | Status vira `expired`, link não funciona mais |
+| **Reenviar** | Admin precisa criar novo convite |
+
+### Permissões necessárias
+
+| Operação | Super Admin | Admin | Funcionário |
+|----------|:---:|:---:|:---:|
+| Ver usuários | Sim | Sim | Não |
+| Convidar usuário | Sim (qualquer cargo) | Sim (só employees) | Não |
+| Editar usuário | Sim (todos) | Sim (só employees) | Só próprio perfil |
+| Mudar role | Sim | **Apenas promover/rebaixar employees** | Não |
+| Promover a admin/superadmin | **Sim** | **Não** | Não |
+| Desativar usuário | Sim | Sim | Não |
+| Reativar usuário | Sim | Sim | Não |
+| Gerenciar skills | Sim | Sim | Não |
+
+### Validações que bloqueiam
+
+!!! danger "Último admin não pode ser desativado"
+    Sistema bloqueia desativação do último super admin OU último admin ativo. Retorna erro: `Cannot deactivate the last active {role}`. Promova outro usuário antes.
+
+!!! warning "Email é imutável"
+    Após o convite ser aceito, o email não pode mais ser alterado. Se precisar mudar, desative e recrie.
+
+!!! note "Skills são soft-delete"
+    Ao "deletar" uma skill, ela é marcada como `isActive: false` mas os registros históricos mantêm referência. Skills desativadas não aparecem em dropdowns de atribuição.
+
+### Defaults do sistema
+
+| Configuração | Padrão |
+|---|---|
+| Status inicial | `Ativo` |
+| Locale inicial | Definido no convite |
+| 10 permissões (employee) | Todas `false` |
+| 10 permissões (admin/superadmin) | Todas `true` |
+| Validade do convite | 7 dias |
+| Tema inicial | `dark` |
 
 ---
 
