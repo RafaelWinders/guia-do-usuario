@@ -1,0 +1,3801 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/estoque/">
+      
+      
+        <link rel="prev" href="../fotos-de-projeto/">
+      
+      
+        <link rel="next" href="../usuarios/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Estoque - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#estoque-guia-do-usuario" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Estoque
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-acessando-a-tela-de-estoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Acessando a tela de Estoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entendendo-a-tela-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Entendendo a tela principal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Entendendo a tela principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cards-de-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cards de resumo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campo-de-busca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campo de busca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-de-cada-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Card de cada item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerta-de-estoque-baixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerta de estoque baixo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-menu-de-acoes-do-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Menu de acoes do item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-criando-um-novo-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Criando um novo item
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Criando um novo item">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo passo a passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-editando-um-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Editando um item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-adicionando-estoque-entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Adicionando estoque (entrada)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Adicionando estoque (entrada)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modo-1-por-valor-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo 1: Por Valor Total
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modo-2-por-valor-unitario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo 2: Por Valor Unitario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-cada-modo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar cada modo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-como-funciona-o-preco-medio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Como funciona o Preco Medio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Como funciona o Preco Medio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-formula-e-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A formula e simples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-pratico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo pratico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esse-metodo-e-eficiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que esse metodo e eficiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mais-um-exemplo-varias-compras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mais um exemplo: varias compras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-alocando-material-para-um-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Alocando material para um projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Alocando material para um projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacoes-exibidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informacoes exibidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-para-preencher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos para preencher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custo-estimado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custo estimado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece-apos-alocar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que acontece apos alocar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-o-custo-aparece-no-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como o custo aparece no projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-historico-de-movimentacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Historico de movimentacoes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Historico de movimentacoes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-aparece-em-cada-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que aparece em cada registro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-alerta-de-estoque-baixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Alerta de estoque baixo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Alerta de estoque baixo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-excluindo-um-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Excluindo um item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-integracao-estoque-x-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Integracao Estoque x Projetos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Integracao Estoque x Projetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-pratico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo pratico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obrigatorios-e-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos obrigatórios e limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-que-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações que bloqueiam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo rapido
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-acessando-a-tela-de-estoque" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Acessando a tela de Estoque
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-entendendo-a-tela-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Entendendo a tela principal
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Entendendo a tela principal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cards-de-resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cards de resumo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campo-de-busca" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campo de busca
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#card-de-cada-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Card de cada item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#alerta-de-estoque-baixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Alerta de estoque baixo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-menu-de-acoes-do-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Menu de acoes do item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-criando-um-novo-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Criando um novo item
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Criando um novo item">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo passo a passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-editando-um-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Editando um item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-adicionando-estoque-entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Adicionando estoque (entrada)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Adicionando estoque (entrada)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modo-1-por-valor-total" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo 1: Por Valor Total
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modo-2-por-valor-unitario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Modo 2: Por Valor Unitario
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-cada-modo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar cada modo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-como-funciona-o-preco-medio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Como funciona o Preco Medio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Como funciona o Preco Medio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-formula-e-simples" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A formula e simples
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-pratico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo pratico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#por-que-esse-metodo-e-eficiente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Por que esse metodo e eficiente
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mais-um-exemplo-varias-compras" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mais um exemplo: varias compras
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-alocando-material-para-um-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Alocando material para um projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Alocando material para um projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#informacoes-exibidas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Informacoes exibidas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#campos-para-preencher" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos para preencher
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#custo-estimado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Custo estimado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-que-acontece-apos-alocar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que acontece apos alocar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-o-custo-aparece-no-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como o custo aparece no projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-historico-de-movimentacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Historico de movimentacoes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Historico de movimentacoes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-aparece-em-cada-registro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que aparece em cada registro
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-alerta-de-estoque-baixo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Alerta de estoque baixo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Alerta de estoque baixo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-excluindo-um-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Excluindo um item
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-integracao-estoque-x-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Integracao Estoque x Projetos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Integracao Estoque x Projetos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo completo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pontos-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pontos importantes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-pratico_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo pratico
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obrigatorios-e-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos obrigatórios e limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-que-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações que bloqueiam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo rapido
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="estoque-guia-do-usuario">Estoque - Guia do Usuario<a class="headerlink" href="#estoque-guia-do-usuario" title="Permanent link">&para;</a></h1>
+<p>Neste guia, voce vai aprender tudo sobre a tela de <strong>Estoque</strong> do SGI. Aqui e onde voce controla os materiais da empresa, acompanha valores e aloca itens para projetos.</p>
+<hr />
+<h2 id="1-acessando-a-tela-de-estoque">1. Acessando a tela de Estoque<a class="headerlink" href="#1-acessando-a-tela-de-estoque" title="Permanent link">&para;</a></h2>
+<p>No menu lateral esquerdo, clique em <strong>"Estoque"</strong>. Voce sera levado para a pagina com todos os itens cadastrados.</p>
+<p><img alt="Lista de itens do estoque" src="../images/inventory-list.png" /></p>
+<hr />
+<h2 id="2-entendendo-a-tela-principal">2. Entendendo a tela principal<a class="headerlink" href="#2-entendendo-a-tela-principal" title="Permanent link">&para;</a></h2>
+<h3 id="cards-de-resumo">Cards de resumo<a class="headerlink" href="#cards-de-resumo" title="Permanent link">&para;</a></h3>
+<p>No topo da pagina, existem 4 cards com informacoes gerais:</p>
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>O que mostra</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total de Itens</strong></td>
+<td>Quantos itens estao cadastrados no estoque</td>
+<td>9</td>
+</tr>
+<tr>
+<td><strong>Valor Total</strong></td>
+<td>A soma do valor de todos os itens em estoque</td>
+<td>R$ 38.460,00</td>
+</tr>
+<tr>
+<td><strong>Baixo Estoque</strong></td>
+<td>Quantos itens estao com quantidade abaixo do minimo</td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Categorias</strong></td>
+<td>Quantas categorias diferentes existem</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<h3 id="campo-de-busca">Campo de busca<a class="headerlink" href="#campo-de-busca" title="Permanent link">&para;</a></h3>
+<p>Abaixo dos cards, existe um campo de busca com o texto "Pesquisar". Digite o nome de um item para filtrar a lista.</p>
+<h3 id="card-de-cada-item">Card de cada item<a class="headerlink" href="#card-de-cada-item" title="Permanent link">&para;</a></h3>
+<p>Cada item aparece como um card com as seguintes informacoes:</p>
+<ul>
+<li><strong>Nome</strong> - Nome do material (ex: "Cimento CP-II 50kg")</li>
+<li><strong>Descricao</strong> - Detalhes sobre o material</li>
+<li><strong>Categoria</strong> - Tag colorida indicando a categoria (ex: Construcao, Pintura, Eletrica)</li>
+<li><strong>Unidade</strong> - Tag indicando a unidade de medida (ex: sacos, latas, m3)</li>
+<li><strong>Quantidade</strong> - Quantas unidades existem em estoque</li>
+<li><strong>Valor Total</strong> - Quanto vale todo o estoque desse item (ex: R$ 6.750,00)</li>
+<li><strong>Preco Medio</strong> - Valor medio por unidade (ex: R$ 45,00)</li>
+<li><strong>Qtd. Minima</strong> - Quantidade minima configurada para alerta</li>
+<li><strong>Ultima Atualizacao</strong> - Data da ultima movimentacao</li>
+</ul>
+<h3 id="alerta-de-estoque-baixo">Alerta de estoque baixo<a class="headerlink" href="#alerta-de-estoque-baixo" title="Permanent link">&para;</a></h3>
+<p>Quando a quantidade de um item fica abaixo da "Quantidade Minima", uma tag vermelha <strong>"Estoque baixo!"</strong> aparece no card do item.</p>
+<p><img alt="Item com alerta de estoque baixo" src="../images/inventory-low-stock.png" /></p>
+<p>O card "Baixo Estoque" no topo da pagina mostra quantos itens estao nessa situacao.</p>
+<hr />
+<h2 id="3-menu-de-acoes-do-item">3. Menu de acoes do item<a class="headerlink" href="#3-menu-de-acoes-do-item" title="Permanent link">&para;</a></h2>
+<p>Cada card de item tem um botao de menu (<strong>...</strong>) no canto superior direito. Ao clicar nele, aparecem 5 opcoes:</p>
+<table>
+<thead>
+<tr>
+<th>Opcao</th>
+<th>O que faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Editar Item</strong></td>
+<td>Altera nome, descricao, unidade, categoria e quantidade minima</td>
+</tr>
+<tr>
+<td><strong>Adicionar Estoque</strong></td>
+<td>Registra uma nova entrada de material (compra)</td>
+</tr>
+<tr>
+<td><strong>Alocar em Projeto</strong></td>
+<td>Retira material do estoque e envia para um projeto</td>
+</tr>
+<tr>
+<td><strong>Ver Historico</strong></td>
+<td>Mostra todas as entradas e saidas do item</td>
+</tr>
+<tr>
+<td><strong>Excluir Item</strong></td>
+<td>Remove o item do sistema (so funciona se quantidade = 0)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> O botao "Excluir Item" fica desabilitado (cinza) enquanto o item tiver estoque. Voce precisa alocar ou zerar todo o estoque antes de excluir.</p>
+</blockquote>
+<hr />
+<h2 id="4-criando-um-novo-item">4. Criando um novo item<a class="headerlink" href="#4-criando-um-novo-item" title="Permanent link">&para;</a></h2>
+<p>Para cadastrar um material no estoque, clique no botao <strong>"Novo Item"</strong> no canto superior direito.</p>
+<p><img alt="Dialog de novo item" src="../images/inventory-new-item.png" /></p>
+<p>Uma janela vai abrir com os seguintes campos:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: center;">Obrigatorio?</th>
+<th style="text-align: right;">Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do Material</strong></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: right;">Nome que identifica o item. Ex: "Cimento CP-II 50kg"</td>
+</tr>
+<tr>
+<td><strong>Descricao</strong></td>
+<td style="text-align: center;">Nao</td>
+<td style="text-align: right;">Detalhes adicionais sobre o material</td>
+</tr>
+<tr>
+<td><strong>Unidade de Medida</strong></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: right;">Como o item e medido. Ex: kg, litros, sacos, metros</td>
+</tr>
+<tr>
+<td><strong>Categoria</strong></td>
+<td style="text-align: center;">Nao</td>
+<td style="text-align: right;">Grupo do material. Ex: Construcao, Pintura, Eletrica</td>
+</tr>
+<tr>
+<td><strong>Quantidade Inicial</strong></td>
+<td style="text-align: center;">Nao</td>
+<td style="text-align: right;">Quantas unidades voce ja tem (padrao: 0)</td>
+</tr>
+<tr>
+<td><strong>Valor Inicial</strong></td>
+<td style="text-align: center;">Nao</td>
+<td style="text-align: right;">Valor total do estoque inicial (padrao: 0)</td>
+</tr>
+<tr>
+<td><strong>Quantidade Minima para Alerta</strong></td>
+<td style="text-align: center;">Nao</td>
+<td style="text-align: right;">Abaixo deste numero, o sistema mostra alerta de estoque baixo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-passo-a-passo">Exemplo passo a passo<a class="headerlink" href="#exemplo-passo-a-passo" title="Permanent link">&para;</a></h3>
+<p>Vamos cadastrar um novo item:</p>
+<ol>
+<li>Clique em <strong>"Novo Item"</strong></li>
+<li>Em <strong>Nome do Material</strong>, digite: <code>Tinta Acrilica Branca 18L</code></li>
+<li>Em <strong>Descricao</strong>, digite: <code>Tinta acrilica premium para paredes internas e externas</code></li>
+<li>Em <strong>Unidade de Medida</strong>, digite: <code>latas</code></li>
+<li>Em <strong>Categoria</strong>, digite: <code>Pintura</code></li>
+<li>Em <strong>Quantidade Inicial</strong>, digite: <code>10</code></li>
+<li>Em <strong>Valor Inicial</strong>, digite: <code>2500</code> (R$ 2.500,00 por 10 latas = R$ 250,00 cada)</li>
+<li>Em <strong>Quantidade Minima para Alerta</strong>, digite: <code>5</code>S</li>
+<li>Clique em <strong>"Criar"</strong></li>
+</ol>
+<p>O item sera criado e aparecera na lista com preco medio de R$ 250,00 (R$ 2.500 / 10 latas).</p>
+<hr />
+<h2 id="5-editando-um-item">5. Editando um item<a class="headerlink" href="#5-editando-um-item" title="Permanent link">&para;</a></h2>
+<p>Para editar um item, clique no menu (<strong>...</strong>) do card e selecione <strong>"Editar Item"</strong>.</p>
+<p><img alt="Dialog de editar item" src="../images/inventory-edit-item.png" /></p>
+<p>Voce pode alterar:
+- Nome do Material
+- Descricao
+- Unidade de Medida
+- Categoria
+- Quantidade Minima para Alerta</p>
+<blockquote>
+<p><strong>Importante:</strong> Voce <strong>nao pode</strong> alterar a quantidade ou o valor do item por aqui. Quantidades sao controladas apenas por entradas (compras) e saidas (alocacoes). Isso garante a rastreabilidade completa de todas as movimentacoes.</p>
+</blockquote>
+<p>Apos fazer as alteracoes, clique em <strong>"Salvar"</strong>.</p>
+<hr />
+<h2 id="6-adicionando-estoque-entrada">6. Adicionando estoque (entrada)<a class="headerlink" href="#6-adicionando-estoque-entrada" title="Permanent link">&para;</a></h2>
+<p>Quando voce compra material, precisa registrar a entrada no sistema. Clique no menu (<strong>...</strong>) do item e selecione <strong>"Adicionar Estoque"</strong>.</p>
+<p>O sistema oferece dois modos de registro:</p>
+<h3 id="modo-1-por-valor-total">Modo 1: Por Valor Total<a class="headerlink" href="#modo-1-por-valor-total" title="Permanent link">&para;</a></h3>
+<p><img alt="Adicionar estoque - Por Valor Total" src="../images/inventory-add-stock-total.png" /></p>
+<p>Use este modo quando voce sabe o valor total da compra.</p>
+<p><strong>Campos:</strong>
+- <strong>Quantidade</strong> - Quantas unidades comprou
+- <strong>Valor Total da Entrada</strong> - Quanto pagou no total
+- <strong>Observacoes</strong> (opcional) - Notas sobre a compra</p>
+<p><strong>Exemplo:</strong> Voce comprou 50 sacos de cimento por R$ 2.250,00 no total.
+- Quantidade: <code>50</code>
+- Valor Total: <code>2250</code></p>
+<h3 id="modo-2-por-valor-unitario">Modo 2: Por Valor Unitario<a class="headerlink" href="#modo-2-por-valor-unitario" title="Permanent link">&para;</a></h3>
+<p><img alt="Adicionar estoque - Por Valor Unitario" src="../images/inventory-add-stock-unit.png" /></p>
+<p>Use este modo quando voce sabe o preco de cada unidade.</p>
+<p><strong>Campos:</strong>
+- <strong>Quantidade</strong> - Quantas unidades comprou
+- <strong>Valor Unitario</strong> - Quanto pagou por unidade
+- <strong>Observacoes</strong> (opcional) - Notas sobre a compra</p>
+<p><strong>Exemplo:</strong> Voce comprou 50 sacos de cimento a R$ 45,00 cada.
+- Quantidade: <code>50</code>
+- Valor Unitario: <code>45</code></p>
+<h3 id="quando-usar-cada-modo">Quando usar cada modo<a class="headerlink" href="#quando-usar-cada-modo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Situacao</th>
+<th>Modo recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nota fiscal mostra valor total</td>
+<td>Por Valor Total</td>
+</tr>
+<tr>
+<td>Nota fiscal mostra preco unitario</td>
+<td>Por Valor Unitario</td>
+</tr>
+<tr>
+<td>Compra com desconto no lote</td>
+<td>Por Valor Total</td>
+</tr>
+<tr>
+<td>Compra com preco tabelado por unidade</td>
+<td>Por Valor Unitario</td>
+</tr>
+</tbody>
+</table>
+<p>Apos preencher, clique em <strong>"Adicionar Estoque"</strong>. A quantidade e o valor do item serao atualizados automaticamente.</p>
+<hr />
+<h2 id="7-como-funciona-o-preco-medio">7. Como funciona o Preco Medio<a class="headerlink" href="#7-como-funciona-o-preco-medio" title="Permanent link">&para;</a></h2>
+<p>O SGI usa um sistema chamado <strong>Preco Medio Ponderado</strong> para calcular o valor dos itens em estoque. Entender esse calculo ajuda voce a saber por que os valores mudam a cada compra.</p>
+<h3 id="a-formula-e-simples">A formula e simples<a class="headerlink" href="#a-formula-e-simples" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>Preco Medio = Valor Total em Estoque / Quantidade em Estoque
+</code></pre></div>
+<h3 id="exemplo-pratico">Exemplo pratico<a class="headerlink" href="#exemplo-pratico" title="Permanent link">&para;</a></h3>
+<p>Imagine que voce tem <strong>100 sacos de cimento</strong> no estoque, com valor total de <strong>R$ 4.000,00</strong>:</p>
+<ul>
+<li>Preco medio atual: R$ 4.000 / 100 = <strong>R$ 40,00 por saco</strong></li>
+</ul>
+<p>Agora voce compra mais <strong>50 sacos por R$ 2.250,00</strong> (R$ 45,00 cada - o preco subiu):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Antes</th>
+<th>Compra</th>
+<th>Depois</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Quantidade</strong></td>
+<td>100 sacos</td>
+<td>+ 50 sacos</td>
+<td>= 150 sacos</td>
+</tr>
+<tr>
+<td><strong>Valor Total</strong></td>
+<td>R$ 4.000,00</td>
+<td>+ R$ 2.250,00</td>
+<td>= R$ 6.250,00</td>
+</tr>
+<tr>
+<td><strong>Preco Medio</strong></td>
+<td>R$ 40,00</td>
+<td>R$ 45,00</td>
+<td>= <strong>R$ 41,67</strong></td>
+</tr>
+</tbody>
+</table>
+<p>O novo preco medio (R$ 41,67) fica entre o preco antigo (R$ 40,00) e o preco da nova compra (R$ 45,00). Isso acontece porque o sistema <strong>pondera</strong> os dois precos pela quantidade.</p>
+<h3 id="por-que-esse-metodo-e-eficiente">Por que esse metodo e eficiente<a class="headerlink" href="#por-que-esse-metodo-e-eficiente" title="Permanent link">&para;</a></h3>
+<p>O sistema de preco medio ponderado traz diversas vantagens:</p>
+<ol>
+<li>
+<p><strong>Absorve variacoes de preco naturalmente</strong> - Se voce comprou cimento a R$ 40,00 e depois a R$ 45,00, o preco medio reflete a realidade: voce tem cimento que custou em media R$ 41,67. Nao precisa separar lotes ou rastrear qual saco veio de qual compra.</p>
+</li>
+<li>
+<p><strong>Lida bem com promocoes e reajustes</strong> - Se uma compra teve desconto, o preco medio cai. Se o fornecedor reajustou, o preco medio sobe. O sistema equilibra tudo automaticamente.</p>
+</li>
+<li>
+<p><strong>Calculo automatico</strong> - Voce nao precisa fazer nenhuma conta. Basta informar a quantidade e o valor da compra. O sistema recalcula o preco medio sozinho.</p>
+</li>
+<li>
+<p><strong>Nao precisa controlar lotes</strong> - Diferente de outros metodos (como FIFO ou LIFO), voce nao precisa saber "qual cimento foi comprado primeiro". Todo o estoque tem o mesmo preco medio.</p>
+</li>
+<li>
+<p><strong>Custo justo para projetos</strong> - Quando voce aloca material para um projeto, o custo e baseado no preco medio real. Isso evita distorcoes como cobrar o preco mais caro ou mais barato de uma unica compra.</p>
+</li>
+</ol>
+<h3 id="mais-um-exemplo-varias-compras">Mais um exemplo: varias compras<a class="headerlink" href="#mais-um-exemplo-varias-compras" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Compra</th>
+<th>Qtd</th>
+<th>Valor Total</th>
+<th>Preco Unit.</th>
+<th>Estoque Apos</th>
+<th>Valor Total Apos</th>
+<th>Preco Medio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1a compra</td>
+<td>100</td>
+<td>R$ 4.000</td>
+<td>R$ 40,00</td>
+<td>100</td>
+<td>R$ 4.000</td>
+<td>R$ 40,00</td>
+</tr>
+<tr>
+<td>2a compra</td>
+<td>50</td>
+<td>R$ 2.250</td>
+<td>R$ 45,00</td>
+<td>150</td>
+<td>R$ 6.250</td>
+<td>R$ 41,67</td>
+</tr>
+<tr>
+<td>3a compra</td>
+<td>80</td>
+<td>R$ 2.800</td>
+<td>R$ 35,00</td>
+<td>230</td>
+<td>R$ 9.050</td>
+<td>R$ 39,35</td>
+</tr>
+</tbody>
+</table>
+<p>Na 3a compra, o preco unitario caiu para R$ 35,00 (uma promocao). O preco medio ajustou automaticamente de R$ 41,67 para R$ 39,35, absorvendo o desconto de forma proporcional.</p>
+<hr />
+<h2 id="8-alocando-material-para-um-projeto">8. Alocando material para um projeto<a class="headerlink" href="#8-alocando-material-para-um-projeto" title="Permanent link">&para;</a></h2>
+<p>Quando voce precisa usar material de estoque em um projeto, use a opcao <strong>"Alocar em Projeto"</strong>. Clique no menu (<strong>...</strong>) do item e selecione essa opcao.</p>
+<p><img alt="Dialog de alocar em projeto" src="../images/inventory-allocate.png" /></p>
+<h3 id="informacoes-exibidas">Informacoes exibidas<a class="headerlink" href="#informacoes-exibidas" title="Permanent link">&para;</a></h3>
+<p>No topo da janela, o sistema mostra:
+- <strong>Preco Medio</strong> - O valor medio atual por unidade (ex: R$ 45,00)
+- <strong>Valor Total em Estoque</strong> - Quanto vale todo o estoque desse item (ex: R$ 6.750,00)</p>
+<h3 id="campos-para-preencher">Campos para preencher<a class="headerlink" href="#campos-para-preencher" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: center;">Obrigatorio?</th>
+<th style="text-align: right;">Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Projeto de Destino</strong></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: right;">Selecione o projeto que vai receber o material</td>
+</tr>
+<tr>
+<td><strong>Quantidade</strong></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: right;">Quantas unidades deseja alocar (maximo: quantidade disponivel)</td>
+</tr>
+<tr>
+<td><strong>Justificativa</strong></td>
+<td style="text-align: center;">Nao</td>
+<td style="text-align: right;">Motivo da alocacao (opcional)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="custo-estimado">Custo estimado<a class="headerlink" href="#custo-estimado" title="Permanent link">&para;</a></h3>
+<p>O sistema calcula e exibe automaticamente o <strong>custo estimado</strong> da alocacao:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>Custo Estimado = Preco Medio x Quantidade
+</code></pre></div>
+<p><strong>Exemplo:</strong> Se o preco medio do cimento e R$ 45,00 e voce aloca 20 sacos:
+- Custo estimado: R$ 45,00 x 20 = <strong>R$ 900,00</strong></p>
+<h3 id="o-que-acontece-apos-alocar">O que acontece apos alocar<a class="headerlink" href="#o-que-acontece-apos-alocar" title="Permanent link">&para;</a></h3>
+<p>Ao clicar em <strong>"Alocar em Projeto"</strong>, tres coisas acontecem automaticamente:</p>
+<ol>
+<li><strong>O estoque diminui</strong> - A quantidade e o valor total do item sao reduzidos</li>
+<li><strong>Um custo e criado no projeto</strong> - O valor da alocacao aparece na aba "Custos" do projeto como um custo <strong>aprovado automaticamente</strong></li>
+<li><strong>O historico e registrado</strong> - A movimentacao fica registrada no historico do item</li>
+</ol>
+<blockquote>
+<p><strong>Nota:</strong> O preco medio <strong>nao muda</strong> quando voce retira material. Tanto a quantidade quanto o valor diminuem na mesma proporcao, mantendo o preco medio intacto.</p>
+</blockquote>
+<h3 id="como-o-custo-aparece-no-projeto">Como o custo aparece no projeto<a class="headerlink" href="#como-o-custo-aparece-no-projeto" title="Permanent link">&para;</a></h3>
+<p>Na aba <strong>Custos</strong> do projeto, o custo de estoque aparece com:
+- <strong>Descricao:</strong> "[Nome do item] - Retirada de Estoque (X unidades)"
+- <strong>Categoria:</strong> Atribuida automaticamente como custo de estoque
+- <strong>Status:</strong> Aprovado (nao precisa de aprovacao manual)
+- <strong>Valor:</strong> Preco medio x quantidade alocada</p>
+<blockquote>
+<p>Para mais detalhes sobre a aba de Custos, consulte o <strong>Guia de Projetos</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="9-historico-de-movimentacoes">9. Historico de movimentacoes<a class="headerlink" href="#9-historico-de-movimentacoes" title="Permanent link">&para;</a></h2>
+<p>Para ver todo o historico de entradas e saidas de um item, clique no menu (<strong>...</strong>) e selecione <strong>"Ver Historico"</strong>.</p>
+<p><img alt="Historico de movimentacoes" src="../images/inventory-history.png" /></p>
+<h3 id="o-que-aparece-em-cada-registro">O que aparece em cada registro<a class="headerlink" href="#o-que-aparece-em-cada-registro" title="Permanent link">&para;</a></h3>
+<p><strong>Para entradas:</strong>
+- Tag verde <strong>"Entrada"</strong>
+- Data e hora
+- Quantidade adicionada (ex: +154)
+- Valor unitario e valor total
+- Modo de entrada (Por valor total ou Por valor unitario)
+- Justificativa/observacoes
+- Quem realizou a operacao</p>
+<p><strong>Para saidas (alocacoes):</strong>
+- Tag laranja <strong>"Saida"</strong>
+- Data e hora
+- Quantidade retirada (ex: -20)
+- Valor unitario e valor total
+- Projeto de destino
+- Justificativa
+- Quem realizou a operacao</p>
+<p>O historico e organizado em ordem cronologica (mais recente primeiro), permitindo rastreabilidade completa de cada movimentacao.</p>
+<hr />
+<h2 id="10-alerta-de-estoque-baixo">10. Alerta de estoque baixo<a class="headerlink" href="#10-alerta-de-estoque-baixo" title="Permanent link">&para;</a></h2>
+<p>O alerta de estoque baixo serve para avisar quando um material esta acabando.</p>
+<h3 id="como-funciona">Como funciona<a class="headerlink" href="#como-funciona" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Ao criar ou editar um item, voce define a <strong>Quantidade Minima para Alerta</strong></li>
+<li>Quando a quantidade em estoque fica <strong>abaixo</strong> desse valor, o sistema mostra a tag vermelha <strong>"Estoque baixo!"</strong> no card do item</li>
+<li>O card <strong>"Baixo Estoque"</strong> no topo da pagina mostra quantos itens estao nessa situacao</li>
+</ul>
+<h3 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h3>
+<p>O item "Argamassa AC-III 20kg" tem:
+- Quantidade atual: <strong>5 sacos</strong>
+- Quantidade minima: <strong>15 sacos</strong></p>
+<p>Como 5 e menor que 15, o sistema exibe o alerta "Estoque baixo!" no card, indicando que e hora de comprar mais.</p>
+<hr />
+<h2 id="11-excluindo-um-item">11. Excluindo um item<a class="headerlink" href="#11-excluindo-um-item" title="Permanent link">&para;</a></h2>
+<p>Para excluir um item, clique no menu (<strong>...</strong>) e selecione <strong>"Excluir Item"</strong>.</p>
+<blockquote>
+<p><strong>Regra importante:</strong> Voce so pode excluir um item quando a quantidade em estoque e <strong>zero</strong>. Enquanto houver material, o botao fica desabilitado (cinza). Isso evita que voce perca o controle de materiais que ainda existem fisicamente.</p>
+</blockquote>
+<p>Para excluir um item com estoque:
+1. Primeiro, aloque todo o material para projetos (ou ajuste via entradas/saidas)
+2. Quando a quantidade chegar a zero, o botao "Excluir Item" sera habilitado
+3. Clique em "Excluir Item" e confirme</p>
+<hr />
+<h2 id="12-integracao-estoque-x-projetos">12. Integracao Estoque x Projetos<a class="headerlink" href="#12-integracao-estoque-x-projetos" title="Permanent link">&para;</a></h2>
+<p>O estoque do SGI esta diretamente conectado aos custos dos projetos. Veja como funciona essa integracao:</p>
+<h3 id="fluxo-completo">Fluxo completo<a class="headerlink" href="#fluxo-completo" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    A[Pagina de Estoque] --&gt; B[Alocar em Projeto]
+    B --&gt; C[Valida quantidade disponivel]
+    C --&gt; D{Quantidade OK?}
+    D --&gt;|Nao| E[Erro: estoque insuficiente]
+    D --&gt;|Sim| F[Calcula preco medio atual]
+    F --&gt; G[Reduz quantidade e valor no estoque]
+    G --&gt; H[Cria CostLog no projeto]
+    H --&gt; I[Status: approved automatico]
+    I --&gt; J[Registra transaction no historico]
+    J --&gt; K[Verifica alerta de estoque baixo]
+    K --&gt;|Baixo| L[Gera notificacao low_stock_alert]
+    K --&gt;|OK| M[Sem notificacao]</code></pre>
+<h3 id="pontos-importantes">Pontos importantes<a class="headerlink" href="#pontos-importantes" title="Permanent link">&para;</a></h3>
+<ul>
+<li>A alocacao pode ser feita pela <strong>pagina de Estoque</strong> (menu ... &gt; Alocar em Projeto) ou pelo <strong>Chat</strong> com a inteligencia artificial do sistema</li>
+<li>Neste guia, abordamos apenas a alocacao pela pagina de Estoque. O uso via Chat sera explicado no <strong>Guia do Chat</strong></li>
+<li>Na aba Custos do projeto, o botao "Adicionar Custo" e para custos <strong>manuais</strong> (como mao de obra, transporte, etc.)</li>
+<li>Custos de estoque sao <strong>adicionados automaticamente</strong> quando voce faz a alocacao</li>
+<li>O valor do custo e calculado com base no <strong>preco medio do momento da alocacao</strong></li>
+<li>Custos de estoque ja vem com status <strong>"Aprovado"</strong> e contam imediatamente no orcamento do projeto</li>
+</ul>
+<h3 id="exemplo-pratico_1">Exemplo pratico<a class="headerlink" href="#exemplo-pratico_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Voce tem 150 sacos de cimento a R$ 45,00 cada (preco medio)</li>
+<li>Na pagina de Estoque, voce aloca 20 sacos para o projeto "Reforma Cozinha"</li>
+<li>O estoque do cimento cai para 130 sacos</li>
+<li>Na aba Custos do projeto "Reforma Cozinha", aparece automaticamente:</li>
+<li>"Cimento CP-II 50kg - Retirada de Estoque (20 unidades)"</li>
+<li>Valor: R$ 900,00 (20 x R$ 45,00)</li>
+<li>Status: Aprovado</li>
+</ol>
+<hr />
+<h2 id="regras-importantes">Regras Importantes<a class="headerlink" href="#regras-importantes" title="Permanent link">&para;</a></h2>
+<h3 id="campos-obrigatorios-e-limites">Campos obrigatórios e limites<a class="headerlink" href="#campos-obrigatorios-e-limites" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: center;">Obrigatório</th>
+<th style="text-align: center;">Min</th>
+<th style="text-align: center;">Max</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">2 chars</td>
+<td style="text-align: center;">100 chars</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>description</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">500 chars</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>unit</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">1 char</td>
+<td style="text-align: center;">20 chars</td>
+<td>Ex: kg, litros, unidades</td>
+</tr>
+<tr>
+<td><code>category</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">50 chars</td>
+<td>Texto livre</td>
+</tr>
+<tr>
+<td><code>initialQuantity</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+<td>Padrão: 0</td>
+</tr>
+<tr>
+<td><code>initialValue</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+<td>Padrão: 0</td>
+</tr>
+<tr>
+<td><code>minQuantity</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+<td>Para alerta de estoque baixo</td>
+</tr>
+<tr>
+<td><strong>Entrada</strong> <code>totalValue</code> OU <code>unitValue</code></td>
+<td style="text-align: center;">Sim (um ou outro)</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td><strong>XOR</strong> - exatamente um obrigatório</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Entrada: modo XOR</p>
+<p>Ao adicionar estoque, você deve informar <strong>OU</strong> <code>totalValue</code> <strong>OU</strong> <code>unitValue</code> — nunca os dois juntos nem nenhum. O sistema bloqueia se ambos ou nenhum forem enviados.</p>
+</div>
+<h3 id="permissoes-necessarias">Permissões necessárias<a class="headerlink" href="#permissoes-necessarias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operação</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Funcionário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ver estoque</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td>Criar item</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Editar item</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Adicionar estoque (entrada)</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Alocar em projeto</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Reverter retirada</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Deletar item</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validacoes-que-bloqueiam">Validações que bloqueiam<a class="headerlink" href="#validacoes-que-bloqueiam" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Não pode deletar com quantidade &gt; 0</p>
+<p>Botão de deletar fica desabilitado enquanto <code>currentQuantity &gt; 0</code>. Aloque todo o estoque antes de deletar.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Alocação não pode exceder disponível</p>
+<p>Ao alocar em projeto, quantidade não pode ser maior que <code>currentQuantity</code>. Sistema retorna erro.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Reversão de retirada</p>
+<p>Admins podem reverter uma alocação feita por engano. Cria transação compensatória (com <code>isReversal: true</code>) e adiciona quantidade de volta ao estoque. A transação original fica marcada com <code>reversedAt</code> e <code>reversedBy</code>.</p>
+</div>
+<h3 id="defaults-do-sistema">Defaults do sistema<a class="headerlink" href="#defaults-do-sistema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Configuração</th>
+<th>Padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>currentQuantity</code> inicial</td>
+<td><code>initialQuantity</code> ou 0</td>
+</tr>
+<tr>
+<td><code>totalValue</code> inicial</td>
+<td><code>initialValue</code> ou 0</td>
+</tr>
+<tr>
+<td><code>minQuantity</code></td>
+<td>Não configurado (sem alerta)</td>
+</tr>
+<tr>
+<td>Preço médio</td>
+<td>Recalculado automaticamente a cada entrada</td>
+</tr>
+<tr>
+<td>Status de alocação</td>
+<td><code>approved</code> (não precisa aprovação manual)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resumo-rapido">Resumo rapido<a class="headerlink" href="#resumo-rapido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Voce quer...</th>
+<th>Faca isso...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ver todos os materiais</td>
+<td>Clique em "Estoque" no menu lateral</td>
+</tr>
+<tr>
+<td>Buscar um item</td>
+<td>Digite no campo "Pesquisar"</td>
+</tr>
+<tr>
+<td>Cadastrar novo material</td>
+<td>Clique em "Novo Item"</td>
+</tr>
+<tr>
+<td>Editar dados de um item</td>
+<td>Menu (...) &gt; "Editar Item"</td>
+</tr>
+<tr>
+<td>Registrar uma compra</td>
+<td>Menu (...) &gt; "Adicionar Estoque"</td>
+</tr>
+<tr>
+<td>Enviar material para um projeto</td>
+<td>Menu (...) &gt; "Alocar em Projeto"</td>
+</tr>
+<tr>
+<td>Ver entradas e saidas</td>
+<td>Menu (...) &gt; "Ver Historico"</td>
+</tr>
+<tr>
+<td>Saber itens com estoque baixo</td>
+<td>Ver card "Baixo Estoque" no topo</td>
+</tr>
+<tr>
+<td>Excluir um item</td>
+<td>Menu (...) &gt; "Excluir Item" (quantidade deve ser 0)</td>
+</tr>
+<tr>
+<td>Ver custo de estoque no projeto</td>
+<td>Aba "Custos" no detalhe do projeto</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

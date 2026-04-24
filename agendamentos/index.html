@@ -1,0 +1,3044 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/agendamentos/">
+      
+      
+        <link rel="prev" href="../dashboard/">
+      
+      
+        <link rel="next" href="../relatorios-diarios/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Agendamentos - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#agendamentos-guia-do-usuario" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Agendamentos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-acessando-a-tela-de-agendamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Acessando a tela de Agendamentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modos-de-visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Modos de visualização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modos de visualização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista (padrão)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calendário
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-criando-um-agendamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Criando um agendamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Criando um agendamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo passo a passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-editando-e-cancelando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Editando e cancelando
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Editando e cancelando">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancelar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cancelar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Filtros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-status-dos-agendamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Status dos agendamentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-integracao-com-google-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Integração com Google Calendar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Integração com Google Calendar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-de-sincronizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status de sincronização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sem-google-conectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sem Google conectado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-sugestao-inteligente-de-funcionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Sugestão inteligente de funcionário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obrigatorios-e-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos obrigatórios e limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-que-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações que bloqueiam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-acessando-a-tela-de-agendamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Acessando a tela de Agendamentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-modos-de-visualizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Modos de visualização
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Modos de visualização">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-padrao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Lista (padrão)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#calendario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Calendário
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-criando-um-agendamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Criando um agendamento
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Criando um agendamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo passo a passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-editando-e-cancelando" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Editando e cancelando
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Editando e cancelando">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cancelar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Cancelar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-filtros" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Filtros
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-status-dos-agendamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Status dos agendamentos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-integracao-com-google-calendar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Integração com Google Calendar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Integração com Google Calendar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-de-sincronizacao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status de sincronização
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sem-google-conectado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sem Google conectado
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-sugestao-inteligente-de-funcionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Sugestão inteligente de funcionário
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obrigatorios-e-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos obrigatórios e limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-que-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações que bloqueiam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="agendamentos-guia-do-usuario">Agendamentos - Guia do Usuário<a class="headerlink" href="#agendamentos-guia-do-usuario" title="Permanent link">&para;</a></h1>
+<p>Este guia explica tudo sobre o módulo de <strong>Agendamentos</strong> do SGI, usado para programar visitas e compromissos dos funcionários nos projetos.</p>
+<hr />
+<h2 id="1-acessando-a-tela-de-agendamentos">1. Acessando a tela de Agendamentos<a class="headerlink" href="#1-acessando-a-tela-de-agendamentos" title="Permanent link">&para;</a></h2>
+<p>No menu lateral, clique em <strong>"Agendamentos"</strong>. Você verá a página principal de gerenciamento.</p>
+<p><img alt="Agendamentos - Lista" src="../images/scheduling-list.png" /></p>
+<hr />
+<h2 id="2-modos-de-visualizacao">2. Modos de visualização<a class="headerlink" href="#2-modos-de-visualizacao" title="Permanent link">&para;</a></h2>
+<p>São 2 modos, com alternador no canto superior direito. A preferência é <strong>salva por usuário</strong> (fica persistida entre sessões).</p>
+<h3 id="lista-padrao">Lista (padrão)<a class="headerlink" href="#lista-padrao" title="Permanent link">&para;</a></h3>
+<p>Agendamentos agrupados por data, do mais recente para o mais antigo. Cada card mostra:</p>
+<ul>
+<li><strong>Horário</strong> - Hora de início e fim (ex: 14:00 → 17:00)</li>
+<li><strong>Status</strong> - Badge colorido (Agendado, Em andamento, Concluído, Cancelado)</li>
+<li><strong>Projeto</strong> - Nome do projeto vinculado</li>
+<li><strong>Funcionário</strong> - Quem está atribuído</li>
+<li><strong>Observações</strong> - Notas adicionais sobre a visita</li>
+<li><strong>Botões</strong> - Editar e Cancelar</li>
+</ul>
+<h3 id="calendario">Calendário<a class="headerlink" href="#calendario" title="Permanent link">&para;</a></h3>
+<p>Grade semanal (segunda a domingo), slots das 08:00 às 18:00. Blocos coloridos por status.</p>
+<p><img alt="Agendamentos - Calendário" src="../images/scheduling-calendar.png" /></p>
+<p>Use <strong>"Anterior"</strong>, <strong>"Hoje"</strong> e <strong>"Próximo"</strong> para navegar entre semanas.</p>
+<hr />
+<h2 id="3-criando-um-agendamento">3. Criando um agendamento<a class="headerlink" href="#3-criando-um-agendamento" title="Permanent link">&para;</a></h2>
+<p>Clique em <strong>"Novo Agendamento"</strong> no canto superior direito (desktop) ou no <strong>botão flutuante "+"</strong> (mobile).</p>
+<p><img alt="Novo Agendamento" src="../images/scheduling-new-dialog.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: center;">Obrigatório?</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Projeto</strong></td>
+<td style="text-align: center;">Sim</td>
+<td>Projeto vinculado à visita</td>
+</tr>
+<tr>
+<td><strong>Funcionário</strong></td>
+<td style="text-align: center;">Sim</td>
+<td>Quem fará a visita</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td style="text-align: center;">Sim</td>
+<td>Data da visita</td>
+</tr>
+<tr>
+<td><strong>Horário de início</strong></td>
+<td style="text-align: center;">Sim</td>
+<td>Hora em que começa</td>
+</tr>
+<tr>
+<td><strong>Duração</strong></td>
+<td style="text-align: center;">Sim</td>
+<td>1h, 2h, 3h, 4h ou customizada (mínimo 1 minuto)</td>
+</tr>
+<tr>
+<td><strong>Observações</strong></td>
+<td style="text-align: center;">Não</td>
+<td>Notas adicionais</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-passo-a-passo">Exemplo passo a passo<a class="headerlink" href="#exemplo-passo-a-passo" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clique em <strong>"Novo Agendamento"</strong></li>
+<li>Em <strong>Projeto</strong>, selecione: <code>Instalação Hidráulica - Rua Dr. Melo Alves, 700</code></li>
+<li>Em <strong>Funcionário</strong>, selecione: <code>João Silva</code></li>
+<li>Em <strong>Data</strong>, selecione a data desejada</li>
+<li>Em <strong>Horário de início</strong>, digite: <code>09:00</code></li>
+<li>Em <strong>Duração</strong>, selecione: <code>2 horas</code></li>
+<li>Em <strong>Observações</strong>, digite: <code>Levar ferramentas para vistoria</code></li>
+<li>Clique em <strong>"Criar Agendamento"</strong></li>
+</ol>
+<hr />
+<h2 id="4-editando-e-cancelando">4. Editando e cancelando<a class="headerlink" href="#4-editando-e-cancelando" title="Permanent link">&para;</a></h2>
+<h3 id="editar">Editar<a class="headerlink" href="#editar" title="Permanent link">&para;</a></h3>
+<p>Na lista, clique em <strong>"Editar"</strong> no card. Você pode alterar:</p>
+<p><img alt="Editar Agendamento" src="../images/scheduling-edit-dialog.png" /></p>
+<ul>
+<li><strong>Data</strong> - Mudar o dia</li>
+<li><strong>Horário de início</strong> - Mudar a hora</li>
+<li><strong>Duração</strong> - Mudar o tempo</li>
+<li><strong>Observações</strong> - Alterar as notas</li>
+</ul>
+<h3 id="cancelar">Cancelar<a class="headerlink" href="#cancelar" title="Permanent link">&para;</a></h3>
+<p>Clique em <strong>"Cancelar"</strong> no card. O status muda para <strong>Cancelado</strong> (o agendamento não é apagado, fica registrado).</p>
+<hr />
+<h2 id="5-filtros">5. Filtros<a class="headerlink" href="#5-filtros" title="Permanent link">&para;</a></h2>
+<p>No topo da página:</p>
+<table>
+<thead>
+<tr>
+<th>Filtro</th>
+<th>O que faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Usuários</strong></td>
+<td>Filtra por funcionário (admin); funcionários veem só os seus</td>
+</tr>
+<tr>
+<td><strong>Status</strong></td>
+<td>agendado / em andamento / concluído / cancelado</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>Intervalo (data início e fim)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-status-dos-agendamentos">6. Status dos agendamentos<a class="headerlink" href="#6-status-dos-agendamentos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Significado</th>
+<th>Cor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Agendado</strong> (<code>scheduled</code>)</td>
+<td>Visita programada para o futuro</td>
+<td>Azul</td>
+</tr>
+<tr>
+<td><strong>Em andamento</strong> (<code>in_progress</code>)</td>
+<td>Visita acontecendo agora</td>
+<td>Verde</td>
+</tr>
+<tr>
+<td><strong>Concluído</strong> (<code>completed</code>)</td>
+<td>Visita realizada</td>
+<td>Cinza</td>
+</tr>
+<tr>
+<td><strong>Cancelado</strong> (<code>cancelled</code>)</td>
+<td>Visita cancelada</td>
+<td>Vermelho</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>stateDiagram-v2
+    direction LR
+    [*] --&gt; scheduled: Criar
+    scheduled --&gt; in_progress: Funcionário chega
+    scheduled --&gt; cancelled: Cancelar
+    in_progress --&gt; completed: Finalizar visita
+    in_progress --&gt; cancelled: Cancelar
+    completed --&gt; [*]
+    cancelled --&gt; [*]</code></pre>
+<hr />
+<h2 id="7-integracao-com-google-calendar">7. Integração com Google Calendar<a class="headerlink" href="#7-integracao-com-google-calendar" title="Permanent link">&para;</a></h2>
+<p>Quando a conta Google da organização está conectada (via <strong>Configurações &gt; Integrações</strong>, apenas super admin pode conectar), agendamentos sincronizam automaticamente.</p>
+<h3 id="como-funciona">Como funciona<a class="headerlink" href="#como-funciona" title="Permanent link">&para;</a></h3>
+<ul>
+<li>O sistema cria <strong>calendários individuais por funcionário</strong> (ex: <code>SGI - João Silva</code>)</li>
+<li>Criar/editar/cancelar no SGI aparece automaticamente no Google Calendar</li>
+<li><strong>Two-way sync:</strong> eventos criados direto no Google Calendar <strong>também aparecem no SGI</strong> (com flag <code>isExternalEvent</code>)</li>
+</ul>
+<h3 id="status-de-sincronizacao">Status de sincronização<a class="headerlink" href="#status-de-sincronizacao" title="Permanent link">&para;</a></h3>
+<p>Cada agendamento tem um campo <code>googleSyncStatus</code> visível no detalhe:</p>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>pending</code></td>
+<td>Aguardando próximo sync</td>
+</tr>
+<tr>
+<td><code>syncing</code></td>
+<td>Sincronização em andamento</td>
+</tr>
+<tr>
+<td><code>synced</code></td>
+<td>Sincronizado com sucesso</td>
+</tr>
+<tr>
+<td><code>failed</code></td>
+<td>Erro na sincronização (mensagem em <code>googleSyncError</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sem-google-conectado">Sem Google conectado<a class="headerlink" href="#sem-google-conectado" title="Permanent link">&para;</a></h3>
+<div class="admonition note">
+<p class="admonition-title">Google Calendar é opcional</p>
+<p>A integração <strong>não é obrigatória</strong>. Se a conta Google não estiver conectada, o agendamento é criado <strong>normalmente no SGI</strong> - apenas não sincroniza com Google. Tudo funciona, só não tem o calendário externo.</p>
+</div>
+<pre class="mermaid"><code>flowchart LR
+    A[Criar agendamento no SGI] --&gt; B{Google&lt;br/&gt;conectado?}
+    B --&gt;|Sim| C[Salva no SGI]
+    C --&gt; D[Cria evento no Google Calendar do funcionário]
+    D --&gt; E[googleSyncStatus: synced]
+    B --&gt;|Não| F[Salva só no SGI]
+    F --&gt; G[googleSyncStatus: pending]
+
+    H[Evento criado direto no Google] --&gt; I[SGI detecta via polling]
+    I --&gt; J[Cria agendamento no SGI]
+    J --&gt; K[isExternalEvent: true]</code></pre>
+<hr />
+<h2 id="8-sugestao-inteligente-de-funcionario">8. Sugestão inteligente de funcionário<a class="headerlink" href="#8-sugestao-inteligente-de-funcionario" title="Permanent link">&para;</a></h2>
+<p>Ao criar um agendamento pelo <strong>Chat com IA</strong>, a IA <strong>sugere automaticamente</strong> o melhor funcionário com base em:</p>
+<ol>
+<li><strong>Skills (habilidades)</strong> - Funcionários com a competência certa para o trabalho</li>
+<li><strong>Disponibilidade</strong> - Evita conflitos de horário</li>
+<li><strong>Carga de trabalho</strong> - Prefere quem tem menos agendamentos no período</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">A sugestão é uma recomendação</p>
+<p>A IA sugere, mas <strong>você decide</strong>. Pode aceitar, escolher outro funcionário, ou pedir para a IA mostrar outras opções.</p>
+</div>
+<hr />
+<h2 id="regras-importantes">Regras Importantes<a class="headerlink" href="#regras-importantes" title="Permanent link">&para;</a></h2>
+<h3 id="campos-obrigatorios-e-limites">Campos obrigatórios e limites<a class="headerlink" href="#campos-obrigatorios-e-limites" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: center;">Obrigatório</th>
+<th style="text-align: center;">Mínimo</th>
+<th style="text-align: center;">Máximo</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>projectId</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>Deve existir no sistema</td>
+</tr>
+<tr>
+<td><code>employeeId</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>Usuário deve estar ativo</td>
+</tr>
+<tr>
+<td><code>startTime</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>ISO 8601 (data no passado é permitida)</td>
+</tr>
+<tr>
+<td><code>durationMinutes</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">1 min</td>
+<td style="text-align: center;">-</td>
+<td>Sem limite máximo explícito</td>
+</tr>
+<tr>
+<td><code>notes</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>Texto livre</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permissoes-necessarias">Permissões necessárias<a class="headerlink" href="#permissoes-necessarias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operação</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Funcionário com <code>canCreateSchedules</code></th>
+<th style="text-align: center;">Funcionário padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ver seus agendamentos</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td>Ver agendamentos de todos</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Criar agendamento</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Editar agendamento</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (só os próprios)</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Cancelar agendamento</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (só os próprios)</td>
+<td style="text-align: center;">Não</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validacoes-que-bloqueiam">Validações que bloqueiam<a class="headerlink" href="#validacoes-que-bloqueiam" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Conflito de horário</p>
+<p>O sistema <strong>valida automaticamente</strong> se o funcionário já tem agendamento no mesmo slot e retorna erro:
+<code>Funcionário não disponível neste horário</code></p>
+<p>Para resolver: escolha outro horário ou outro funcionário.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Data no passado é permitida</p>
+<p>O sistema <strong>permite</strong> criar agendamentos em datas passadas (útil para registrar visitas que já aconteceram). Atenção ao confirmar a data.</p>
+</div>
+<h3 id="defaults-do-sistema">Defaults do sistema<a class="headerlink" href="#defaults-do-sistema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Configuração</th>
+<th>Valor padrão</th>
+<th>Onde alterar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Duração padrão</td>
+<td>2 horas</td>
+<td>Na criação</td>
+</tr>
+<tr>
+<td>Slot do calendário</td>
+<td>08:00-18:00</td>
+<td>Sistema (não configurável)</td>
+</tr>
+<tr>
+<td>Status inicial</td>
+<td><code>scheduled</code></td>
+<td>Automático</td>
+</tr>
+<tr>
+<td>Sync Google Calendar</td>
+<td>Opcional</td>
+<td>Super admin em Integrações</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resumo-rapido">Resumo rápido<a class="headerlink" href="#resumo-rapido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Você quer...</th>
+<th>Faça isso...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ver todos os agendamentos</td>
+<td>Clique em "Agendamentos" no menu</td>
+</tr>
+<tr>
+<td>Ver no calendário</td>
+<td>Clique no botão "Calendário"</td>
+</tr>
+<tr>
+<td>Criar agendamento</td>
+<td>Clique em "Novo Agendamento"</td>
+</tr>
+<tr>
+<td>Criar via Chat</td>
+<td>"Agendar visita para projeto X amanhã 9h"</td>
+</tr>
+<tr>
+<td>Editar agendamento</td>
+<td>Botão "Editar" no card</td>
+</tr>
+<tr>
+<td>Cancelar agendamento</td>
+<td>Botão "Cancelar" no card</td>
+</tr>
+<tr>
+<td>Filtrar por funcionário</td>
+<td>Dropdown "Todos os usuários"</td>
+</tr>
+<tr>
+<td>Ver integração Google</td>
+<td>Configurações &gt; Integrações (super admin)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

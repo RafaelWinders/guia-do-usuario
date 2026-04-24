@@ -1,0 +1,5463 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/chat-en/">
+      
+      
+        <link rel="prev" href="../emergencia/">
+      
+      
+        <link rel="next" href="../projects/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>AI Chat - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chat-with-ai-assistant-user-guide" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              AI Chat
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-sgi-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is the SGI Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is the SGI Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-chat-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Chat screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Chat screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-see-on-the-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you see on the screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input bar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-the-ai-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. How the AI works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. How the AI works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-how-the-ai-understands-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of how the AI understands you
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-conversation-adapts-naturally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The conversation adapts naturally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-generate-scopes-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Generate Scopes (Work Order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Generate Scopes (Work Order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-power-of-scope-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The power of scope generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-generating-scope-by-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Generating scope by text
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Generating scope by text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-conversation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-describing-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for describing work
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-generating-scope-from-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Generating scope from photos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Generating scope from photos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for photos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-generating-scope-from-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Generating scope from audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Generating scope from audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-audio-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for audio recording
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-generating-scope-from-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Generating scope from video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Generating scope from video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-the-16-work-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. The 16 work categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. The 16 work categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement units
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-reviewing-and-editing-the-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Reviewing and editing the scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Reviewing and editing the scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you can do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-how-the-scope-appears-in-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. How the scope appears in the project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. How the scope appears in the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-see-in-the-scope-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you see in the Scope tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visibility-difference-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visibility difference by role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-register-costs-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Register costs through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Register costs through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-can-register-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who can register costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-automatic-invoice-reading-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Automatic invoice reading (OCR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Automatic invoice reading (OCR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-invoice-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for invoice photos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-schedule-visits-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Schedule visits through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Schedule visits through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-ai-suggests-an-employee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the AI suggests an employee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-send-progress-reports-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Send progress reports through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Send progress reports through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-flow-from-start-to-end-of-a-visit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete flow: from start to end of a visit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-what-a-report-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. What a report contains
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. What a report contains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-the-report-appears" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the report appears
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-sees-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who sees what
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-manage-inventory-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Manage inventory through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Manage inventory through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-manage-projects-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Manage projects through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Manage projects through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-project-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change project status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-accepted-input-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Accepted input types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Accepted input types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-functions-accept-which-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which functions accept which types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191-importing-work-orders-from-external-pdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 Importing Work Orders from external PDFs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1 Importing Work Orders from external PDFs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-conversation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example conversation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-how-the-ai-picks-the-right-action-masteragentrouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 How the AI picks the right action (masterAgentRouter)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-tips-for-using-the-chat-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Tips for using the Chat better
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. Tips for using the Chat better">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#be-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Be specific
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-right-input-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use the right input type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-remembers-context-with-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AI remembers context (with limits)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-something-went-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If something went wrong
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-mix-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You can mix languages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Size limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations-and-behaviors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations and behaviors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Quick reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Quick reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-say-in-chat-for-each-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to say in Chat for each action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-what-is-the-sgi-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. What is the SGI Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. What is the SGI Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-the-chat-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. The Chat screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. The Chat screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-see-on-the-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you see on the screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-indicator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status indicator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-bar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Input bar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-how-the-ai-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. How the AI works
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. How the AI works">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#examples-of-how-the-ai-understands-you" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Examples of how the AI understands you
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-conversation-adapts-naturally" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The conversation adapts naturally
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-generate-scopes-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Generate Scopes (Work Order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Generate Scopes (Work Order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-a-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What is a scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-power-of-scope-generation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The power of scope generation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-generating-scope-by-text" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Generating scope by text
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Generating scope by text">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-conversation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-describing-work" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for describing work
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-generating-scope-from-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Generating scope from photos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Generating scope from photos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for photos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-generating-scope-from-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Generating scope from audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Generating scope from audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-audio-recording" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for audio recording
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-generating-scope-from-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Generating scope from video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Generating scope from video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-the-16-work-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. The 16 work categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. The 16 work categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measurement-units" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Measurement units
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-reviewing-and-editing-the-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Reviewing and editing the scope
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Reviewing and editing the scope">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-can-do" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you can do
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scope-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scope status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Edit example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-how-the-scope-appears-in-the-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. How the scope appears in the project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. How the scope appears in the project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-you-see-in-the-scope-tab" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What you see in the Scope tab
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visibility-difference-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Visibility difference by role
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-register-costs-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Register costs through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Register costs through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-can-register-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who can register costs
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-automatic-invoice-reading-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Automatic invoice reading (OCR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Automatic invoice reading (OCR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-for-invoice-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tips for invoice photos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-schedule-visits-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Schedule visits through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Schedule visits through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conversation-example_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conversation example
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-the-ai-suggests-an-employee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How the AI suggests an employee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-send-progress-reports-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Send progress reports through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Send progress reports through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#complete-flow-from-start-to-end-of-a-visit" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Complete flow: from start to end of a visit
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-what-a-report-contains" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. What a report contains
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. What a report contains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#where-the-report-appears" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Where the report appears
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-sees-what" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who sees what
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-manage-inventory-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Manage inventory through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Manage inventory through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#available-operations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available operations
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-manage-projects-through-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Manage projects through Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Manage projects through Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Create a project
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#change-project-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Change project status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#query-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Query projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-accepted-input-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Accepted input types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Accepted input types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#which-functions-accept-which-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Which functions accept which types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191-importing-work-orders-from-external-pdfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 Importing Work Orders from external PDFs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1 Importing Work Orders from external PDFs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-it-works_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How it works
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-conversation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example conversation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-how-the-ai-picks-the-right-action-masteragentrouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 How the AI picks the right action (masterAgentRouter)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-tips-for-using-the-chat-better" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Tips for using the Chat better
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. Tips for using the Chat better">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#be-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Be specific
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-the-right-input-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use the right input type
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-ai-remembers-context-with-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The AI remembers context (with limits)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#if-something-went-wrong" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        If something went wrong
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#you-can-mix-languages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        You can mix languages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#size-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Size limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations-and-behaviors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations and behaviors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Quick reference
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Quick reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-to-say-in-chat-for-each-action" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What to say in Chat for each action
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#useful-shortcuts" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Useful shortcuts
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chat-with-ai-assistant-user-guide">Chat with AI Assistant - User Guide<a class="headerlink" href="#chat-with-ai-assistant-user-guide" title="Permanent link">&para;</a></h1>
+<p>In this guide, you will learn everything about the <strong>Chat with AI Assistant</strong> in SGI - the heart of the system. This is where artificial intelligence organizes all your work: generates detailed scopes, registers costs by reading invoices, schedules visits, collects progress reports, manages inventory and projects - all through natural conversation.</p>
+<blockquote>
+<p><strong>Why is the Chat so important?</strong> Almost everything you do manually on other SGI screens can be done faster through the Chat. Just talk naturally with the AI, as if it were a personal assistant in the field.</p>
+</blockquote>
+<hr />
+<h2 id="1-what-is-the-sgi-chat">1. What is the SGI Chat<a class="headerlink" href="#1-what-is-the-sgi-chat" title="Permanent link">&para;</a></h2>
+<p>The SGI Chat is your <strong>personal field assistant</strong>. It works like a natural conversation where you can:</p>
+<ul>
+<li><strong>Generate detailed scopes</strong> for projects from text, photos, audio, or video</li>
+<li><strong>Register costs</strong> and expenses, including automatic invoice reading</li>
+<li><strong>Schedule visits</strong> with intelligent suggestion of the best employee</li>
+<li><strong>Send daily progress reports</strong> from field work</li>
+<li><strong>Manage inventory</strong> - withdraw materials, check quantities, verify alerts</li>
+<li><strong>Manage projects</strong> - create, edit, change status</li>
+</ul>
+<h3 id="how-it-works">How it works<a class="headerlink" href="#how-it-works" title="Permanent link">&para;</a></h3>
+<p>You don't need to choose any "mode" or "function". The AI automatically understands what you want based on your message. If you say "I spent $500 at the store", the AI knows you want to register a cost. If you say "schedule a visit for tomorrow", the AI knows you want to create an appointment.</p>
+<p>The conversation adapts: if you start talking about costs and then switch to scheduling, the AI follows naturally. Everything works in the same chat, without needing to switch screens.</p>
+<div class="admonition note">
+<p class="admonition-title">Current availability</p>
+<p>The Chat works through the App (PWA) on all devices (desktop, tablet, mobile). WhatsApp support is planned for future releases, but is not yet available.</p>
+</div>
+<hr />
+<h2 id="2-the-chat-screen">2. The Chat screen<a class="headerlink" href="#2-the-chat-screen" title="Permanent link">&para;</a></h2>
+<p>On the left sidebar menu, click <strong>"Chat"</strong>. You will be taken to the assistant screen.</p>
+<p><img alt="Chat main screen" src="../images/chat-main.png" /></p>
+<h3 id="what-you-see-on-the-screen">What you see on the screen<a class="headerlink" href="#what-you-see-on-the-screen" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Header:</strong> "Assistente SGI" with a status indicator that changes based on the conversation context (see below)</li>
+<li><strong>Initial message:</strong> The AI introduces itself and lists its 5 main capabilities</li>
+<li><strong>"Nova Conversa" (New Conversation) button</strong> (top right corner) - To start a fresh conversation</li>
+<li><strong>Conversation area:</strong> Where messages appear (WhatsApp-style)</li>
+</ul>
+<h3 id="status-indicator">Status indicator<a class="headerlink" href="#status-indicator" title="Permanent link">&para;</a></h3>
+<p>The text below the "Assistente SGI" name changes automatically based on what the AI is currently doing:</p>
+<table>
+<thead>
+<tr>
+<th>Displayed status</th>
+<th>When it appears</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>online</strong></td>
+<td>When the AI is ready to receive any message (default)</td>
+</tr>
+<tr>
+<td><strong>General Assistant</strong></td>
+<td>Answering general questions or helping with doubts</td>
+</tr>
+<tr>
+<td><strong>Work Order</strong></td>
+<td>Generating or editing a work scope</td>
+</tr>
+<tr>
+<td><strong>Adding Cost</strong></td>
+<td>Registering an expense or reading an invoice</td>
+</tr>
+<tr>
+<td><strong>Scheduling</strong></td>
+<td>Creating or consulting appointments</td>
+</tr>
+<tr>
+<td><strong>Daily Reporting</strong></td>
+<td>Collecting progress report from a visit</td>
+</tr>
+<tr>
+<td><strong>Inventory Management</strong></td>
+<td>Consulting or moving materials</td>
+</tr>
+<tr>
+<td><strong>Project Management</strong></td>
+<td>Creating, editing, or consulting projects</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Tip:</strong> The status indicator helps you understand what the AI is processing. If you are generating a scope and change the subject, the status automatically changes to reflect the new context.</p>
+</blockquote>
+<h3 id="input-bar">Input bar<a class="headerlink" href="#input-bar" title="Permanent link">&para;</a></h3>
+<p><img alt="Input bar with attachment buttons" src="../images/chat-attachments.png" /></p>
+<p>At the bottom of the screen, you will find:</p>
+<p><strong>Desktop:</strong> Individual buttons for each attachment type.</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text field</strong></td>
+<td>"Digite sua mensagem..." - where you type (up to 2000 characters)</td>
+</tr>
+<tr>
+<td><strong>Image button</strong></td>
+<td>Send photos (invoices, work site, documents)</td>
+</tr>
+<tr>
+<td><strong>Microphone button</strong></td>
+<td>Record voice audio directly in the app (with waveform)</td>
+</tr>
+<tr>
+<td><strong>Audio button</strong></td>
+<td>Send a pre-recorded audio file</td>
+</tr>
+<tr>
+<td><strong>Video button (camera)</strong></td>
+<td>Record video up to 30s directly in the app</td>
+</tr>
+<tr>
+<td><strong>Video button (upload)</strong></td>
+<td>Send pre-recorded video</td>
+</tr>
+<tr>
+<td><strong>PDF button</strong></td>
+<td>Send PDF file (up to 10MB) - useful for importing Work Orders</td>
+</tr>
+<tr>
+<td><strong>Send button</strong></td>
+<td>Send the message (or press Enter)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mobile:</strong> A single <strong>"+"</strong> button opens a WhatsApp-style menu with all options (photo, audio, video, PDF).</p>
+<!-- TODO: screenshot of ChatInputBar mobile with attachments menu open. File: images/chat-mobile-menu.png. Capture: Popover menu with Photo/Record Audio/Upload Audio/Record Video/Upload Video/Upload PDF options -->
+<p><img alt="Mobile attachments menu" class="placeholder-image" src="images/chat-mobile-menu.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Keyboard shortcuts</p>
+<ul>
+<li><strong>Enter</strong> - Send the message</li>
+<li><strong>Shift+Enter</strong> - New line without sending</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Chat limits</p>
+<ul>
+<li><strong>Text:</strong> up to 2000 characters per message (counter shows when you pass 80%)</li>
+<li><strong>PDF:</strong> up to 10 MB per file</li>
+<li><strong>Image/audio/video:</strong> up to 50 MB per file</li>
+<li><strong>Video recorded in app:</strong> maximum 30 seconds</li>
+<li><strong>Session:</strong> expires automatically (1 day for most flows, 7 days for specific cases). After expiration, the AI no longer remembers the context of that conversation.</li>
+</ul>
+</div>
+<hr />
+<h2 id="3-how-the-ai-works">3. How the AI works<a class="headerlink" href="#3-how-the-ai-works" title="Permanent link">&para;</a></h2>
+<p>The SGI AI is smart: it understands the context of your conversation and automatically decides which action to take. You don't need to use special commands or choose menus.</p>
+<h3 id="examples-of-how-the-ai-understands-you">Examples of how the AI understands you<a class="headerlink" href="#examples-of-how-the-ai-understands-you" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>You say...</th>
+<th>The AI understands you want to...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"I need a scope for project X"</td>
+<td>Generate a scope (Work Order)</td>
+</tr>
+<tr>
+<td>"I spent $500 on materials"</td>
+<td>Register a cost</td>
+</tr>
+<tr>
+<td>[Send invoice photo]</td>
+<td>Read the invoice and register the cost</td>
+</tr>
+<tr>
+<td>"Schedule a visit for tomorrow at 9am"</td>
+<td>Create an appointment</td>
+</tr>
+<tr>
+<td>"I arrived at the site"</td>
+<td>Start a progress report</td>
+</tr>
+<tr>
+<td>"How much cement is in stock?"</td>
+<td>Check inventory</td>
+</tr>
+<tr>
+<td>"Create a new project"</td>
+<td>Create a project</td>
+</tr>
+<tr>
+<td>"Hi, good morning!"</td>
+<td>Greet and offer help</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-conversation-adapts-naturally">The conversation adapts naturally<a class="headerlink" href="#the-conversation-adapts-naturally" title="Permanent link">&para;</a></h3>
+<p>The AI remembers the context of your conversation. You don't need to repeat information:</p>
+<blockquote>
+<p><strong>You:</strong> "I need to generate a scope for the Rua das Flores project"
+<strong>AI:</strong> "Got it! I'll collect the scope information for 'Carpet Installation - Rua das Flores 123'. Describe the work that needs to be done."
+<strong>You:</strong> "Install 100 SF of drywall in the main bathroom"
+<strong>AI:</strong> "Added to scope: Drywall - Install Drywall, 100 SF, Main Bathroom. Any more items?"
+<strong>You:</strong> "No, that's it. Oh, and schedule a visit for tomorrow at 9am"
+<strong>AI:</strong> "Perfect! Scope finalized. Now I'll schedule the visit. Checking availability... I recommend Joao Silva (skill: Drywall). Confirm for tomorrow at 09:00?"</p>
+</blockquote>
+<p>Notice how the conversation naturally changed from "generate scope" to "schedule visit" without any interruption.</p>
+<hr />
+<h2 id="4-generate-scopes-work-order">4. Generate Scopes (Work Order)<a class="headerlink" href="#4-generate-scopes-work-order" title="Permanent link">&para;</a></h2>
+<h3 id="what-is-a-scope">What is a scope<a class="headerlink" href="#what-is-a-scope" title="Permanent link">&para;</a></h3>
+<p>The <strong>scope</strong> (also called Work Order) is the <strong>complete breakdown of work</strong> that needs to be done in a project. It organizes all tasks into professional categories, in the actual execution order of the construction.</p>
+<p>Each scope item has:
+- <strong>Task</strong> - What needs to be done (e.g., "Install Drywall")
+- <strong>Action</strong> - Type of action: Install, Remove, or Detach &amp; Reset
+- <strong>Type</strong> - Labor, Material, or Equipment
+- <strong>Quantity</strong> - How much (e.g., 100)
+- <strong>Unit</strong> - Measurement used (e.g., SF - square feet, EA - each)
+- <strong>Room</strong> - Where it will be done (e.g., Bathroom, Kitchen)
+- <strong>Notes</strong> - Additional observations</p>
+<p>The scope is directly connected to the <strong>"Scope"</strong> tab in the project. When you generate a scope through Chat, it automatically appears in the project details.</p>
+<h3 id="the-power-of-scope-generation">The power of scope generation<a class="headerlink" href="#the-power-of-scope-generation" title="Permanent link">&para;</a></h3>
+<p>What makes SGI special is the ability to <strong>generate complete scopes from any type of input</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Input</th>
+<th>What the AI does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text</strong></td>
+<td>You describe the work and the AI organizes it into categories</td>
+</tr>
+<tr>
+<td><strong>Photos</strong></td>
+<td>The AI analyzes photos and identifies materials, conditions, and dimensions</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>You record yourself talking about the work and the AI transcribes and organizes it</td>
+</tr>
+<tr>
+<td><strong>Video</strong></td>
+<td>The AI analyzes the video frame by frame, extracting visual and audio information</td>
+</tr>
+</tbody>
+</table>
+<p>You can even <strong>combine</strong> multiple input types in the same conversation!</p>
+<hr />
+<h2 id="5-generating-scope-by-text">5. Generating scope by text<a class="headerlink" href="#5-generating-scope-by-text" title="Permanent link">&para;</a></h2>
+<p>The simplest way to generate a scope is by describing the work through text.</p>
+<h3 id="complete-conversation-example">Complete conversation example<a class="headerlink" href="#complete-conversation-example" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "I need to generate a scope for the Rua Dr. Melo Alves project"
+<strong>AI:</strong> "Found the project 'Hydraulic Installation - Rua Dr. Melo Alves, 700'. I'll collect the scope items. Describe the work that needs to be done."</p>
+<p><strong>You:</strong> "I need to install 100 SF of drywall in the main bathroom and paint 2 bedrooms, each with 200 SF"
+<strong>AI:</strong> "Got it! I'll organize the scope:</p>
+<p><strong>Category DRY - Drywall:</strong>
+- Install Drywall | Labor | 100 SF | Main Bathroom</p>
+<p><strong>Category PNT - Painting:</strong>
+- Install Paint | Labor | 200 SF | Bedroom 1
+- Install Paint | Labor | 200 SF | Bedroom 2</p>
+<p>Total: 3 items in 2 categories. Want to add more items?"</p>
+<p><strong>You:</strong> "Yes, also need to replace the bathroom floor, 50 SF of tile"
+<strong>AI:</strong> "Added!</p>
+<p><strong>Category TIL - Tile:</strong>
+- Install Tile | Labor | 50 SF | Main Bathroom</p>
+<p>Updated total: 4 items in 3 categories. Anything else?"</p>
+<p><strong>You:</strong> "No, you can finalize"
+<strong>AI:</strong> "Scope sent for review! Final summary:
+- DRY (Drywall): 1 item - 100 SF
+- PNT (Painting): 2 items - 400 SF total
+- TIL (Tile): 1 item - 50 SF</p>
+<p>The scope is available in the 'Scope' tab of the project. An administrator can review and approve it."</p>
+</blockquote>
+<h3 id="tips-for-describing-work">Tips for describing work<a class="headerlink" href="#tips-for-describing-work" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Be specific with quantities:</strong> "100 SF of drywall" is better than "drywall in the bathroom"</li>
+<li><strong>Mention the rooms:</strong> "painting in the living room" helps organize by location</li>
+<li><strong>Use clear actions:</strong> "install", "remove", "replace" help the AI classify correctly</li>
+<li><strong>You can mix languages:</strong> "50 SF de tile no bathroom" works perfectly</li>
+</ul>
+<hr />
+<h2 id="6-generating-scope-from-photos">6. Generating scope from photos<a class="headerlink" href="#6-generating-scope-from-photos" title="Permanent link">&para;</a></h2>
+<p>One of the most powerful SGI features is the ability to <strong>analyze photos</strong> to automatically generate scopes.</p>
+<h3 id="how-it-works_1">How it works<a class="headerlink" href="#how-it-works_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Send one or more photos of the work site</li>
+<li>The AI analyzes the images and identifies:</li>
+<li><strong>Rooms</strong> and visible spaces</li>
+<li><strong>Materials</strong> and their conditions</li>
+<li><strong>Approximate dimensions</strong></li>
+<li><strong>Problems</strong> or visible damage</li>
+<li>The AI automatically suggests items and categories for the scope</li>
+</ol>
+<h3 id="conversation-example">Conversation example<a class="headerlink" href="#conversation-example" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "I'll send photos from the apartment inspection"
+<strong>You:</strong> [Sends 3 photos: bathroom with damaged tiles, bedroom with peeling paint, kitchen with broken floor]</p>
+<p><strong>AI:</strong> "I analyzed the 3 photos. I identified:</p>
+<p><strong>Photo 1 - Bathroom:</strong>
+- Tiles with cracks and deteriorated grout
+- Estimate: ~40 SF of area to be replaced</p>
+<p><strong>Photo 2 - Bedroom:</strong>
+- Wall with peeling paint
+- Needs surface preparation + repainting
+- Estimate: ~150 SF of area</p>
+<p><strong>Photo 3 - Kitchen:</strong>
+- Ceramic floor broken in several spots
+- Estimate: ~60 SF of area</p>
+<p>I suggest the following scope:</p>
+<p><strong>TIL - Tile:</strong> Remove + Install Tile | 40 SF | Bathroom
+<strong>PNT - Painting:</strong> Install Paint | 150 SF | Bedroom
+<strong>FCW - Floor Covering:</strong> Remove + Install Floor | 60 SF | Kitchen</p>
+<p>Want to confirm, adjust quantities, or add more items?"</p>
+<p><strong>You:</strong> "The bathroom is bigger, it's actually 60 SF"
+<strong>AI:</strong> "Corrected! Tile in Bathroom: 40 SF → 60 SF. Any other adjustments?"</p>
+</blockquote>
+<h3 id="tips-for-photos">Tips for photos<a class="headerlink" href="#tips-for-photos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Take photos from different angles</strong> so the AI has more context</li>
+<li><strong>Include a size reference</strong> (e.g., a visible measuring tape) for more accurate estimates</li>
+<li><strong>Clear, well-lit photos</strong> give better results</li>
+<li><strong>You can send multiple photos</strong> at once - the AI analyzes all of them</li>
+</ul>
+<hr />
+<h2 id="7-generating-scope-from-audio">7. Generating scope from audio<a class="headerlink" href="#7-generating-scope-from-audio" title="Permanent link">&para;</a></h2>
+<p>Ideal for <strong>field inspections</strong>. You can walk through the site talking naturally about what needs to be done, and the AI transcribes and organizes everything.</p>
+<h3 id="how-it-works_2">How it works<a class="headerlink" href="#how-it-works_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>microphone</strong> button to record or send an <strong>audio file</strong></li>
+<li>The AI transcribes the audio automatically</li>
+<li>Extracts structured information (tasks, quantities, rooms)</li>
+<li>Organizes into scope categories</li>
+</ol>
+<h3 id="conversation-example_1">Conversation example<a class="headerlink" href="#conversation-example_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> [Records 2-minute audio while walking through the site]
+<em>"I'm in the main bathroom, need to replace all the tile, about 60 square feet. The sink also needs to be reinstalled. Now I'm in the bedroom... it's painting here, about 200 square feet of wall. There's a hole in the drywall near the window, about 4 square feet that needs to be patched. In the kitchen the plumbing is leaking under the sink, need to replace the pipes."</em></p>
+<p><strong>AI:</strong> "I transcribed the audio and organized the scope:</p>
+<p><strong>TIL - Tile:</strong>
+- Remove + Install Tile | 60 SF | Main Bathroom</p>
+<p><strong>PLM - Plumbing:</strong>
+- Detach &amp; Reset Sink | 1 EA | Main Bathroom
+- Remove + Install Plumbing | 1 EA | Kitchen (leak)</p>
+<p><strong>DRY - Drywall:</strong>
+- Install Drywall Patch | 4 SF | Bedroom (hole near window)</p>
+<p><strong>PNT - Painting:</strong>
+- Install Paint | 200 SF | Bedroom</p>
+<p>Total: 5 items in 4 categories. Is this correct?"</p>
+</blockquote>
+<h3 id="tips-for-audio-recording">Tips for audio recording<a class="headerlink" href="#tips-for-audio-recording" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Speak naturally</strong> - no need to be formal</li>
+<li><strong>Mention the room</strong> when you change location ("now I'm in the kitchen...")</li>
+<li><strong>Give quantities</strong> when possible ("about 100 square feet")</li>
+<li><strong>You can mix languages</strong> - the AI understands Portuguese and English</li>
+<li><strong>Longer recordings</strong> are better - more details = more accurate scope</li>
+</ul>
+<hr />
+<h2 id="8-generating-scope-from-video">8. Generating scope from video<a class="headerlink" href="#8-generating-scope-from-video" title="Permanent link">&para;</a></h2>
+<p>The <strong>most complete</strong> way to generate a scope. The AI analyzes the video frame by frame, combining visual and audio information for maximum detail.</p>
+<h3 id="how-it-works_3">How it works<a class="headerlink" href="#how-it-works_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>video</strong> button and send the file</li>
+<li>The AI analyzes:</li>
+<li><strong>Video frames</strong> - identifies rooms, materials, dimensions, damage</li>
+<li><strong>Video audio</strong> - transcribes your comments during recording</li>
+<li>Combines both sources for a more complete scope</li>
+</ol>
+<h3 id="conversation-example_2">Conversation example<a class="headerlink" href="#conversation-example_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> [Sends 3-minute video doing walkthrough of the apartment, commenting while filming]</p>
+<p><strong>AI:</strong> "I analyzed the complete video. I combined what I saw in the images with your comments:</p>
+<p><strong>Identified visually:</strong>
+- Bathroom: damaged tiles, old sink, cracked glass shower enclosure
+- Bedroom: walls with peeling paint, hole in drywall
+- Kitchen: broken ceramic floor, visible leak under sink</p>
+<p><strong>From your comments:</strong>
+- Bathroom: 60 SF of tile, reinstall sink
+- Bedroom: 200 SF of painting, 4 SF of drywall patch
+- Kitchen: replace plumbing</p>
+<p><strong>Suggested scope:</strong>
+- TIL: 60 SF | Bathroom
+- PLM: Sink (Bathroom) + Plumbing (Kitchen)
+- GLS: 1 EA Glass Enclosure | Bathroom (cracked - not mentioned in audio, saw in images)
+- DRY: 4 SF Patch | Bedroom
+- PNT: 200 SF | Bedroom
+- FCW: ~60 SF Floor | Kitchen</p>
+<p>I noticed the glass enclosure is cracked but you didn't mention it. Want to include it in the scope?"</p>
+</blockquote>
+<p>Notice how the AI <strong>complemented</strong> the audio information with what it saw in the images, identifying the cracked glass enclosure that wasn't mentioned verbally.</p>
+<h3 id="tips-for-videos">Tips for videos<a class="headerlink" href="#tips-for-videos" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>⚠️ In testing phase:</strong> Video upload is in testing phase. We strongly recommend sending <strong>short videos</strong> (up to 1-2 minutes). Long videos may take longer to process or have less accurate results.</p>
+</blockquote>
+<ul>
+<li><strong>Short videos</strong> - prefer videos of up to 1-2 minutes per room</li>
+<li><strong>Comment while filming</strong> - "here we need drywall, about 100 SF"</li>
+<li><strong>Film slowly</strong> - give the AI time to analyze each scene</li>
+<li><strong>Show details</strong> - zoom in on damage, cracks, leaks</li>
+<li><strong>Prefer photos + audio</strong> if the video is too long - results may be better</li>
+</ul>
+<hr />
+<h2 id="9-the-16-work-categories">9. The 16 work categories<a class="headerlink" href="#9-the-16-work-categories" title="Permanent link">&para;</a></h2>
+<p>The SGI scope organizes work into <strong>16 professional categories</strong>, in the actual execution order of the construction. This ensures work is done in the correct sequence.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FRM</strong></td>
+<td>Framing</td>
+<td>Wood structures, walls, beams</td>
+</tr>
+<tr>
+<td><strong>ELE</strong></td>
+<td>Electrical</td>
+<td>Wiring, outlets, switches, panels</td>
+</tr>
+<tr>
+<td><strong>INS</strong></td>
+<td>Insulation</td>
+<td>Thermal and acoustic insulation</td>
+</tr>
+<tr>
+<td><strong>DRY</strong></td>
+<td>Drywall</td>
+<td>Gypsum boards, partitions</td>
+</tr>
+<tr>
+<td><strong>MUD</strong></td>
+<td>Mud/Taping</td>
+<td>Joint compound, tape, finishing</td>
+</tr>
+<tr>
+<td><strong>FNC</strong></td>
+<td>Finish Carpentry</td>
+<td>Baseboards, moldings, doors, windows</td>
+</tr>
+<tr>
+<td><strong>PNT</strong></td>
+<td>Painting</td>
+<td>Wall, ceiling, and trim painting</td>
+</tr>
+<tr>
+<td><strong>FCW</strong></td>
+<td>Floor Covering</td>
+<td>Carpet, laminate, vinyl</td>
+</tr>
+<tr>
+<td><strong>TIL</strong></td>
+<td>Tile</td>
+<td>Ceramic tiles, porcelain, stone</td>
+</tr>
+<tr>
+<td><strong>PLM</strong></td>
+<td>Plumbing</td>
+<td>Pipes, sinks, toilets, showers</td>
+</tr>
+<tr>
+<td><strong>DTL</strong></td>
+<td>Details/Hardware</td>
+<td>Handles, locks, accessories</td>
+</tr>
+<tr>
+<td><strong>GLS</strong></td>
+<td>Glass/Mirrors</td>
+<td>Mirrors, glass enclosures, glass windows</td>
+</tr>
+<tr>
+<td><strong>CLN</strong></td>
+<td>Cleaning</td>
+<td>Post-construction cleaning</td>
+</tr>
+<tr>
+<td><strong>TCH</strong></td>
+<td>Touch Ups</td>
+<td>Final paint and finish touch-ups</td>
+</tr>
+<tr>
+<td><strong>CON</strong></td>
+<td>Contents</td>
+<td>Furniture, appliances, decor</td>
+</tr>
+<tr>
+<td><strong>DMO</strong></td>
+<td>Demolition</td>
+<td>Demolition of existing structures</td>
+</tr>
+</tbody>
+</table>
+<h3 id="measurement-units">Measurement units<a class="headerlink" href="#measurement-units" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Abbreviation</th>
+<th>Name</th>
+<th>Usage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EA</strong></td>
+<td>Each</td>
+<td>Individual items (sink, toilet, door)</td>
+</tr>
+<tr>
+<td><strong>SF</strong></td>
+<td>Square Feet</td>
+<td>Areas (walls, floors)</td>
+</tr>
+<tr>
+<td><strong>LF</strong></td>
+<td>Linear Feet</td>
+<td>Lengths (baseboards, pipes)</td>
+</tr>
+<tr>
+<td><strong>SY</strong></td>
+<td>Square Yards</td>
+<td>Larger areas (carpet)</td>
+</tr>
+<tr>
+<td><strong>HR</strong></td>
+<td>Hours</td>
+<td>Work time</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> The categories and units follow the American construction standard, as the system is designed to serve international markets. The AI accepts input in Portuguese and converts automatically.</p>
+</blockquote>
+<hr />
+<h2 id="10-reviewing-and-editing-the-scope">10. Reviewing and editing the scope<a class="headerlink" href="#10-reviewing-and-editing-the-scope" title="Permanent link">&para;</a></h2>
+<p>After the AI generates the scope, you can review and adjust before finalizing.</p>
+<h3 id="what-you-can-do">What you can do<a class="headerlink" href="#what-you-can-do" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Add more items:</strong> "Add 50 LF of baseboard in the living room"</li>
+<li><strong>Remove items:</strong> "Remove the painting item for bedroom 2"</li>
+<li><strong>Change quantities:</strong> "The drywall in the bathroom is 80 SF, not 60"</li>
+<li><strong>Change rooms:</strong> "The tile is in the kitchen, not the bathroom"</li>
+<li><strong>Confirm and submit:</strong> "You can finalize the scope"</li>
+</ul>
+<h3 id="scope-status">Scope status<a class="headerlink" href="#scope-status" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Draft</strong></td>
+<td>Scope being built, can be freely edited</td>
+</tr>
+<tr>
+<td><strong>Ready for Review</strong></td>
+<td>Scope finalized, awaiting admin approval</td>
+</tr>
+<tr>
+<td><strong>Approved</strong></td>
+<td>Scope approved and ready for execution</td>
+</tr>
+<tr>
+<td><strong>In Progress</strong></td>
+<td>Work being executed</td>
+</tr>
+<tr>
+<td><strong>Completed</strong></td>
+<td>Work finished</td>
+</tr>
+</tbody>
+</table>
+<h3 id="edit-example">Edit example<a class="headerlink" href="#edit-example" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>AI:</strong> "Current scope has 4 items. Want to adjust anything?"
+<strong>You:</strong> "The drywall is actually 120 SF, and add demolition of the old floor in the kitchen, 60 SF"
+<strong>AI:</strong> "Updated!
+- DRY: 100 SF → 120 SF (Main Bathroom)
+- DMO: Added - Remove Floor | 60 SF | Kitchen</p>
+<p>Total: 5 items in 4 categories. Any more adjustments?"</p>
+</blockquote>
+<hr />
+<h2 id="11-how-the-scope-appears-in-the-project">11. How the scope appears in the project<a class="headerlink" href="#11-how-the-scope-appears-in-the-project" title="Permanent link">&para;</a></h2>
+<p>After finalizing the scope through Chat, it automatically appears in the <strong>"Scope"</strong> tab of the project details.</p>
+<h3 id="what-you-see-in-the-scope-tab">What you see in the Scope tab<a class="headerlink" href="#what-you-see-in-the-scope-tab" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Collapsible categories</strong> - Click to expand/collapse each category</li>
+<li><strong>Detailed items</strong> - Task, action, type, quantity, unit, room, and notes</li>
+<li><strong>Prices</strong> - Only administrators see estimated prices</li>
+<li><strong>Approval button</strong> - Administrators can approve the scope</li>
+</ul>
+<h3 id="visibility-difference-by-role">Visibility difference by role<a class="headerlink" href="#visibility-difference-by-role" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Information</th>
+<th style="text-align: center;">Administrator</th>
+<th style="text-align: center;">Employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categories and items</td>
+<td style="text-align: center;">Sees</td>
+<td style="text-align: center;">Sees</td>
+</tr>
+<tr>
+<td>Quantities and units</td>
+<td style="text-align: center;">Sees</td>
+<td style="text-align: center;">Sees</td>
+</tr>
+<tr>
+<td>Rooms and notes</td>
+<td style="text-align: center;">Sees</td>
+<td style="text-align: center;">Sees</td>
+</tr>
+<tr>
+<td>Unit prices</td>
+<td style="text-align: center;">Sees</td>
+<td style="text-align: center;">Doesn't see</td>
+</tr>
+<tr>
+<td>Total prices</td>
+<td style="text-align: center;">Sees</td>
+<td style="text-align: center;">Doesn't see</td>
+</tr>
+<tr>
+<td>Approve button</td>
+<td style="text-align: center;">Sees</td>
+<td style="text-align: center;">Doesn't see</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>For more details about the Scope tab, see the <strong>Projects Guide</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="12-register-costs-through-chat">12. Register costs through Chat<a class="headerlink" href="#12-register-costs-through-chat" title="Permanent link">&para;</a></h2>
+<p>You can register project costs and expenses directly through Chat, without needing to navigate to the projects screen.</p>
+<h3 id="conversation-example_3">Conversation example<a class="headerlink" href="#conversation-example_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "I spent R$ 1,250 on materials at Home Depot for the Rua das Flores project"
+<strong>AI:</strong> "Got it! I'll register the cost:
+- <strong>Project:</strong> Carpet Installation - Rua das Flores 123
+- <strong>Amount:</strong> R$ 1,250.00
+- <strong>Description:</strong> Materials - Home Depot
+- <strong>Category:</strong> Material</p>
+<p>Confirm?"
+<strong>You:</strong> "Yes"
+<strong>AI:</strong> "Cost registered successfully! Status: Approved."</p>
+</blockquote>
+<h3 id="who-can-register-costs">Who can register costs<a class="headerlink" href="#who-can-register-costs" title="Permanent link">&para;</a></h3>
+<p>Cost registration depends on <strong>user permissions</strong>:</p>
+<ul>
+<li><strong>Users with "Can add costs" permission:</strong> Can register costs normally through Chat. The cost is created in the project.</li>
+<li><strong>Users without this permission:</strong> <strong>Cannot register costs</strong> through Chat. The AI informs you that you don't have authorization for this operation.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> Permissions are configured by the administrator on the Users screen. See the <strong>Users and Skills Guide</strong> for more details.</p>
+</blockquote>
+<hr />
+<h2 id="13-automatic-invoice-reading-ocr">13. Automatic invoice reading (OCR)<a class="headerlink" href="#13-automatic-invoice-reading-ocr" title="Permanent link">&para;</a></h2>
+<p>One of the most practical SGI features: just <strong>send a photo of the invoice</strong> and the AI reads everything automatically.</p>
+<h3 id="how-it-works_4">How it works<a class="headerlink" href="#how-it-works_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Take a photo of the invoice or receipt</li>
+<li>Send the photo in Chat</li>
+<li>The AI uses computer vision to extract:</li>
+<li><strong>Total amount</strong> of the purchase</li>
+<li><strong>Items</strong> purchased (name, quantity, unit price)</li>
+<li><strong>Vendor</strong> (store name)</li>
+<li><strong>Date</strong> of purchase</li>
+<li>You check the data and confirm</li>
+</ol>
+<h3 id="conversation-example_4">Conversation example<a class="headerlink" href="#conversation-example_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> [Sends photo of an invoice from the materials store]</p>
+<p><strong>AI:</strong> "I analyzed the invoice. I identified:</p>
+<p><strong>Vendor:</strong> Casa dos Materiais Ltda
+<strong>Date:</strong> 02/10/2026
+<strong>Total:</strong> R$ 2,350.00</p>
+<p><strong>Items:</strong>
+| Item | Qty | Unit Price | Total |
+|------|-----|------------|-------|
+| White Acrylic Paint 18L | 5 | R$ 250.00 | R$ 1,250.00 |
+| Wool Roller 23cm | 10 | R$ 35.00 | R$ 350.00 |
+| Sandpaper 150 (pack 50) | 3 | R$ 45.00 | R$ 135.00 |
+| Masking Tape 50mm | 20 | R$ 12.00 | R$ 240.00 |
+| Spackle 25kg | 5 | R$ 75.00 | R$ 375.00 |</p>
+<p>Does the data look correct? Which project should I associate it with?"</p>
+<p><strong>You:</strong> "Data is correct, the Rua Dr. Melo Alves project"
+<strong>AI:</strong> "Cost of R$ 2,350.00 added to project 'Hydraulic Installation - Rua Dr. Melo Alves, 700'. Status: Approved."</p>
+</blockquote>
+<h3 id="tips-for-invoice-photos">Tips for invoice photos<a class="headerlink" href="#tips-for-invoice-photos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Flat, well-lit photo</strong> - avoid shadows and reflections</li>
+<li><strong>Include the entire invoice</strong> - the AI needs to see the total and items</li>
+<li><strong>Can be a printed or electronic invoice</strong> (phone screen)</li>
+<li><strong>If the invoice is crumpled</strong>, try to flatten it before photographing</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> If the AI can't read some field, it will ask you to provide it manually. You always confirm before saving.</p>
+</blockquote>
+<hr />
+<h2 id="14-schedule-visits-through-chat">14. Schedule visits through Chat<a class="headerlink" href="#14-schedule-visits-through-chat" title="Permanent link">&para;</a></h2>
+<p>Scheduling a visit through Chat is faster than through the Scheduling screen, because the AI automatically suggests the best employee.</p>
+<h3 id="conversation-example_5">Conversation example<a class="headerlink" href="#conversation-example_5" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "I need to schedule a visit for the Rua das Flores project, tomorrow at 9am"
+<strong>AI:</strong> "Checking availability for 'Carpet Installation - Rua das Flores 123'...</p>
+<p><strong>I recommend:</strong> Joao Silva
+- Skill: Carpet Installation
+- Available tomorrow at 09:00
+- No schedule conflicts</p>
+<p>Confirm the appointment?"
+<strong>You:</strong> "Confirm"
+<strong>AI:</strong> "Appointment created!
+- Employee: Joao Silva
+- Date: 02/15/2026 at 09:00
+- Duration: 2 hours
+- Project: Carpet Installation - Rua das Flores 123</p>
+<p>Notification sent to Joao Silva."</p>
+</blockquote>
+<h3 id="how-the-ai-suggests-an-employee">How the AI suggests an employee<a class="headerlink" href="#how-the-ai-suggests-an-employee" title="Permanent link">&para;</a></h3>
+<p>The AI analyzes 3 criteria to make a <strong>suggestion</strong>:
+1. <strong>Skills</strong> - Selects employees with the right competency for the job
+2. <strong>Availability</strong> - Checks the schedule to avoid time conflicts
+3. <strong>Workload</strong> - Prefers employees with fewer appointments in the period</p>
+<blockquote>
+<p><strong>Important:</strong> The AI's suggestion is just a <strong>recommendation</strong>. The administrator has <strong>full control</strong> over who gets scheduled. You can accept the suggestion, choose a different employee, or ask the AI to show other options. The final decision is always yours.</p>
+<p><strong>Note:</strong> Administrators can schedule for any employee. Employees only see their own appointments.</p>
+</blockquote>
+<hr />
+<h2 id="15-send-progress-reports-through-chat">15. Send progress reports through Chat<a class="headerlink" href="#15-send-progress-reports-through-chat" title="Permanent link">&para;</a></h2>
+<p>Daily reports are generated by employees in the field, directly through Chat. There is no "create report" button on the Daily Reports page - they are created here.</p>
+<h3 id="complete-flow-from-start-to-end-of-a-visit">Complete flow: from start to end of a visit<a class="headerlink" href="#complete-flow-from-start-to-end-of-a-visit" title="Permanent link">&para;</a></h3>
+<h4 id="1-arriving-at-the-site">1. Arriving at the site<a class="headerlink" href="#1-arriving-at-the-site" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "I arrived at the Rua das Flores project"
+<strong>AI:</strong> "Visit started! Project: 'Carpet Installation - Rua das Flores 123'. Good work! Let me know about progress throughout the day."</p>
+</blockquote>
+<h4 id="2-reporting-progress">2. Reporting progress<a class="headerlink" href="#2-reporting-progress" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "I did 40% of the carpet, finished the living room and starting the bedrooms"
+<strong>AI:</strong> "Progress updated: 40% completed. Tasks registered:
+- Carpet installation in living room (completed)
+- Starting installation in bedrooms</p>
+<p>Keep it up!"</p>
+<p><strong>You:</strong> [Sends 2 photos of the installed carpet in the living room]
+<strong>AI:</strong> "Photos received and attached to the report. The work looks great!"</p>
+</blockquote>
+<h4 id="3-reporting-problems">3. Reporting problems<a class="headerlink" href="#3-reporting-problems" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "I found a problem: the subfloor in bedroom 2 is uneven, it will need leveling before the carpet"
+<strong>AI:</strong> "Problem registered in the report:
+- 'Uneven subfloor in bedroom 2 - needs leveling'</p>
+<p>Want to continue working in the other rooms meanwhile?"</p>
+</blockquote>
+<h4 id="4-finishing-the-visit">4. Finishing the visit<a class="headerlink" href="#4-finishing-the-visit" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "I'm done for today. Did 75% of the total, still missing the 2 smaller bedrooms"
+<strong>AI:</strong> "Report finalized!</p>
+<p><strong>Today's summary:</strong>
+- Progress: 75%
+- Tasks completed: Carpet in living room, Carpet in bedroom 1
+- Problems: Uneven subfloor in bedroom 2
+- Photos: 2 attachments</p>
+<p>Report submitted and available on the Daily Reports page and in the project's Reports tab. Have a good rest!"</p>
+</blockquote>
+<hr />
+<h2 id="16-what-a-report-contains">16. What a report contains<a class="headerlink" href="#16-what-a-report-contains" title="Permanent link">&para;</a></h2>
+<p>Each report generated through Chat includes:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Project</strong></td>
+<td>Project name</td>
+<td>Carpet Installation - Rua das Flores 123</td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td>When the report was submitted</td>
+<td>02/15/2026</td>
+</tr>
+<tr>
+<td><strong>Employee</strong></td>
+<td>Who submitted</td>
+<td>Joao Silva</td>
+</tr>
+<tr>
+<td><strong>Progress</strong></td>
+<td>Completion percentage</td>
+<td>75%</td>
+</tr>
+<tr>
+<td><strong>Tasks completed</strong></td>
+<td>List of what was done</td>
+<td>Carpet in living room, Carpet in bedroom 1</td>
+</tr>
+<tr>
+<td><strong>Problems</strong></td>
+<td>Difficulties encountered</td>
+<td>Uneven subfloor in bedroom 2</td>
+</tr>
+<tr>
+<td><strong>Notes</strong></td>
+<td>Additional observations</td>
+<td>Smaller bedrooms remaining</td>
+</tr>
+<tr>
+<td><strong>Photos</strong></td>
+<td>Progress images</td>
+<td>2 photos attached</td>
+</tr>
+</tbody>
+</table>
+<h3 id="where-the-report-appears">Where the report appears<a class="headerlink" href="#where-the-report-appears" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Daily Reports page</strong> (sidebar menu &gt; "Daily Reports")</li>
+<li><strong>"Reports" tab</strong> in the corresponding project details</li>
+</ul>
+<h3 id="who-sees-what">Who sees what<a class="headerlink" href="#who-sees-what" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Role</th>
+<th>Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Administrator</strong></td>
+<td>Sees <strong>all</strong> reports from all employees</td>
+</tr>
+<tr>
+<td><strong>Employee</strong></td>
+<td>Sees only <strong>their own</strong> reports</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>For more details about the Daily Reports page, see the <strong>Scheduling, Reports, Settings and Emergency Guide</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="17-manage-inventory-through-chat">17. Manage inventory through Chat<a class="headerlink" href="#17-manage-inventory-through-chat" title="Permanent link">&para;</a></h2>
+<p>You can check and move inventory directly through Chat, without needing to go to the Inventory screen.</p>
+<h3 id="available-operations">Available operations<a class="headerlink" href="#available-operations" title="Permanent link">&para;</a></h3>
+<h4 id="check-quantity">Check quantity<a class="headerlink" href="#check-quantity" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "How much white paint is in stock?"
+<strong>AI:</strong> "White paint stock:
+- White Acrylic Paint 18L: <strong>12 cans</strong> (Average price: R$ 250.00)
+- Total stock value: R$ 3,000.00</p>
+<p>Want to do any operation?"</p>
+</blockquote>
+<h4 id="withdraw-material-for-a-project">Withdraw material for a project<a class="headerlink" href="#withdraw-material-for-a-project" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "Withdraw 5 cans of white paint for the Rua Dr. Melo Alves project"
+<strong>AI:</strong> "Confirm the withdrawal:
+- Material: White Acrylic Paint 18L
+- Quantity: 5 cans
+- Project: Hydraulic Installation - Rua Dr. Melo Alves, 700
+- Estimated cost: R$ 1,250.00 (5 x R$ 250.00)</p>
+<p>Confirm?"
+<strong>You:</strong> "Yes"
+<strong>AI:</strong> "Withdrawal registered!
+- Stock updated: 12 → 7 cans
+- Cost of R$ 1,250.00 added to project (approved)</p>
+<p>Warning: Low stock! Minimum configured quantity: 10 cans."</p>
+</blockquote>
+<h4 id="check-low-stock">Check low stock<a class="headerlink" href="#check-low-stock" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>You:</strong> "Which items are low on stock?"
+<strong>AI:</strong> "1 item with low stock:
+- <strong>White Acrylic Paint 18L:</strong> 7 cans (minimum: 10)</p>
+<p>I recommend restocking."</p>
+<p>For more details about the inventory system, see the <strong>Inventory Guide</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="18-manage-projects-through-chat">18. Manage projects through Chat<a class="headerlink" href="#18-manage-projects-through-chat" title="Permanent link">&para;</a></h2>
+<p>Administrators can create and manage projects directly through Chat.</p>
+<blockquote>
+<p><strong>Important:</strong> Only administrators and super administrators can use these functions. Employees do not have access.</p>
+</blockquote>
+<h3 id="create-a-project">Create a project<a class="headerlink" href="#create-a-project" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "Create a new Residential Painting project at Av. Paulista 1000"
+<strong>AI:</strong> "I'll create the project. Any description or additional notes?"
+<strong>You:</strong> "Complete painting of 3 bedrooms and living room, client Ana Silva"
+<strong>AI:</strong> "Project created successfully!
+- Name: Residential Painting
+- Address: Av. Paulista 1000, Sao Paulo
+- Description: Complete painting of 3 bedrooms and living room
+- Client: Ana Silva
+- Status: Pending"</p>
+</blockquote>
+<h3 id="change-project-status">Change project status<a class="headerlink" href="#change-project-status" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "Change the Av. Paulista project status to on hold"
+<strong>AI:</strong> "Found project 'Residential Painting - Av. Paulista 1000'. What's the reason for pausing?"
+<strong>You:</strong> "Waiting for material delivery from supplier"
+<strong>AI:</strong> "Status updated: Pending → On Hold
+Reason: Waiting for material delivery from supplier"</p>
+</blockquote>
+<h3 id="query-projects">Query projects<a class="headerlink" href="#query-projects" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> "What are my active projects?"
+<strong>AI:</strong> "You have 3 active projects:
+1. Carpet Installation - Rua das Flores 123 (In Progress, 75%)
+2. Hydraulic Installation - Rua Dr. Melo Alves, 700 (In Progress, 30%)
+3. Residential Painting - Av. Paulista 1000 (On Hold)"</p>
+<p>For more details about project management, see the <strong>Projects Guide</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="19-accepted-input-types">19. Accepted input types<a class="headerlink" href="#19-accepted-input-types" title="Permanent link">&para;</a></h2>
+<p>The Chat accepts <strong>5 input types</strong>, and you can combine text with any of them:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Formats</th>
+<th>Main use</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Text</strong></td>
+<td>Typed in the field</td>
+<td>All commands and conversations</td>
+<td>2000 chars</td>
+</tr>
+<tr>
+<td><strong>Image</strong></td>
+<td>JPG, PNG, HEIC, WebP</td>
+<td>Invoices (OCR), site photos, documents</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>MP3, OGG, AAC, WAV, WebM</td>
+<td>Verbal scope description, field inspections</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td><strong>Video</strong></td>
+<td>MP4, MOV, WebM</td>
+<td>Site walkthroughs, complete inspections</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td><strong>PDF</strong></td>
+<td>PDF</td>
+<td><strong>Import Work Orders</strong> from other systems</td>
+<td>10 MB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="which-functions-accept-which-types">Which functions accept which types<a class="headerlink" href="#which-functions-accept-which-types" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th style="text-align: center;">Text</th>
+<th style="text-align: center;">Image</th>
+<th style="text-align: center;">Audio</th>
+<th style="text-align: center;">Video</th>
+<th style="text-align: center;">PDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate scopes (Work Orders)</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes*</td>
+<td style="text-align: center;"><strong>Yes (import)</strong></td>
+</tr>
+<tr>
+<td>Register costs</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes (OCR)</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Schedule visits</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Daily reports</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes*</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Manage inventory</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Manage projects</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Audio works in all functions</p>
+<p>You can use audio in any Chat function. The AI automatically transcribes what you say and interprets the intent. For example, record an audio saying "I spent 500 on materials" and the AI registers the cost.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Video in testing phase</p>
+<p>Video upload functionality is in <strong>testing phase</strong>. We strongly recommend sending <strong>short videos</strong> (up to 1-2 minutes) for best results. Very long videos may take longer to process or have less accurate results.</p>
+</div>
+<hr />
+<h2 id="191-importing-work-orders-from-external-pdfs">19.1 Importing Work Orders from external PDFs<a class="headerlink" href="#191-importing-work-orders-from-external-pdfs" title="Permanent link">&para;</a></h2>
+<p>If your company receives <strong>ready Work Orders</strong> from other systems (clients, partners, estimating software), you can import them directly into SGI through the Chat.</p>
+<h3 id="how-it-works_5">How it works<a class="headerlink" href="#how-it-works_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click the <strong>PDF</strong> button (desktop) or the <strong>"+"</strong> menu → <strong>PDF</strong> (mobile)</li>
+<li>Select the external Work Order PDF file (up to 10 MB)</li>
+<li>Send the message</li>
+<li>The AI analyzes the PDF and <strong>automatically extracts</strong>:</li>
+<li><strong>Header:</strong> Work Order number, Job number, Project Manager, date</li>
+<li><strong>Customer:</strong> name, address, phone, email</li>
+<li><strong>Job address:</strong> street, city, state, ZIP</li>
+<li><strong>Items:</strong> organized in the 16 professional categories</li>
+<li>
+<p><strong>Prices:</strong> unit and total (if present in the PDF)</p>
+</li>
+<li>
+<p>The AI presents a <strong>structured preview</strong> with:</p>
+</li>
+<li>Detected format (<strong>SGI</strong>, <strong>external</strong>, or <strong>unknown</strong>)</li>
+<li><strong>Confidence score</strong> (0 to 1) indicating extraction quality</li>
+<li>
+<p><strong>Warnings</strong> if there is missing or questionable data</p>
+</li>
+<li>
+<p>You <strong>review</strong> and can adjust before confirming</p>
+</li>
+<li>After confirming, the Work Order is <strong>created automatically</strong> in the project</li>
+</ol>
+<h3 id="example-conversation">Example conversation<a class="headerlink" href="#example-conversation" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>You:</strong> [Sends PDF "WO-2024-589-Rabiee.pdf"]</p>
+<p><strong>AI:</strong> "Analyzed the PDF (format detected: <code>external</code>, confidence: 0.87). Extracted:</p>
+<p><strong>Header:</strong>
+- WO Number: WO0001-14547
+- Job Number: 25-1959-RPR
+- Job Name: 590 Indigo Drive - Rabiee, Sarah
+- Project Manager: John Smith</p>
+<p><strong>Customer:</strong> Sarah Rabiee - 590 Indigo Drive, Orlando FL 32828</p>
+<p><strong>Items extracted:</strong> 24 items in 8 categories
+- DRY (Drywall): 8 items, 450 SF total
+- PNT (Painting): 6 items, 1,200 SF total
+- FCW (Floor Covering): 4 items
+- ... (others)</p>
+<p><strong>Warnings:</strong> 2 items without room defined. Want to review before importing?"</p>
+<p><strong>You:</strong> "Yes, show me the items without room"</p>
+<p><strong>AI:</strong> [lists items and lets you assign rooms before saving]</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">SGI format recognized</p>
+<p>If the PDF was generated by SGI itself (via export), extraction has <strong>high confidence (&gt;0.95)</strong> and practically needs no adjustments. For PDFs from other systems, quality varies according to the original document layout.</p>
+</div>
+<p>📖 See the <a href="../work-order-en/">Work Order Guide</a> for more details about the Work Order system.</p>
+<hr />
+<h2 id="192-how-the-ai-picks-the-right-action-masteragentrouter">19.2 How the AI picks the right action (masterAgentRouter)<a class="headerlink" href="#192-how-the-ai-picks-the-right-action-masteragentrouter" title="Permanent link">&para;</a></h2>
+<p>The AI uses an intelligent router that detects the intent of your message and sends it to the right specialized agent.</p>
+<pre class="mermaid"><code>flowchart TB
+    A[You send a message in the Chat] --&gt; B[masterAgentRouter analyzes]
+    B --&gt; C{What's the intent?}
+    C --&gt;|Mentions scope, WO, categories| D[workOrderFlow]
+    C --&gt;|Mentions amount, spent, invoice| E[costFlow]
+    C --&gt;|Mentions schedule, visit, time| F[schedulingFlow]
+    C --&gt;|Mentions arrived, progress, finished| G[dailyReportingFlow]
+    C --&gt;|Mentions inventory, materials, withdrawal| H[inventoryFlow]
+    C --&gt;|Mentions create project, change status| I[projectFlow]
+    C --&gt;|Greeting, general question| J[generalAssistantFlow]
+    D --&gt; K[Executes action via backend]
+    E --&gt; K
+    F --&gt; K
+    G --&gt; K
+    H --&gt; K
+    I --&gt; K
+    J --&gt; K
+    K --&gt; L[AI responds with result]</code></pre>
+<p>This is why the <strong>status indicator</strong> in the Chat header changes as you talk - it reflects which agent is active.</p>
+<hr />
+<h2 id="20-tips-for-using-the-chat-better">20. Tips for using the Chat better<a class="headerlink" href="#20-tips-for-using-the-chat-better" title="Permanent link">&para;</a></h2>
+<h3 id="be-specific">Be specific<a class="headerlink" href="#be-specific" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Less effective</th>
+<th>More effective</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"I need something"</td>
+<td>"I need to schedule a visit for tomorrow"</td>
+</tr>
+<tr>
+<td>"Is there stuff in stock?"</td>
+<td>"How much cement is in stock?"</td>
+</tr>
+<tr>
+<td>"I spent money"</td>
+<td>"I spent R$ 500 on materials at Home Depot"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-the-right-input-type">Use the right input type<a class="headerlink" href="#use-the-right-input-type" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Invoices?</strong> Send a photo - the AI reads it automatically</li>
+<li><strong>Field inspection?</strong> Record audio while walking through the site</li>
+<li><strong>Complete walkthrough?</strong> Film a video showing all rooms</li>
+<li><strong>Simple scope?</strong> Just describe it with text</li>
+</ul>
+<h3 id="the-ai-remembers-context-with-limits">The AI remembers context (with limits)<a class="headerlink" href="#the-ai-remembers-context-with-limits" title="Permanent link">&para;</a></h3>
+<p>Within the same conversation, you don't need to repeat information. If you already selected a project, the AI remembers:</p>
+<blockquote>
+<p><strong>You:</strong> "I spent R$ 200 on screws"
+<strong>AI:</strong> "Registered in the 'Carpet Installation - Rua das Flores 123' project (same project from the conversation). Confirm?"</p>
+</blockquote>
+<p><strong>However, context has limits:</strong>
+- The AI remembers the <strong>most recent messages</strong> in the conversation well
+- Very long conversations go through <strong>automatic compaction</strong>: older messages are summarized to free up space, and some details may be lost
+- Information from <strong>weeks or months ago</strong> will likely no longer be accessible in the AI's memory
+- If you need the AI to remember something specific from a long time ago, <strong>repeat the information</strong> in the current conversation</p>
+<blockquote>
+<p><strong>Practical tip:</strong> For new tasks, don't rely on the AI remembering details from very old conversations. Provide the necessary data (project, address, amounts) again. If the conversation has gotten too long, use the <strong>"Nova Conversa"</strong> (New Conversation) button and start fresh.</p>
+</blockquote>
+<h3 id="if-something-went-wrong">If something went wrong<a class="headerlink" href="#if-something-went-wrong" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Say <strong>"cancel"</strong> or <strong>"undo"</strong> to reverse the last action</li>
+<li>Use the <strong>"Nova Conversa"</strong> (New Conversation) button to start fresh</li>
+<li>The AI always <strong>asks for confirmation</strong> before executing important actions</li>
+</ul>
+<h3 id="you-can-mix-languages">You can mix languages<a class="headerlink" href="#you-can-mix-languages" title="Permanent link">&para;</a></h3>
+<p>The AI understands Portuguese and English. You can say "I need 100 SF of drywall in the banheiro" and it works perfectly.</p>
+<hr />
+<h2 id="important-rules">Important Rules<a class="headerlink" href="#important-rules" title="Permanent link">&para;</a></h2>
+<h3 id="size-limits">Size limits<a class="headerlink" href="#size-limits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Limit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text per message</td>
+<td><strong>2000 characters</strong></td>
+</tr>
+<tr>
+<td>Image</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>Audio</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>Video</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>PDF</td>
+<td>10 MB</td>
+</tr>
+<tr>
+<td>Video recorded in app</td>
+<td>30 seconds</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-permissions">Required permissions<a class="headerlink" href="#required-permissions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use Chat</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Generate scope/WO</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes (if assigned to project)</td>
+</tr>
+<tr>
+<td>Record cost</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canAddCosts</code></td>
+</tr>
+<tr>
+<td>Schedule visit</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canCreateSchedules</code></td>
+</tr>
+<tr>
+<td>Create project</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canCreateProjects</code></td>
+</tr>
+<tr>
+<td>Manage inventory</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validations-and-behaviors">Validations and behaviors<a class="headerlink" href="#validations-and-behaviors" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Session expires automatically</p>
+<ul>
+<li><strong>1 day</strong> for most flows (chat, cost, scheduling)</li>
+<li><strong>7 days</strong> for special flows</li>
+<li>After expiration, the AI no longer remembers the context. Use <strong>"Nova Conversa"</strong> (New Conversation) to start fresh.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Automatic compaction</p>
+<p>Very long conversations go through compaction: older messages are summarized to free up space. Very old details may be lost. For critical information from past conversations, repeat it in the current conversation.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Mix languages</p>
+<p>The AI understands PT and EN. "Preciso 100 SF of drywall in the bathroom" works perfectly.</p>
+</div>
+<h3 id="system-defaults">System defaults<a class="headerlink" href="#system-defaults" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Text limit</td>
+<td>2000 characters</td>
+</tr>
+<tr>
+<td>Default session TTL</td>
+<td>1 day</td>
+</tr>
+<tr>
+<td>service_catalog TTL</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>Default max file size</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>Recorded video max</td>
+<td>30 seconds</td>
+</tr>
+<tr>
+<td>Accepted languages</td>
+<td>PT and EN (mixed OK)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="21-quick-reference">21. Quick reference<a class="headerlink" href="#21-quick-reference" title="Permanent link">&para;</a></h2>
+<h3 id="what-to-say-in-chat-for-each-action">What to say in Chat for each action<a class="headerlink" href="#what-to-say-in-chat-for-each-action" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>You want to...</th>
+<th>Say this in Chat...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Generate scope</td>
+<td>"I need to generate a scope for..." or send photos/audio/video</td>
+</tr>
+<tr>
+<td>Add cost</td>
+<td>"I spent R$ X on..." or send invoice photo</td>
+</tr>
+<tr>
+<td>Schedule visit</td>
+<td>"Schedule a visit for project X tomorrow at 9am"</td>
+</tr>
+<tr>
+<td>Start visit</td>
+<td>"I arrived at the site" or "Start visit at project X"</td>
+</tr>
+<tr>
+<td>Report progress</td>
+<td>"I did X% of the work" or send progress photos</td>
+</tr>
+<tr>
+<td>Finish visit</td>
+<td>"I finished the work" or "Completed"</td>
+</tr>
+<tr>
+<td>Check inventory</td>
+<td>"How much X is in stock?"</td>
+</tr>
+<tr>
+<td>Withdraw material</td>
+<td>"Withdraw X units of Y for project Z"</td>
+</tr>
+<tr>
+<td>Create project</td>
+<td>"Create a [type] project at [address]"</td>
+</tr>
+<tr>
+<td>Change status</td>
+<td>"Change project X status to [status]"</td>
+</tr>
+<tr>
+<td>Query projects</td>
+<td>"What are my active projects?"</td>
+</tr>
+<tr>
+<td>General help</td>
+<td>"How does inventory work?" or "Help me with..."</td>
+</tr>
+</tbody>
+</table>
+<h3 id="useful-shortcuts">Useful shortcuts<a class="headerlink" href="#useful-shortcuts" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>How to do it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Send message</td>
+<td>Press <strong>Enter</strong></td>
+</tr>
+<tr>
+<td>New line</td>
+<td>Press <strong>Shift+Enter</strong></td>
+</tr>
+<tr>
+<td>Start fresh</td>
+<td>Click <strong>"Nova Conversa"</strong> (New Conversation)</td>
+</tr>
+<tr>
+<td>Send photo</td>
+<td>Click the <strong>image</strong> button</td>
+</tr>
+<tr>
+<td>Record audio</td>
+<td>Click the <strong>microphone</strong> button</td>
+</tr>
+<tr>
+<td>Send video</td>
+<td>Click the <strong>video</strong> button</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,3630 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/projects/">
+      
+      
+        <link rel="prev" href="../chat-en/">
+      
+      
+        <link rel="next" href="../work-order-en/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Overview - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#projects-user-guide" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-accessing-the-projects-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Accessing the Projects screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-understanding-the-project-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Understanding the project card
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-view-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. View modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. View modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid (default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kanban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kanban
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-searching-for-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Searching for projects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-filtering-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Filtering projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Filtering projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#budget-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Budget Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sorting-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sorting projects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-creating-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Creating a new project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Creating a new project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-project-details-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Project details page
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Project details page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#budget-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Budget Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-project-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Project tabs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Project tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab-visao-geral-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Visao Geral (Overview)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-custos-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Custos (Costs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-equipe-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Equipe (Team)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-linha-do-tempo-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Linha do Tempo (Timeline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-work-order-professional-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Work Order (Professional Scope)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-relatorios-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Relatorios (Reports)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-project-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Project Photos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-editing-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Editing a project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-deleting-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Deleting a project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-kanban-managing-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Kanban - Managing status
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Kanban - Managing status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-each-column-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each column means
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields-and-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields and limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocking-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocking validations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-accessing-the-projects-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Accessing the Projects screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-understanding-the-project-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Understanding the project card
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-view-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. View modes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. View modes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#grid-default" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Grid (default)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        List
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kanban" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kanban
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-searching-for-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Searching for projects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-filtering-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Filtering projects
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Filtering projects">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#client-group" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Client Group
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#budget-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Budget Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-sorting-projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Sorting projects
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-creating-a-new-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Creating a new project
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Creating a new project">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-project-details-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Project details page
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Project details page">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#budget-panel" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Budget Panel
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-project-tabs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Project tabs
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Project tabs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab-visao-geral-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Visao Geral (Overview)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-custos-costs" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Custos (Costs)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-equipe-team" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Equipe (Team)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-linha-do-tempo-timeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Linha do Tempo (Timeline)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-work-order-professional-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Work Order (Professional Scope)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-relatorios-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Relatorios (Reports)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-project-photos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Project Photos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-editing-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Editing a project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-deleting-a-project" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Deleting a project
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-kanban-managing-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Kanban - Managing status
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Kanban - Managing status">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#how-to-use" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to use
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-each-column-means" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each column means
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields-and-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields and limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blocking-validations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Blocking validations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="projects-user-guide">Projects - User Guide<a class="headerlink" href="#projects-user-guide" title="Permanent link">&para;</a></h1>
+<p>In this guide, you will learn everything about the <strong>Projects</strong> screen in SGI. This is where you view, create, edit, and track all company projects.</p>
+<hr />
+<h2 id="1-accessing-the-projects-screen">1. Accessing the Projects screen<a class="headerlink" href="#1-accessing-the-projects-screen" title="Permanent link">&para;</a></h2>
+<p>On the left sidebar menu, click <strong>"Projetos"</strong> (Projects). You will be taken to the list with all projects in the system.</p>
+<p><img alt="Projects list in grid view" src="../images/projects-list-grid.png" /></p>
+<hr />
+<h2 id="2-understanding-the-project-card">2. Understanding the project card<a class="headerlink" href="#2-understanding-the-project-card" title="Permanent link">&para;</a></h2>
+<p>Each project appears as a card with the following information:</p>
+<ul>
+<li><strong>Project name</strong> - Example: "Instalacao Eletrica - Rua Augusta, 500"</li>
+<li><strong>Status</strong> - A colored badge indicating the current situation (Pending, In Progress, etc.)</li>
+<li><strong>Address</strong> - Where the service will be performed</li>
+<li><strong>Client</strong> - Name of the responsible client</li>
+<li><strong>Budget</strong> - How much has been spent and the total budget (e.g., R$ 2,500.00 / R$ 5,000.00)</li>
+<li><strong>Progress bar</strong> - Visually shows how much of the budget has been used</li>
+<li><strong>Employees</strong> - How many employees are assigned to the project</li>
+<li><strong>Creation date</strong> - When the project was created</li>
+</ul>
+<hr />
+<h2 id="3-view-modes">3. View modes<a class="headerlink" href="#3-view-modes" title="Permanent link">&para;</a></h2>
+<p>You can see projects in 3 different ways. The buttons are in the upper right corner of the screen.</p>
+<h3 id="grid-default">Grid (default)<a class="headerlink" href="#grid-default" title="Permanent link">&para;</a></h3>
+<p>Shows projects as cards organized in 3 columns. This is the default view and allows you to see multiple projects at once.</p>
+<p><img alt="Grid view" src="../images/projects-list-grid.png" /></p>
+<h3 id="list">List<a class="headerlink" href="#list" title="Permanent link">&para;</a></h3>
+<p>Shows projects one below the other in horizontal rows. Useful when you want to see more projects on screen without many visual details.</p>
+<p><img alt="List view" src="../images/projects-list-view.png" /></p>
+<h3 id="kanban">Kanban<a class="headerlink" href="#kanban" title="Permanent link">&para;</a></h3>
+<p>Organizes projects in columns by status. Each column represents a different status:</p>
+<ul>
+<li><strong>Pendente (Pending)</strong> - Projects ready to start</li>
+<li><strong>Em Andamento (In Progress)</strong> - Projects with work in progress</li>
+<li><strong>Em Espera (On Hold)</strong> - Projects temporarily paused</li>
+<li><strong>Aguardando Informacao (Awaiting Information)</strong> - Projects waiting for data from a client or someone else</li>
+<li><strong>Concluido (Completed)</strong> - Finished projects</li>
+</ul>
+<p>In Kanban, you can <strong>drag and drop</strong> a project from one column to another to change its status. If you make a mistake, press <strong>Ctrl+Z</strong> to undo.</p>
+<p><img alt="Kanban view" src="../images/projects-kanban.png" /></p>
+<hr />
+<h2 id="4-searching-for-projects">4. Searching for projects<a class="headerlink" href="#4-searching-for-projects" title="Permanent link">&para;</a></h2>
+<p>At the top of the page, there is a search field with the placeholder text "Buscar por nome, endereco ou cliente..." (Search by name, address or client...).</p>
+<p>Just type part of the project name, address, or client name. The list will be filtered automatically as you type.</p>
+<p><strong>Example:</strong> If you type "Pintura", all projects containing "Pintura" in the name will appear.</p>
+<hr />
+<h2 id="5-filtering-projects">5. Filtering projects<a class="headerlink" href="#5-filtering-projects" title="Permanent link">&para;</a></h2>
+<p>Click the <strong>"Filtros"</strong> (Filters) button to open the advanced filters panel.</p>
+<p><img alt="Filters panel" src="../images/projects-filters.png" /></p>
+<p>The available filters are:</p>
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<p>Check the statuses you want to see. You can select more than one at a time:
+- Pendente (Pending)
+- Em Andamento (In Progress)
+- Em Espera (On Hold)
+- Aguardando Informacao (Awaiting Information)
+- Concluido (Completed)</p>
+<h3 id="client-group">Client Group<a class="headerlink" href="#client-group" title="Permanent link">&para;</a></h3>
+<p>Filter by client group (if you have groups set up). Select "Todos os Grupos" (All Groups) to see all.</p>
+<h3 id="budget-status">Budget Status<a class="headerlink" href="#budget-status" title="Permanent link">&para;</a></h3>
+<p>Filter by the financial state of the project:
+- <strong>Todos (All)</strong> - Shows all projects
+- <strong>Abaixo (Under)</strong> - Projects with expenses below the alert threshold
+- <strong>Proximo (Near)</strong> - Projects with expenses near the alert threshold
+- <strong>Ultrapassado (Over)</strong> - Projects that have already spent more than the total budget</p>
+<hr />
+<h2 id="6-sorting-projects">6. Sorting projects<a class="headerlink" href="#6-sorting-projects" title="Permanent link">&para;</a></h2>
+<p>Next to the filters button, there is a sort selector. Click it to choose how projects are ordered:</p>
+<ul>
+<li><strong>Mais Recentes (Most Recent)</strong> - Most recently created projects first (default)</li>
+<li><strong>Mais Antigos (Oldest)</strong> - Oldest created projects first</li>
+<li><strong>Nome (A-Z) (Name A-Z)</strong> - Alphabetical order</li>
+<li><strong>Nome (Z-A) (Name Z-A)</strong> - Reverse alphabetical order</li>
+<li><strong>Maior Orcamento (Highest Budget)</strong> - Projects with the highest budget first</li>
+<li><strong>Menor Orcamento (Lowest Budget)</strong> - Projects with the lowest budget first</li>
+</ul>
+<hr />
+<h2 id="7-creating-a-new-project">7. Creating a new project<a class="headerlink" href="#7-creating-a-new-project" title="Permanent link">&para;</a></h2>
+<p>To create a project, click the <strong>"+ Novo Projeto"</strong> (New Project) button in the upper right corner.</p>
+<p><img alt="New project dialog" src="../images/project-create-dialog.png" /></p>
+<p>A window will open with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome do Projeto (Project Name)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>The name that identifies the project. E.g.: "Residential Painting - Rua das Flores, 100"</td>
+</tr>
+<tr>
+<td><strong>Endereco (Address)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Full address where the service will be performed</td>
+</tr>
+<tr>
+<td><strong>Nome do Cliente (Client Name)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Name of the client who hired the service</td>
+</tr>
+<tr>
+<td><strong>Grupo do Cliente (Client Group)</strong></td>
+<td style="text-align: center;">No</td>
+<td>Select a group to organize your clients (optional)</td>
+</tr>
+<tr>
+<td><strong>Orcamento (Budget)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Total budget value. Use 0 if not yet defined</td>
+</tr>
+<tr>
+<td><strong>Limite de Alerta (Alert Threshold %)</strong></td>
+<td style="text-align: center;">No</td>
+<td>Budget percentage at which you will be alerted. Default: 80%</td>
+</tr>
+<tr>
+<td><strong>Funcionarios Atribuidos (Assigned Employees)</strong></td>
+<td style="text-align: center;">No</td>
+<td>Select which employees will have access to this project</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-by-step-example">Step-by-step example<a class="headerlink" href="#step-by-step-example" title="Permanent link">&para;</a></h3>
+<p>Let's create a sample project:</p>
+<ol>
+<li>Click <strong>"+ Novo Projeto"</strong></li>
+<li>In <strong>Nome do Projeto</strong>, type: <code>Pintura Residencial - Rua das Flores, 100</code></li>
+<li>In <strong>Endereco</strong>, type: <code>Rua das Flores, 100 - Sao Paulo, SP</code></li>
+<li>In <strong>Nome do Cliente</strong>, type: <code>Ana Silva</code></li>
+<li>In <strong>Orcamento</strong>, type: <code>15000</code> (R$ 15,000.00)</li>
+<li>The <strong>Limite de Alerta</strong> is already filled with 80% - this means when the project spends 80% of the budget (R$ 12,000.00), you will see an alert</li>
+<li>Click <strong>"Criar Projeto"</strong> (Create Project)</li>
+</ol>
+<p>The project will be created with "Pendente" (Pending) status and will appear in the list.</p>
+<hr />
+<h2 id="8-project-details-page">8. Project details page<a class="headerlink" href="#8-project-details-page" title="Permanent link">&para;</a></h2>
+<p>To see all details of a project, click its card in the list. You will be taken to the details page.</p>
+<p><img alt="Project details - Overview" src="../images/project-detail-overview.png" /></p>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>At the top of the page, you will find:</p>
+<ul>
+<li><strong>"Voltar" (Back) button</strong> - Returns to the project list</li>
+<li><strong>Project name</strong> - The full project name</li>
+<li><strong>Status</strong> - Colored badge with the current status</li>
+<li><strong>Address</strong> - Project address</li>
+<li><strong>Client</strong> - Client name</li>
+<li><strong>Creation date</strong> - When the project was created</li>
+<li><strong>"Editar" (Edit) button</strong> - Opens the form to edit the project (administrators only)</li>
+<li><strong>"Excluir" (Delete) button</strong> - Permanently removes the project (administrators only)</li>
+</ul>
+<h3 id="budget-panel">Budget Panel<a class="headerlink" href="#budget-panel" title="Permanent link">&para;</a></h3>
+<p>Right below the header, there is the budget panel showing 3 important values:</p>
+<table>
+<thead>
+<tr>
+<th>Information</th>
+<th>What it means</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Orcamento Total (Total Budget)</strong></td>
+<td>The total value defined for the project</td>
+<td>R$ 20,000.00</td>
+</tr>
+<tr>
+<td><strong>Gasto Atual (Current Spending)</strong></td>
+<td>The sum of all approved costs</td>
+<td>R$ 12,000.00</td>
+</tr>
+<tr>
+<td><strong>Disponivel (Available)</strong></td>
+<td>How much remains of the budget (Total - Current Spending)</td>
+<td>R$ 8,000.00</td>
+</tr>
+</tbody>
+</table>
+<p>Below the values, there is a <strong>progress bar</strong> that visually shows the percentage used.</p>
+<h4 id="how-the-system-calculates">How the system calculates<a class="headerlink" href="#how-the-system-calculates" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Total Budget</strong> = Value defined when you created or edited the project</li>
+<li><strong>Current Spending</strong> = Sum of all costs that were <strong>approved</strong> (pending or rejected costs do not count)</li>
+<li><strong>Available</strong> = Total Budget minus Current Spending</li>
+<li><strong>Percentage</strong> = (Current Spending / Total Budget) x 100</li>
+</ul>
+<h4 id="alert-threshold-and-colors">Alert Threshold and colors<a class="headerlink" href="#alert-threshold-and-colors" title="Permanent link">&para;</a></h4>
+<p>The <strong>Alert Threshold</strong> is the percentage at which the system warns you that spending is getting high. The default is 80%, but you can change it when creating or editing the project.</p>
+<p>The progress bar changes color based on the situation:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Bar color</th>
+<th>Meaning</th>
+<th>When it appears</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Green/Blue</td>
+<td>Everything normal</td>
+<td>Spending below the alert threshold</td>
+</tr>
+<tr>
+<td style="text-align: center;">Orange</td>
+<td>Attention! Near the limit</td>
+<td>Spending between the alert threshold and 100%</td>
+</tr>
+<tr>
+<td style="text-align: center;">Red</td>
+<td>Budget exceeded</td>
+<td>Spending above 100% of the budget</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong> If the budget is R$ 20,000.00 and the alert threshold is 80%:
+- Up to R$ 16,000.00 in spending = green bar (normal)
+- From R$ 16,000.00 to R$ 20,000.00 = orange bar (attention)
+- Above R$ 20,000.00 = red bar (exceeded)</p>
+<hr />
+<h2 id="9-project-tabs">9. Project tabs<a class="headerlink" href="#9-project-tabs" title="Permanent link">&para;</a></h2>
+<p>The details page has 6 tabs. Click each one to see different information.</p>
+<h3 id="tab-visao-geral-overview">Tab: Visao Geral (Overview)<a class="headerlink" href="#tab-visao-geral-overview" title="Permanent link">&para;</a></h3>
+<p>Shows a summary with two sections:</p>
+<p><strong>Project Information:</strong>
+- Project Name
+- Address
+- Client
+- Current Status
+- Creation date
+- Last update date</p>
+<p><strong>Scope Details:</strong>
+- Estimated service duration (in hours and minutes)
+- Number of assigned employees
+- Configured budget alert threshold</p>
+<p><img alt="Overview tab" src="../images/project-detail-overview.png" /></p>
+<hr />
+<h3 id="tab-custos-costs">Tab: Custos (Costs)<a class="headerlink" href="#tab-custos-costs" title="Permanent link">&para;</a></h3>
+<p>Here you see all costs recorded for this project.</p>
+<p><img alt="Costs tab" src="../images/project-detail-costs.png" /></p>
+<p><strong>What appears in each cost:</strong>
+- <strong>Value</strong> - How much it cost (e.g., R$ 12,000.00)
+- <strong>Status</strong> - Whether it is Approved, Pending, or Rejected
+- <strong>Description</strong> - What the expense was for
+- <strong>Who added it</strong> - Name of the employee or admin who recorded the cost
+- <strong>Date</strong> - When the cost was recorded</p>
+<p><strong>Available actions (administrators only):</strong>
+- <strong>"+ Adicionar Custo" (Add Cost)</strong> - Record a new expense for the project
+- <strong>"Editar" (Edit)</strong> - Change the data of an existing cost
+- <strong>"Ver detalhes" (View details)</strong> - Expand to see more information about the cost</p>
+<h4 id="how-costs-work">How costs work<a class="headerlink" href="#how-costs-work" title="Permanent link">&para;</a></h4>
+<ul>
+<li>When an <strong>administrator</strong> adds a cost, it is <strong>automatically approved</strong> and immediately counts toward the budget</li>
+<li>When an <strong>employee</strong> adds a cost (via Chat), it stays as <strong>"Pending"</strong> until an administrator approves or rejects it</li>
+<li>Only costs with <strong>"Approved"</strong> status are added to the "Current Spending" of the budget</li>
+<li>Pending or rejected costs <strong>do not affect</strong> the budget</li>
+</ul>
+<pre class="mermaid"><code>flowchart TD
+    A[User adds cost] --&gt; B{Who added?}
+    B --&gt;|Admin/Super Admin| C[Status: approved automatico]
+    B --&gt;|Employee with canApproveCosts| D[Status: approved automatico]
+    B --&gt;|Default employee| E[Status: pending_approval]
+    E --&gt; F[Admin reviews]
+    F --&gt;|Approves| G[Status: approved]
+    F --&gt;|Rejects| H[Status: rejected]
+    C --&gt; I[Counted in budget]
+    D --&gt; I
+    G --&gt; I
+    H --&gt; J[Not counted]</code></pre>
+<h4 id="inventory-costs">Inventory Costs<a class="headerlink" href="#inventory-costs" title="Permanent link">&para;</a></h4>
+<p>In addition to manual costs, you can also add costs from the system's <strong>Inventory</strong>. When you withdraw items from inventory for a project, the value is automatically recorded as a cost.</p>
+<blockquote>
+<p>This feature will be explained in detail in the <strong>Inventory Guide</strong>.</p>
+</blockquote>
+<hr />
+<h3 id="tab-equipe-team">Tab: Equipe (Team)<a class="headerlink" href="#tab-equipe-team" title="Permanent link">&para;</a></h3>
+<p>Shows all employees assigned to this project.</p>
+<p><img alt="Team tab" src="../images/project-detail-team.png" /></p>
+<p><strong>What appears for each employee:</strong>
+- <strong>Photo/Initial</strong> - A circle with the name initial
+- <strong>Name</strong> - Employee's full name
+- <strong>Email</strong> - Employee's email
+- <strong>Skills</strong> - Tags showing skills (e.g., carpet_installation, painting, electrical)
+- <strong>Role</strong> - Whether they are an Employee or Administrator</p>
+<p>Employees are assigned to the project during creation or editing of the project.</p>
+<hr />
+<h3 id="tab-linha-do-tempo-timeline">Tab: Linha do Tempo (Timeline)<a class="headerlink" href="#tab-linha-do-tempo-timeline" title="Permanent link">&para;</a></h3>
+<p>Shows the history of everything that happened in the project, in chronological order.</p>
+<p><img alt="Timeline tab" src="../images/project-detail-timeline.png" /></p>
+<p><strong>Types of events that appear:</strong>
+- <strong>Project created</strong> - When the project was created and by whom
+- <strong>Status changed</strong> - When the status changed (e.g., "Status changed from Pending to In Progress")
+- <strong>Cost approved</strong> - When a cost was approved
+- <strong>Employees assigned</strong> - When employees were added or removed
+- <strong>Data edited</strong> - When project information was changed</p>
+<p>Each event shows the date, time, and who performed the action.</p>
+<hr />
+<h3 id="tab-work-order-professional-scope">Tab: Work Order (Professional Scope)<a class="headerlink" href="#tab-work-order-professional-scope" title="Permanent link">&para;</a></h3>
+<p>The project scope is now called <strong>Work Order</strong> - a complete professional service order with header, customer info, categories and detailed items.</p>
+<!-- TODO: screenshot of WorkOrderView complete. File: images/work-order-view.png. Capture: expanded categories with items and values -->
+<p><img alt="Work Order Tab" class="placeholder-image" src="images/work-order-view.png" /></p>
+<p>The Work Order is generated through the <strong>AI Chat</strong> (from text, photo, audio or video) <strong>or</strong> imported from an <strong>external PDF</strong>. It contains:</p>
+<ul>
+<li><strong>Header:</strong> WO number, job number, customer, job address</li>
+<li><strong>16 professional categories</strong> (Framing, Electrical, Drywall, Plumbing, etc.)</li>
+<li><strong>Detailed items</strong> with task, action, type, quantity, unit, room</li>
+<li><strong>Prices</strong> (visible only to administrators)</li>
+<li><strong>Formal status</strong> (Draft → Ready for Review → Approved → In Progress → Completed)</li>
+<li><strong>PDF export</strong> to send to the client</li>
+</ul>
+<p>📖 <strong>See the <a href="../work-order-en/">Work Order Guide</a></strong> for complete system documentation.</p>
+<hr />
+<h3 id="tab-relatorios-reports">Tab: Relatorios (Reports)<a class="headerlink" href="#tab-relatorios-reports" title="Permanent link">&para;</a></h3>
+<p>Shows the history of daily progress reports for the project.</p>
+<p><img alt="Reports tab" src="../images/project-detail-reports.png" /></p>
+<p>Reports are created by employees through <strong>AI Chat</strong>. There is no "Create Report" button on this tab - all reports come from the Chat.</p>
+<p>📖 See the <a href="../chat-en/">AI Chat</a> and <a href="../daily-reports/">Daily Reports</a> guides for the full flow.</p>
+<hr />
+<h3 id="tab-project-photos">Tab: Project Photos<a class="headerlink" href="#tab-project-photos" title="Permanent link">&para;</a></h3>
+<!-- TODO: screenshot of PhotosTab with PhotoGrid. File: images/project-photos-tab.png. Capture: grid of thumbnails + upload button -->
+<p><img alt="Photos Tab" class="placeholder-image" src="images/project-photos-tab.png" /></p>
+<p>The <strong>Photos</strong> tab allows attaching images to the project (work progress, damages, inspections, etc.). Features:</p>
+<ul>
+<li>Upload multiple photos (up to 50MB each)</li>
+<li>Metadata: description, tags, capture date</li>
+<li>Per-photo comments (collaborative)</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Permission required</p>
+<p>The "Photos" tab <strong>only appears</strong> for users with the <code>canViewProjectPhotos</code> permission. To upload/edit/delete, you also need <code>canEditProjectPhotos</code>.</p>
+</div>
+<p>📖 See the <a href="../project-photos/">Project Photos Guide</a> for full instructions.</p>
+<hr />
+<h2 id="10-editing-a-project">10. Editing a project<a class="headerlink" href="#10-editing-a-project" title="Permanent link">&para;</a></h2>
+<p>To edit a project:</p>
+<ol>
+<li>Click the project in the list to open the details page</li>
+<li>Click the <strong>"Editar"</strong> (Edit) button in the upper right corner</li>
+<li>A window will open with the current project data already filled in</li>
+<li>Change whatever is needed (name, address, client, budget, alert threshold, employees)</li>
+<li>Click <strong>"Salvar"</strong> (Save) to confirm the changes</li>
+</ol>
+<p>The changes will be saved and the page will be updated automatically.</p>
+<hr />
+<h2 id="11-deleting-a-project">11. Deleting a project<a class="headerlink" href="#11-deleting-a-project" title="Permanent link">&para;</a></h2>
+<p>To delete a project:</p>
+<ol>
+<li>Click the project in the list to open the details page</li>
+<li>Click the <strong>"Excluir"</strong> (Delete) button in the upper right corner</li>
+<li>A confirmation window will appear showing the project data (name, address, client, budget, spending, status)</li>
+<li>Read carefully - <strong>this action is permanent and cannot be undone</strong></li>
+<li>If you are sure, click the confirmation button to delete</li>
+</ol>
+<p>After deleting, you will be redirected back to the project list.</p>
+<hr />
+<h2 id="12-kanban-managing-status">12. Kanban - Managing status<a class="headerlink" href="#12-kanban-managing-status" title="Permanent link">&para;</a></h2>
+<p>The Kanban mode is ideal for visually managing project status.</p>
+<p><img alt="Kanban" src="../images/projects-kanban.png" /></p>
+<h3 id="how-to-use">How to use<a class="headerlink" href="#how-to-use" title="Permanent link">&para;</a></h3>
+<p><strong>On desktop:</strong>
+- <strong>Drag and drop</strong> a project card to the desired status column
+- Example: Drag "Instalacao Carpete" from the "Pendente" column to "Em Andamento"
+- The system will update the status automatically</p>
+<p><strong>Undo:</strong>
+- If you moved a project by mistake, press <strong>Ctrl+Z</strong> (or <strong>Cmd+Z</strong> on Mac) to undo
+- An "Undo" button also appears in the notification that shows up after moving</p>
+<h3 id="what-each-column-means">What each column means<a class="headerlink" href="#what-each-column-means" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Meaning</th>
+<th>When to use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pendente</strong> (<code>pending</code>)</td>
+<td>The project was created and is ready to start</td>
+<td>New or approved projects</td>
+</tr>
+<tr>
+<td><strong>Em Andamento</strong> (<code>active</code>)</td>
+<td>Work is being done</td>
+<td>When the team started the service</td>
+</tr>
+<tr>
+<td><strong>Em Espera</strong> (<code>on_hold</code>)</td>
+<td>The project is paused</td>
+<td>When there is a temporary blocker</td>
+</tr>
+<tr>
+<td><strong>Aguardando Informacao</strong> (<code>awaiting_input</code>)</td>
+<td>Missing information to continue</td>
+<td>When you need data from the client or supplier</td>
+</tr>
+<tr>
+<td><strong>Concluido</strong> (<code>completed</code>)</td>
+<td>The project is finished</td>
+<td>When all work has been delivered</td>
+</tr>
+</tbody>
+</table>
+<pre class="mermaid"><code>stateDiagram-v2
+    direction LR
+    [*] --&gt; pending: Project created
+    pending --&gt; active: Team starts work
+    active --&gt; on_hold: Temporary blocker
+    active --&gt; awaiting_input: Missing client info
+    on_hold --&gt; active: Resume
+    awaiting_input --&gt; active: Info received
+    active --&gt; completed: Work delivered
+    completed --&gt; [*]</code></pre>
+<div class="admonition warning">
+<p class="admonition-title">Reason required for <code>on_hold</code> and <code>awaiting_input</code></p>
+<p>When you change a project to <strong>On Hold</strong> or <strong>Awaiting Info</strong>, the system opens a modal asking for the <strong>reason</strong> (<code>statusReason</code> field, up to 500 characters). Without a reason, the change is <strong>not saved</strong>.</p>
+<p>This reason appears in the project Timeline and helps the team understand why work stopped.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Status change: admin only</p>
+<p>Only <strong>Super Admin</strong> and <strong>Admin</strong> can change project status. Employees do not have access to Kanban drag-and-drop or status buttons.</p>
+</div>
+<hr />
+<h2 id="important-rules">Important Rules<a class="headerlink" href="#important-rules" title="Permanent link">&para;</a></h2>
+<h3 id="required-fields-and-limits">Required fields and limits<a class="headerlink" href="#required-fields-and-limits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: center;">Min</th>
+<th style="text-align: center;">Max</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>projectName</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">3 chars</td>
+<td style="text-align: center;">100 chars</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>address</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">5 chars</td>
+<td style="text-align: center;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>clientName</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">3 chars</td>
+<td style="text-align: center;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>clientGroupId</code></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>Must exist if provided</td>
+</tr>
+<tr>
+<td><code>budget</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">-</td>
+<td>Can be 0 (not defined)</td>
+</tr>
+<tr>
+<td><code>budgetAlertThreshold</code></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td>Default: 0.8 (80%)</td>
+</tr>
+<tr>
+<td><code>assignedUsers</code></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>Empty array if none</td>
+</tr>
+<tr>
+<td><code>statusReason</code></td>
+<td style="text-align: center;">Conditional</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">500 chars</td>
+<td><strong>Required</strong> when changing to <code>on_hold</code> or <code>awaiting_input</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-permissions">Required permissions<a class="headerlink" href="#required-permissions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Employee with permission</th>
+<th style="text-align: center;">Default employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View all projects</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canViewAllProjects</code></td>
+<td style="text-align: center;">Assigned only</td>
+</tr>
+<tr>
+<td>Create project</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canCreateProjects</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Edit project</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canEditProjects</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Delete project</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canDeleteProjects</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Change status (Kanban)</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No (admins only)</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Add cost</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canAddCosts</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Approve cost</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><code>canApproveCosts</code></td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="blocking-validations">Blocking validations<a class="headerlink" href="#blocking-validations" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Reason required</p>
+<p>Changing a project to <code>on_hold</code> or <code>awaiting_input</code> without filling in <code>statusReason</code> blocks the operation.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Deleting a project is not blocked</p>
+<p>The system <strong>allows</strong> deleting a project even with costs, schedules, photos, and daily reports. <strong>All related data is lost</strong> (cascade delete for photos, others become orphaned). Be careful.</p>
+</div>
+<h3 id="system-defaults">System defaults<a class="headerlink" href="#system-defaults" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial status</td>
+<td><code>pending</code></td>
+</tr>
+<tr>
+<td><code>budgetAlertThreshold</code></td>
+<td>0.8 (80%)</td>
+</tr>
+<tr>
+<td><code>assignedUsers</code></td>
+<td>[] (empty)</td>
+</tr>
+<tr>
+<td><code>clientGroupId</code></td>
+<td>null (no group)</td>
+</tr>
+<tr>
+<td>Initial list view</td>
+<td>Grid</td>
+</tr>
+<tr>
+<td>Items per page</td>
+<td>20 (infinite scroll)</td>
+</tr>
+<tr>
+<td>Sort order</td>
+<td>Most recent first</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-reference">Quick reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>You want to...</th>
+<th>Do this...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>See all projects</td>
+<td>Click "Projetos" in the sidebar menu</td>
+</tr>
+<tr>
+<td>Search for a project</td>
+<td>Type in the search field</td>
+</tr>
+<tr>
+<td>Filter by status</td>
+<td>Click "Filtros" and check the statuses</td>
+</tr>
+<tr>
+<td>Create a project</td>
+<td>Click "+ Novo Projeto"</td>
+</tr>
+<tr>
+<td>View details</td>
+<td>Click on the project card</td>
+</tr>
+<tr>
+<td>Edit a project</td>
+<td>Details &gt; "Editar" button</td>
+</tr>
+<tr>
+<td>Delete a project</td>
+<td>Details &gt; "Excluir" button</td>
+</tr>
+<tr>
+<td>Quickly change status</td>
+<td>Use Kanban mode and drag the card</td>
+</tr>
+<tr>
+<td>Track expenses</td>
+<td>Details &gt; "Custos" tab</td>
+</tr>
+<tr>
+<td>See the team</td>
+<td>Details &gt; "Equipe" tab</td>
+</tr>
+<tr>
+<td>View history</td>
+<td>Details &gt; "Linha do Tempo" tab</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

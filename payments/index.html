@@ -1,0 +1,3323 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/payments/">
+      
+      
+        <link rel="prev" href="../client-groups/">
+      
+      
+        <link rel="next" href="../reports-analytics/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Payments - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#payments-user-guide" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Payments
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-the-module-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. How the module works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-accessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Accessing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-typical-monthly-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Typical monthly flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Typical monthly flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monthly-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monthly step-by-step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-managing-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Managing Categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Managing Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#category-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-managing-payees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Managing Payees
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Managing Payees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payee-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payee fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-payment-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available payment methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-creating-the-monthly-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Creating the Monthly Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Creating the Monthly Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sheet ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-filling-in-the-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Filling in the Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Filling in the Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-payees-to-the-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding payees to the sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filling-in-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filling in values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-weeks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing weeks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-closing-the-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Closing the Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Closing the Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-closing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when closing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reopening-a-closed-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reopening a closed sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields-and-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields and limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations-that-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations that block
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-how-the-module-works" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. How the module works
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-accessing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Accessing
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-typical-monthly-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Typical monthly flow
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Typical monthly flow">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#monthly-step-by-step" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Monthly step-by-step
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-managing-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Managing Categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Managing Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#category-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Category fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Example categories
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-managing-payees" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Managing Payees
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Managing Payees">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#payee-fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Payee fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#available-payment-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Available payment methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-creating-the-monthly-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Creating the Monthly Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Creating the Monthly Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fields" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fields
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sheet-id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Sheet ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-filling-in-the-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Filling in the Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Filling in the Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-payees-to-the-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Adding payees to the sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#filling-in-values" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Filling in values
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#managing-weeks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Managing weeks
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-closing-the-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Closing the Sheet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Closing the Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-happens-when-closing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What happens when closing
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reopening-a-closed-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Reopening a closed sheet
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields-and-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields and limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations-that-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations that block
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick summary
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="payments-user-guide">Payments - User Guide<a class="headerlink" href="#payments-user-guide" title="Permanent link">&para;</a></h1>
+<p>The SGI <strong>Payments</strong> module is a monthly control of disbursements for employees, subcontractors, and suppliers - a structured digital spreadsheet that replaces HR/financial Excel.</p>
+<div class="admonition note">
+<p class="admonition-title">Administrators only</p>
+<p>The Payments module is only accessible by <strong>Administrators</strong> and <strong>Super Administrators</strong>. Employees do not see this menu.</p>
+</div>
+<hr />
+<h2 id="1-how-the-module-works">1. How the module works<a class="headerlink" href="#1-how-the-module-works" title="Permanent link">&para;</a></h2>
+<p>The system organizes payments into <strong>4 entities</strong>:</p>
+<pre class="mermaid"><code>flowchart TB
+    A[Payment Categories] --&gt; B[Payment Payees]
+    B --&gt; C[Payment Sheet&lt;br/&gt;Monthly sheet]
+    C --&gt; D[Payment Entry&lt;br/&gt;Row per payee]
+    D --&gt; E[Weekly Amounts]</code></pre>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>What it is</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Payment Category</strong></td>
+<td>Payee group</td>
+<td>"Subcontractors", "Employees", "Suppliers"</td>
+</tr>
+<tr>
+<td><strong>Payment Payee</strong></td>
+<td>Who receives</td>
+<td>"Nathan", "XYZ Carpentry Ltd"</td>
+</tr>
+<tr>
+<td><strong>Payment Sheet</strong></td>
+<td>1-month spreadsheet</td>
+<td>"2026-01" (January 2026)</td>
+</tr>
+<tr>
+<td><strong>Payment Entry</strong></td>
+<td>Row in the sheet</td>
+<td>Nathan receives X, Y, Z in weeks 1, 2, 3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-accessing">2. Accessing<a class="headerlink" href="#2-accessing" title="Permanent link">&para;</a></h2>
+<p>In the side menu, click <strong>"Pagamentos"</strong> (Payments).</p>
+<!-- TODO: screenshot of main page. File: images/payments-main.png. Capture: header + sheet selector (dropdown with months) + Manage Categories/Payees buttons -->
+<p><img alt="Payments main page" class="placeholder-image" src="images/payments-main.png" /></p>
+<p>At the top you have:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Sheet dropdown</strong></td>
+<td>Choose which month to view (e.g., "January 2026")</td>
+</tr>
+<tr>
+<td><strong>Status badge</strong></td>
+<td>Shows if the sheet is <strong>"open"</strong> or <strong>"closed"</strong></td>
+</tr>
+<tr>
+<td><strong>"Manage Categories" button</strong></td>
+<td>Opens dialog to manage categories</td>
+</tr>
+<tr>
+<td><strong>"Manage Payees" button</strong></td>
+<td>Opens dialog to manage payees</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-typical-monthly-flow">3. Typical monthly flow<a class="headerlink" href="#3-typical-monthly-flow" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>flowchart LR
+    A[Day 1 of the month] --&gt; B[Create month sheet&lt;br/&gt;Create Sheet]
+    B --&gt; C[Define weeks&lt;br/&gt;Manage Weeks]
+    C --&gt; D[Add payees&lt;br/&gt;Add Payees]
+    D --&gt; E[Fill values&lt;br/&gt;daily/weekly]
+    E --&gt; F[Review totals]
+    F --&gt; G[End of month:&lt;br/&gt;Close sheet]
+    G --&gt; H[Archive ready&lt;br/&gt;for audit]</code></pre>
+<h3 id="monthly-step-by-step">Monthly step-by-step<a class="headerlink" href="#monthly-step-by-step" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Create the month sheet</strong> (beginning of the month)</li>
+<li><strong>Define the weeks</strong> (4 or 5 week-ending dates)</li>
+<li><strong>Add payees</strong> who will receive that month</li>
+<li><strong>Fill in values</strong> week by week as you pay</li>
+<li><strong>Review totals</strong> before closing</li>
+<li><strong>Close sheet</strong> (<code>closed</code>) - becomes read-only for audit</li>
+</ol>
+<hr />
+<h2 id="4-managing-categories">4. Managing Categories<a class="headerlink" href="#4-managing-categories" title="Permanent link">&para;</a></h2>
+<p>Before adding payees, you need to have <strong>categories</strong> to organize them.</p>
+<p>Click <strong>"Manage Categories"</strong>.</p>
+<!-- TODO: screenshot of ManageCategoriesDialog. File: images/payments-categories-dialog.png. Capture: category list with colors and edit/delete buttons -->
+<p><img alt="Manage Categories" class="placeholder-image" src="images/payments-categories-dialog.png" /></p>
+<h3 id="category-fields">Category fields<a class="headerlink" href="#category-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>E.g., "Subcontractors", "Employees"</td>
+</tr>
+<tr>
+<td><strong>Color</strong></td>
+<td>Color name for theming (emerald, amber, blue, purple, pink, cyan, lime, red, orange, indigo)</td>
+</tr>
+<tr>
+<td><strong>Order</strong></td>
+<td>In which position the category appears</td>
+</tr>
+<tr>
+<td><strong>Active</strong></td>
+<td>Whether the category is in use (soft delete)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="example-categories">Example categories<a class="headerlink" href="#example-categories" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Color</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Subcontractors</td>
+<td><code>blue</code></td>
+</tr>
+<tr>
+<td>Employees</td>
+<td><code>emerald</code></td>
+</tr>
+<tr>
+<td>Suppliers</td>
+<td><code>amber</code></td>
+</tr>
+<tr>
+<td>Services</td>
+<td><code>purple</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-managing-payees">5. Managing Payees<a class="headerlink" href="#5-managing-payees" title="Permanent link">&para;</a></h2>
+<p>Each payee has a category and a preferred payment method.</p>
+<p>Click <strong>"Manage Payees"</strong>.</p>
+<!-- TODO: screenshot of ManagePayeesDialog. File: images/payments-payees-dialog.png. Capture: list of payees grouped by category, with name/company/method -->
+<p><img alt="Manage Payees" class="placeholder-image" src="images/payments-payees-dialog.png" /></p>
+<h3 id="payee-fields">Payee fields<a class="headerlink" href="#payee-fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Short name</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Name on the sheet (e.g., "Nathan")</td>
+</tr>
+<tr>
+<td><strong>Full name</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Official name (e.g., "Nathanael da Silva")</td>
+</tr>
+<tr>
+<td><strong>Category</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Which category they belong to</td>
+</tr>
+<tr>
+<td><strong>Payment method</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Zelle / Check / Cash / Company Check</td>
+</tr>
+<tr>
+<td><strong>Company</strong></td>
+<td style="text-align: center;">No</td>
+<td>For subcontractors/suppliers</td>
+</tr>
+<tr>
+<td><strong>Order</strong></td>
+<td style="text-align: center;">No</td>
+<td>Position on the sheet</td>
+</tr>
+<tr>
+<td><strong>Active</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Soft delete</td>
+</tr>
+</tbody>
+</table>
+<h3 id="available-payment-methods">Available payment methods<a class="headerlink" href="#available-payment-methods" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Code</th>
+<th>Typical use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Zelle</strong></td>
+<td><code>zelle</code></td>
+<td>Zelle transfer (US banks)</td>
+</tr>
+<tr>
+<td><strong>Check</strong></td>
+<td><code>check</code></td>
+<td>Personal check</td>
+</tr>
+<tr>
+<td><strong>Cash</strong></td>
+<td><code>cash</code></td>
+<td>Physical cash</td>
+</tr>
+<tr>
+<td><strong>Company Check</strong></td>
+<td><code>company_check</code></td>
+<td>Company check</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Each payee has 1 method</p>
+<p>A payee can only have <strong>1 registered payment method</strong>. If you need to change it, edit the payee - the old method is overwritten.</p>
+</div>
+<hr />
+<h2 id="6-creating-the-monthly-sheet">6. Creating the Monthly Sheet<a class="headerlink" href="#6-creating-the-monthly-sheet" title="Permanent link">&para;</a></h2>
+<p>Click <strong>"+ Nova Sheet"</strong> (+ New Sheet) or similar.</p>
+<!-- TODO: screenshot of CreateSheetDialog. File: images/payments-create-sheet.png. Capture: dialog with year/month selectors + weeks preview -->
+<p><img alt="Create Monthly Sheet" class="placeholder-image" src="images/payments-create-sheet.png" /></p>
+<h3 id="fields">Fields<a class="headerlink" href="#fields" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Year</strong></td>
+<td>2026 (default: current year)</td>
+</tr>
+<tr>
+<td><strong>Month</strong></td>
+<td>1-12</td>
+</tr>
+<tr>
+<td><strong>Weeks</strong></td>
+<td>Week-ending dates for each week of the month (e.g., 01/05, 01/12, 01/19, 01/26)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="sheet-id">Sheet ID<a class="headerlink" href="#sheet-id" title="Permanent link">&para;</a></h3>
+<p>The system automatically creates the ID in the format <strong><code>YYYY-MM</code></strong> (e.g., <code>2026-01</code> for January 2026).</p>
+<div class="admonition warning">
+<p class="admonition-title">Unique ID per month</p>
+<p>You <strong>cannot create two sheets for the same month</strong>. If you try to create <code>2026-01</code> when it already exists, the system returns an error. Use the existing sheet or delete the previous one.</p>
+</div>
+<hr />
+<h2 id="7-filling-in-the-sheet">7. Filling in the Sheet<a class="headerlink" href="#7-filling-in-the-sheet" title="Permanent link">&para;</a></h2>
+<!-- TODO: screenshot of PaymentSheetView. File: images/payments-sheet-view.png. Capture: grid with categories (collapsible) + payee rows + week columns + totals -->
+<p><img alt="Sheet view" class="placeholder-image" src="images/payments-sheet-view.png" /></p>
+<p>The sheet is displayed as a <strong>grid</strong> with:</p>
+<ul>
+<li><strong>Rows:</strong> payees grouped by category (collapsible categories)</li>
+<li><strong>Columns:</strong> weeks of the month (week-ending dates)</li>
+<li><strong>Cells:</strong> amount paid to payee that week</li>
+<li><strong>Totals:</strong> per week, per category, and grand total of the month</li>
+</ul>
+<h3 id="adding-payees-to-the-sheet">Adding payees to the sheet<a class="headerlink" href="#adding-payees-to-the-sheet" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Click <strong>"Add Payees"</strong> (if the sheet is empty)</li>
+<li>Select the payees who will receive that month</li>
+<li>Confirm</li>
+</ol>
+<p>Each selected payee generates a <strong>row (entry)</strong> in the sheet.</p>
+<h3 id="filling-in-values">Filling in values<a class="headerlink" href="#filling-in-values" title="Permanent link">&para;</a></h3>
+<p>Click the intersection cell (payee × week) and type the value. The system:</p>
+<ul>
+<li><strong>Updates in real time</strong> the payee's total for that month</li>
+<li><strong>Recalculates</strong> the category subtotal</li>
+<li><strong>Updates</strong> the grand total</li>
+</ul>
+<h3 id="managing-weeks">Managing weeks<a class="headerlink" href="#managing-weeks" title="Permanent link">&para;</a></h3>
+<p>Click <strong>"Manage Weeks"</strong> to adjust week-ending dates (useful in months with 5 weeks).</p>
+<!-- TODO: screenshot of ManageWeeksDialog. File: images/payments-manage-weeks.png. Capture: dialog with list of editable dates -->
+<p><img alt="Manage weeks" class="placeholder-image" src="images/payments-manage-weeks.png" /></p>
+<hr />
+<h2 id="8-closing-the-sheet">8. Closing the Sheet<a class="headerlink" href="#8-closing-the-sheet" title="Permanent link">&para;</a></h2>
+<p>At the end of the month, when all payments have been posted:</p>
+<ol>
+<li>Click the <strong>status toggle</strong> (open padlock icon)</li>
+<li>Confirm the action</li>
+<li>Status changes to <strong><code>closed</code></strong></li>
+</ol>
+<h3 id="what-happens-when-closing">What happens when closing<a class="headerlink" href="#what-happens-when-closing" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Sheet becomes <strong>read-only</strong> (no values can be changed)</li>
+<li>Payees cannot be added/removed</li>
+<li>Weeks cannot be adjusted</li>
+<li>Badge shows <strong>"Fechado"</strong> (Closed)</li>
+</ul>
+<h3 id="reopening-a-closed-sheet">Reopening a closed sheet<a class="headerlink" href="#reopening-a-closed-sheet" title="Permanent link">&para;</a></h3>
+<p>If you need to change something retroactively:</p>
+<ol>
+<li>Click the toggle again (now it's a closed padlock)</li>
+<li>Confirm</li>
+<li>Status returns to <strong><code>open</code></strong></li>
+<li>Editing reactivated</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Reopening is visible</p>
+<p>The status change appears in the sheet's <code>updatedAt</code> - audit can track when it was closed and reopened.</p>
+</div>
+<hr />
+<h2 id="important-rules">Important Rules<a class="headerlink" href="#important-rules" title="Permanent link">&para;</a></h2>
+<h3 id="required-fields-and-limits">Required fields and limits<a class="headerlink" href="#required-fields-and-limits" title="Permanent link">&para;</a></h3>
+<p><strong>Categories:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: center;">Yes</td>
+<td>Free text</td>
+</tr>
+<tr>
+<td><code>color</code></td>
+<td style="text-align: center;">Yes</td>
+<td>Material color name (emerald, amber, etc.)</td>
+</tr>
+<tr>
+<td><code>sortOrder</code></td>
+<td style="text-align: center;">No</td>
+<td>Order in list</td>
+</tr>
+<tr>
+<td><code>active</code></td>
+<td style="text-align: center;">Yes (default true)</td>
+<td>Soft delete</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Payees:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>name</code></td>
+<td style="text-align: center;">Yes</td>
+<td>Short name on the sheet</td>
+</tr>
+<tr>
+<td><code>fullName</code></td>
+<td style="text-align: center;">Yes</td>
+<td>Full official name</td>
+</tr>
+<tr>
+<td><code>categoryId</code></td>
+<td style="text-align: center;">Yes</td>
+<td>FK to existing category</td>
+</tr>
+<tr>
+<td><code>paymentMethod</code></td>
+<td style="text-align: center;">Yes</td>
+<td>zelle / check / cash / company_check</td>
+</tr>
+<tr>
+<td><code>companyName</code></td>
+<td style="text-align: center;">No</td>
+<td>For company/subcontractors</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Sheets:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>year</code></td>
+<td style="text-align: center;">Yes</td>
+<td>Year (e.g., 2026)</td>
+</tr>
+<tr>
+<td><code>month</code></td>
+<td style="text-align: center;">Yes</td>
+<td>1-12</td>
+</tr>
+<tr>
+<td><code>weekEndings</code></td>
+<td style="text-align: center;">Yes</td>
+<td>Array of ISO dates (no quantity limit)</td>
+</tr>
+<tr>
+<td><code>status</code></td>
+<td style="text-align: center;">Yes</td>
+<td>open / closed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-permissions">Required permissions<a class="headerlink" href="#required-permissions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View "Pagamentos" menu</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><strong>No</strong></td>
+</tr>
+<tr>
+<td>Create/edit categories</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Create/edit payees</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Create monthly sheet</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Fill in values</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Close/reopen sheet</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Delete sheet</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validations-that-block">Validations that block<a class="headerlink" href="#validations-that-block" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title"><code>closed</code> sheet is read-only</p>
+<p>Trying to edit a value in a closed sheet returns an error. Reopen the sheet first if you need to change it.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Unique ID per month</p>
+<p>Format <code>YYYY-MM</code> - two sheets for the same month generate an error on create.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Payees from deactivated category</p>
+<p>If you deactivate a category (<code>active: false</code>), the payees in that category continue to exist and may still appear in old sheets. But they cannot be added to new sheets.</p>
+</div>
+<h3 id="system-defaults">System defaults<a class="headerlink" href="#system-defaults" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial sheet status</td>
+<td><code>open</code></td>
+</tr>
+<tr>
+<td>Payees in new sheet</td>
+<td>None (add manually)</td>
+</tr>
+<tr>
+<td>Default weeks</td>
+<td>4 (can adjust to 5)</td>
+</tr>
+<tr>
+<td>Default payment method</td>
+<td>None (mandatory to choose)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-summary">Quick summary<a class="headerlink" href="#quick-summary" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>You want to...</th>
+<th>Do this...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View month spreadsheet</td>
+<td>"Pagamentos" menu &gt; sheet dropdown</td>
+</tr>
+<tr>
+<td>Create new month sheet</td>
+<td>"+ Nova Sheet" (+ New Sheet)</td>
+</tr>
+<tr>
+<td>Add category</td>
+<td>"Manage Categories" &gt; "+"</td>
+</tr>
+<tr>
+<td>Add payee (person)</td>
+<td>"Manage Payees" &gt; "+"</td>
+</tr>
+<tr>
+<td>Add payee to sheet</td>
+<td>Sheet &gt; "Add Payees"</td>
+</tr>
+<tr>
+<td>Fill in week value</td>
+<td>Click the cell &gt; type</td>
+</tr>
+<tr>
+<td>Close month</td>
+<td>Status toggle in header</td>
+</tr>
+<tr>
+<td>Reopen month</td>
+<td>Toggle again</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

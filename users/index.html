@@ -1,0 +1,4126 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/users/">
+      
+      
+        <link rel="prev" href="../inventory/">
+      
+      
+        <link rel="next" href="../client-groups/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Users & Permissions - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#users-and-skills-user-guide" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Users & Permissions
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-accessing-the-users-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Accessing the Users screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-understanding-the-main-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Understanding the main screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Understanding the main screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary cards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#each-user-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Each user card
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-role-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Role hierarchy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Role hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#super-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Super Administrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#employee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Employee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-can-invite-whom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who can invite whom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-inviting-a-new-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Inviting a new user
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Inviting a new user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-the-user-accepts-the-invitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. How the user accepts the invitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-user-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. User details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. User details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-basico-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Basico (Basic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-permissoes-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Permissoes (Permissions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-historico-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Historico (History)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-estatisticas-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Estatisticas (Statistics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-editing-a-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Editing a user
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Editing a user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab-basico-basic_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Basico (Basic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-status-funcao-status-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Status &amp; Funcao (Status &amp; Role)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-permissoes-permissions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Permissoes (Permissions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-filtering-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Filtering users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Filtering users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcao-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcao (Role)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-permissions-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Permissions in detail
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Permissions in detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-each-permission-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each permission controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-permissions-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default permissions by role
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-adjust-an-employees-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to adjust an employee's permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-skills-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Skills screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a new skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing a skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting a skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-assign-skills-to-an-employee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to assign skills to an employee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-user-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. User statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. User statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costs-added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costs Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields-and-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields and limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invitation-validity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invitation validity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations-that-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations that block
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-accessing-the-users-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Accessing the Users screen
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-understanding-the-main-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Understanding the main screen
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. Understanding the main screen">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#summary-cards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Summary cards
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-field" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Search field
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#each-user-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Each user card
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-role-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Role hierarchy
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Role hierarchy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#super-administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Super Administrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrator" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrator
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#employee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Employee
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comparison-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparison table
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#who-can-invite-whom" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Who can invite whom
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hierarchy-diagram" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hierarchy diagram
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-inviting-a-new-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Inviting a new user
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Inviting a new user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-by-step-example" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step-by-step example
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-how-the-user-accepts-the-invitation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. How the user accepts the invitation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-user-details" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. User details
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. User details">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-basico-basic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Basico (Basic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-permissoes-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Permissoes (Permissions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-historico-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Historico (History)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-estatisticas-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Estatisticas (Statistics)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-editing-a-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Editing a user
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Editing a user">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tab-basico-basic_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Basico (Basic)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-status-funcao-status-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Status &amp; Funcao (Status &amp; Role)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tab-permissoes-permissions_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tab: Permissoes (Permissions)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-filtering-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Filtering users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Filtering users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#funcao-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcao (Role)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Skills
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-permissions-in-detail" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Permissions in detail
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Permissions in detail">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-each-permission-controls" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What each permission controls
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-permissions-by-role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Default permissions by role
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-adjust-an-employees-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to adjust an employee's permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-skills" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Skills
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Skills">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#accessing-the-skills-screen" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Accessing the Skills screen
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-a-new-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Creating a new skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Editing a skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deleting-a-skill" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deleting a skill
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-assign-skills-to-an-employee" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        How to assign skills to an employee
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-user-statistics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. User statistics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. User statistics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#projects" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Projects
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costs-added" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Costs Added
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#important-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Important Rules
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Important Rules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#required-fields-and-limits" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required fields and limits
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#invitation-validity" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Invitation validity
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#required-permissions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Required permissions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validations-that-block" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validations that block
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-defaults" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        System defaults
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quick-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quick reference
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="users-and-skills-user-guide">Users and Skills - User Guide<a class="headerlink" href="#users-and-skills-user-guide" title="Permanent link">&para;</a></h1>
+<p>In this guide, you will learn everything about the <strong>Users</strong> screen and the <strong>Skills</strong> screen in SGI. This is where you manage the team, invite new users, set permissions, and organize employee competencies.</p>
+<hr />
+<h2 id="1-accessing-the-users-screen">1. Accessing the Users screen<a class="headerlink" href="#1-accessing-the-users-screen" title="Permanent link">&para;</a></h2>
+<p>On the left sidebar menu, click <strong>"Usuarios"</strong> (Users). You will be taken to the page with all registered users in the system.</p>
+<p><img alt="User list" src="../images/users-list.png" /></p>
+<hr />
+<h2 id="2-understanding-the-main-screen">2. Understanding the main screen<a class="headerlink" href="#2-understanding-the-main-screen" title="Permanent link">&para;</a></h2>
+<h3 id="summary-cards">Summary cards<a class="headerlink" href="#summary-cards" title="Permanent link">&para;</a></h3>
+<p>At the top of the page, there are 4 cards with general information:</p>
+<table>
+<thead>
+<tr>
+<th>Card</th>
+<th>What it shows</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total de Usuarios (Total Users)</strong></td>
+<td>How many users are registered</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Usuarios Ativos (Active Users)</strong></td>
+<td>How many users have active accounts</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Administradores (Administrators)</strong></td>
+<td>How many users have Admin role</td>
+<td>0</td>
+</tr>
+<tr>
+<td><strong>Funcionarios (Employees)</strong></td>
+<td>How many users have Employee role</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<h3 id="search-field">Search field<a class="headerlink" href="#search-field" title="Permanent link">&para;</a></h3>
+<p>Below the cards, there is a search field with the text "Pesquisar" (Search). Type a user's name or email to filter the list.</p>
+<h3 id="each-user-card">Each user card<a class="headerlink" href="#each-user-card" title="Permanent link">&para;</a></h3>
+<p>Each user appears as a card with the following information:</p>
+<ul>
+<li><strong>Name</strong> - User's full name (e.g., "Joao Silva")</li>
+<li><strong>Email</strong> - User's email (e.g., funcionario1@sgi.com)</li>
+<li><strong>Status</strong> - Green "Ativo" (Active) or red "Inativo" (Inactive) tag</li>
+<li><strong>Role</strong> - Icon + text indicating the role (e.g., Funcionario/Employee)</li>
+<li><strong>Skills</strong> - Colored badges showing the user's skills (e.g., Instalacao de Carpete, Pintura)</li>
+</ul>
+<hr />
+<h2 id="3-role-hierarchy">3. Role hierarchy<a class="headerlink" href="#3-role-hierarchy" title="Permanent link">&para;</a></h2>
+<p>SGI has 3 access levels. Each role has different permissions in the system.</p>
+<h3 id="super-administrator">Super Administrator<a class="headerlink" href="#super-administrator" title="Permanent link">&para;</a></h3>
+<p>The highest role. Has full control over the system:
+- Can invite users of any role (superadmin, admin, employee)
+- Can manage all users
+- All permissions are enabled</p>
+<h3 id="administrator">Administrator<a class="headerlink" href="#administrator" title="Permanent link">&para;</a></h3>
+<p>Manages employees and projects:
+- Can only invite Employees
+- Can only manage Employees
+- Has all permissions except managing other admins</p>
+<h3 id="employee">Employee<a class="headerlink" href="#employee" title="Permanent link">&para;</a></h3>
+<p>Basic system access:
+- Cannot invite anyone
+- Cannot manage other users
+- Granular permissions (individually configured by the administrator)</p>
+<h3 id="comparison-table">Comparison table<a class="headerlink" href="#comparison-table" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Create projects</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Edit projects</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Delete projects</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>View all projects</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Add costs</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+</tr>
+<tr>
+<td>Approve costs</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Note:</strong> An employee's permissions can be individually adjusted by the administrator. For example, you can give a specific employee permission to create projects.</p>
+</blockquote>
+<h3 id="who-can-invite-whom">Who can invite whom<a class="headerlink" href="#who-can-invite-whom" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Your role</th>
+<th>Can invite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Super Administrator</strong></td>
+<td>Super Admin, Admin, and Employee</td>
+</tr>
+<tr>
+<td><strong>Administrator</strong></td>
+<td>Only Employee</td>
+</tr>
+<tr>
+<td><strong>Employee</strong></td>
+<td>No one</td>
+</tr>
+</tbody>
+</table>
+<h3 id="hierarchy-diagram">Hierarchy diagram<a class="headerlink" href="#hierarchy-diagram" title="Permanent link">&para;</a></h3>
+<pre class="mermaid"><code>flowchart TB
+    SA[Super Administrator] --&gt;|Can invite| SA2[Super Admin]
+    SA --&gt;|Can invite| A[Administrator]
+    SA --&gt;|Can invite| E[Employee]
+    A --&gt;|Can invite| E
+    E -.X.-&gt;|Cannot invite| NA[Nobody]
+
+    SA --&gt;|Manages| A
+    SA --&gt;|Manages| E
+    A --&gt;|Manages| E
+
+    classDef superClass fill:#4db8c7,stroke:#fff,color:#000
+    classDef adminClass fill:#5ec4d4,stroke:#fff,color:#000
+    classDef empClass fill:#1a9db8,stroke:#fff,color:#fff
+    class SA superClass
+    class A adminClass
+    class E empClass</code></pre>
+<hr />
+<h2 id="4-inviting-a-new-user">4. Inviting a new user<a class="headerlink" href="#4-inviting-a-new-user" title="Permanent link">&para;</a></h2>
+<p>To add a new team member, click the <strong>"Convidar Usuario"</strong> (Invite User) button in the upper right corner.</p>
+<p><img alt="Invite dialog" src="../images/users-invite-dialog.png" /></p>
+<p>A window will open with the following fields:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome Completo (Full Name)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>The new user's full name</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Email to send the invitation</td>
+</tr>
+<tr>
+<td><strong>Role</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>User's role: Funcionario (Employee), Administrador (Administrator), or Super Administrador (Super Administrator)</td>
+</tr>
+<tr>
+<td><strong>Idioma do Convite (Invitation Language)</strong></td>
+<td style="text-align: center;">No</td>
+<td>Language of the invitation email (English US or Portugues BR). Sets the system language on first access, but the employee can change it later in settings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="step-by-step-example">Step-by-step example<a class="headerlink" href="#step-by-step-example" title="Permanent link">&para;</a></h3>
+<p>Let's invite a new employee:</p>
+<ol>
+<li>Click <strong>"Convidar Usuario"</strong></li>
+<li>In <strong>Nome Completo</strong>, type: <code>Carlos Oliveira</code></li>
+<li>In <strong>Email</strong>, type: <code>carlos@exemplo.com</code></li>
+<li>In <strong>Role</strong>, select: <code>Funcionario</code></li>
+<li>In <strong>Idioma do Convite</strong>, select: <code>Portugues (BR)</code></li>
+<li>Click <strong>"Enviar Convite"</strong> (Send Invitation)</li>
+</ol>
+<p>The system will send an email with the invitation link to the provided address.</p>
+<blockquote>
+<p><strong>Note:</strong> The invitation is valid for <strong>7 days</strong>. After this period, the link expires and you will need to send a new invitation.</p>
+</blockquote>
+<hr />
+<h2 id="5-how-the-user-accepts-the-invitation">5. How the user accepts the invitation<a class="headerlink" href="#5-how-the-user-accepts-the-invitation" title="Permanent link">&para;</a></h2>
+<p>After you send the invitation, the new user receives an email with a special link. The process is as follows:</p>
+<ol>
+<li>The user receives the email and clicks the link</li>
+<li>They are taken to a page showing the invitation details (name, email, role, who invited them)</li>
+<li>The user creates a password (minimum 6 characters)</li>
+<li>Clicks <strong>"Completar Cadastro"</strong> (Complete Registration)</li>
+</ol>
+<p>Done! The account is automatically created with:
+- Default permissions for the selected role
+- Zeroed statistics (projects and costs)
+- "Active" status</p>
+<hr />
+<h2 id="6-user-details">6. User details<a class="headerlink" href="#6-user-details" title="Permanent link">&para;</a></h2>
+<p>To view a user's details, click their card in the list. A side panel will open with complete information.</p>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>At the top of the panel, you see:
+- <strong>Avatar</strong> - Circle with the name initial
+- <strong>Name</strong> - Full name
+- <strong>Email</strong> - User's email
+- <strong>Role</strong> - Badge indicating the role (e.g., Funcionario)
+- <strong>Status</strong> - Badge indicating Active or Inactive
+- <strong>"Editar" (Edit) button</strong> - Opens the edit form</p>
+<h3 id="tab-basico-basic">Tab: Basico (Basic)<a class="headerlink" href="#tab-basico-basic" title="Permanent link">&para;</a></h3>
+<p><img alt="Basic tab" src="../images/users-detail-basic.png" /></p>
+<p>Shows the user's personal information:
+- Name
+- Email
+- Phone
+- Role (colored badge)
+- Status (colored badge)
+- Account creation date</p>
+<h3 id="tab-permissoes-permissions">Tab: Permissoes (Permissions)<a class="headerlink" href="#tab-permissoes-permissions" title="Permanent link">&para;</a></h3>
+<p><img alt="Permissions tab" src="../images/users-detail-permissions.png" /></p>
+<p>Shows <strong>10 granular permissions</strong> with toggles (on/off). These are configured individually, regardless of the default role:</p>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>What it controls</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pode criar projetos</strong> (<code>canCreateProjects</code>)</td>
+<td>Allows creating new projects</td>
+</tr>
+<tr>
+<td><strong>Pode editar projetos</strong> (<code>canEditProjects</code>)</td>
+<td>Allows changing data of existing projects</td>
+</tr>
+<tr>
+<td><strong>Pode deletar projetos</strong> (<code>canDeleteProjects</code>)</td>
+<td>Allows deleting projects</td>
+</tr>
+<tr>
+<td><strong>Pode ver todos os projetos</strong> (<code>canViewAllProjects</code>)</td>
+<td>View all projects, not just assigned ones</td>
+</tr>
+<tr>
+<td><strong>Pode adicionar custos</strong> (<code>canAddCosts</code>)</td>
+<td>Record costs (app or chat)</td>
+</tr>
+<tr>
+<td><strong>Pode aprovar custos</strong> (<code>canApproveCosts</code>)</td>
+<td>Manage status of recorded costs</td>
+</tr>
+<tr>
+<td><strong>Pode deletar tarefas</strong> (<code>canDeleteTasks</code>)</td>
+<td>Delete task items</td>
+</tr>
+<tr>
+<td><strong>Pode criar agendamentos</strong> (<code>canCreateSchedules</code>)</td>
+<td>Create/edit schedules, Google Calendar sync</td>
+</tr>
+<tr>
+<td><strong>Pode visualizar fotos de projeto</strong> (<code>canViewProjectPhotos</code>)</td>
+<td>View "Photos" tab with metadata</td>
+</tr>
+<tr>
+<td><strong>Pode editar fotos de projeto</strong> (<code>canEditProjectPhotos</code>)</td>
+<td>Upload, delete, edit metadata, and comment on photos</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Employees with <code>canApproveCosts</code></p>
+<p>Despite the name "Employee" suggesting limited permissions, <strong>an employee with the <code>canApproveCosts</code> permission enabled can also approve costs</strong>, not only admins. Useful to delegate responsibilities to team managers.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Last administrator cannot be deactivated</p>
+<p>The system <strong>blocks</strong> deactivation of the last active Super Admin or last Admin. If you try to deactivate the only remaining admin, you will see the error:
+<code>Cannot deactivate the last active admin/superadmin</code></p>
+<p>To resolve: first promote another user to admin, then deactivate the former admin.</p>
+</div>
+<h3 id="tab-skills">Tab: Skills<a class="headerlink" href="#tab-skills" title="Permanent link">&para;</a></h3>
+<p><img alt="Skills tab" src="../images/users-detail-skills.png" /></p>
+<p>Shows the count and colored badges of skills assigned to the user.</p>
+<p><strong>Example:</strong> Joao Silva has 2 skills: "Instalacao de Carpete" (Carpet Installation) and "Pintura" (Painting).</p>
+<h3 id="tab-historico-history">Tab: Historico (History)<a class="headerlink" href="#tab-historico-history" title="Permanent link">&para;</a></h3>
+<p>Shows a timeline with all user activities in the system (audit log). Each event shows the date, time, and what happened.</p>
+<h3 id="tab-estatisticas-statistics">Tab: Estatisticas (Statistics)<a class="headerlink" href="#tab-estatisticas-statistics" title="Permanent link">&para;</a></h3>
+<p><img alt="Statistics tab" src="../images/users-detail-stats.png" /></p>
+<p>Shows numbers about the user's participation:</p>
+<p><strong>Projects:</strong>
+- <strong>Total</strong> - How many projects the user participates in (e.g., 22)
+- <strong>Ativos (Active)</strong> - How many are in progress (e.g., 20)
+- <strong>Concluidos (Completed)</strong> - How many have been finished (e.g., 2)</p>
+<p><strong>Costs Added:</strong>
+- <strong>Total</strong> - How many costs the user has recorded (e.g., 3)
+- <strong>Pendentes (Pending)</strong> - How many still await approval (e.g., 3)
+- <strong>Aprovados (Approved)</strong> - How many have been approved (e.g., 0)</p>
+<hr />
+<h2 id="7-editing-a-user">7. Editing a user<a class="headerlink" href="#7-editing-a-user" title="Permanent link">&para;</a></h2>
+<p>To edit a user, click their card in the list and then click the <strong>"Editar"</strong> (Edit) button in the upper right corner of the panel.</p>
+<p><img alt="Edit dialog" src="../images/users-edit-dialog.png" /></p>
+<p>The edit dialog has 3 tabs:</p>
+<h3 id="tab-basico-basic_1">Tab: Basico (Basic)<a class="headerlink" href="#tab-basico-basic_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Nome Completo (Full Name)</strong> - Change the user's name</li>
+<li><strong>Telefone (Phone)</strong> - Change the phone number</li>
+<li><strong>Email</strong> - Disabled field (email cannot be changed)</li>
+<li><strong>Habilidades (Skills)</strong> - Select or remove user skills (multi-select with tags)</li>
+</ul>
+<h3 id="tab-status-funcao-status-role">Tab: Status &amp; Funcao (Status &amp; Role)<a class="headerlink" href="#tab-status-funcao-status-role" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Status</strong> - Switch between Active and Inactive</li>
+<li><strong>Funcao (Role)</strong> - Change the user's role</li>
+</ul>
+<blockquote>
+<p><strong>Deactivating a user:</strong> When you change the status to "Inactive", the user loses access to the system but their data is kept. You can reactivate at any time.</p>
+</blockquote>
+<h3 id="tab-permissoes-permissions_1">Tab: Permissoes (Permissions)<a class="headerlink" href="#tab-permissoes-permissions_1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Checkboxes for each of the <strong>10 permissions</strong></li>
+<li>Allows adjusting permissions individually, regardless of the default role</li>
+</ul>
+<p>After making changes, click <strong>"Salvar Alteracoes"</strong> (Save Changes).</p>
+<hr />
+<h2 id="8-filtering-users">8. Filtering users<a class="headerlink" href="#8-filtering-users" title="Permanent link">&para;</a></h2>
+<p>Click the <strong>"Filtros"</strong> (Filters) button to open the filters panel.</p>
+<p><img alt="Filters panel" src="../images/users-filters.png" /></p>
+<p>The available filters are:</p>
+<h3 id="funcao-role">Funcao (Role)<a class="headerlink" href="#funcao-role" title="Permanent link">&para;</a></h3>
+<p>Filter by user role:
+- <strong>Todas (All)</strong> - Shows everyone (default)
+- <strong>Admin</strong> - Only administrators
+- <strong>Funcionario (Employee)</strong> - Only employees</p>
+<h3 id="status">Status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h3>
+<p>Filter by account state:
+- <strong>Todos (All)</strong> - Shows everyone (default)
+- <strong>Ativos (Active)</strong> - Only active accounts
+- <strong>Inativos (Inactive)</strong> - Only deactivated accounts</p>
+<h3 id="skills">Skills<a class="headerlink" href="#skills" title="Permanent link">&para;</a></h3>
+<p>Filter by specific skill. Select one or more skills from the dropdown to see only users who have that competency.</p>
+<hr />
+<h2 id="9-permissions-in-detail">9. Permissions in detail<a class="headerlink" href="#9-permissions-in-detail" title="Permanent link">&para;</a></h2>
+<h3 id="what-each-permission-controls">What each permission controls<a class="headerlink" href="#what-each-permission-controls" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>What the user CAN do with it</th>
+<th>What they CANNOT do without it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Create projects</strong></td>
+<td>Click "+ Novo Projeto" and create projects</td>
+<td>Does not see the create project button</td>
+</tr>
+<tr>
+<td><strong>Edit projects</strong></td>
+<td>Change name, address, budget, team</td>
+<td>Does not see the "Edit" button on projects</td>
+</tr>
+<tr>
+<td><strong>Delete projects</strong></td>
+<td>Permanently delete projects</td>
+<td>Does not see the "Delete" button on projects</td>
+</tr>
+<tr>
+<td><strong>View all projects</strong></td>
+<td>View all projects in the system</td>
+<td>Only sees projects they are assigned to</td>
+</tr>
+<tr>
+<td><strong>Add costs</strong></td>
+<td>Record expenses in projects (app or chat)</td>
+<td>Cannot add costs</td>
+</tr>
+<tr>
+<td><strong>Approve costs</strong></td>
+<td>Manage status of recorded costs</td>
+<td>Cannot change status of costs</td>
+</tr>
+<tr>
+<td><strong>Delete tasks</strong></td>
+<td>Delete task items</td>
+<td>"Delete" button disabled on tasks</td>
+</tr>
+<tr>
+<td><strong>Create schedules</strong></td>
+<td>Create/edit schedules, Google Calendar sync</td>
+<td>Does not see "New Schedule" button</td>
+</tr>
+<tr>
+<td><strong>View project photos</strong></td>
+<td>See "Photos" tab on project details</td>
+<td>"Photos" tab does not appear</td>
+</tr>
+<tr>
+<td><strong>Edit project photos</strong></td>
+<td>Upload, delete, edit metadata, comment</td>
+<td>"Photos" tab appears but is read-only</td>
+</tr>
+</tbody>
+</table>
+<h3 id="default-permissions-by-role">Default permissions by role<a class="headerlink" href="#default-permissions-by-role" title="Permanent link">&para;</a></h3>
+<p>When a user is created, they receive the default permissions for their role:</p>
+<ul>
+<li><strong>Super Admin and Admin:</strong> <strong>All 10 permissions</strong> enabled by default</li>
+<li><strong>Employee:</strong> All permissions <strong>disabled</strong> by default. The administrator configures granularly as needed.</li>
+</ul>
+<h3 id="how-to-adjust-an-employees-permissions">How to adjust an employee's permissions<a class="headerlink" href="#how-to-adjust-an-employees-permissions" title="Permanent link">&para;</a></h3>
+<p>You can give extra permissions to a specific employee:</p>
+<ol>
+<li>Click on the employee's card in the list</li>
+<li>Click <strong>"Editar"</strong> (Edit)</li>
+<li>Go to the <strong>"Permissoes"</strong> (Permissions) tab</li>
+<li>Check the desired permissions</li>
+<li>Click <strong>"Salvar Alteracoes"</strong> (Save Changes)</li>
+</ol>
+<p><strong>Example:</strong> To allow employee Joao Silva to create projects:
+1. Open Joao Silva's panel
+2. Click "Editar" &gt; "Permissoes" tab
+3. Check "Pode criar projetos" (Can create projects)
+4. Save</p>
+<hr />
+<h2 id="10-skills">10. Skills<a class="headerlink" href="#10-skills" title="Permanent link">&para;</a></h2>
+<p>Skills are competency tags that you assign to employees. They serve two main purposes:</p>
+<ol>
+<li><strong>Organization:</strong> Quickly identify what each employee can do</li>
+<li><strong>Artificial Intelligence:</strong> The Chat AI uses skills to suggest the right employee for each type of service. For example, when assembling a team for an electrical project, the AI suggests employees with the "Eletrica" (Electrical) skill</li>
+</ol>
+<h3 id="accessing-the-skills-screen">Accessing the Skills screen<a class="headerlink" href="#accessing-the-skills-screen" title="Permanent link">&para;</a></h3>
+<p>On the left sidebar menu, click <strong>"Habilidades"</strong> (Skills). You will see the list of all registered skills.</p>
+<p><img alt="Skills list" src="../images/skills-list.png" /></p>
+<p>Each skill appears as a card with:
+- <strong>Icon</strong> - Tool icon
+- <strong>Name</strong> - Skill name (e.g., Eletrica, Pintura, Encanamento)
+- <strong>Color</strong> - Visual indicator of the assigned color
+- <strong>Buttons</strong> - Edit (pencil) and Delete (trash)</p>
+<h3 id="creating-a-new-skill">Creating a new skill<a class="headerlink" href="#creating-a-new-skill" title="Permanent link">&para;</a></h3>
+<p>Click the <strong>"Nova Skill"</strong> (New Skill) button in the upper right corner.</p>
+<p><img alt="New skill dialog" src="../images/skills-new-dialog.png" /></p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required?</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Nome (Name)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Skill name. E.g.: "Instalacao de Carpete" (Carpet Installation)</td>
+</tr>
+<tr>
+<td><strong>Descricao (Description)</strong></td>
+<td style="text-align: center;">No</td>
+<td>Skill description (optional)</td>
+</tr>
+<tr>
+<td><strong>Cor (Color)</strong></td>
+<td style="text-align: center;">Yes</td>
+<td>Skill badge color (color picker, default: blue #3b82f6)</td>
+</tr>
+</tbody>
+</table>
+<p>Fill in the fields and click <strong>"Criar"</strong> (Create).</p>
+<h3 id="editing-a-skill">Editing a skill<a class="headerlink" href="#editing-a-skill" title="Permanent link">&para;</a></h3>
+<p>Click the edit button (pencil icon) on the skill card. The dialog will open with pre-filled fields. Change what is needed and click <strong>"Salvar"</strong> (Save).</p>
+<h3 id="deleting-a-skill">Deleting a skill<a class="headerlink" href="#deleting-a-skill" title="Permanent link">&para;</a></h3>
+<p>Click the delete button (trash icon) on the skill card.</p>
+<p><img alt="Delete skill dialog" src="../images/skills-delete-dialog.png" /></p>
+<p>A confirmation window will appear showing:
+- Skill name and color
+- Warning: <strong>"Esta acao nao pode ser desfeita. Funcionarios com esta skill perderao a atribuicao."</strong> (This action cannot be undone. Employees with this skill will lose the assignment.)</p>
+<p>If you are sure, click <strong>"Excluir"</strong> (Delete). Otherwise, click <strong>"Cancelar"</strong> (Cancel).</p>
+<blockquote>
+<p><strong>Important:</strong> When you delete a skill, all employees who had that skill lose the assignment automatically.</p>
+</blockquote>
+<h3 id="how-to-assign-skills-to-an-employee">How to assign skills to an employee<a class="headerlink" href="#how-to-assign-skills-to-an-employee" title="Permanent link">&para;</a></h3>
+<p>Skills are assigned when editing a user:</p>
+<ol>
+<li>Go to the <strong>Users</strong> screen</li>
+<li>Click on the employee's card</li>
+<li>Click <strong>"Editar"</strong> (Edit)</li>
+<li>In the <strong>"Basico"</strong> (Basic) tab, use the <strong>"Habilidades"</strong> (Skills) field to select skills</li>
+<li>You can add multiple skills and remove them by clicking the "x" on each badge</li>
+<li>Click <strong>"Salvar Alteracoes"</strong> (Save Changes)</li>
+</ol>
+<hr />
+<h2 id="11-user-statistics">11. User statistics<a class="headerlink" href="#11-user-statistics" title="Permanent link">&para;</a></h2>
+<p>The <strong>"Estatisticas"</strong> (Statistics) tab in the user panel shows numbers about their participation in the system.</p>
+<h3 id="projects">Projects<a class="headerlink" href="#projects" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total</strong></td>
+<td>Total number of projects the user participates in</td>
+</tr>
+<tr>
+<td><strong>Ativos (Active)</strong></td>
+<td>Projects that are in progress</td>
+</tr>
+<tr>
+<td><strong>Concluidos (Completed)</strong></td>
+<td>Projects that have been finished</td>
+</tr>
+</tbody>
+</table>
+<h3 id="costs-added">Costs Added<a class="headerlink" href="#costs-added" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Indicator</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Total</strong></td>
+<td>Total number of costs the user has recorded</td>
+</tr>
+<tr>
+<td><strong>Pendentes (Pending)</strong></td>
+<td>Costs that still await approval from an administrator</td>
+</tr>
+<tr>
+<td><strong>Aprovados (Approved)</strong></td>
+<td>Costs that have been approved</td>
+</tr>
+</tbody>
+</table>
+<p>These numbers help track the productivity and participation of each team member.</p>
+<hr />
+<h2 id="important-rules">Important Rules<a class="headerlink" href="#important-rules" title="Permanent link">&para;</a></h2>
+<h3 id="required-fields-and-limits">Required fields and limits<a class="headerlink" href="#required-fields-and-limits" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th style="text-align: center;">Required</th>
+<th style="text-align: center;">Min</th>
+<th style="text-align: center;">Max</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>displayName</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">3 chars</td>
+<td style="text-align: center;">-</td>
+<td>Full name</td>
+</tr>
+<tr>
+<td><code>email</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td><strong>Immutable</strong> after registration</td>
+</tr>
+<tr>
+<td><code>role</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>superadmin / admin / employee</td>
+</tr>
+<tr>
+<td><code>password</code></td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><strong>6 chars</strong></td>
+<td style="text-align: center;">-</td>
+<td>No mandatory complexity</td>
+</tr>
+<tr>
+<td><code>phoneNumber</code></td>
+<td style="text-align: center;">No</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+<td>Free format</td>
+</tr>
+</tbody>
+</table>
+<h3 id="invitation-validity">Invitation validity<a class="headerlink" href="#invitation-validity" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Duration</strong></td>
+<td>7 days</td>
+</tr>
+<tr>
+<td><strong>On expiration</strong></td>
+<td>Status becomes <code>expired</code>, link no longer works</td>
+</tr>
+<tr>
+<td><strong>Resend</strong></td>
+<td>Admin needs to create a new invitation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="required-permissions">Required permissions<a class="headerlink" href="#required-permissions" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operation</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Employee</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>View users</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Invite user</td>
+<td style="text-align: center;">Yes (any role)</td>
+<td style="text-align: center;">Yes (employees only)</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Edit user</td>
+<td style="text-align: center;">Yes (all)</td>
+<td style="text-align: center;">Yes (employees only)</td>
+<td style="text-align: center;">Only own profile</td>
+</tr>
+<tr>
+<td>Change role</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;"><strong>Only promote/demote employees</strong></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Promote to admin/superadmin</td>
+<td style="text-align: center;"><strong>Yes</strong></td>
+<td style="text-align: center;"><strong>No</strong></td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Deactivate user</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Reactivate user</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+<tr>
+<td>Manage skills</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">Yes</td>
+<td style="text-align: center;">No</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validations-that-block">Validations that block<a class="headerlink" href="#validations-that-block" title="Permanent link">&para;</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Last admin cannot be deactivated</p>
+<p>The system blocks deactivation of the last active super admin OR last active admin. Returns error: <code>Cannot deactivate the last active {role}</code>. Promote another user first.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Email is immutable</p>
+<p>After the invitation is accepted, the email can no longer be changed. If you need to change it, deactivate and recreate.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Skills are soft-deleted</p>
+<p>When you "delete" a skill, it is marked as <code>isActive: false</code> but historical records keep the reference. Deactivated skills don't appear in assignment dropdowns.</p>
+</div>
+<h3 id="system-defaults">System defaults<a class="headerlink" href="#system-defaults" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Initial status</td>
+<td><code>Active</code></td>
+</tr>
+<tr>
+<td>Initial locale</td>
+<td>Defined at invitation</td>
+</tr>
+<tr>
+<td>10 permissions (employee)</td>
+<td>All <code>false</code></td>
+</tr>
+<tr>
+<td>10 permissions (admin/superadmin)</td>
+<td>All <code>true</code></td>
+</tr>
+<tr>
+<td>Invitation validity</td>
+<td>7 days</td>
+</tr>
+<tr>
+<td>Initial theme</td>
+<td><code>dark</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="quick-reference">Quick reference<a class="headerlink" href="#quick-reference" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>You want to...</th>
+<th>Do this...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>See all users</td>
+<td>Click "Usuarios" in the sidebar menu</td>
+</tr>
+<tr>
+<td>Search for a user</td>
+<td>Type in the "Pesquisar" field</td>
+</tr>
+<tr>
+<td>Invite new user</td>
+<td>Click "Convidar Usuario"</td>
+</tr>
+<tr>
+<td>View user details</td>
+<td>Click on the user card</td>
+</tr>
+<tr>
+<td>Edit user data</td>
+<td>Details &gt; "Editar" button</td>
+</tr>
+<tr>
+<td>Change permissions</td>
+<td>Edit &gt; "Permissoes" tab</td>
+</tr>
+<tr>
+<td>Deactivate a user</td>
+<td>Edit &gt; "Status &amp; Funcao" tab &gt; Status: Inativo</td>
+</tr>
+<tr>
+<td>Assign skills</td>
+<td>Edit &gt; "Basico" tab &gt; "Habilidades" field</td>
+</tr>
+<tr>
+<td>Filter by role</td>
+<td>Click "Filtros" &gt; select the role</td>
+</tr>
+<tr>
+<td>View statistics</td>
+<td>Details &gt; "Estatisticas" tab</td>
+</tr>
+<tr>
+<td>Manage skills</td>
+<td>Click "Habilidades" in the sidebar menu</td>
+</tr>
+<tr>
+<td>Create new skill</td>
+<td>Skills screen &gt; "Nova Skill"</td>
+</tr>
+<tr>
+<td>Delete a skill</td>
+<td>Skills screen &gt; trash icon on the card</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

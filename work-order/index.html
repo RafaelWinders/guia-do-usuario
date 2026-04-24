@@ -1,0 +1,3566 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/work-order/">
+      
+      
+        <link rel="prev" href="../projetos/">
+      
+      
+        <link rel="next" href="../fotos-de-projeto/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Work Order - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#work-order-ordem-de-servico-guia-do-usuario" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Work Order
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../chat/" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-e-uma-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que é uma Work Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-onde-encontrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Onde encontrar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-criar-uma-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Como criar uma Work Order
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Como criar uma Work Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pelo-chat-com-ia-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Pelo Chat com IA (recomendado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-importando-pdf-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Importando PDF externo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-estrutura-completa-da-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Estrutura completa da Work Order
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Estrutura completa da Work Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer (Cliente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-address-endereco-do-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Address (Endereço do trabalho)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorias-e-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorias e Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-as-16-categorias-em-ordem-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. As 16 categorias (em ordem de execução)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estrutura-de-um-item-de-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estrutura de um item de trabalho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estrutura de um item de trabalho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-acoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions (Ações)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-status-da-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Status da Work Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-quem-ve-o-que-precisa-saber-antes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Quem vê o quê (precisa saber antes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Quem vê o quê (precisa saber antes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#administrador-super-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrador / Super Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionário
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-editando-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Editando items
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Editando items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-editar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como editar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-adicionar-novo-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como adicionar novo item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-deletar-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como deletar item
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-export-em-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Export em PDF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Export em PDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-gerar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como gerar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obrigatorios-e-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos obrigatórios e limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-que-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações que bloqueiam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-e-uma-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que é uma Work Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-onde-encontrar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Onde encontrar
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-criar-uma-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Como criar uma Work Order
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Como criar uma Work Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-pelo-chat-com-ia-recomendado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Pelo Chat com IA (recomendado)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-importando-pdf-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Importando PDF externo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-estrutura-completa-da-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Estrutura completa da Work Order
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Estrutura completa da Work Order">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Header
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#customer-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Customer (Cliente)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job-address-endereco-do-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Job Address (Endereço do trabalho)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categorias-e-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Categorias e Items
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-as-16-categorias-em-ordem-de-execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. As 16 categorias (em ordem de execução)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-estrutura-de-um-item-de-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Estrutura de um item de trabalho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Estrutura de um item de trabalho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#actions-acoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Actions (Ações)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-status-da-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Status da Work Order
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-quem-ve-o-que-precisa-saber-antes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Quem vê o quê (precisa saber antes)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Quem vê o quê (precisa saber antes)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#administrador-super-admin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrador / Super Admin
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funcionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Funcionário
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-editando-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Editando items
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. Editando items">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-editar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como editar
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-adicionar-novo-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como adicionar novo item
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-deletar-item" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como deletar item
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-export-em-pdf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Export em PDF
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Export em PDF">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-gerar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como gerar
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#campos-obrigatorios-e-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Campos obrigatórios e limites
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-que-bloqueiam" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações que bloqueiam
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Resumo rápido
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="work-order-ordem-de-servico-guia-do-usuario">Work Order (Ordem de Serviço) - Guia do Usuário<a class="headerlink" href="#work-order-ordem-de-servico-guia-do-usuario" title="Permanent link">&para;</a></h1>
+<p>O <strong>Work Order</strong> (WO) é o sistema profissional do SGI para detalhar o trabalho de um projeto. Substituiu o antigo "Escopo simples" (v3.0+), trazendo estrutura formal da indústria americana de construção civil.</p>
+<hr />
+<h2 id="1-o-que-e-uma-work-order">1. O que é uma Work Order<a class="headerlink" href="#1-o-que-e-uma-work-order" title="Permanent link">&para;</a></h2>
+<p>Uma Work Order é um <strong>documento formal</strong> que detalha tudo que será feito em um projeto, com:</p>
+<ul>
+<li><strong>Header</strong> completo: número da WO, número do job, cliente, endereço, data</li>
+<li><strong>16 categorias</strong> de trabalho organizadas na ordem de execução real da obra</li>
+<li><strong>Items</strong> detalhados com task, ação, tipo, quantidade, unidade, cômodo, preço</li>
+<li><strong>Status</strong> formal com aprovação obrigatória</li>
+<li><strong>Export/Import em PDF</strong></li>
+</ul>
+<!-- TODO: screenshot de WorkOrderView completo. Arquivo: images/work-order-view.png. Capturar: header + 2-3 categorias expandidas com items + botoes de action -->
+<p><img alt="Work Order completa" class="placeholder-image" src="images/work-order-view.png" /></p>
+<hr />
+<h2 id="2-onde-encontrar">2. Onde encontrar<a class="headerlink" href="#2-onde-encontrar" title="Permanent link">&para;</a></h2>
+<p>A Work Order fica na <strong>aba "Work Order"</strong> no detalhe de um projeto (antigamente chamada "Escopo").</p>
+<p>📖 Veja o <a href="../projetos/">Guia de Projetos</a> para como navegar até o projeto.</p>
+<hr />
+<h2 id="3-como-criar-uma-work-order">3. Como criar uma Work Order<a class="headerlink" href="#3-como-criar-uma-work-order" title="Permanent link">&para;</a></h2>
+<p>Existem <strong>2 formas</strong>:</p>
+<h3 id="31-pelo-chat-com-ia-recomendado">3.1 Pelo Chat com IA (recomendado)<a class="headerlink" href="#31-pelo-chat-com-ia-recomendado" title="Permanent link">&para;</a></h3>
+<p>O jeito mais rápido e flexível:</p>
+<ul>
+<li><strong>Descreva por texto</strong>: "Preciso de uma WO para o projeto Rua das Flores"</li>
+<li><strong>Envie fotos</strong> do local - a IA identifica cômodos, materiais, dimensões</li>
+<li><strong>Grave áudio</strong> caminhando pelo local descrevendo o trabalho</li>
+<li><strong>Envie vídeo</strong> de walkthrough</li>
+</ul>
+<p>A IA organiza tudo nas 16 categorias automaticamente e você revisa.</p>
+<p>📖 Veja o <a href="../chat/">Guia do Chat</a> para o fluxo completo.</p>
+<h3 id="32-importando-pdf-externo">3.2 Importando PDF externo<a class="headerlink" href="#32-importando-pdf-externo" title="Permanent link">&para;</a></h3>
+<p>Se você recebeu uma Work Order pronta de outro sistema (cliente, parceiro, estimating software):</p>
+<ol>
+<li>No Chat, envie o <strong>arquivo PDF</strong> (até 10 MB)</li>
+<li>A IA analisa e extrai:</li>
+<li>Header (WO number, job number, project manager, datas)</li>
+<li>Customer (nome, endereço, telefone)</li>
+<li>Items organizados nas 16 categorias</li>
+<li>Preços (se presentes no PDF)</li>
+<li>Você <strong>revisa o preview estruturado</strong> com score de confiança</li>
+<li>Confirma e a WO é criada no projeto</li>
+</ol>
+<!-- TODO: screenshot de WorkOrderImportDialog. Arquivo: images/work-order-import-dialog.png. Capturar: dialog com upload de PDF e area drag-and-drop -->
+<p><img alt="Import de Work Order PDF" class="placeholder-image" src="images/work-order-import-dialog.png" /></p>
+<!-- TODO: screenshot de WorkOrderImportPreview. Arquivo: images/work-order-import-preview.png. Capturar: preview estruturado dos dados extraidos antes de confirmar -->
+<p><img alt="Preview do import" class="placeholder-image" src="images/work-order-import-preview.png" /></p>
+<pre class="mermaid"><code>flowchart LR
+    A[Usuario envia PDF no Chat] --&gt; B[IA analisa via Gemini]
+    B --&gt; C{Formato detectado}
+    C --&gt;|sgi| D[Confianca alta &gt; 0.95]
+    C --&gt;|external| E[Confianca media 0.6-0.95]
+    C --&gt;|unknown| F[Confianca baixa &lt; 0.6]
+    D --&gt; G[Preview estruturado]
+    E --&gt; G
+    F --&gt; G
+    G --&gt; H{Usuario revisa}
+    H --&gt;|Confirma| I[WO criada como draft]
+    H --&gt;|Cancela| J[Descarta]
+    I --&gt; K[Admin aprova no projeto]</code></pre>
+<hr />
+<h2 id="4-estrutura-completa-da-work-order">4. Estrutura completa da Work Order<a class="headerlink" href="#4-estrutura-completa-da-work-order" title="Permanent link">&para;</a></h2>
+<h3 id="header">Header<a class="headerlink" href="#header" title="Permanent link">&para;</a></h3>
+<p>O cabeçalho tem todas as informações identificadoras:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Exemplo</th>
+<th style="text-align: center;">Obrigatório</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Work Order Number</strong></td>
+<td><code>WO0001-14547</code></td>
+<td style="text-align: center;">Sim (auto-gerado no SGI)</td>
+</tr>
+<tr>
+<td><strong>Job Number</strong></td>
+<td><code>25-1959-RPR</code></td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td><strong>Job Name</strong></td>
+<td><code>590 Indigo Drive - Rabiee, Sarah</code></td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td><strong>Project Manager</strong></td>
+<td>Nome do funcionário responsável</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td><strong>Work Order Date</strong></td>
+<td>Data da WO (ISO)</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+</tbody>
+</table>
+<!-- TODO: screenshot de WorkOrderHeader. Arquivo: images/work-order-header.png. Capturar: todos os campos do header preenchidos -->
+<p><img alt="Header da Work Order" class="placeholder-image" src="images/work-order-header.png" /></p>
+<h3 id="customer-cliente">Customer (Cliente)<a class="headerlink" href="#customer-cliente" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Name</strong></td>
+<td>Sarah Rabiee</td>
+</tr>
+<tr>
+<td><strong>Address</strong></td>
+<td>590 Indigo Drive</td>
+</tr>
+<tr>
+<td><strong>Phone</strong></td>
+<td>+1 (321) 555-0100</td>
+</tr>
+<tr>
+<td><strong>Email</strong></td>
+<td>sarah.rabiee@email.com</td>
+</tr>
+</tbody>
+</table>
+<h3 id="job-address-endereco-do-trabalho">Job Address (Endereço do trabalho)<a class="headerlink" href="#job-address-endereco-do-trabalho" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Street</strong></td>
+<td>590 Indigo Drive</td>
+</tr>
+<tr>
+<td><strong>City</strong></td>
+<td>Orlando</td>
+</tr>
+<tr>
+<td><strong>State</strong></td>
+<td>FL</td>
+</tr>
+<tr>
+<td><strong>Zip</strong></td>
+<td>32828</td>
+</tr>
+</tbody>
+</table>
+<h3 id="categorias-e-items">Categorias e Items<a class="headerlink" href="#categorias-e-items" title="Permanent link">&para;</a></h3>
+<p>Cada categoria agrupa <strong>items de trabalho</strong> (tasks específicas). Uma WO tem múltiplas categorias, e cada categoria tem múltiplos items.</p>
+<!-- TODO: screenshot de WorkOrderCategory expandida. Arquivo: images/work-order-category.png. Capturar: categoria com items listados, incluindo preco -->
+<p><img alt="Categoria com items" class="placeholder-image" src="images/work-order-category.png" /></p>
+<hr />
+<h2 id="5-as-16-categorias-em-ordem-de-execucao">5. As 16 categorias (em ordem de execução)<a class="headerlink" href="#5-as-16-categorias-em-ordem-de-execucao" title="Permanent link">&para;</a></h2>
+<p>Seguem a <strong>sequência real da obra</strong> - o sistema executa categorias na ordem definida abaixo.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Código</th>
+<th>Nome</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>FRM</strong></td>
+<td>Framing</td>
+<td>Estrutura inicial, madeira</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>ELE</strong></td>
+<td>Electrical</td>
+<td>Elétrica (fiação, tomadas, painéis)</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>INS</strong></td>
+<td>Insulation</td>
+<td>Isolamento térmico e acústico</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>DRY</strong></td>
+<td>Drywall</td>
+<td>Placas de gesso, divisórias</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>MUD</strong></td>
+<td>Mud/Taping</td>
+<td>Acabamento drywall (fita, massa)</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>FNC</strong></td>
+<td>Finish Carpentry</td>
+<td>Rodapés, molduras, portas, janelas</td>
+</tr>
+<tr>
+<td>7</td>
+<td><strong>PNT</strong></td>
+<td>Painting</td>
+<td>Pintura (prime, coats)</td>
+</tr>
+<tr>
+<td>8</td>
+<td><strong>FCW</strong></td>
+<td>Floor Covering</td>
+<td>Carpete, laminado, vinílico, madeira</td>
+</tr>
+<tr>
+<td>9</td>
+<td><strong>TIL</strong></td>
+<td>Tile</td>
+<td>Cerâmica, azulejo, porcelanato</td>
+</tr>
+<tr>
+<td>10</td>
+<td><strong>PLM</strong></td>
+<td>Plumbing</td>
+<td>Encanamento (rough + finish)</td>
+</tr>
+<tr>
+<td>11</td>
+<td><strong>DTL</strong></td>
+<td>Details</td>
+<td>Maçanetas, fechaduras, acessórios</td>
+</tr>
+<tr>
+<td>12</td>
+<td><strong>GLS</strong></td>
+<td>Glass</td>
+<td>Vidros, espelhos, box de vidro</td>
+</tr>
+<tr>
+<td>13</td>
+<td><strong>CLN</strong></td>
+<td>Cleaning</td>
+<td>Limpeza final</td>
+</tr>
+<tr>
+<td>14</td>
+<td><strong>TCH</strong></td>
+<td>Touch Ups</td>
+<td>Retoques finais</td>
+</tr>
+<tr>
+<td>15</td>
+<td><strong>CON</strong></td>
+<td>Contents</td>
+<td>Mover móveis, decoração</td>
+</tr>
+<tr>
+<td>16</td>
+<td><strong>DMO</strong></td>
+<td>Demolition</td>
+<td>Demolição, dumpster</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Por que essa ordem?</p>
+<p>É a ordem <strong>real</strong> de execução da obra. Framing antes de elétrica, elétrica antes de drywall, drywall antes de pintura, etc. Respeitar essa ordem no escopo ajuda a planejar o trabalho.</p>
+</div>
+<hr />
+<h2 id="6-estrutura-de-um-item-de-trabalho">6. Estrutura de um item de trabalho<a class="headerlink" href="#6-estrutura-de-um-item-de-trabalho" title="Permanent link">&para;</a></h2>
+<p>Cada item dentro de uma categoria tem:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task</strong></td>
+<td>O que fazer</td>
+<td><code>1/2" drywall - hung, taped, floated</code></td>
+</tr>
+<tr>
+<td><strong>Action</strong></td>
+<td>Tipo de ação</td>
+<td><code>Install</code> / <code>Remove</code> / <code>Detach &amp; Reset</code></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td>Classificação</td>
+<td><code>Labor</code> / <code>Material</code> / <code>Equipment</code></td>
+</tr>
+<tr>
+<td><strong>Quantity</strong></td>
+<td>Quanto</td>
+<td><code>100</code></td>
+</tr>
+<tr>
+<td><strong>Unit</strong></td>
+<td>Unidade de medida</td>
+<td><code>SF</code> / <code>LF</code> / <code>EA</code> / <code>SY</code> / <code>HR</code></td>
+</tr>
+<tr>
+<td><strong>Room</strong></td>
+<td>Cômodo/local</td>
+<td><code>Bathroom</code></td>
+</tr>
+<tr>
+<td><strong>Notes</strong></td>
+<td>Observação opcional</td>
+<td><code>* To frame shower curb</code></td>
+</tr>
+<tr>
+<td><strong>Unit Price</strong></td>
+<td>Preço unitário (<strong>só admin</strong>)</td>
+<td>$4.50</td>
+</tr>
+<tr>
+<td><strong>Total Price</strong></td>
+<td>Quantity × Unit Price (<strong>só admin</strong>)</td>
+<td>$450.00</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unidades-de-medida">Unidades de medida<a class="headerlink" href="#unidades-de-medida" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Nome</th>
+<th>Uso típico</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EA</strong></td>
+<td>Each (Unidade)</td>
+<td>Itens contáveis (pia, vaso, porta)</td>
+</tr>
+<tr>
+<td><strong>SF</strong></td>
+<td>Square Feet</td>
+<td>Áreas (paredes, pisos)</td>
+</tr>
+<tr>
+<td><strong>LF</strong></td>
+<td>Linear Feet</td>
+<td>Comprimentos (rodapés, tubulações)</td>
+</tr>
+<tr>
+<td><strong>SY</strong></td>
+<td>Square Yards</td>
+<td>Áreas grandes (carpete)</td>
+</tr>
+<tr>
+<td><strong>HR</strong></td>
+<td>Hours</td>
+<td>Tempo de mão de obra</td>
+</tr>
+</tbody>
+</table>
+<h3 id="actions-acoes">Actions (Ações)<a class="headerlink" href="#actions-acoes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Action</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Install</strong></td>
+<td>Instalar (adicionar novo)</td>
+</tr>
+<tr>
+<td><strong>Remove</strong></td>
+<td>Remover (demolir, retirar)</td>
+</tr>
+<tr>
+<td><strong>Detach &amp; Reset</strong></td>
+<td>Desmontar, guardar, remontar depois</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="7-status-da-work-order">7. Status da Work Order<a class="headerlink" href="#7-status-da-work-order" title="Permanent link">&para;</a></h2>
+<p>A Work Order segue um fluxo formal com aprovação:</p>
+<pre class="mermaid"><code>stateDiagram-v2
+    direction LR
+    [*] --&gt; draft: Criar via Chat/Import
+    draft --&gt; ready_for_review: Funcionario envia
+    ready_for_review --&gt; approved: Admin aprova
+    ready_for_review --&gt; draft: Admin pede ajustes
+    approved --&gt; in_progress: Iniciar trabalho
+    in_progress --&gt; completed: Finalizar obra
+    completed --&gt; [*]
+
+    classDef critical fill:#ffa726,stroke:#fff,color:#000
+    class approved,completed critical</code></pre>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Significado</th>
+<th>Quem muda</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rascunho</strong> (<code>draft</code>)</td>
+<td>Em construção, editável</td>
+<td>Funcionário ou admin</td>
+</tr>
+<tr>
+<td><strong>Pronto para Revisão</strong> (<code>ready_for_review</code>)</td>
+<td>Aguardando aprovação</td>
+<td>Funcionário</td>
+</tr>
+<tr>
+<td><strong>Aprovado</strong> (<code>approved</code>)</td>
+<td>Pronto para execução</td>
+<td><strong>Admin</strong> (ação obrigatória)</td>
+</tr>
+<tr>
+<td><strong>Em Andamento</strong> (<code>in_progress</code>)</td>
+<td>Trabalho em execução</td>
+<td>Admin ou funcionário</td>
+</tr>
+<tr>
+<td><strong>Concluído</strong> (<code>completed</code>)</td>
+<td>Trabalho finalizado</td>
+<td>Admin ou funcionário</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-quem-ve-o-que-precisa-saber-antes">8. Quem vê o quê (precisa saber antes)<a class="headerlink" href="#8-quem-ve-o-que-precisa-saber-antes" title="Permanent link">&para;</a></h2>
+<h3 id="administrador-super-admin">Administrador / Super Admin<a class="headerlink" href="#administrador-super-admin" title="Permanent link">&para;</a></h3>
+<p>Vê <strong>tudo</strong>:
+- Todos os campos do header
+- Todas as categorias e items
+- <strong>Preços</strong> unitários e totais
+- Botões de editar, aprovar, excluir, exportar PDF</p>
+<h3 id="funcionario">Funcionário<a class="headerlink" href="#funcionario" title="Permanent link">&para;</a></h3>
+<p>Vê <strong>tudo EXCETO preços</strong>:
+- Header completo
+- Categorias e items
+- Task, action, type, quantity, unit, room, notes
+- <strong>Não vê</strong>: <code>unitPrice</code>, <code>totalPrice</code>, <code>totalCost</code> da WO</p>
+<div class="admonition note">
+<p class="admonition-title">Por quê funcionários não veem preços?</p>
+<p>O SGI serve empresas que não querem expor margem/custos ao time operacional. Funcionários precisam saber <strong>o que fazer</strong> e <strong>quanto</strong> (quantidade), mas não <strong>quanto custa</strong>. Se precisar que um funcionário específico veja preços, promova ele a admin.</p>
+</div>
+<hr />
+<h2 id="9-editando-items">9. Editando items<a class="headerlink" href="#9-editando-items" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Edição só em <code>draft</code></p>
+<p>Items só podem ser editados enquanto a WO está em <strong><code>draft</code></strong>. Depois de <code>ready_for_review</code>, tudo fica <strong>read-only</strong>.</p>
+<p>Se precisar mudar algo em uma WO aprovada: admin precisa voltá-la para <code>draft</code> (se ainda não iniciou execução) ou criar uma WO nova adicional.</p>
+</div>
+<!-- TODO: screenshot de WorkOrderEditItemDialog. Arquivo: images/work-order-edit-item.png. Capturar: dialog de edicao de item com todos os campos -->
+<p><img alt="Editando item da Work Order" class="placeholder-image" src="images/work-order-edit-item.png" /></p>
+<h3 id="como-editar">Como editar<a class="headerlink" href="#como-editar" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clique no ícone de editar ao lado do item</li>
+<li>Altere campos: task, action, quantity, unit, room, notes, preço</li>
+<li>Clique em <strong>"Salvar"</strong></li>
+</ol>
+<h3 id="como-adicionar-novo-item">Como adicionar novo item<a class="headerlink" href="#como-adicionar-novo-item" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Expanda a categoria desejada</li>
+<li>Clique em <strong>"+ Adicionar item"</strong> no rodapé da categoria</li>
+<li>Preencha os campos</li>
+<li>Salve</li>
+</ol>
+<h3 id="como-deletar-item">Como deletar item<a class="headerlink" href="#como-deletar-item" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clique no ícone de lixeira ao lado do item</li>
+<li>Confirme no dialog</li>
+<li>Item é removido da categoria</li>
+</ol>
+<hr />
+<h2 id="10-export-em-pdf">10. Export em PDF<a class="headerlink" href="#10-export-em-pdf" title="Permanent link">&para;</a></h2>
+<p>Admin pode gerar um PDF profissional da Work Order completa para enviar ao cliente ou arquivar.</p>
+<h3 id="como-gerar">Como gerar<a class="headerlink" href="#como-gerar" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Na WO, clique em <strong>"Download PDF"</strong> no header</li>
+<li>Aguarde a geração (alguns segundos)</li>
+<li>O PDF é baixado automaticamente</li>
+</ol>
+<p>O PDF contém:</p>
+<ul>
+<li>Header completo com logo, números, datas, cliente</li>
+<li>Todas as categorias e items organizados</li>
+<li><strong>Preços</strong> (apenas se quem gerar for admin)</li>
+<li>Assinaturas (campos para cliente e responsável)</li>
+</ul>
+<hr />
+<h2 id="regras-importantes">Regras Importantes<a class="headerlink" href="#regras-importantes" title="Permanent link">&para;</a></h2>
+<h3 id="campos-obrigatorios-e-limites">Campos obrigatórios e limites<a class="headerlink" href="#campos-obrigatorios-e-limites" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th style="text-align: center;">Obrigatório</th>
+<th style="text-align: center;">Limite</th>
+<th>Observação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>workOrderNumber</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>Auto-gerado (<code>WO{ANO}{MES}-{SEQ}</code>)</td>
+</tr>
+<tr>
+<td><code>jobNumber</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>Pode ser informado manualmente</td>
+</tr>
+<tr>
+<td><code>jobName</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>Nome descritivo do job</td>
+</tr>
+<tr>
+<td><code>projectManager</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>Deve ser um funcionário cadastrado</td>
+</tr>
+<tr>
+<td><code>workOrderDate</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>ISO 8601</td>
+</tr>
+<tr>
+<td><code>customer.name</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>customer.address</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>customer.phone</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>customer.email</code></td>
+<td style="text-align: center;">Não</td>
+<td style="text-align: center;">-</td>
+<td>Opcional</td>
+</tr>
+<tr>
+<td><code>jobAddress.*</code></td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td>street, city, state, zip todos obrigatórios</td>
+</tr>
+<tr>
+<td><strong>Import PDF</strong></td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">10 MB</td>
+<td>Para upload no Chat</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permissoes-necessarias">Permissões necessárias<a class="headerlink" href="#permissoes-necessarias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operação</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Funcionário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ver Work Order (sem preços)</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (se projeto atribuído)</td>
+</tr>
+<tr>
+<td>Ver preços</td>
+<td style="text-align: center;"><strong>Sim</strong></td>
+<td style="text-align: center;"><strong>Sim</strong></td>
+<td style="text-align: center;"><strong>Não</strong></td>
+</tr>
+<tr>
+<td>Criar WO (via Chat)</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (se projeto atribuído)</td>
+</tr>
+<tr>
+<td>Importar WO de PDF</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td>Editar items (em draft)</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td><strong>Aprovar WO</strong></td>
+<td style="text-align: center;"><strong>Sim</strong></td>
+<td style="text-align: center;"><strong>Sim</strong></td>
+<td style="text-align: center;"><strong>Não</strong></td>
+</tr>
+<tr>
+<td>Deletar WO</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+<tr>
+<td>Gerar PDF</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (sem preços)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validacoes-que-bloqueiam">Validações que bloqueiam<a class="headerlink" href="#validacoes-que-bloqueiam" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Items só editáveis em <code>draft</code></p>
+<p>Tentar editar um item quando a WO está em <code>ready_for_review</code> (ou posterior) retorna erro. Volte ao <code>draft</code> primeiro (se o admin permitir).</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Import PDF tem limite de 10 MB</p>
+<p>PDFs maiores que 10 MB são rejeitados no upload. Se sua WO externa está grande, tente comprimir o PDF ou dividir em partes.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Score de confiança no import</p>
+<p>PDFs com confiança <code>&lt; 0.6</code> (formato desconhecido) <strong>ainda são aceitos</strong>, mas o sistema alerta que pode ter extraído dados errados. Sempre revise o preview antes de confirmar.</p>
+</div>
+<h3 id="defaults-do-sistema">Defaults do sistema<a class="headerlink" href="#defaults-do-sistema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Configuração</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Status inicial</td>
+<td><code>draft</code></td>
+</tr>
+<tr>
+<td>Formato do número</td>
+<td><code>WO{AA}{MM}-{SEQUENCIAL 5 dígitos}</code> (ex: <code>WO2601-00001</code>)</td>
+</tr>
+<tr>
+<td>Sort order das categorias</td>
+<td>Fixo (ver tabela da seção 5)</td>
+</tr>
+<tr>
+<td>Preços visíveis</td>
+<td>Apenas admin/superadmin</td>
+</tr>
+<tr>
+<td>Import: confiança mínima</td>
+<td>Sem bloqueio (sempre aceita, mas avisa)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="resumo-rapido">Resumo rápido<a class="headerlink" href="#resumo-rapido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Você quer...</th>
+<th>Faça isso...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criar WO do zero</td>
+<td><a href="../chat/">Chat</a> - "Preciso de uma WO para..."</td>
+</tr>
+<tr>
+<td>Importar WO de PDF</td>
+<td><a href="../chat/">Chat</a> - envie o arquivo PDF</td>
+</tr>
+<tr>
+<td>Editar items</td>
+<td>WO em <code>draft</code> &gt; clicar editar no item</td>
+</tr>
+<tr>
+<td>Enviar para aprovação</td>
+<td>WO &gt; botão "Enviar para revisão"</td>
+</tr>
+<tr>
+<td>Aprovar WO (admin)</td>
+<td>WO em <code>ready_for_review</code> &gt; "Aprovar"</td>
+</tr>
+<tr>
+<td>Gerar PDF</td>
+<td>WO &gt; "Download PDF"</td>
+</tr>
+<tr>
+<td>Deletar WO</td>
+<td>WO &gt; "Excluir" (admin only)</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>

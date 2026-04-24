@@ -1,0 +1,5463 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Guia completo do Sistema de Gestão Inteligente">
+      
+      
+      
+        <link rel="canonical" href="https://docs.sgiflow.com/chat/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../projetos/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Chat com IA - SGI - Guia do Usuário</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#chat-com-assistente-ia-guia-do-usuario" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href=".." title="SGI - Guia do Usuário" class="md-header__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SGI - Guia do Usuário
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Chat com IA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo claro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Modo claro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="custom"  aria-label="Modo escuro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Modo escuro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Compartilhar" aria-label="Compartilhar" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+    
+      
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  Português (BR)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../chat-en/" class="md-tabs__link">
+          
+  
+  
+  English
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SGI - Guia do Usuário" class="md-nav__button md-logo" aria-label="SGI - Guia do Usuário" data-md-component="logo">
+      
+  <img src="../images/logo.png" alt="logo">
+
+    </a>
+    SGI - Guia do Usuário
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Início
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Português (BR)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Português (BR)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Chat com IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-e-o-chat-do-sgi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que e o Chat do SGI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. O que e o Chat do SGI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-a-tela-do-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. A tela do Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. A tela do Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-voce-ve-na-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que voce ve na tela
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicador-de-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicador de status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barra-de-entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barra de entrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-a-ia-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Como a IA funciona
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Como a IA funciona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-de-como-a-ia-entende-voce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos de como a IA entende voce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-conversa-se-adapta-naturalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A conversa se adapta naturalmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gerar-escopos-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Gerar Escopos (Work Order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gerar Escopos (Work Order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que e um escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-poder-da-geracao-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O poder da geracao de escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gerando-escopo-por-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gerando escopo por texto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gerando escopo por texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-completo-de-conversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo completo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-descrever-o-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para descrever o trabalho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gerando-escopo-a-partir-de-fotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Gerando escopo a partir de fotos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Gerando escopo a partir de fotos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-fotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para fotos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gerando-escopo-a-partir-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Gerando escopo a partir de audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Gerando escopo a partir de audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-gravacao-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para gravacao de audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-gerando-escopo-a-partir-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Gerando escopo a partir de video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Gerando escopo a partir de video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-as-16-categorias-de-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. As 16 categorias de trabalho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. As 16 categorias de trabalho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-revisando-e-editando-o-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Revisando e editando o escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Revisando e editando o escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-voce-pode-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que voce pode fazer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-do-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status do escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de edicao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-como-o-escopo-aparece-no-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Como o escopo aparece no projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Como o escopo aparece no projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-voce-ve-na-aba-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que voce ve na aba Escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferenca-de-visualizacao-por-cargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferenca de visualizacao por cargo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-registrar-custos-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Registrar custos pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Registrar custos pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quem-pode-registrar-custos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quem pode registrar custos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-leitura-automatica-de-notas-fiscais-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Leitura automatica de notas fiscais (OCR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Leitura automatica de notas fiscais (OCR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-fotos-de-notas-fiscais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para fotos de notas fiscais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-agendar-visitas-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Agendar visitas pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Agendar visitas pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-a-ia-sugere-o-funcionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como a IA sugere o funcionario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-enviar-relatorios-de-progresso-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Enviar relatorios de progresso pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Enviar relatorios de progresso pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-completo-do-inicio-ao-fim-de-uma-visita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo completo: do inicio ao fim de uma visita
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-o-que-um-relatorio-contem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. O que um relatorio contem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. O que um relatorio contem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onde-o-relatorio-aparece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Onde o relatorio aparece
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quem-ve-o-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quem ve o que
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-gerenciar-estoque-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Gerenciar estoque pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Gerenciar estoque pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacoes-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operacoes disponiveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-gerenciar-projetos-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Gerenciar projetos pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Gerenciar projetos pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-um-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criar um projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mudar-status-de-um-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mudar status de um projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultar projetos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-tipos-de-entrada-aceitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Tipos de entrada aceitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Tipos de entrada aceitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quais-funcoes-aceitam-quais-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quais funcoes aceitam quais tipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191-importando-work-order-de-pdf-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 Importando Work Order de PDF externo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1 Importando Work Order de PDF externo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-como-a-ia-decide-a-acao-certa-masteragentrouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 Como a IA decide a acao certa (masterAgentRouter)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-dicas-para-usar-melhor-o-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Dicas para usar melhor o Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. Dicas para usar melhor o Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seja-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seja especifico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-o-tipo-de-entrada-certo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use o tipo de entrada certo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-ia-lembra-do-contexto-com-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A IA lembra do contexto (com limites)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-algo-deu-errado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se algo deu errado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pode-misturar-idiomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pode misturar idiomas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-tamanho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites de tamanho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-e-comportamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações e comportamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Resumo rapido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Resumo rapido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-dizer-no-chat-para-cada-acao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que dizer no Chat para cada acao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atalhos-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atalhos uteis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projetos
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projetos
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projetos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visão geral
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../fotos-de-projeto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Fotos do Projeto
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../estoque/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Estoque
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_4" id="__nav_2_4_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Equipe
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Equipe
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usuarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usuários e Permissões
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../grupos-de-clientes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Grupos de Clientes
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Financeiro
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Financeiro
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pagamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pagamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios e Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operações
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operações
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agendamentos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Agendamentos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../relatorios-diarios/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Relatórios Diários
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notificacoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notificações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administração
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administração
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../configuracoes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configurações
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergencia/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergência
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    English
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    English
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../chat-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI Chat
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Projects
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Projects
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../work-order-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Work Order
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../project-photos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Project Photos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inventory/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inventory
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Team
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Team
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Users & Permissions
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../client-groups/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Client Groups
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Finance
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Finance
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../payments/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Payments
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reports-analytics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reports & Analytics
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Operations
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Operations
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dashboard-en/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dashboard
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scheduling/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Scheduling
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../daily-reports/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Daily Reports
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../notifications/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Notifications
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Administration
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Administration
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Settings
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../emergency/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Emergency
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-o-que-e-o-chat-do-sgi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. O que e o Chat do SGI
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1. O que e o Chat do SGI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-a-tela-do-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. A tela do Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2. A tela do Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-voce-ve-na-tela" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que voce ve na tela
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indicador-de-status" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicador de status
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#barra-de-entrada" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Barra de entrada
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-como-a-ia-funciona" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Como a IA funciona
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Como a IA funciona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos-de-como-a-ia-entende-voce" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplos de como a IA entende voce
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-conversa-se-adapta-naturalmente" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A conversa se adapta naturalmente
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-gerar-escopos-work-order" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Gerar Escopos (Work Order)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Gerar Escopos (Work Order)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-e-um-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que e um escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-poder-da-geracao-de-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O poder da geracao de escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-gerando-escopo-por-texto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Gerando escopo por texto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Gerando escopo por texto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-completo-de-conversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo completo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-descrever-o-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para descrever o trabalho
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-gerando-escopo-a-partir-de-fotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Gerando escopo a partir de fotos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Gerando escopo a partir de fotos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-fotos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para fotos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-gerando-escopo-a-partir-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Gerando escopo a partir de audio
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Gerando escopo a partir de audio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-gravacao-de-audio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para gravacao de audio
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-gerando-escopo-a-partir-de-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Gerando escopo a partir de video
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Gerando escopo a partir de video">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-videos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para videos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-as-16-categorias-de-trabalho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. As 16 categorias de trabalho
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="9. As 16 categorias de trabalho">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unidades-de-medida" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unidades de medida
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-revisando-e-editando-o-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Revisando e editando o escopo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="10. Revisando e editando o escopo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-voce-pode-fazer" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que voce pode fazer
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-do-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status do escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-edicao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de edicao
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-como-o-escopo-aparece-no-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        11. Como o escopo aparece no projeto
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="11. Como o escopo aparece no projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-voce-ve-na-aba-escopo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que voce ve na aba Escopo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#diferenca-de-visualizacao-por-cargo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Diferenca de visualizacao por cargo
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-registrar-custos-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        12. Registrar custos pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="12. Registrar custos pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quem-pode-registrar-custos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quem pode registrar custos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-leitura-automatica-de-notas-fiscais-ocr" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        13. Leitura automatica de notas fiscais (OCR)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="13. Leitura automatica de notas fiscais (OCR)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dicas-para-fotos-de-notas-fiscais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dicas para fotos de notas fiscais
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-agendar-visitas-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        14. Agendar visitas pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="14. Agendar visitas pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#como-a-ia-sugere-o-funcionario" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como a IA sugere o funcionario
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-enviar-relatorios-de-progresso-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        15. Enviar relatorios de progresso pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="15. Enviar relatorios de progresso pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-completo-do-inicio-ao-fim-de-uma-visita" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fluxo completo: do inicio ao fim de uma visita
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-o-que-um-relatorio-contem" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        16. O que um relatorio contem
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="16. O que um relatorio contem">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#onde-o-relatorio-aparece" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Onde o relatorio aparece
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#quem-ve-o-que" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quem ve o que
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-gerenciar-estoque-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        17. Gerenciar estoque pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="17. Gerenciar estoque pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacoes-disponiveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Operacoes disponiveis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#18-gerenciar-projetos-pelo-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        18. Gerenciar projetos pelo Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="18. Gerenciar projetos pelo Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criar-um-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criar um projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mudar-status-de-um-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mudar status de um projeto
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consultar-projetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Consultar projetos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#19-tipos-de-entrada-aceitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19. Tipos de entrada aceitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19. Tipos de entrada aceitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quais-funcoes-aceitam-quais-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quais funcoes aceitam quais tipos
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#191-importando-work-order-de-pdf-externo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.1 Importando Work Order de PDF externo
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="19.1 Importando Work Order de PDF externo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#como-funciona_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Como funciona
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-conversa_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de conversa
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-como-a-ia-decide-a-acao-certa-masteragentrouter" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        19.2 Como a IA decide a acao certa (masterAgentRouter)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#20-dicas-para-usar-melhor-o-chat" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        20. Dicas para usar melhor o Chat
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="20. Dicas para usar melhor o Chat">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#seja-especifico" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Seja especifico
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#use-o-tipo-de-entrada-certo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Use o tipo de entrada certo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-ia-lembra-do-contexto-com-limites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        A IA lembra do contexto (com limites)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#se-algo-deu-errado" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Se algo deu errado
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pode-misturar-idiomas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pode misturar idiomas
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regras-importantes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Regras Importantes
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regras Importantes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#limites-de-tamanho" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Limites de tamanho
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#permissoes-necessarias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Permissões necessárias
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#validacoes-e-comportamentos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Validações e comportamentos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#defaults-do-sistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Defaults do sistema
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#21-resumo-rapido" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        21. Resumo rapido
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="21. Resumo rapido">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-que-dizer-no-chat-para-cada-acao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        O que dizer no Chat para cada acao
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atalhos-uteis" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Atalhos uteis
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="chat-com-assistente-ia-guia-do-usuario">Chat com Assistente IA - Guia do Usuario<a class="headerlink" href="#chat-com-assistente-ia-guia-do-usuario" title="Permanent link">&para;</a></h1>
+<p>Neste guia, voce vai aprender tudo sobre o <strong>Chat com Assistente IA</strong> do SGI - o coracao do sistema. Aqui e onde a inteligencia artificial organiza todo o seu trabalho: gera escopos detalhados, registra custos lendo notas fiscais, agenda visitas, coleta relatorios de progresso, gerencia estoque e projetos - tudo por conversa natural.</p>
+<blockquote>
+<p><strong>Por que o Chat e tao importante?</strong> Quase tudo que voce faz manualmente nas outras telas do SGI pode ser feito mais rapido pelo Chat. Basta conversar naturalmente com a IA, como se fosse um assistente pessoal no campo.</p>
+</blockquote>
+<hr />
+<h2 id="1-o-que-e-o-chat-do-sgi">1. O que e o Chat do SGI<a class="headerlink" href="#1-o-que-e-o-chat-do-sgi" title="Permanent link">&para;</a></h2>
+<p>O Chat do SGI e o seu <strong>assistente pessoal de campo</strong>. Ele funciona como uma conversa natural onde voce pode:</p>
+<ul>
+<li><strong>Gerar escopos</strong> detalhados de projetos a partir de texto, fotos, audios ou videos</li>
+<li><strong>Registrar custos</strong> e despesas, incluindo leitura automatica de notas fiscais</li>
+<li><strong>Agendar visitas</strong> com sugestao inteligente do melhor funcionario</li>
+<li><strong>Enviar relatorios</strong> de progresso diario do trabalho em campo</li>
+<li><strong>Gerenciar estoque</strong> - retirar materiais, consultar quantidades, verificar alertas</li>
+<li><strong>Gerenciar projetos</strong> - criar, editar, mudar status</li>
+</ul>
+<h3 id="como-funciona">Como funciona<a class="headerlink" href="#como-funciona" title="Permanent link">&para;</a></h3>
+<p>Voce nao precisa escolher nenhum "modo" ou "funcao". A IA entende automaticamente o que voce quer com base na sua mensagem. Se voce diz "gastei R$ 500 na loja", a IA sabe que voce quer registrar um custo. Se voce diz "agendar visita para amanha", a IA sabe que voce quer criar um agendamento.</p>
+<p>A conversa se adapta: se voce comeca falando sobre custos e depois muda para agendamento, a IA acompanha naturalmente. Tudo funciona no mesmo chat, sem precisar trocar de tela.</p>
+<div class="admonition note">
+<p class="admonition-title">Disponibilidade atual</p>
+<p>O Chat funciona pelo App (PWA) em todos os dispositivos (desktop, tablet, mobile). Suporte via WhatsApp esta previsto para versoes futuras, mas ainda nao esta disponivel.</p>
+</div>
+<hr />
+<h2 id="2-a-tela-do-chat">2. A tela do Chat<a class="headerlink" href="#2-a-tela-do-chat" title="Permanent link">&para;</a></h2>
+<p>No menu lateral esquerdo, clique em <strong>"Chat"</strong>. Voce sera levado para a tela do assistente.</p>
+<p><img alt="Tela principal do Chat" src="../images/chat-main.png" /></p>
+<h3 id="o-que-voce-ve-na-tela">O que voce ve na tela<a class="headerlink" href="#o-que-voce-ve-na-tela" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cabecalho:</strong> "Assistente SGI" com indicador de status que muda conforme o contexto da conversa (veja abaixo)</li>
+<li><strong>Mensagem inicial:</strong> A IA se apresenta e lista suas 5 capacidades principais</li>
+<li><strong>Botao "Nova Conversa"</strong> (canto superior direito) - Para iniciar uma conversa do zero</li>
+<li><strong>Area de conversa:</strong> Onde as mensagens aparecem (estilo WhatsApp)</li>
+</ul>
+<h3 id="indicador-de-status">Indicador de status<a class="headerlink" href="#indicador-de-status" title="Permanent link">&para;</a></h3>
+<p>O texto abaixo do nome "Assistente SGI" muda automaticamente conforme o que a IA esta fazendo no momento:</p>
+<table>
+<thead>
+<tr>
+<th>Status exibido</th>
+<th>Quando aparece</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>online</strong></td>
+<td>Quando a IA esta pronta para receber qualquer mensagem (padrao)</td>
+</tr>
+<tr>
+<td><strong>Assistente Geral</strong></td>
+<td>Respondendo perguntas gerais ou ajudando com duvidas</td>
+</tr>
+<tr>
+<td><strong>Work Order</strong></td>
+<td>Gerando ou editando um escopo de trabalho</td>
+</tr>
+<tr>
+<td><strong>Adicionando Custo</strong></td>
+<td>Registrando uma despesa ou lendo nota fiscal</td>
+</tr>
+<tr>
+<td><strong>Agendamento</strong></td>
+<td>Criando ou consultando agendamentos</td>
+</tr>
+<tr>
+<td><strong>Relatorio Diario</strong></td>
+<td>Coletando relatorio de progresso de uma visita</td>
+</tr>
+<tr>
+<td><strong>Gestao de Estoque</strong></td>
+<td>Consultando ou movimentando materiais</td>
+</tr>
+<tr>
+<td><strong>Gestao de Projetos</strong></td>
+<td>Criando, editando ou consultando projetos</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Dica:</strong> O indicador de status ajuda voce a entender o que a IA esta processando. Se voce estiver gerando um escopo e mudar de assunto, o status muda automaticamente para refletir o novo contexto.</p>
+</blockquote>
+<h3 id="barra-de-entrada">Barra de entrada<a class="headerlink" href="#barra-de-entrada" title="Permanent link">&para;</a></h3>
+<p><img alt="Barra de entrada com botoes de anexo" src="../images/chat-attachments.png" /></p>
+<p>Na parte inferior da tela, voce encontra:</p>
+<p><strong>Desktop:</strong> Botoes individuais para cada tipo de anexo.</p>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>O que faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Campo de texto</strong></td>
+<td>"Digite sua mensagem..." - onde voce escreve (ate 2000 caracteres)</td>
+</tr>
+<tr>
+<td><strong>Botao de imagem</strong></td>
+<td>Envia fotos (notas fiscais, local de trabalho, documentos)</td>
+</tr>
+<tr>
+<td><strong>Botao de microfone</strong></td>
+<td>Grava audio de voz diretamente no app (com waveform)</td>
+</tr>
+<tr>
+<td><strong>Botao de audio</strong></td>
+<td>Envia arquivo de audio ja gravado</td>
+</tr>
+<tr>
+<td><strong>Botao de video (camera)</strong></td>
+<td>Grava video de ate 30s diretamente no app</td>
+</tr>
+<tr>
+<td><strong>Botao de video (upload)</strong></td>
+<td>Envia video ja gravado</td>
+</tr>
+<tr>
+<td><strong>Botao de PDF</strong></td>
+<td>Envia arquivo PDF (ate 10MB) - util para importar Work Orders</td>
+</tr>
+<tr>
+<td><strong>Botao enviar</strong></td>
+<td>Envia a mensagem (ou pressione Enter)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Mobile:</strong> Um unico botao <strong>"+"</strong> abre um menu estilo WhatsApp com todas as opcoes (foto, audio, video, PDF).</p>
+<!-- TODO: screenshot de ChatInputBar mobile com menu de anexos aberto. Arquivo: images/chat-mobile-menu.png. Capturar: menu Popover com opcoes Photo/Record Audio/Upload Audio/Record Video/Upload Video/Upload PDF -->
+<p><img alt="Menu de anexos mobile" class="placeholder-image" src="images/chat-mobile-menu.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Atalhos de teclado</p>
+<ul>
+<li><strong>Enter</strong> - Envia a mensagem</li>
+<li><strong>Shift+Enter</strong> - Pula uma linha sem enviar</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Limites do Chat</p>
+<ul>
+<li><strong>Texto:</strong> ate 2000 caracteres por mensagem (contador aparece quando voce passa de 80%)</li>
+<li><strong>PDF:</strong> ate 10 MB por arquivo</li>
+<li><strong>Imagem/audio/video:</strong> ate 50 MB por arquivo</li>
+<li><strong>Video gravado no app:</strong> maximo 30 segundos</li>
+<li><strong>Sessao:</strong> expira automaticamente (1 dia para a maioria dos fluxos, 7 dias para casos especificos). Apos expirar, a IA nao lembra mais do contexto daquela conversa.</li>
+</ul>
+</div>
+<hr />
+<h2 id="3-como-a-ia-funciona">3. Como a IA funciona<a class="headerlink" href="#3-como-a-ia-funciona" title="Permanent link">&para;</a></h2>
+<p>A IA do SGI e inteligente: ela entende o contexto da sua conversa e decide automaticamente qual acao tomar. Voce nao precisa usar comandos especiais ou escolher menus.</p>
+<h3 id="exemplos-de-como-a-ia-entende-voce">Exemplos de como a IA entende voce<a class="headerlink" href="#exemplos-de-como-a-ia-entende-voce" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Voce diz...</th>
+<th>A IA entende que voce quer...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Preciso de um escopo para o projeto X"</td>
+<td>Gerar um escopo (Work Order)</td>
+</tr>
+<tr>
+<td>"Gastei R$ 500 em materiais"</td>
+<td>Registrar um custo</td>
+</tr>
+<tr>
+<td>[Envia foto de nota fiscal]</td>
+<td>Ler a nota e registrar o custo</td>
+</tr>
+<tr>
+<td>"Agendar visita para amanha as 9h"</td>
+<td>Criar um agendamento</td>
+</tr>
+<tr>
+<td>"Cheguei no local"</td>
+<td>Iniciar um relatorio de progresso</td>
+</tr>
+<tr>
+<td>"Quanto tem de cimento no estoque?"</td>
+<td>Consultar o estoque</td>
+</tr>
+<tr>
+<td>"Criar um novo projeto"</td>
+<td>Criar um projeto</td>
+</tr>
+<tr>
+<td>"Oi, bom dia!"</td>
+<td>Cumprimentar e oferecer ajuda</td>
+</tr>
+</tbody>
+</table>
+<h3 id="a-conversa-se-adapta-naturalmente">A conversa se adapta naturalmente<a class="headerlink" href="#a-conversa-se-adapta-naturalmente" title="Permanent link">&para;</a></h3>
+<p>A IA lembra do contexto da sua conversa. Voce nao precisa repetir informacoes:</p>
+<blockquote>
+<p><strong>Voce:</strong> "Preciso gerar um escopo para o projeto Rua das Flores"
+<strong>IA:</strong> "Entendido! Vou coletar as informacoes do escopo para o projeto 'Instalacao Carpete - Rua das Flores 123'. Descreva o trabalho que precisa ser feito."
+<strong>Voce:</strong> "Instalar 100 SF de drywall no banheiro"
+<strong>IA:</strong> "Adicionei ao escopo: Drywall - Install Drywall, 100 SF, Banheiro. Mais algum item?"
+<strong>Voce:</strong> "Nao, e so isso. Ah, e agenda uma visita para amanha as 9h"
+<strong>IA:</strong> "Perfeito! Escopo finalizado. Agora vou agendar a visita. Verificando disponibilidade... Recomendo Joao Silva (skill: Drywall). Confirma para amanha as 09:00?"</p>
+</blockquote>
+<p>Veja como a conversa mudou naturalmente de "gerar escopo" para "agendar visita" sem nenhuma interrupcao.</p>
+<hr />
+<h2 id="4-gerar-escopos-work-order">4. Gerar Escopos (Work Order)<a class="headerlink" href="#4-gerar-escopos-work-order" title="Permanent link">&para;</a></h2>
+<h3 id="o-que-e-um-escopo">O que e um escopo<a class="headerlink" href="#o-que-e-um-escopo" title="Permanent link">&para;</a></h3>
+<p>O <strong>escopo</strong> (tambem chamado de Work Order ou Ordem de Servico) e o <strong>detalhamento completo do trabalho</strong> que precisa ser feito em um projeto. Ele organiza todas as tarefas em categorias profissionais, na ordem de execucao real da obra.</p>
+<p>Cada item do escopo tem:
+- <strong>Tarefa</strong> - O que precisa ser feito (ex: "Install Drywall")
+- <strong>Acao</strong> - Tipo de acao: Install (Instalar), Remove (Remover) ou Detach &amp; Reset (Desmontar e Remontar)
+- <strong>Tipo</strong> - Labor (Mao de Obra), Material ou Equipment (Equipamento)
+- <strong>Quantidade</strong> - Quanto (ex: 100)
+- <strong>Unidade</strong> - Medida usada (ex: SF - pe quadrado, EA - unidade)
+- <strong>Comodo</strong> - Onde sera feito (ex: Banheiro, Cozinha)
+- <strong>Notas</strong> - Observacoes adicionais</p>
+<p>O escopo e conectado diretamente a aba <strong>"Escopo"</strong> do projeto. Quando voce gera um escopo pelo Chat, ele aparece automaticamente no detalhe do projeto.</p>
+<h3 id="o-poder-da-geracao-de-escopo">O poder da geracao de escopo<a class="headerlink" href="#o-poder-da-geracao-de-escopo" title="Permanent link">&para;</a></h3>
+<p>O que torna o SGI especial e a capacidade de <strong>gerar escopos completos a partir de qualquer tipo de entrada</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Entrada</th>
+<th>O que a IA faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Texto</strong></td>
+<td>Voce descreve o trabalho e a IA organiza em categorias</td>
+</tr>
+<tr>
+<td><strong>Fotos</strong></td>
+<td>A IA analisa as fotos e identifica materiais, condicoes e dimensoes</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>Voce grava falando sobre o trabalho e a IA transcreve e organiza</td>
+</tr>
+<tr>
+<td><strong>Video</strong></td>
+<td>A IA analisa o video quadro a quadro, extraindo informacoes visuais e de audio</td>
+</tr>
+</tbody>
+</table>
+<p>Voce pode ate <strong>combinar</strong> varios tipos de entrada na mesma conversa!</p>
+<hr />
+<h2 id="5-gerando-escopo-por-texto">5. Gerando escopo por texto<a class="headerlink" href="#5-gerando-escopo-por-texto" title="Permanent link">&para;</a></h2>
+<p>A forma mais simples de gerar um escopo e descrevendo o trabalho por texto.</p>
+<h3 id="exemplo-completo-de-conversa">Exemplo completo de conversa<a class="headerlink" href="#exemplo-completo-de-conversa" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Preciso gerar um escopo para o projeto da Rua Dr. Melo Alves"
+<strong>IA:</strong> "Encontrei o projeto 'Instalacao Hidraulica - Rua Dr. Melo Alves, 700'. Vou coletar os itens do escopo. Descreva o trabalho que precisa ser feito."</p>
+<p><strong>Voce:</strong> "Preciso instalar 100 SF de drywall no banheiro principal e pintar 2 quartos, cada um com 200 SF"
+<strong>IA:</strong> "Entendido! Vou organizar o escopo:</p>
+<p><strong>Categoria DRY - Drywall:</strong>
+- Install Drywall | Labor | 100 SF | Banheiro Principal</p>
+<p><strong>Categoria PNT - Painting:</strong>
+- Install Paint | Labor | 200 SF | Quarto 1
+- Install Paint | Labor | 200 SF | Quarto 2</p>
+<p>Total: 3 itens em 2 categorias. Deseja adicionar mais itens?"</p>
+<p><strong>Voce:</strong> "Sim, tambem precisa trocar o piso do banheiro, 50 SF de ceramica"
+<strong>IA:</strong> "Adicionado!</p>
+<p><strong>Categoria TIL - Tile:</strong>
+- Install Tile | Labor | 50 SF | Banheiro Principal</p>
+<p>Total atualizado: 4 itens em 3 categorias. Mais alguma coisa?"</p>
+<p><strong>Voce:</strong> "Nao, pode finalizar"
+<strong>IA:</strong> "Escopo enviado para revisao! Resumo final:
+- DRY (Drywall): 1 item - 100 SF
+- PNT (Painting): 2 itens - 400 SF total
+- TIL (Tile): 1 item - 50 SF</p>
+<p>O escopo esta disponivel na aba 'Escopo' do projeto. Um administrador pode revisar e aprovar."</p>
+</blockquote>
+<h3 id="dicas-para-descrever-o-trabalho">Dicas para descrever o trabalho<a class="headerlink" href="#dicas-para-descrever-o-trabalho" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Seja especifico com quantidades:</strong> "100 SF de drywall" e melhor que "drywall no banheiro"</li>
+<li><strong>Mencione os comodos:</strong> "pintura na sala" ajuda a organizar por local</li>
+<li><strong>Use acoes claras:</strong> "instalar", "remover", "trocar" ajudam a IA a classificar corretamente</li>
+<li><strong>Pode misturar idiomas:</strong> "50 SF de tile no bathroom" funciona perfeitamente</li>
+</ul>
+<hr />
+<h2 id="6-gerando-escopo-a-partir-de-fotos">6. Gerando escopo a partir de fotos<a class="headerlink" href="#6-gerando-escopo-a-partir-de-fotos" title="Permanent link">&para;</a></h2>
+<p>Uma das funcionalidades mais poderosas do SGI e a capacidade de <strong>analisar fotos</strong> para gerar escopos automaticamente.</p>
+<h3 id="como-funciona_1">Como funciona<a class="headerlink" href="#como-funciona_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Envie uma ou mais fotos do local de trabalho</li>
+<li>A IA analisa as imagens e identifica:</li>
+<li><strong>Comodos</strong> e espacos visiveis</li>
+<li><strong>Materiais</strong> existentes e suas condicoes</li>
+<li><strong>Dimensoes</strong> aproximadas</li>
+<li><strong>Problemas</strong> ou danos visiveis</li>
+<li>A IA sugere automaticamente itens e categorias para o escopo</li>
+</ol>
+<h3 id="exemplo-de-conversa">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Vou enviar fotos da vistoria do apartamento"
+<strong>Voce:</strong> [Envia 3 fotos: banheiro com azulejo danificado, quarto com parede descascando, cozinha com piso quebrado]</p>
+<p><strong>IA:</strong> "Analisei as 3 fotos. Identifiquei:</p>
+<p><strong>Foto 1 - Banheiro:</strong>
+- Azulejo com trincas e juntas deterioradas
+- Estimativa: ~40 SF de area a ser trocada</p>
+<p><strong>Foto 2 - Quarto:</strong>
+- Parede com pintura descascando
+- Necessita preparacao de superficie + repintura
+- Estimativa: ~150 SF de area</p>
+<p><strong>Foto 3 - Cozinha:</strong>
+- Piso ceramico quebrado em varios pontos
+- Estimativa: ~60 SF de area</p>
+<p>Sugiro o seguinte escopo:</p>
+<p><strong>TIL - Tile:</strong> Remove + Install Tile | 40 SF | Banheiro
+<strong>PNT - Painting:</strong> Install Paint | 150 SF | Quarto
+<strong>FCW - Floor Covering:</strong> Remove + Install Floor | 60 SF | Cozinha</p>
+<p>Deseja confirmar, ajustar quantidades ou adicionar mais itens?"</p>
+<p><strong>Voce:</strong> "O banheiro e maior, sao 60 SF na verdade"
+<strong>IA:</strong> "Corrigido! Tile no Banheiro: 40 SF → 60 SF. Mais algum ajuste?"</p>
+</blockquote>
+<h3 id="dicas-para-fotos">Dicas para fotos<a class="headerlink" href="#dicas-para-fotos" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Tire fotos de angulos diferentes</strong> para a IA ter mais contexto</li>
+<li><strong>Inclua referencia de tamanho</strong> (ex: uma fita metrica visivel) para estimativas mais precisas</li>
+<li><strong>Fotos claras e bem iluminadas</strong> dao melhores resultados</li>
+<li><strong>Pode enviar varias fotos</strong> de uma vez - a IA analisa todas</li>
+</ul>
+<hr />
+<h2 id="7-gerando-escopo-a-partir-de-audio">7. Gerando escopo a partir de audio<a class="headerlink" href="#7-gerando-escopo-a-partir-de-audio" title="Permanent link">&para;</a></h2>
+<p>Ideal para <strong>vistorias no campo</strong>. Voce pode caminhar pelo local falando naturalmente sobre o que precisa ser feito, e a IA transcreve e organiza tudo.</p>
+<h3 id="como-funciona_2">Como funciona<a class="headerlink" href="#como-funciona_2" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clique no botao de <strong>microfone</strong> para gravar ou envie um <strong>arquivo de audio</strong></li>
+<li>A IA transcreve o audio automaticamente</li>
+<li>Extrai informacoes estruturadas (tarefas, quantidades, comodos)</li>
+<li>Organiza em categorias do escopo</li>
+</ol>
+<h3 id="exemplo-de-conversa_1">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa_1" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> [Grava audio de 2 minutos caminhando pelo local]
+<em>"Estou no banheiro principal, precisa trocar todo o azulejo, uns 60 pes quadrados. A pia tambem precisa ser reinstalada. Agora estou no quarto... aqui e pintura, umas 200 pes quadrados de parede. Tem um buraco no drywall perto da janela, uns 4 pes quadrados que precisa patchar. Na cozinha o encanamento esta vazando debaixo da pia, precisa trocar a tubulacao."</em></p>
+<p><strong>IA:</strong> "Transcri o audio e organizei o escopo:</p>
+<p><strong>TIL - Tile:</strong>
+- Remove + Install Tile | 60 SF | Banheiro Principal</p>
+<p><strong>PLM - Plumbing:</strong>
+- Detach &amp; Reset Sink | 1 EA | Banheiro Principal
+- Remove + Install Plumbing | 1 EA | Cozinha (vazamento)</p>
+<p><strong>DRY - Drywall:</strong>
+- Install Drywall Patch | 4 SF | Quarto (buraco perto da janela)</p>
+<p><strong>PNT - Painting:</strong>
+- Install Paint | 200 SF | Quarto</p>
+<p>Total: 5 itens em 4 categorias. Esta correto?"</p>
+</blockquote>
+<h3 id="dicas-para-gravacao-de-audio">Dicas para gravacao de audio<a class="headerlink" href="#dicas-para-gravacao-de-audio" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Fale naturalmente</strong> - nao precisa ser formal</li>
+<li><strong>Mencione o comodo</strong> quando mudar de ambiente ("agora estou na cozinha...")</li>
+<li><strong>De quantidades</strong> quando possivel ("uns 100 pes quadrados")</li>
+<li><strong>Pode misturar idiomas</strong> - a IA entende portugues e ingles</li>
+<li><strong>Gravacoes mais longas</strong> sao melhores - mais detalhes = escopo mais preciso</li>
+</ul>
+<hr />
+<h2 id="8-gerando-escopo-a-partir-de-video">8. Gerando escopo a partir de video<a class="headerlink" href="#8-gerando-escopo-a-partir-de-video" title="Permanent link">&para;</a></h2>
+<p>A forma <strong>mais completa</strong> de gerar um escopo. A IA analisa o video quadro a quadro, combinando informacoes visuais e de audio para maximo de detalhes.</p>
+<h3 id="como-funciona_3">Como funciona<a class="headerlink" href="#como-funciona_3" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clique no botao de <strong>video</strong> e envie o arquivo</li>
+<li>A IA analisa:</li>
+<li><strong>Frames do video</strong> - identifica comodos, materiais, dimensoes, danos</li>
+<li><strong>Audio do video</strong> - transcreve seus comentarios durante a gravacao</li>
+<li>Combina ambas as fontes para um escopo mais completo</li>
+</ol>
+<h3 id="exemplo-de-conversa_2">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa_2" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> [Envia video de 3 minutos fazendo walkthrough do apartamento, comentando enquanto filma]</p>
+<p><strong>IA:</strong> "Analisei o video completo. Combinei o que vi nas imagens com seus comentarios:</p>
+<p><strong>Identificado visualmente:</strong>
+- Banheiro: azulejo danificado, pia antiga, box de vidro trincado
+- Quarto: paredes com pintura descascando, buraco no drywall
+- Cozinha: piso ceramico quebrado, vazamento visivel sob a pia</p>
+<p><strong>Dos seus comentarios:</strong>
+- Banheiro: 60 SF de azulejo, reinstalar pia
+- Quarto: 200 SF de pintura, 4 SF de patch no drywall
+- Cozinha: trocar encanamento</p>
+<p><strong>Escopo sugerido:</strong>
+- TIL: 60 SF | Banheiro
+- PLM: Sink (Banheiro) + Plumbing (Cozinha)
+- GLS: 1 EA Glass Box | Banheiro (trincado - nao mencionado no audio, vi nas imagens)
+- DRY: 4 SF Patch | Quarto
+- PNT: 200 SF | Quarto
+- FCW: ~60 SF Floor | Cozinha</p>
+<p>Notei que o box de vidro esta trincado mas voce nao mencionou. Deseja incluir no escopo?"</p>
+</blockquote>
+<p>Note como a IA <strong>complementou</strong> as informacoes do audio com o que viu nas imagens, identificando o box trincado que nao foi mencionado verbalmente.</p>
+<h3 id="dicas-para-videos">Dicas para videos<a class="headerlink" href="#dicas-para-videos" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>⚠️ Em fase de testes:</strong> O envio de videos esta em fase de testes. Recomendamos fortemente enviar <strong>videos curtos</strong> (ate 1-2 minutos). Videos longos podem demorar para processar ou ter resultados menos precisos.</p>
+</blockquote>
+<ul>
+<li><strong>Videos curtos</strong> - prefira videos de ate 1-2 minutos por comodo</li>
+<li><strong>Comente enquanto filma</strong> - "aqui precisa de drywall, uns 100 SF"</li>
+<li><strong>Filme devagar</strong> - de tempo para a IA analisar cada cena</li>
+<li><strong>Mostre detalhes</strong> - aproxime de danos, trincas, vazamentos</li>
+<li><strong>Prefira fotos + audio</strong> se o video estiver muito longo - os resultados podem ser melhores</li>
+</ul>
+<hr />
+<h2 id="9-as-16-categorias-de-trabalho">9. As 16 categorias de trabalho<a class="headerlink" href="#9-as-16-categorias-de-trabalho" title="Permanent link">&para;</a></h2>
+<p>O escopo do SGI organiza o trabalho em <strong>16 categorias profissionais</strong>, na ordem de execucao real da obra. Isso garante que o trabalho seja feito na sequencia correta.</p>
+<table>
+<thead>
+<tr>
+<th>Codigo</th>
+<th>Nome</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FRM</strong></td>
+<td>Framing (Estrutura)</td>
+<td>Estruturas de madeira, paredes, vigas</td>
+</tr>
+<tr>
+<td><strong>ELE</strong></td>
+<td>Electrical (Eletrica)</td>
+<td>Fiacao, tomadas, interruptores, paineis</td>
+</tr>
+<tr>
+<td><strong>INS</strong></td>
+<td>Insulation (Isolamento)</td>
+<td>Isolamento termico e acustico</td>
+</tr>
+<tr>
+<td><strong>DRY</strong></td>
+<td>Drywall</td>
+<td>Placas de gesso, divisorias</td>
+</tr>
+<tr>
+<td><strong>MUD</strong></td>
+<td>Mud/Taping (Acabamento Drywall)</td>
+<td>Massa, fita, acabamento de juntas</td>
+</tr>
+<tr>
+<td><strong>FNC</strong></td>
+<td>Finish Carpentry (Acabamento Carpintaria)</td>
+<td>Rodapes, molduras, portas, janelas</td>
+</tr>
+<tr>
+<td><strong>PNT</strong></td>
+<td>Painting (Pintura)</td>
+<td>Pintura de paredes, tetos, acabamentos</td>
+</tr>
+<tr>
+<td><strong>FCW</strong></td>
+<td>Floor Covering (Piso)</td>
+<td>Carpete, laminado, vinilico</td>
+</tr>
+<tr>
+<td><strong>TIL</strong></td>
+<td>Tile (Ceramica)</td>
+<td>Azulejos, pisos ceramicos, porcelanato</td>
+</tr>
+<tr>
+<td><strong>PLM</strong></td>
+<td>Plumbing (Encanamento)</td>
+<td>Tubulacoes, pias, vasos, chuveiros</td>
+</tr>
+<tr>
+<td><strong>DTL</strong></td>
+<td>Details (Detalhes/Hardware)</td>
+<td>Macanetas, fechaduras, acessorios</td>
+</tr>
+<tr>
+<td><strong>GLS</strong></td>
+<td>Glass/Mirrors (Vidros)</td>
+<td>Espelhos, box de vidro, janelas de vidro</td>
+</tr>
+<tr>
+<td><strong>CLN</strong></td>
+<td>Cleaning (Limpeza)</td>
+<td>Limpeza pos-obra</td>
+</tr>
+<tr>
+<td><strong>TCH</strong></td>
+<td>Touch Ups (Retoques)</td>
+<td>Retoques finais de pintura e acabamento</td>
+</tr>
+<tr>
+<td><strong>CON</strong></td>
+<td>Contents (Moveis)</td>
+<td>Moveis, eletrodomesticos, decoracao</td>
+</tr>
+<tr>
+<td><strong>DMO</strong></td>
+<td>Demolition (Demolicao)</td>
+<td>Demolicao de estruturas existentes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="unidades-de-medida">Unidades de medida<a class="headerlink" href="#unidades-de-medida" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Sigla</th>
+<th>Nome</th>
+<th>Uso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>EA</strong></td>
+<td>Each (Unidade)</td>
+<td>Itens individuais (pia, vaso, porta)</td>
+</tr>
+<tr>
+<td><strong>SF</strong></td>
+<td>Square Feet (Pe Quadrado)</td>
+<td>Areas (paredes, pisos)</td>
+</tr>
+<tr>
+<td><strong>LF</strong></td>
+<td>Linear Feet (Pe Linear)</td>
+<td>Comprimentos (rodapes, tubulacoes)</td>
+</tr>
+<tr>
+<td><strong>SY</strong></td>
+<td>Square Yards (Jarda Quadrada)</td>
+<td>Areas maiores (carpete)</td>
+</tr>
+<tr>
+<td><strong>HR</strong></td>
+<td>Hours (Horas)</td>
+<td>Tempo de trabalho</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota:</strong> As categorias e unidades seguem o padrao americano de construcao civil, pois o sistema e projetado para atender mercados internacionais. A IA aceita entrada em portugues e converte automaticamente.</p>
+</blockquote>
+<hr />
+<h2 id="10-revisando-e-editando-o-escopo">10. Revisando e editando o escopo<a class="headerlink" href="#10-revisando-e-editando-o-escopo" title="Permanent link">&para;</a></h2>
+<p>Apos a IA gerar o escopo, voce pode revisar e ajustar antes de finalizar.</p>
+<h3 id="o-que-voce-pode-fazer">O que voce pode fazer<a class="headerlink" href="#o-que-voce-pode-fazer" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Adicionar mais itens:</strong> "Adicione 50 LF de rodape na sala"</li>
+<li><strong>Remover itens:</strong> "Remova o item de pintura do quarto 2"</li>
+<li><strong>Alterar quantidades:</strong> "O drywall do banheiro sao 80 SF, nao 60"</li>
+<li><strong>Mudar comodos:</strong> "O tile e na cozinha, nao no banheiro"</li>
+<li><strong>Confirmar e enviar:</strong> "Pode finalizar o escopo"</li>
+</ul>
+<h3 id="status-do-escopo">Status do escopo<a class="headerlink" href="#status-do-escopo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Rascunho (Draft)</strong></td>
+<td>Escopo sendo montado, pode ser editado livremente</td>
+</tr>
+<tr>
+<td><strong>Pronto para Revisao (Ready for Review)</strong></td>
+<td>Escopo finalizado, aguardando aprovacao do admin</td>
+</tr>
+<tr>
+<td><strong>Aprovado (Approved)</strong></td>
+<td>Escopo aprovado e pronto para execucao</td>
+</tr>
+<tr>
+<td><strong>Em Andamento (In Progress)</strong></td>
+<td>Trabalho em execucao</td>
+</tr>
+<tr>
+<td><strong>Concluido (Completed)</strong></td>
+<td>Trabalho finalizado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo-de-edicao">Exemplo de edicao<a class="headerlink" href="#exemplo-de-edicao" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>IA:</strong> "Escopo atual tem 4 itens. Deseja ajustar algo?"
+<strong>Voce:</strong> "O drywall na verdade sao 120 SF, e adiciona demolição do piso antigo na cozinha, 60 SF"
+<strong>IA:</strong> "Atualizado!
+- DRY: 100 SF → 120 SF (Banheiro Principal)
+- DMO: Adicionado - Remove Floor | 60 SF | Cozinha</p>
+<p>Total: 5 itens em 4 categorias. Mais algum ajuste?"</p>
+</blockquote>
+<hr />
+<h2 id="11-como-o-escopo-aparece-no-projeto">11. Como o escopo aparece no projeto<a class="headerlink" href="#11-como-o-escopo-aparece-no-projeto" title="Permanent link">&para;</a></h2>
+<p>Apos finalizar o escopo pelo Chat, ele aparece automaticamente na aba <strong>"Escopo"</strong> do detalhe do projeto.</p>
+<h3 id="o-que-voce-ve-na-aba-escopo">O que voce ve na aba Escopo<a class="headerlink" href="#o-que-voce-ve-na-aba-escopo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Categorias colapsaveis</strong> - Clique para expandir/recolher cada categoria</li>
+<li><strong>Itens detalhados</strong> - Tarefa, acao, tipo, quantidade, unidade, comodo e notas</li>
+<li><strong>Precos</strong> - Apenas administradores veem os precos estimados</li>
+<li><strong>Botao de aprovacao</strong> - Administradores podem aprovar o escopo</li>
+</ul>
+<h3 id="diferenca-de-visualizacao-por-cargo">Diferenca de visualizacao por cargo<a class="headerlink" href="#diferenca-de-visualizacao-por-cargo" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Informacao</th>
+<th style="text-align: center;">Administrador</th>
+<th style="text-align: center;">Funcionario</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categorias e itens</td>
+<td style="text-align: center;">Ve</td>
+<td style="text-align: center;">Ve</td>
+</tr>
+<tr>
+<td>Quantidades e unidades</td>
+<td style="text-align: center;">Ve</td>
+<td style="text-align: center;">Ve</td>
+</tr>
+<tr>
+<td>Comodos e notas</td>
+<td style="text-align: center;">Ve</td>
+<td style="text-align: center;">Ve</td>
+</tr>
+<tr>
+<td>Precos unitarios</td>
+<td style="text-align: center;">Ve</td>
+<td style="text-align: center;">Nao ve</td>
+</tr>
+<tr>
+<td>Precos totais</td>
+<td style="text-align: center;">Ve</td>
+<td style="text-align: center;">Nao ve</td>
+</tr>
+<tr>
+<td>Botao aprovar</td>
+<td style="text-align: center;">Ve</td>
+<td style="text-align: center;">Nao ve</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Para mais detalhes sobre a aba Escopo, consulte o <strong>Guia de Projetos</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="12-registrar-custos-pelo-chat">12. Registrar custos pelo Chat<a class="headerlink" href="#12-registrar-custos-pelo-chat" title="Permanent link">&para;</a></h2>
+<p>Voce pode registrar custos e despesas de projetos diretamente pelo Chat, sem precisar navegar ate a tela de projetos.</p>
+<h3 id="exemplo-de-conversa_3">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa_3" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Gastei R$ 1.250 em materiais na Home Depot para o projeto da Rua das Flores"
+<strong>IA:</strong> "Entendido! Vou registrar o custo:
+- <strong>Projeto:</strong> Instalacao Carpete - Rua das Flores 123
+- <strong>Valor:</strong> R$ 1.250,00
+- <strong>Descricao:</strong> Materiais - Home Depot
+- <strong>Categoria:</strong> Material</p>
+<p>Confirma?"
+<strong>Voce:</strong> "Sim"
+<strong>IA:</strong> "Custo registrado com sucesso! Status: Aprovado."</p>
+</blockquote>
+<h3 id="quem-pode-registrar-custos">Quem pode registrar custos<a class="headerlink" href="#quem-pode-registrar-custos" title="Permanent link">&para;</a></h3>
+<p>O registro de custos depende das <strong>permissoes do usuario</strong>:</p>
+<ul>
+<li><strong>Usuarios com permissao "Pode adicionar custos":</strong> Podem registrar custos normalmente pelo Chat. O custo e criado no projeto.</li>
+<li><strong>Usuarios sem essa permissao:</strong> <strong>Nao conseguem registrar custos</strong> pelo Chat. A IA informa que voce nao tem autorizacao para essa operacao.</li>
+</ul>
+<blockquote>
+<p><strong>Nota:</strong> As permissoes sao configuradas pelo administrador na tela de Usuarios. Consulte o <strong>Guia de Usuarios e Habilidades</strong> para mais detalhes.</p>
+</blockquote>
+<hr />
+<h2 id="13-leitura-automatica-de-notas-fiscais-ocr">13. Leitura automatica de notas fiscais (OCR)<a class="headerlink" href="#13-leitura-automatica-de-notas-fiscais-ocr" title="Permanent link">&para;</a></h2>
+<p>Uma das funcionalidades mais praticas do SGI: basta <strong>enviar uma foto da nota fiscal</strong> e a IA le tudo automaticamente.</p>
+<h3 id="como-funciona_4">Como funciona<a class="headerlink" href="#como-funciona_4" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Tire uma foto da nota fiscal ou recibo</li>
+<li>Envie a foto no Chat</li>
+<li>A IA usa visao computacional para extrair:</li>
+<li><strong>Valor total</strong> da compra</li>
+<li><strong>Itens</strong> comprados (nome, quantidade, preco unitario)</li>
+<li><strong>Fornecedor</strong> (nome da loja)</li>
+<li><strong>Data</strong> da compra</li>
+<li>Voce confere os dados e confirma</li>
+</ol>
+<h3 id="exemplo-de-conversa_4">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa_4" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> [Envia foto de uma nota fiscal da loja de materiais]</p>
+<p><strong>IA:</strong> "Analisei a nota fiscal. Identifiquei:</p>
+<p><strong>Fornecedor:</strong> Casa dos Materiais Ltda
+<strong>Data:</strong> 10/02/2026
+<strong>Total:</strong> R$ 2.350,00</p>
+<p><strong>Itens:</strong>
+| Item | Qtd | Preco Unit. | Total |
+|------|-----|-------------|-------|
+| Tinta Acrilica Branca 18L | 5 | R$ 250,00 | R$ 1.250,00 |
+| Rolo de La 23cm | 10 | R$ 35,00 | R$ 350,00 |
+| Lixa 150 (pct 50) | 3 | R$ 45,00 | R$ 135,00 |
+| Fita Crepe 50mm | 20 | R$ 12,00 | R$ 240,00 |
+| Massa Corrida 25kg | 5 | R$ 75,00 | R$ 375,00 |</p>
+<p>Conferiu os dados? Qual projeto devo associar?"</p>
+<p><strong>Voce:</strong> "Dados corretos, projeto da Rua Dr. Melo Alves"
+<strong>IA:</strong> "Custo de R$ 2.350,00 adicionado ao projeto 'Instalacao Hidraulica - Rua Dr. Melo Alves, 700'. Status: Aprovado."</p>
+</blockquote>
+<h3 id="dicas-para-fotos-de-notas-fiscais">Dicas para fotos de notas fiscais<a class="headerlink" href="#dicas-para-fotos-de-notas-fiscais" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Foto plana e bem iluminada</strong> - evite sombras e reflexos</li>
+<li><strong>Inclua toda a nota</strong> - a IA precisa ver o valor total e os itens</li>
+<li><strong>Pode ser nota impressa ou eletronica</strong> (tela do celular)</li>
+<li><strong>Se a nota estiver amassada</strong>, tente alisar antes de fotografar</li>
+</ul>
+<blockquote>
+<p><strong>Nota:</strong> Se a IA nao conseguir ler algum campo, ela vai pedir para voce informar manualmente. Voce sempre confirma antes de salvar.</p>
+</blockquote>
+<hr />
+<h2 id="14-agendar-visitas-pelo-chat">14. Agendar visitas pelo Chat<a class="headerlink" href="#14-agendar-visitas-pelo-chat" title="Permanent link">&para;</a></h2>
+<p>Agendar uma visita pelo Chat e mais rapido do que pela tela de Agendamentos, porque a IA sugere automaticamente o melhor funcionario.</p>
+<h3 id="exemplo-de-conversa_5">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa_5" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Preciso agendar uma visita para o projeto da Rua das Flores, amanha as 9h"
+<strong>IA:</strong> "Verificando disponibilidade para o projeto 'Instalacao Carpete - Rua das Flores 123'...</p>
+<p><strong>Recomendo:</strong> Joao Silva
+- Habilidade: Instalacao de Carpete
+- Disponivel amanha as 09:00
+- Sem conflitos de agenda</p>
+<p>Confirma o agendamento?"
+<strong>Voce:</strong> "Confirma"
+<strong>IA:</strong> "Agendamento criado!
+- Funcionario: Joao Silva
+- Data: 15/02/2026 as 09:00
+- Duracao: 2 horas
+- Projeto: Instalacao Carpete - Rua das Flores 123</p>
+<p>Notificacao enviada para Joao Silva."</p>
+</blockquote>
+<h3 id="como-a-ia-sugere-o-funcionario">Como a IA sugere o funcionario<a class="headerlink" href="#como-a-ia-sugere-o-funcionario" title="Permanent link">&para;</a></h3>
+<p>A IA analisa 3 criterios para fazer uma <strong>sugestao</strong>:
+1. <strong>Habilidades (Skills)</strong> - Seleciona funcionarios com a competencia certa para o trabalho
+2. <strong>Disponibilidade</strong> - Verifica a agenda para evitar conflitos de horario
+3. <strong>Carga de trabalho</strong> - Prefere funcionarios com menos agendamentos no periodo</p>
+<blockquote>
+<p><strong>Importante:</strong> A sugestao da IA e apenas uma <strong>recomendacao</strong>. O administrador tem <strong>total controle</strong> sobre quem sera agendado. Voce pode aceitar a sugestao, escolher outro funcionario, ou pedir para a IA mostrar outras opcoes. A decisao final e sempre sua.</p>
+<p><strong>Nota:</strong> Administradores podem agendar para qualquer funcionario. Funcionarios veem apenas seus proprios agendamentos.</p>
+</blockquote>
+<hr />
+<h2 id="15-enviar-relatorios-de-progresso-pelo-chat">15. Enviar relatorios de progresso pelo Chat<a class="headerlink" href="#15-enviar-relatorios-de-progresso-pelo-chat" title="Permanent link">&para;</a></h2>
+<p>Os relatorios diarios sao gerados pelos funcionarios no campo, diretamente pelo Chat. Nao ha botao de "criar relatorio" na pagina de Relatorios Diarios - eles sao criados aqui.</p>
+<h3 id="fluxo-completo-do-inicio-ao-fim-de-uma-visita">Fluxo completo: do inicio ao fim de uma visita<a class="headerlink" href="#fluxo-completo-do-inicio-ao-fim-de-uma-visita" title="Permanent link">&para;</a></h3>
+<h4 id="1-chegando-no-local">1. Chegando no local<a class="headerlink" href="#1-chegando-no-local" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Cheguei no projeto da Rua das Flores"
+<strong>IA:</strong> "Visita iniciada! Projeto: 'Instalacao Carpete - Rua das Flores 123'. Bom trabalho! Me avise sobre o progresso durante o dia."</p>
+</blockquote>
+<h4 id="2-reportando-progresso">2. Reportando progresso<a class="headerlink" href="#2-reportando-progresso" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Fiz 40% do carpete, terminei a sala e estou comecando os quartos"
+<strong>IA:</strong> "Progresso atualizado: 40% concluido. Tarefas registradas:
+- Instalacao de carpete na sala (concluida)
+- Inicio da instalacao nos quartos</p>
+<p>Continue assim!"</p>
+<p><strong>Voce:</strong> [Envia 2 fotos do carpete instalado na sala]
+<strong>IA:</strong> "Fotos recebidas e anexadas ao relatorio. O trabalho esta ficando otimo!"</p>
+</blockquote>
+<h4 id="3-reportando-problemas">3. Reportando problemas<a class="headerlink" href="#3-reportando-problemas" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Encontrei um problema: o contrapiso do quarto 2 esta irregular, vai precisar de nivelamento antes do carpete"
+<strong>IA:</strong> "Problema registrado no relatorio:
+- 'Contrapiso irregular no quarto 2 - necessita nivelamento'</p>
+<p>Deseja continuar o trabalho nos outros comodos enquanto isso?"</p>
+</blockquote>
+<h4 id="4-finalizando-a-visita">4. Finalizando a visita<a class="headerlink" href="#4-finalizando-a-visita" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Terminei por hoje. Fiz 75% do total, faltam os 2 quartos menores"
+<strong>IA:</strong> "Relatorio finalizado!</p>
+<p><strong>Resumo do dia:</strong>
+- Progresso: 75%
+- Tarefas concluidas: Carpete na sala, Carpete no quarto 1
+- Problemas: Contrapiso irregular no quarto 2
+- Fotos: 2 anexos</p>
+<p>Relatorio enviado e disponivel na pagina de Relatorios Diarios e na aba Relatorios do projeto. Bom descanso!"</p>
+</blockquote>
+<hr />
+<h2 id="16-o-que-um-relatorio-contem">16. O que um relatorio contem<a class="headerlink" href="#16-o-que-um-relatorio-contem" title="Permanent link">&para;</a></h2>
+<p>Cada relatorio gerado pelo Chat inclui:</p>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descricao</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Projeto</strong></td>
+<td>Nome do projeto</td>
+<td>Instalacao Carpete - Rua das Flores 123</td>
+</tr>
+<tr>
+<td><strong>Data</strong></td>
+<td>Quando o relatorio foi enviado</td>
+<td>15/02/2026</td>
+</tr>
+<tr>
+<td><strong>Funcionario</strong></td>
+<td>Quem enviou</td>
+<td>Joao Silva</td>
+</tr>
+<tr>
+<td><strong>Progresso</strong></td>
+<td>Porcentagem de conclusao</td>
+<td>75%</td>
+</tr>
+<tr>
+<td><strong>Tarefas concluidas</strong></td>
+<td>Lista do que foi feito</td>
+<td>Carpete na sala, Carpete no quarto 1</td>
+</tr>
+<tr>
+<td><strong>Problemas</strong></td>
+<td>Dificuldades encontradas</td>
+<td>Contrapiso irregular no quarto 2</td>
+</tr>
+<tr>
+<td><strong>Notas</strong></td>
+<td>Observacoes adicionais</td>
+<td>Faltam quartos menores</td>
+</tr>
+<tr>
+<td><strong>Fotos</strong></td>
+<td>Imagens do progresso</td>
+<td>2 fotos anexadas</td>
+</tr>
+</tbody>
+</table>
+<h3 id="onde-o-relatorio-aparece">Onde o relatorio aparece<a class="headerlink" href="#onde-o-relatorio-aparece" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Pagina de Relatorios Diarios</strong> (menu lateral &gt; "Relatorios Diarios")</li>
+<li><strong>Aba "Relatorios"</strong> no detalhe do projeto correspondente</li>
+</ul>
+<h3 id="quem-ve-o-que">Quem ve o que<a class="headerlink" href="#quem-ve-o-que" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Cargo</th>
+<th>Acesso</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Administrador</strong></td>
+<td>Ve <strong>todos</strong> os relatorios de todos os funcionarios</td>
+</tr>
+<tr>
+<td><strong>Funcionario</strong></td>
+<td>Ve apenas <strong>seus proprios</strong> relatorios</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Para mais detalhes sobre a pagina de Relatorios Diarios, consulte o <strong>Guia de Agendamentos, Relatorios, Configuracoes e Emergencia</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="17-gerenciar-estoque-pelo-chat">17. Gerenciar estoque pelo Chat<a class="headerlink" href="#17-gerenciar-estoque-pelo-chat" title="Permanent link">&para;</a></h2>
+<p>Voce pode consultar e movimentar o estoque diretamente pelo Chat, sem precisar ir ate a tela de Estoque.</p>
+<h3 id="operacoes-disponiveis">Operacoes disponiveis<a class="headerlink" href="#operacoes-disponiveis" title="Permanent link">&para;</a></h3>
+<h4 id="consultar-quantidade">Consultar quantidade<a class="headerlink" href="#consultar-quantidade" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Quanto tem de tinta branca no estoque?"
+<strong>IA:</strong> "Estoque de tinta branca:
+- Tinta Acrilica Branca 18L: <strong>12 latas</strong> (Preco medio: R$ 250,00)
+- Valor total em estoque: R$ 3.000,00</p>
+<p>Deseja fazer alguma operacao?"</p>
+</blockquote>
+<h4 id="retirar-material-para-projeto">Retirar material para projeto<a class="headerlink" href="#retirar-material-para-projeto" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Retirar 5 latas de tinta branca para o projeto Rua Dr. Melo Alves"
+<strong>IA:</strong> "Confirme a retirada:
+- Material: Tinta Acrilica Branca 18L
+- Quantidade: 5 latas
+- Projeto: Instalacao Hidraulica - Rua Dr. Melo Alves, 700
+- Custo estimado: R$ 1.250,00 (5 x R$ 250,00)</p>
+<p>Confirma?"
+<strong>Voce:</strong> "Sim"
+<strong>IA:</strong> "Retirada registrada!
+- Estoque atualizado: 12 → 7 latas
+- Custo de R$ 1.250,00 adicionado ao projeto (aprovado)</p>
+<p>⚠️ Alerta: Estoque baixo! Quantidade minima configurada: 10 latas."</p>
+</blockquote>
+<h4 id="verificar-estoque-baixo">Verificar estoque baixo<a class="headerlink" href="#verificar-estoque-baixo" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><strong>Voce:</strong> "Quais itens estao com estoque baixo?"
+<strong>IA:</strong> "1 item com estoque baixo:
+- <strong>Tinta Acrilica Branca 18L:</strong> 7 latas (minimo: 10)</p>
+<p>Recomendo repor o estoque."</p>
+<p>Para mais detalhes sobre o sistema de estoque, consulte o <strong>Guia de Estoque</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="18-gerenciar-projetos-pelo-chat">18. Gerenciar projetos pelo Chat<a class="headerlink" href="#18-gerenciar-projetos-pelo-chat" title="Permanent link">&para;</a></h2>
+<p>Administradores podem criar e gerenciar projetos diretamente pelo Chat.</p>
+<blockquote>
+<p><strong>Importante:</strong> Apenas administradores e super administradores podem usar estas funcoes. Funcionarios nao tem acesso.</p>
+</blockquote>
+<h3 id="criar-um-projeto">Criar um projeto<a class="headerlink" href="#criar-um-projeto" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Criar um novo projeto de Pintura Residencial no endereco Av. Paulista 1000"
+<strong>IA:</strong> "Vou criar o projeto. Alguma descricao ou observacao adicional?"
+<strong>Voce:</strong> "Pintura completa de 3 quartos e sala, cliente Ana Silva"
+<strong>IA:</strong> "Projeto criado com sucesso!
+- Nome: Pintura Residencial
+- Endereco: Av. Paulista 1000, Sao Paulo
+- Descricao: Pintura completa de 3 quartos e sala
+- Cliente: Ana Silva
+- Status: Pendente"</p>
+</blockquote>
+<h3 id="mudar-status-de-um-projeto">Mudar status de um projeto<a class="headerlink" href="#mudar-status-de-um-projeto" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Mudar status do projeto Av. Paulista para em espera"
+<strong>IA:</strong> "Encontrei o projeto 'Pintura Residencial - Av. Paulista 1000'. Qual o motivo da pausa?"
+<strong>Voce:</strong> "Aguardando entrega de materiais do fornecedor"
+<strong>IA:</strong> "Status atualizado: Pendente → Em Espera
+Motivo: Aguardando entrega de materiais do fornecedor"</p>
+</blockquote>
+<h3 id="consultar-projetos">Consultar projetos<a class="headerlink" href="#consultar-projetos" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> "Quais sao meus projetos ativos?"
+<strong>IA:</strong> "Voce tem 3 projetos ativos:
+1. Instalacao Carpete - Rua das Flores 123 (Em Andamento, 75%)
+2. Instalacao Hidraulica - Rua Dr. Melo Alves, 700 (Em Andamento, 30%)
+3. Pintura Residencial - Av. Paulista 1000 (Em Espera)"</p>
+<p>Para mais detalhes sobre gerenciamento de projetos, consulte o <strong>Guia de Projetos</strong>.</p>
+</blockquote>
+<hr />
+<h2 id="19-tipos-de-entrada-aceitos">19. Tipos de entrada aceitos<a class="headerlink" href="#19-tipos-de-entrada-aceitos" title="Permanent link">&para;</a></h2>
+<p>O Chat aceita <strong>5 tipos de entrada</strong>, e voce pode combinar texto com qualquer um deles:</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Formatos</th>
+<th>Uso principal</th>
+<th>Limite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Texto</strong></td>
+<td>Digitado no campo</td>
+<td>Todos os comandos e conversas</td>
+<td>2000 chars</td>
+</tr>
+<tr>
+<td><strong>Imagem</strong></td>
+<td>JPG, PNG, HEIC, WebP</td>
+<td>Notas fiscais (OCR), fotos do local, documentos</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td><strong>Audio</strong></td>
+<td>MP3, OGG, AAC, WAV, WebM</td>
+<td>Descricao verbal de escopos, vistorias no campo</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td><strong>Video</strong></td>
+<td>MP4, MOV, WebM</td>
+<td>Walkthrough de locais, vistorias completas</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td><strong>PDF</strong></td>
+<td>PDF</td>
+<td><strong>Importar Work Orders</strong> de outros sistemas</td>
+<td>10 MB</td>
+</tr>
+</tbody>
+</table>
+<h3 id="quais-funcoes-aceitam-quais-tipos">Quais funcoes aceitam quais tipos<a class="headerlink" href="#quais-funcoes-aceitam-quais-tipos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Funcao</th>
+<th style="text-align: center;">Texto</th>
+<th style="text-align: center;">Imagem</th>
+<th style="text-align: center;">Audio</th>
+<th style="text-align: center;">Video</th>
+<th style="text-align: center;">PDF</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerar escopos (Work Orders)</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim*</td>
+<td style="text-align: center;"><strong>Sim (import)</strong></td>
+</tr>
+<tr>
+<td>Registrar custos</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (OCR)</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Agendar visitas</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Relatorios diarios</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim*</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Gerenciar estoque</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr>
+<td>Gerenciar projetos</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">-</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Audio funciona em todas as funcoes</p>
+<p>Voce pode usar audio em qualquer funcao do Chat. A IA transcreve automaticamente o que voce fala e interpreta a intencao. Por exemplo, grave um audio dizendo "gastei 500 reais em material" e a IA registra o custo.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Videos em fase de testes</p>
+<p>A funcionalidade de envio de videos esta em <strong>fase de testes</strong>. Recomendamos fortemente enviar <strong>videos curtos</strong> (ate 1-2 minutos) para melhores resultados. Videos muito longos podem demorar para processar ou ter resultados menos precisos.</p>
+</div>
+<hr />
+<h2 id="191-importando-work-order-de-pdf-externo">19.1 Importando Work Order de PDF externo<a class="headerlink" href="#191-importando-work-order-de-pdf-externo" title="Permanent link">&para;</a></h2>
+<p>Se sua empresa recebe <strong>Work Orders prontas</strong> de outros sistemas (clientes, parceiros, softwares de orcamento), voce pode importa-las direto no SGI atraves do Chat.</p>
+<h3 id="como-funciona_5">Como funciona<a class="headerlink" href="#como-funciona_5" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Clique no botao <strong>PDF</strong> (desktop) ou no menu <strong>"+"</strong> → <strong>PDF</strong> (mobile)</li>
+<li>Selecione o arquivo PDF da Work Order externa (ate 10 MB)</li>
+<li>Envie a mensagem</li>
+<li>A IA analisa o PDF e <strong>extrai automaticamente</strong>:</li>
+<li><strong>Header:</strong> Work Order number, Job number, Project Manager, data</li>
+<li><strong>Cliente:</strong> nome, endereco, telefone, email</li>
+<li><strong>Endereco do trabalho:</strong> rua, cidade, estado, CEP</li>
+<li><strong>Items:</strong> organizados nas 16 categorias profissionais</li>
+<li>
+<p><strong>Precos:</strong> unitarios e totais (se presentes no PDF)</p>
+</li>
+<li>
+<p>A IA apresenta um <strong>preview estruturado</strong> com:</p>
+</li>
+<li>Formato detectado (<strong>SGI</strong>, <strong>external</strong> ou <strong>unknown</strong>)</li>
+<li><strong>Score de confianca</strong> (0 a 1) indicando qualidade da extracao</li>
+<li>
+<p><strong>Warnings</strong> se houver dados faltando ou duvidosos</p>
+</li>
+<li>
+<p>Voce <strong>revisa</strong> e pode ajustar antes de confirmar</p>
+</li>
+<li>Apos confirmar, a Work Order e <strong>criada automaticamente</strong> no projeto</li>
+</ol>
+<h3 id="exemplo-de-conversa_6">Exemplo de conversa<a class="headerlink" href="#exemplo-de-conversa_6" title="Permanent link">&para;</a></h3>
+<blockquote>
+<p><strong>Voce:</strong> [Envia PDF "WO-2024-589-Rabiee.pdf"]</p>
+<p><strong>IA:</strong> "Analisei o PDF (formato detectado: <code>external</code>, confianca: 0.87). Extrai:</p>
+<p><strong>Header:</strong>
+- WO Number: WO0001-14547
+- Job Number: 25-1959-RPR
+- Job Name: 590 Indigo Drive - Rabiee, Sarah
+- Project Manager: John Smith</p>
+<p><strong>Cliente:</strong> Sarah Rabiee - 590 Indigo Drive, Orlando FL 32828</p>
+<p><strong>Items extraidos:</strong> 24 items em 8 categorias
+- DRY (Drywall): 8 items, 450 SF total
+- PNT (Painting): 6 items, 1,200 SF total
+- FCW (Floor Covering): 4 items
+- ... (outros)</p>
+<p><strong>Warnings:</strong> 2 items sem comodo definido. Deseja revisar antes de importar?"</p>
+<p><strong>Voce:</strong> "Sim, me mostra os items sem comodo"</p>
+<p><strong>IA:</strong> [lista os items e permite voce atribuir comodos antes de salvar]</p>
+</blockquote>
+<div class="admonition tip">
+<p class="admonition-title">Formato SGI reconhecido</p>
+<p>Se o PDF foi gerado pelo proprio SGI (via export), a extracao tem <strong>confianca alta (&gt;0.95)</strong> e praticamente nao precisa ajustes. Para PDFs de outros sistemas, a qualidade varia conforme o layout do documento original.</p>
+</div>
+<p>📖 Veja o <a href="../work-order/">Guia de Work Order</a> para mais detalhes sobre o sistema de Work Orders.</p>
+<hr />
+<h2 id="192-como-a-ia-decide-a-acao-certa-masteragentrouter">19.2 Como a IA decide a acao certa (masterAgentRouter)<a class="headerlink" href="#192-como-a-ia-decide-a-acao-certa-masteragentrouter" title="Permanent link">&para;</a></h2>
+<p>A IA usa um roteador inteligente que detecta a intencao da sua mensagem e envia para o agente especializado certo.</p>
+<pre class="mermaid"><code>flowchart TB
+    A[Voce envia mensagem no Chat] --&gt; B[masterAgentRouter analisa]
+    B --&gt; C{Qual a intencao?}
+    C --&gt;|Menciona escopo, WO, categorias| D[workOrderFlow]
+    C --&gt;|Menciona valor R$, gastei, nota fiscal| E[costFlow]
+    C --&gt;|Menciona agendar, visita, horario| F[schedulingFlow]
+    C --&gt;|Menciona cheguei, progresso, terminei| G[dailyReportingFlow]
+    C --&gt;|Menciona estoque, materiais, retirada| H[inventoryFlow]
+    C --&gt;|Menciona criar projeto, mudar status| I[projectFlow]
+    C --&gt;|Saudacao, duvida geral| J[generalAssistantFlow]
+    D --&gt; K[Executa acao via backend]
+    E --&gt; K
+    F --&gt; K
+    G --&gt; K
+    H --&gt; K
+    I --&gt; K
+    J --&gt; K
+    K --&gt; L[IA responde com resultado]</code></pre>
+<p>Essa e a razao do <strong>indicador de status</strong> no cabecalho do Chat mudar conforme voce fala - ele reflete qual agente esta ativo.</p>
+<hr />
+<h2 id="20-dicas-para-usar-melhor-o-chat">20. Dicas para usar melhor o Chat<a class="headerlink" href="#20-dicas-para-usar-melhor-o-chat" title="Permanent link">&para;</a></h2>
+<h3 id="seja-especifico">Seja especifico<a class="headerlink" href="#seja-especifico" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Menos eficaz</th>
+<th>Mais eficaz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>"Preciso de algo"</td>
+<td>"Preciso agendar uma visita para amanha"</td>
+</tr>
+<tr>
+<td>"Tem coisa no estoque?"</td>
+<td>"Quanto tem de cimento no estoque?"</td>
+</tr>
+<tr>
+<td>"Gastei dinheiro"</td>
+<td>"Gastei R$ 500 em materiais na Home Depot"</td>
+</tr>
+</tbody>
+</table>
+<h3 id="use-o-tipo-de-entrada-certo">Use o tipo de entrada certo<a class="headerlink" href="#use-o-tipo-de-entrada-certo" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Notas fiscais?</strong> Envie uma foto - a IA le automaticamente</li>
+<li><strong>Vistoria no campo?</strong> Grave um audio enquanto caminha pelo local</li>
+<li><strong>Walkthrough completo?</strong> Filme um video mostrando todos os comodos</li>
+<li><strong>Escopo simples?</strong> Descreva por texto mesmo</li>
+</ul>
+<h3 id="a-ia-lembra-do-contexto-com-limites">A IA lembra do contexto (com limites)<a class="headerlink" href="#a-ia-lembra-do-contexto-com-limites" title="Permanent link">&para;</a></h3>
+<p>Dentro da mesma conversa, voce nao precisa repetir informacoes. Se voce ja selecionou um projeto, a IA lembra:</p>
+<blockquote>
+<p><strong>Voce:</strong> "Gastei R$ 200 em parafusos"
+<strong>IA:</strong> "Registrado no projeto 'Instalacao Carpete - Rua das Flores 123' (mesmo projeto da conversa). Confirma?"</p>
+</blockquote>
+<p><strong>Porem, o contexto tem limites:</strong>
+- A IA lembra bem das <strong>ultimas mensagens</strong> da conversa (as mais recentes)
+- Conversas muito longas passam por uma <strong>compactacao automatica</strong>: mensagens antigas sao resumidas para liberar espaco, e alguns detalhes podem se perder
+- Informacoes de <strong>semanas ou meses atras</strong> provavelmente nao estarao mais acessiveis na memoria da IA
+- Se voce precisa que a IA lembre algo especifico de muito tempo atras, <strong>repita a informacao</strong> na conversa atual</p>
+<blockquote>
+<p><strong>Dica pratica:</strong> Para tarefas novas, nao dependa da IA lembrar detalhes de conversas muito antigas. Informe os dados necessarios (projeto, endereco, valores) novamente. Se a conversa ficou muito longa, use o botao <strong>"Nova Conversa"</strong> e comece do zero.</p>
+</blockquote>
+<h3 id="se-algo-deu-errado">Se algo deu errado<a class="headerlink" href="#se-algo-deu-errado" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Diga <strong>"cancelar"</strong> ou <strong>"desfazer"</strong> para reverter a ultima acao</li>
+<li>Use o botao <strong>"Nova Conversa"</strong> para comecar do zero</li>
+<li>A IA sempre <strong>pede confirmacao</strong> antes de executar acoes importantes</li>
+</ul>
+<h3 id="pode-misturar-idiomas">Pode misturar idiomas<a class="headerlink" href="#pode-misturar-idiomas" title="Permanent link">&para;</a></h3>
+<p>A IA entende portugues e ingles. Voce pode dizer "Preciso de 100 SF de drywall no bathroom" e funciona perfeitamente.</p>
+<hr />
+<h2 id="regras-importantes">Regras Importantes<a class="headerlink" href="#regras-importantes" title="Permanent link">&para;</a></h2>
+<h3 id="limites-de-tamanho">Limites de tamanho<a class="headerlink" href="#limites-de-tamanho" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Limite</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Texto por mensagem</td>
+<td><strong>2000 caracteres</strong></td>
+</tr>
+<tr>
+<td>Imagem</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>Áudio</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>Vídeo</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>PDF</td>
+<td>10 MB</td>
+</tr>
+<tr>
+<td>Vídeo gravado no app</td>
+<td>30 segundos</td>
+</tr>
+</tbody>
+</table>
+<h3 id="permissoes-necessarias">Permissões necessárias<a class="headerlink" href="#permissoes-necessarias" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Operação</th>
+<th style="text-align: center;">Super Admin</th>
+<th style="text-align: center;">Admin</th>
+<th style="text-align: center;">Funcionário</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Usar Chat</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+</tr>
+<tr>
+<td>Gerar escopo/WO</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim (se projeto atribuído)</td>
+</tr>
+<tr>
+<td>Registrar custo</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;"><code>canAddCosts</code></td>
+</tr>
+<tr>
+<td>Agendar visita</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;"><code>canCreateSchedules</code></td>
+</tr>
+<tr>
+<td>Criar projeto</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;"><code>canCreateProjects</code></td>
+</tr>
+<tr>
+<td>Gerenciar estoque</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Sim</td>
+<td style="text-align: center;">Não</td>
+</tr>
+</tbody>
+</table>
+<h3 id="validacoes-e-comportamentos">Validações e comportamentos<a class="headerlink" href="#validacoes-e-comportamentos" title="Permanent link">&para;</a></h3>
+<div class="admonition warning">
+<p class="admonition-title">Sessão expira automaticamente</p>
+<ul>
+<li><strong>1 dia</strong> para a maioria dos fluxos (chat, custo, agendamento)</li>
+<li><strong>7 dias</strong> para fluxos especiais</li>
+<li>Após expirar, a IA não lembra mais do contexto. Use <strong>"Nova Conversa"</strong> para começar do zero.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Compactação automática</p>
+<p>Conversas muito longas passam por compactação: mensagens antigas são resumidas para liberar espaço. Detalhes muito antigos podem se perder. Para informação crítica de conversas passadas, repita na conversa atual.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Misture idiomas</p>
+<p>A IA entende PT e EN. "Preciso 100 SF de drywall no bathroom" funciona perfeitamente.</p>
+</div>
+<h3 id="defaults-do-sistema">Defaults do sistema<a class="headerlink" href="#defaults-do-sistema" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Configuração</th>
+<th>Padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Limite de texto</td>
+<td>2000 caracteres</td>
+</tr>
+<tr>
+<td>TTL sessão padrão</td>
+<td>1 dia</td>
+</tr>
+<tr>
+<td>TTL service_catalog</td>
+<td>7 dias</td>
+</tr>
+<tr>
+<td>Arquivo padrão max</td>
+<td>50 MB</td>
+</tr>
+<tr>
+<td>Video gravado max</td>
+<td>30 segundos</td>
+</tr>
+<tr>
+<td>Idiomas aceitos</td>
+<td>PT e EN (misturados OK)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="21-resumo-rapido">21. Resumo rapido<a class="headerlink" href="#21-resumo-rapido" title="Permanent link">&para;</a></h2>
+<h3 id="o-que-dizer-no-chat-para-cada-acao">O que dizer no Chat para cada acao<a class="headerlink" href="#o-que-dizer-no-chat-para-cada-acao" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Voce quer...</th>
+<th>Diga isso no Chat...</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Gerar escopo</td>
+<td>"Preciso gerar um escopo para..." ou envie fotos/audio/video</td>
+</tr>
+<tr>
+<td>Adicionar custo</td>
+<td>"Gastei R$ X em..." ou envie foto da nota fiscal</td>
+</tr>
+<tr>
+<td>Agendar visita</td>
+<td>"Agendar visita para o projeto X amanha as 9h"</td>
+</tr>
+<tr>
+<td>Iniciar visita</td>
+<td>"Cheguei no local" ou "Iniciar visita no projeto X"</td>
+</tr>
+<tr>
+<td>Reportar progresso</td>
+<td>"Fiz X% do trabalho" ou envie fotos do progresso</td>
+</tr>
+<tr>
+<td>Finalizar visita</td>
+<td>"Terminei o trabalho" ou "Concluido"</td>
+</tr>
+<tr>
+<td>Consultar estoque</td>
+<td>"Quanto tem de X no estoque?"</td>
+</tr>
+<tr>
+<td>Retirar material</td>
+<td>"Retirar X unidades de Y para o projeto Z"</td>
+</tr>
+<tr>
+<td>Criar projeto</td>
+<td>"Criar projeto de [tipo] no endereco [endereco]"</td>
+</tr>
+<tr>
+<td>Mudar status</td>
+<td>"Mudar status do projeto X para [status]"</td>
+</tr>
+<tr>
+<td>Consultar projetos</td>
+<td>"Quais sao meus projetos ativos?"</td>
+</tr>
+<tr>
+<td>Ajuda geral</td>
+<td>"Como funciona o estoque?" ou "Me ajude com..."</td>
+</tr>
+</tbody>
+</table>
+<h3 id="atalhos-uteis">Atalhos uteis<a class="headerlink" href="#atalhos-uteis" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Acao</th>
+<th>Como fazer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Enviar mensagem</td>
+<td>Pressione <strong>Enter</strong></td>
+</tr>
+<tr>
+<td>Nova linha</td>
+<td>Pressione <strong>Shift+Enter</strong></td>
+</tr>
+<tr>
+<td>Comecar do zero</td>
+<td>Clique em <strong>"Nova Conversa"</strong></td>
+</tr>
+<tr>
+<td>Enviar foto</td>
+<td>Clique no botao de <strong>imagem</strong></td>
+</tr>
+<tr>
+<td>Gravar audio</td>
+<td>Clique no botao de <strong>microfone</strong></td>
+</tr>
+<tr>
+<td>Enviar video</td>
+<td>Clique no botao de <strong>video</strong></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "navigation.top", "navigation.tabs", "navigation.tabs.sticky", "navigation.instant", "navigation.tracking", "content.code.copy", "search.highlight", "search.suggest", "search.share"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@10/dist/mermaid.min.js"></script>
+      
+        <script src="../javascripts/mermaid-init.js"></script>
+      
+    
+  </body>
+</html>
