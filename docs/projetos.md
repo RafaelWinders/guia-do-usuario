@@ -126,6 +126,7 @@ Uma janela vai abrir com os seguintes campos:
 | **Grupo do Cliente** | Nao | Selecione um grupo para organizar seus clientes (opcional) |
 | **Orcamento** | Sim | Valor total do orcamento. Use 0 se ainda nao foi definido |
 | **Limite de Alerta (%)** | Nao | Porcentagem do orcamento a partir da qual voce sera alertado. Padrao: 80% |
+| **Modelo de Relatorio** | Nao | Selecione um modelo de relatorio diario para o projeto (opcional). Sem modelo = formulario basico |
 | **Funcionarios Atribuidos** | Nao | Selecione quais funcionarios terao acesso a este projeto |
 
 ### Exemplo passo a passo
@@ -315,13 +316,13 @@ O escopo do projeto agora e chamado **Work Order** - uma ordem de servico profis
 <!-- TODO: screenshot de WorkOrderView completo. Arquivo: images/work-order-view.png. Capturar: categorias expandidas com items e valores -->
 ![Aba Work Order](images/work-order-view.png){ .placeholder-image }
 
-A Work Order e gerada atraves do **Chat com IA** (a partir de texto, foto, audio ou video) **ou** importada de um **PDF externo**. Ela contem:
+A Work Order pode ser criada de **3 formas**: em branco, via Chat com IA (texto/foto/audio/video) ou importada de um **PDF externo**. Ela contem:
 
 - **Header:** numero da WO, numero do job, cliente, endereco do trabalho
-- **16 categorias profissionais** (Framing, Electrical, Drywall, Plumbing, etc.)
-- **Items detalhados** com task, acao, tipo, quantidade, unidade, comodo
-- **Precos** (visiveis apenas para administradores)
-- **Status formal** (Draft → Ready for Review → Approved → In Progress → Completed)
+- **Categorias dinamicas** do Catalogo de Servicos gerenciado pelo admin
+- **Items detalhados** com servico, acao, tipo, quantidade, unidade, comodo
+- **Precos com breakdown** de 4 fontes (default, group_override, pdf, manual)
+- **Status simplificado** (Draft ↔ Approved — reversivel)
 - **Export em PDF** para envio ao cliente
 
 📖 **Consulte o [Guia de Work Order](work-order.md)** para documentacao completa do sistema.
@@ -334,9 +335,9 @@ Mostra o historico de relatorios diarios de progresso do projeto.
 
 ![Aba Relatorios](images/project-detail-reports.png)
 
-Os relatorios sao criados pelos funcionarios atraves do **Chat com IA**. Nao ha botao "Criar Relatorio" nesta aba - todos os relatorios vem do Chat.
+Os relatorios sao criados e preenchidos diretamente pela interface (nao mais pelo Chat). Clique em qualquer card de relatorio para abri-lo em modo edicao.
 
-📖 Veja os guias [Chat com IA](chat.md) e [Relatorios Diarios](relatorios-diarios.md) para o fluxo completo.
+📖 Veja o [Guia de Relatorios Diarios](relatorios-diarios.md) para o fluxo completo.
 
 ---
 

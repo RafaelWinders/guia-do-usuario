@@ -82,7 +82,31 @@ Click the **trash** icon on the card.
 
 ---
 
-## 7. Using groups in projects
+## 7. Custom prices per group (VIP pricing)
+
+Each group can have a **custom price table** per service — ideal for VIP customers who negotiated special rates.
+
+### How to configure
+
+1. Open the group edit dialog (pencil icon)
+2. Click the **"Custom Prices"** tab
+3. The list shows all active services from the catalog, grouped by category
+4. For each service, set the overridden price (leave blank to use the catalog default)
+5. Save
+
+### How it works in practice
+
+- Custom prices are stored in `servicePriceOverrides` in the group document
+- When a project linked to the group has a Work Order, the system automatically suggests the **`group_override`** source on WO items
+- Admin can accept the group price or choose another source (default, pdf, manual)
+- If the service is not in the overrides map → uses `defaultUnitPrice` from the catalog
+
+!!! tip "VIP group in Work Order"
+    For projects linked to a group with custom prices, adding an item in the Work Order automatically suggests the `group_override` price. The admin just needs to confirm.
+
+---
+
+## 8. Using groups in projects
 
 ### When creating the project
 
@@ -112,7 +136,7 @@ See the [Projects Guide](projects.md) for more about filters.
 
 ---
 
-## 8. When to use groups
+## 9. When to use groups
 
 ### Use groups when
 
@@ -120,6 +144,7 @@ See the [Projects Guide](projects.md) for more about filters.
 - You need to **report consolidated** by customer (e.g., "how much did we spend on Customer X this year?")
 - You want to **facilitate the assignment** of specific employees to a portfolio
 - You work with **recurring partners** (real estate companies, construction firms)
+- You have customers who negotiated a **differentiated price table** (VIP pricing)
 
 ### No need for groups when
 
@@ -147,6 +172,7 @@ See the [Projects Guide](projects.md) for more about filters.
 | View "Client Groups" menu | Yes | Yes | **No** |
 | Create group | Yes | Yes | No |
 | Edit group | Yes | Yes | No |
+| Configure custom prices | Yes | Yes | No |
 | Delete group | Yes | Yes | No |
 | Associate project with group | Yes | Yes | No (employee does not edit project) |
 
@@ -165,6 +191,7 @@ See the [Projects Guide](projects.md) for more about filters.
 | `clientGroupId` when creating project | `null` (no group) |
 | Soft delete | No - deleting is permanent |
 | List order | By alphabetical name (default) |
+| `servicePriceOverrides` | `{}` (empty — uses catalog prices) |
 
 ---
 
@@ -174,6 +201,7 @@ See the [Projects Guide](projects.md) for more about filters.
 |-------------|-------------|
 | View all groups | "Client Groups" menu |
 | Create new group | "+ Novo Grupo" (+ New Group) > fill in name and description |
+| Configure VIP prices | Edit group > "Custom Prices" tab |
 | Associate project with group | Edit project > "Grupo do Cliente" (Client Group) dropdown |
 | Filter projects by group | Projects > Filters > "Grupo do Cliente" (Client Group) |
 | Delete group | Trash on card (disassociate projects first) |

@@ -126,6 +126,7 @@ A window will open with the following fields:
 | **Grupo do Cliente (Client Group)** | No | Select a group to organize your clients (optional) |
 | **Orcamento (Budget)** | Yes | Total budget value. Use 0 if not yet defined |
 | **Limite de Alerta (Alert Threshold %)** | No | Budget percentage at which you will be alerted. Default: 80% |
+| **Report Template** | No | Select a daily report template for the project (optional). No template = basic form |
 | **Funcionarios Atribuidos (Assigned Employees)** | No | Select which employees will have access to this project |
 
 ### Step-by-step example
@@ -315,13 +316,13 @@ The project scope is now called **Work Order** - a complete professional service
 <!-- TODO: screenshot of WorkOrderView complete. File: images/work-order-view.png. Capture: expanded categories with items and values -->
 ![Work Order Tab](images/work-order-view.png){ .placeholder-image }
 
-The Work Order is generated through the **AI Chat** (from text, photo, audio or video) **or** imported from an **external PDF**. It contains:
+The Work Order can be created in **3 ways**: blank, via AI Chat (text/photo/audio/video), or imported from an **external PDF**. It contains:
 
 - **Header:** WO number, job number, customer, job address
-- **16 professional categories** (Framing, Electrical, Drywall, Plumbing, etc.)
-- **Detailed items** with task, action, type, quantity, unit, room
-- **Prices** (visible only to administrators)
-- **Formal status** (Draft → Ready for Review → Approved → In Progress → Completed)
+- **Dynamic categories** from the Service Catalog managed by the admin
+- **Detailed items** with service, action, type, quantity, unit, room
+- **Price with breakdown** from 4 sources (default, group_override, pdf, manual)
+- **Simplified status** (Draft ↔ Approved — reversible)
 - **PDF export** to send to the client
 
 📖 **See the [Work Order Guide](work-order-en.md)** for complete system documentation.
@@ -334,9 +335,9 @@ Shows the history of daily progress reports for the project.
 
 ![Reports tab](images/project-detail-reports.png)
 
-Reports are created by employees through **AI Chat**. There is no "Create Report" button on this tab - all reports come from the Chat.
+Reports are created and filled in directly in the interface (no longer through the Chat). Click any report card to open it in edit mode.
 
-📖 See the [AI Chat](chat-en.md) and [Daily Reports](daily-reports.md) guides for the full flow.
+📖 See the [Daily Reports Guide](daily-reports.md) for the full flow.
 
 ---
 

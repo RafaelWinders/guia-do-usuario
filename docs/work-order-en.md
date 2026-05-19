@@ -9,13 +9,11 @@ The **Work Order** (WO) is SGI's professional system for detailing the work on a
 A Work Order is a **formal document** detailing everything that will be done on a project, with:
 
 - Complete **Header**: WO number, job number, customer, address, date
-- **16 work categories** organized in the actual execution order of the job
-- Detailed **items** with task, action, type, quantity, unit, room, price
-- Formal **status** with mandatory approval
+- **Dynamic work categories** managed by the admin (via Service Catalog)
+- Detailed **items** with service, action, type, quantity, unit, room, price
+- **Price with breakdown** from 4 possible sources
+- Simplified **status**: draft or approved (reversible)
 - **Export/Import in PDF**
-
-<!-- TODO: screenshot of full WorkOrderView. File: images/work-order-view.png. Capture: header + 2-3 expanded categories with items + action buttons -->
-![Complete Work Order](images/work-order-view.png){ .placeholder-image }
 
 ---
 
@@ -29,54 +27,51 @@ See the [Projects Guide](projects.md) for how to navigate to the project.
 
 ## 3. How to create a Work Order
 
-There are **2 ways**:
+There are **3 ways**:
 
-### 3.1 Through Chat with AI (recommended)
+### 3.1 Create a blank WO
 
-The fastest and most flexible way:
+The most direct way when you already know what you're doing:
+
+1. Open the project
+2. Go to the **"Work Order"** tab
+3. Click **"Criar WO em branco"** (Create blank WO)
+4. The WO is created in `draft` mode with the header already filled with project data
+5. Add items manually (see section 9)
+
+### 3.2 Through AI Chat (recommended for inspections)
+
+The fastest way when you're describing the work on site:
 
 - **Describe by text**: "I need a WO for the Rua das Flores project"
-- **Send photos** of the location - the AI identifies rooms, materials, dimensions
+- **Send photos** of the location — the AI identifies rooms, materials, dimensions
 - **Record audio** while walking through the location describing the work
 - **Send a walkthrough video**
 
-The AI organizes everything into the 16 categories automatically and you review it.
+The AI organizes everything into the categories automatically and you review it.
 
 See the [Chat Guide](chat-en.md) for the complete flow.
 
-### 3.2 Importing an external PDF
+### 3.3 Importing an external PDF
 
 If you received a ready Work Order from another system (customer, partner, estimating software):
 
 1. In the Chat, send the **PDF file** (up to 10 MB)
-2. The AI analyzes and extracts:
-   - Header (WO number, job number, project manager, dates)
-   - Customer (name, address, phone)
-   - Items organized into the 16 categories
-   - Prices (if present in the PDF)
-3. You **review the structured preview** with a confidence score
-4. Confirm and the WO is created in the project
-
-<!-- TODO: screenshot of WorkOrderImportDialog. File: images/work-order-import-dialog.png. Capture: dialog with PDF upload and drag-and-drop area -->
-![Work Order PDF Import](images/work-order-import-dialog.png){ .placeholder-image }
-
-<!-- TODO: screenshot of WorkOrderImportPreview. File: images/work-order-import-preview.png. Capture: structured preview of extracted data before confirming -->
-![Import preview](images/work-order-import-preview.png){ .placeholder-image }
+2. The AI analyzes and extracts the header, customer, and items
+3. You **review the preview** with 3 columns: what came in the PDF, the matching service in the system, and the final value
+4. Unrecognized items show a **"Classify"** badge — you choose the service manually
+5. Confirm and the WO is created in the project
 
 ```mermaid
 flowchart LR
     A[User sends PDF in Chat] --> B[AI analyzes via Gemini]
-    B --> C{Format detected}
-    C -->|sgi| D[High confidence > 0.95]
-    C -->|external| E[Medium confidence 0.6-0.95]
-    C -->|unknown| F[Low confidence < 0.6]
-    D --> G[Structured preview]
-    E --> G
-    F --> G
-    G --> H{User reviews}
-    H -->|Confirms| I[WO created as draft]
-    H -->|Cancels| J[Discard]
-    I --> K[Admin approves in project]
+    B --> C[3-column preview: PDF / System / Final]
+    C --> D{Items with Classify badge}
+    D -->|Admin picks service| E[Item mapped]
+    D -->|Already recognized| E
+    E --> F{User confirms}
+    F -->|Confirms| G[WO created as draft]
+    F -->|Cancels| H[Discard]
 ```
 
 ---
@@ -95,8 +90,8 @@ The header has all identifying information:
 | **Project Manager** | Name of the responsible employee | Yes |
 | **Work Order Date** | WO date (ISO) | Yes |
 
-<!-- TODO: screenshot of WorkOrderHeader. File: images/work-order-header.png. Capture: all header fields filled in -->
-![Work Order Header](images/work-order-header.png){ .placeholder-image }
+!!! tip "Editing the header"
+    Admins can edit the header by clicking **"Editar WO"** (Edit WO) while the WO is in `draft`. You can change jobName, projectManager, workOrderDate, customer, and jobAddress.
 
 ### Customer
 
@@ -118,48 +113,19 @@ The header has all identifying information:
 
 ### Categories and Items
 
-Each category groups **work items** (specific tasks). A WO has multiple categories, and each category has multiple items.
+WO categories come from the **Service Catalog** — the admin manages which categories and services exist. Each category groups **work items** (specific tasks). A WO has multiple categories, each with multiple items.
 
-<!-- TODO: screenshot of expanded WorkOrderCategory. File: images/work-order-category.png. Capture: category with listed items, including price -->
-![Category with items](images/work-order-category.png){ .placeholder-image }
-
----
-
-## 5. The 16 categories (in execution order)
-
-They follow the **actual sequence of the job** - the system executes categories in the order defined below.
-
-| # | Code | Name | Description |
-|---|--------|------|-----------|
-| 1 | **FRM** | Framing | Initial structure, wood |
-| 2 | **ELE** | Electrical | Electrical (wiring, outlets, panels) |
-| 3 | **INS** | Insulation | Thermal and acoustic insulation |
-| 4 | **DRY** | Drywall | Gypsum boards, partitions |
-| 5 | **MUD** | Mud/Taping | Drywall finish (tape, mud) |
-| 6 | **FNC** | Finish Carpentry | Baseboards, moldings, doors, windows |
-| 7 | **PNT** | Painting | Painting (prime, coats) |
-| 8 | **FCW** | Floor Covering | Carpet, laminate, vinyl, wood |
-| 9 | **TIL** | Tile | Ceramic, tile, porcelain |
-| 10 | **PLM** | Plumbing | Plumbing (rough + finish) |
-| 11 | **DTL** | Details | Handles, locks, accessories |
-| 12 | **GLS** | Glass | Glass, mirrors, glass shower enclosures |
-| 13 | **CLN** | Cleaning | Final cleaning |
-| 14 | **TCH** | Touch Ups | Final touch-ups |
-| 15 | **CON** | Contents | Move furniture, decoration |
-| 16 | **DMO** | Demolition | Demolition, dumpster |
-
-!!! tip "Why this order?"
-    It's the **actual** job execution order. Framing before electrical, electrical before drywall, drywall before painting, etc. Respecting this order in the scope helps plan the work.
+📖 See the [Service Catalog Guide](services.md) to understand how the admin configures categories.
 
 ---
 
-## 6. Structure of a work item
+## 5. Structure of a work item
 
 Each item within a category has:
 
 | Field | Description | Example |
 |-------|-----------|---------|
-| **Task** | What to do | `1/2" drywall - hung, taped, floated` |
+| **Service** | Which catalog service | `Paint trim/casing` (category PNT) |
 | **Action** | Action type | `Install` / `Remove` / `Detach & Reset` |
 | **Type** | Classification | `Labor` / `Material` / `Equipment` |
 | **Quantity** | How much | `100` |
@@ -189,32 +155,50 @@ Each item within a category has:
 
 ---
 
+## 6. Price with breakdown (4 sources)
+
+Each item can have its price defined by **4 different sources**. The admin chooses which to use:
+
+| Source | Description | When to use |
+|--------|------------|------------|
+| **default** | Default price from service catalog | Always available as a starting point |
+| **group_override** | Special price from Client Group (VIP) | Project linked to a group with custom prices |
+| **pdf** | Price extracted from imported PDF | When WO came from a PDF file |
+| **manual** | Price typed manually by admin | When no automatic source fits |
+
+!!! tip "Automatic priority"
+    When multiple sources are available, the system suggests this priority:
+    `manual > pdf > group_override > default`
+
+    The admin can pick any source via radio button in the item edit dialog.
+
+---
+
 ## 7. Work Order Status
 
-The Work Order follows a formal flow with approval:
+The Work Order has **2 statuses** — and the transition is reversible:
 
 ```mermaid
 stateDiagram-v2
     direction LR
-    [*] --> draft: Create via Chat/Import
-    draft --> ready_for_review: Employee submits
-    ready_for_review --> approved: Admin approves
-    ready_for_review --> draft: Admin requests changes
-    approved --> in_progress: Start work
-    in_progress --> completed: Finish job
-    completed --> [*]
+    [*] --> draft: Create via Chat/Import/Blank
+    draft --> approved: Admin approves
+    approved --> draft: Admin reverts to draft
 
-    classDef critical fill:#ffa726,stroke:#fff,color:#000
-    class approved,completed critical
+    classDef active fill:#ffa726,stroke:#fff,color:#000
+    class approved active
 ```
 
 | Status | Meaning | Who changes it |
 |--------|-------------|-----------|
 | **Draft** (`draft`) | Under construction, editable | Employee or admin |
-| **Ready for Review** (`ready_for_review`) | Awaiting approval | Employee |
 | **Approved** (`approved`) | Ready for execution | **Admin** (mandatory action) |
-| **In Progress** (`in_progress`) | Work in execution | Admin or employee |
-| **Completed** (`completed`) | Work finished | Admin or employee |
+
+!!! note "Reversible"
+    Admin can click **"Voltar para rascunho"** (Revert to draft) when the WO is approved — this allows editing again. The audit log preserves the full history of all transitions.
+
+!!! warning "Removed statuses"
+    The statuses `ready_for_review`, `in_progress`, and `completed` have been removed. The flow is now simple: `draft` ↔ `approved`.
 
 ---
 
@@ -225,8 +209,8 @@ stateDiagram-v2
 Sees **everything**:
 - All header fields
 - All categories and items
-- **Unit and total prices**
-- Edit, approve, delete, export PDF buttons
+- **Unit and total prices** and price source breakdown
+- Edit, approve, revert, delete, export PDF buttons
 
 ### Employee
 
@@ -241,38 +225,47 @@ Sees **everything EXCEPT prices**:
 
 ---
 
-## 9. Editing items
+## 9. Adding items (via Service Catalog)
 
 !!! warning "Editing only in `draft`"
-    Items can only be edited while the WO is in **`draft`**. After `ready_for_review`, everything becomes **read-only**.
+    Items can only be added/edited while the WO is in **`draft`**. Once `approved`, everything is **read-only** until the admin reverts.
 
-    If you need to change something in an approved WO: the admin needs to return it to `draft` (if execution hasn't started yet) or create a new additional WO.
+### How to add an item
 
-<!-- TODO: screenshot of WorkOrderEditItemDialog. File: images/work-order-edit-item.png. Capture: item edit dialog with all fields -->
-![Editing Work Order item](images/work-order-edit-item.png){ .placeholder-image }
+1. Expand (or create) the desired category
+2. Click **"+ Adicionar item"** (+ Add item)
+3. In the dialog, select:
+   - **Category** — dropdown with catalog categories
+   - **Service** — dropdown with services in the chosen category
+4. The action, type, unit, and price fields are auto-filled with the service's defaults
+5. Adjust quantity, room, notes, and price source as needed
+6. Save
 
-### How to edit
+### How to edit an existing item
 
 1. Click the edit icon next to the item
-2. Change fields: task, action, quantity, unit, room, notes, price
+2. Change fields: quantity, room, notes, price source, manual price
 3. Click **"Salvar"** (Save)
-
-### How to add a new item
-
-1. Expand the desired category
-2. Click **"+ Adicionar item"** (+ Add item) at the bottom of the category
-3. Fill in the fields
-4. Save
 
 ### How to delete an item
 
 1. Click the trash icon next to the item
 2. Confirm in the dialog
-3. Item is removed from the category
+3. Item is removed (snapshot preserved — old WOs are not affected)
 
 ---
 
-## 10. PDF Export
+## 10. Editing the WO header
+
+Admin can edit the header while the WO is in `draft`:
+
+1. Click **"Editar WO"** (Edit WO) at the top of the Work Order
+2. Change: jobName, projectManager, workOrderDate, customer, jobAddress
+3. Save
+
+---
+
+## 11. PDF Export
 
 Admin can generate a professional PDF of the complete Work Order to send to the customer or archive.
 
@@ -293,45 +286,32 @@ The PDF contains:
 
 ## Important Rules
 
-### Required fields and limits
-
-| Field | Required | Limit | Note |
-|-------|:---:|:---:|---|
-| `workOrderNumber` | Yes | - | Auto-generated (`WO{YEAR}{MONTH}-{SEQ}`) |
-| `jobNumber` | Yes | - | Can be entered manually |
-| `jobName` | Yes | - | Descriptive job name |
-| `projectManager` | Yes | - | Must be a registered employee |
-| `workOrderDate` | Yes | - | ISO 8601 |
-| `customer.name` | Yes | - | - |
-| `customer.address` | Yes | - | - |
-| `customer.phone` | Yes | - | - |
-| `customer.email` | No | - | Optional |
-| `jobAddress.*` | Yes | - | street, city, state, zip all required |
-| **PDF Import** | - | 10 MB | For upload in Chat |
-
 ### Required permissions
 
 | Operation | Super Admin | Admin | Employee |
 |----------|:---:|:---:|:---:|
 | View Work Order (without prices) | Yes | Yes | Yes (if project assigned) |
 | View prices | **Yes** | **Yes** | **No** |
-| Create WO (via Chat) | Yes | Yes | Yes (if project assigned) |
+| Create blank WO | Yes | Yes | Yes |
+| Create WO via Chat | Yes | Yes | Yes (if project assigned) |
 | Import WO from PDF | Yes | Yes | Yes |
 | Edit items (in draft) | Yes | Yes | Yes |
+| Edit header (in draft) | Yes | Yes | No |
 | **Approve WO** | **Yes** | **Yes** | **No** |
+| **Revert to draft** | **Yes** | **Yes** | **No** |
 | Delete WO | Yes | Yes | No |
 | Generate PDF | Yes | Yes | Yes (without prices) |
 
 ### Validations that block
 
 !!! warning "Items only editable in `draft`"
-    Trying to edit an item when the WO is in `ready_for_review` (or later) returns an error. Return to `draft` first (if the admin allows it).
+    Trying to edit an item when the WO is `approved` returns an error. The admin must first revert to `draft`.
 
 !!! warning "PDF Import has a 10 MB limit"
     PDFs larger than 10 MB are rejected on upload. If your external WO is large, try compressing the PDF or splitting it into parts.
 
-!!! note "Import confidence score"
-    PDFs with confidence `< 0.6` (unknown format) **are still accepted**, but the system warns that data may have been extracted incorrectly. Always review the preview before confirming.
+!!! note "Service soft delete"
+    If a catalog service is deactivated after the WO was created, items that use it are preserved (snapshot freezes name, category, action, type, unit). The WO is not affected.
 
 ### System defaults
 
@@ -339,8 +319,8 @@ The PDF contains:
 |---|---|
 | Initial status | `draft` |
 | Number format | `WO{YY}{MM}-{5-digit SEQUENCE}` (e.g., `WO2601-00001`) |
-| Category sort order | Fixed (see section 5 table) |
 | Visible prices | Admin/superadmin only |
+| Default price source | `default` (catalog) |
 | Import: minimum confidence | No block (always accepts, but warns) |
 
 ---
@@ -349,10 +329,12 @@ The PDF contains:
 
 | You want to... | Do this... |
 |-------------|-------------|
-| Create WO from scratch | [Chat](chat-en.md) - "I need a WO for..." |
+| Create blank WO | Work Order tab > "Criar WO em branco" |
+| Create WO via AI | [Chat](chat-en.md) - "I need a WO for..." |
 | Import WO from PDF | [Chat](chat-en.md) - send the PDF file |
-| Edit items | WO in `draft` > click edit on the item |
-| Send for approval | WO > "Enviar para revisão" (Send for review) button |
-| Approve WO (admin) | WO in `ready_for_review` > "Aprovar" (Approve) |
+| Add item | WO in `draft` > "+ Adicionar item" > Category > Service |
+| Edit header | WO in `draft` > "Editar WO" |
+| Approve WO (admin) | WO in `draft` > "Aprovar" |
+| Revert to draft (admin) | Approved WO > "Voltar para rascunho" |
 | Generate PDF | WO > "Download PDF" |
-| Delete WO | WO > "Excluir" (Delete, admin only) |
+| Delete WO | WO > "Excluir" (admin only) |

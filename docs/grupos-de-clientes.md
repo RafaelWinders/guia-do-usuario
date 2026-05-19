@@ -82,7 +82,31 @@ Clique no ícone de **lixeira** no card.
 
 ---
 
-## 7. Usando grupos em projetos
+## 7. Preços customizados por grupo (VIP pricing)
+
+Cada grupo pode ter uma tabela de **preços customizados** por serviço — ideal para clientes VIP que negociaram valores especiais.
+
+### Como configurar
+
+1. Abra o dialog de edição do grupo (ícone lápis)
+2. Clique na aba **"Preços customizados"**
+3. A lista exibe todos os serviços ativos do catálogo, agrupados por categoria
+4. Para cada serviço, defina o preço sobrescrito (deixe em branco para usar o padrão do catálogo)
+5. Salve
+
+### Como funciona na prática
+
+- Os preços customizados ficam em `servicePriceOverrides` no documento do grupo
+- Quando um projeto vinculado ao grupo tem uma Work Order, o sistema sugere automaticamente a fonte **`group_override`** nos items de WO
+- Admin pode aceitar o preço do grupo ou escolher outra fonte (default, pdf, manual)
+- Se o serviço não estiver no map de overrides → usa `defaultUnitPrice` do catálogo
+
+!!! tip "Grupo VIP na Work Order"
+    Para projetos vinculados a um grupo com preços customizados, ao adicionar um item na Work Order o sistema já sugere automaticamente o preço `group_override`. O admin só precisa confirmar.
+
+---
+
+## 8. Usando grupos em projetos
 
 ### Na criação do projeto
 
@@ -112,16 +136,17 @@ Na tela **Projetos**, clique em **"Filtros"** e escolha **"Grupo do Cliente"**:
 
 ---
 
-## 8. Quando usar grupos
+## 9. Quando usar grupos
 
-### ✅ Use grupos quando
+### Use grupos quando
 
 - Tem **múltiplos projetos** do mesmo cliente (cliente recorrente)
 - Precisa **reportar consolidado** por cliente (ex: "quanto gastamos com Cliente X este ano?")
 - Quer **facilitar atribuição** de funcionários específicos a uma carteira
 - Trabalha com **parceiros recorrentes** (imobiliárias, construtoras)
+- Tem clientes que negociaram **tabela de preços diferenciada** (VIP pricing)
 
-### ❌ Não precisa grupo para
+### Não precisa grupo para
 
 - Projeto único de cliente **one-shot** (pessoa física sem continuidade)
 - Organização que já faz sentido por **status** ou **data**
@@ -147,6 +172,7 @@ Na tela **Projetos**, clique em **"Filtros"** e escolha **"Grupo do Cliente"**:
 | Ver menu "Client Groups" | Sim | Sim | **Não** |
 | Criar grupo | Sim | Sim | Não |
 | Editar grupo | Sim | Sim | Não |
+| Configurar preços customizados | Sim | Sim | Não |
 | Deletar grupo | Sim | Sim | Não |
 | Associar projeto a grupo | Sim | Sim | Não (funcionário não edita projeto) |
 
@@ -165,6 +191,7 @@ Na tela **Projetos**, clique em **"Filtros"** e escolha **"Grupo do Cliente"**:
 | `clientGroupId` ao criar projeto | `null` (sem grupo) |
 | Soft delete | Não - deletar é permanente |
 | Ordem na lista | Por nome alfabético (padrão) |
+| `servicePriceOverrides` | `{}` (vazio — usa preços do catálogo) |
 
 ---
 
@@ -174,6 +201,7 @@ Na tela **Projetos**, clique em **"Filtros"** e escolha **"Grupo do Cliente"**:
 |-------------|-------------|
 | Ver todos os grupos | Menu "Client Groups" |
 | Criar grupo novo | "+ Novo Grupo" > preencher nome e descrição |
+| Configurar preços VIP | Editar grupo > aba "Preços customizados" |
 | Associar projeto a grupo | Editar projeto > dropdown "Grupo do Cliente" |
 | Filtrar projetos por grupo | Projetos > Filtros > "Grupo do Cliente" |
 | Deletar grupo | Lixeira no card (desassocie projetos primeiro) |

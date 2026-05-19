@@ -57,6 +57,8 @@ nav:
       - Notificações: notificacoes.md
     - Administração:
       - Configurações: configuracoes.md
+      - Catálogo de Serviços: servicos.md
+      - Modelos de Relatório: modelos-relatorio.md
       - Emergência: emergencia.md
   - English:
     - AI Chat: chat-en.md
@@ -78,6 +80,8 @@ nav:
       - Notifications: notifications.md
     - Administration:
       - Settings: settings.md
+      - Service Catalog: services.md
+      - Report Templates: report-templates.md
       - Emergency: emergency.md
 
 markdown_extensions:

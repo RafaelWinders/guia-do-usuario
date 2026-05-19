@@ -75,7 +75,7 @@ Budget utilization, completion rate, projects by status + exports.
 
 <div class="landing-card" markdown>
 ### 📝 Relatórios Diários
-Progresso em campo enviado via Chat pelos funcionários.
+Formulários de progresso em campo — com templates personalizados por projeto.
 
 [Abrir guia →](relatorios-diarios.md)
 </div>
@@ -89,9 +89,23 @@ Upload, tags, comentários colaborativos por foto.
 
 <div class="landing-card" markdown>
 ### 🏢 Grupos de Clientes
-Agrupe múltiplos projetos por cliente recorrente.
+Agrupe múltiplos projetos por cliente recorrente — com preços VIP por grupo.
 
 [Abrir guia →](grupos-de-clientes.md)
+</div>
+
+<div class="landing-card" markdown>
+### 🗂️ Catálogo de Serviços
+Gerencie categorias e serviços dinamicamente — alimenta Work Orders e PDF import.
+
+[Abrir guia →](servicos.md)
+</div>
+
+<div class="landing-card" markdown>
+### 📋 Modelos de Relatório
+Builder visual de formulários com 9 tipos de campo — vinculado por projeto.
+
+[Abrir guia →](modelos-relatorio.md)
 </div>
 
 <div class="landing-card" markdown>
@@ -170,6 +184,8 @@ Alertas urgentes que ignoram preferências dos usuários.
 
 <div class="landing-card" markdown>
 ### 📝 Daily Reports
+Field progress forms — with custom templates per project.
+
 [Open guide →](daily-reports.md)
 </div>
 
@@ -180,7 +196,23 @@ Alertas urgentes que ignoram preferências dos usuários.
 
 <div class="landing-card" markdown>
 ### 🏢 Client Groups
+Group projects by recurring customer — with VIP pricing per group.
+
 [Open guide →](client-groups.md)
+</div>
+
+<div class="landing-card" markdown>
+### 🗂️ Service Catalog
+Manage categories and services dynamically — feeds Work Orders and PDF import.
+
+[Open guide →](services.md)
+</div>
+
+<div class="landing-card" markdown>
+### 📋 Report Templates
+Visual form builder with 9 field types — linked per project.
+
+[Open guide →](report-templates.md)
 </div>
 
 <div class="landing-card" markdown>
@@ -205,10 +237,19 @@ Alertas urgentes que ignoram preferências dos usuários.
 ## ✨ Novidades da v3.x
 
 !!! tip "O que há de novo"
-    - **Work Order System** — substitui o escopo simples com ordem de serviço profissional (16 categorias, import PDF, aprovação formal)
+    **Novidades do redesign v3.x (commit ff364c9):**
+
+    - **Catálogo de Serviços** — categorias e serviços dinâmicos (admin configura), substitui as 16 categorias hardcoded
+    - **Modelos de Relatório** — builder visual de formulários com 9 tipos de campo, incluindo checklist da Work Order
+    - **Work Order refatorada** — status simplificado (draft ↔ approved, reversível); items via catálogo; preço com 4 fontes (default/group_override/pdf/manual); criar WO em branco; editar header; preview PDF com 3 colunas
+    - **Relatórios Diários redesenhados** — formulário na UI (não mais pelo Chat); template opcional; múltiplos por dia; edição sempre permitida
+    - **Grupos de Clientes com preços VIP** — nova aba "Preços customizados" com `servicePriceOverrides` por serviço
+    - **Projetos com modelo de relatório** — dropdown "Modelo de Relatório" no formulário de edição
+
+    **Novidades anteriores (v3.0):**
+    - **Work Order System** — substitui o escopo simples com ordem de serviço profissional (import PDF, aprovação formal)
     - **Pagamentos** — planilhas mensais completas
     - **Fotos do Projeto** — com comentários colaborativos
-    - **Grupos de Clientes** — organização de projetos recorrentes
     - **Central de Notificações** — 12 tipos com deep links
     - **Google Drive Backup** — sincronização automática de projetos (opcional)
     - **10 permissões granulares** — controle fino do que cada funcionário pode fazer

@@ -1,6 +1,6 @@
 # Chat com Assistente IA - Guia do Usuario
 
-Neste guia, voce vai aprender tudo sobre o **Chat com Assistente IA** do SGI - o coracao do sistema. Aqui e onde a inteligencia artificial organiza todo o seu trabalho: gera escopos detalhados, registra custos lendo notas fiscais, agenda visitas, coleta relatorios de progresso, gerencia estoque e projetos - tudo por conversa natural.
+Neste guia, voce vai aprender tudo sobre o **Chat com Assistente IA** do SGI - o coracao do sistema. Aqui e onde a inteligencia artificial organiza todo o seu trabalho: gera escopos detalhados, registra custos lendo notas fiscais, agenda visitas, gerencia estoque e projetos - tudo por conversa natural.
 
 > **Por que o Chat e tao importante?** Quase tudo que voce faz manualmente nas outras telas do SGI pode ser feito mais rapido pelo Chat. Basta conversar naturalmente com a IA, como se fosse um assistente pessoal no campo.
 
@@ -13,7 +13,6 @@ O Chat do SGI e o seu **assistente pessoal de campo**. Ele funciona como uma con
 - **Gerar escopos** detalhados de projetos a partir de texto, fotos, audios ou videos
 - **Registrar custos** e despesas, incluindo leitura automatica de notas fiscais
 - **Agendar visitas** com sugestao inteligente do melhor funcionario
-- **Enviar relatorios** de progresso diario do trabalho em campo
 - **Gerenciar estoque** - retirar materiais, consultar quantidades, verificar alertas
 - **Gerenciar projetos** - criar, editar, mudar status
 
@@ -22,6 +21,9 @@ O Chat do SGI e o seu **assistente pessoal de campo**. Ele funciona como uma con
 Voce nao precisa escolher nenhum "modo" ou "funcao". A IA entende automaticamente o que voce quer com base na sua mensagem. Se voce diz "gastei R$ 500 na loja", a IA sabe que voce quer registrar um custo. Se voce diz "agendar visita para amanha", a IA sabe que voce quer criar um agendamento.
 
 A conversa se adapta: se voce comeca falando sobre custos e depois muda para agendamento, a IA acompanha naturalmente. Tudo funciona no mesmo chat, sem precisar trocar de tela.
+
+!!! note "Relatorios Diarios nao sao criados pelo Chat"
+    A partir do redesign v3.x, os **relatorios diarios** sao criados e preenchidos diretamente na tela de Relatorios Diarios — nao mais pelo Chat. Consulte o [Guia de Relatorios Diarios](relatorios-diarios.md).
 
 !!! note "Disponibilidade atual"
     O Chat funciona pelo App (PWA) em todos os dispositivos (desktop, tablet, mobile). Suporte via WhatsApp esta previsto para versoes futuras, mas ainda nao esta disponivel.
@@ -52,7 +54,6 @@ O texto abaixo do nome "Assistente SGI" muda automaticamente conforme o que a IA
 | **Work Order** | Gerando ou editando um escopo de trabalho |
 | **Adicionando Custo** | Registrando uma despesa ou lendo nota fiscal |
 | **Agendamento** | Criando ou consultando agendamentos |
-| **Relatorio Diario** | Coletando relatorio de progresso de uma visita |
 | **Gestao de Estoque** | Consultando ou movimentando materiais |
 | **Gestao de Projetos** | Criando, editando ou consultando projetos |
 
@@ -107,10 +108,12 @@ A IA do SGI e inteligente: ela entende o contexto da sua conversa e decide autom
 | "Gastei R$ 500 em materiais" | Registrar um custo |
 | [Envia foto de nota fiscal] | Ler a nota e registrar o custo |
 | "Agendar visita para amanha as 9h" | Criar um agendamento |
-| "Cheguei no local" | Iniciar um relatorio de progresso |
 | "Quanto tem de cimento no estoque?" | Consultar o estoque |
 | "Criar um novo projeto" | Criar um projeto |
 | "Oi, bom dia!" | Cumprimentar e oferecer ajuda |
+
+!!! tip "Relatorios diarios: use a tela dedicada"
+    O Chat nao cria mais relatorios diarios automaticamente. Para registrar progresso de campo, use a pagina **"Relatorios Diarios"** no menu lateral. Veja o [Guia de Relatorios Diarios](relatorios-diarios.md).
 
 ### A conversa se adapta naturalmente
 
@@ -566,84 +569,7 @@ A IA analisa 3 criterios para fazer uma **sugestao**:
 
 ---
 
-## 15. Enviar relatorios de progresso pelo Chat
-
-Os relatorios diarios sao gerados pelos funcionarios no campo, diretamente pelo Chat. Nao ha botao de "criar relatorio" na pagina de Relatorios Diarios - eles sao criados aqui.
-
-### Fluxo completo: do inicio ao fim de uma visita
-
-#### 1. Chegando no local
-
-> **Voce:** "Cheguei no projeto da Rua das Flores"
-> **IA:** "Visita iniciada! Projeto: 'Instalacao Carpete - Rua das Flores 123'. Bom trabalho! Me avise sobre o progresso durante o dia."
-
-#### 2. Reportando progresso
-
-> **Voce:** "Fiz 40% do carpete, terminei a sala e estou comecando os quartos"
-> **IA:** "Progresso atualizado: 40% concluido. Tarefas registradas:
-> - Instalacao de carpete na sala (concluida)
-> - Inicio da instalacao nos quartos
->
-> Continue assim!"
-
-> **Voce:** [Envia 2 fotos do carpete instalado na sala]
-> **IA:** "Fotos recebidas e anexadas ao relatorio. O trabalho esta ficando otimo!"
-
-#### 3. Reportando problemas
-
-> **Voce:** "Encontrei um problema: o contrapiso do quarto 2 esta irregular, vai precisar de nivelamento antes do carpete"
-> **IA:** "Problema registrado no relatorio:
-> - 'Contrapiso irregular no quarto 2 - necessita nivelamento'
->
-> Deseja continuar o trabalho nos outros comodos enquanto isso?"
-
-#### 4. Finalizando a visita
-
-> **Voce:** "Terminei por hoje. Fiz 75% do total, faltam os 2 quartos menores"
-> **IA:** "Relatorio finalizado!
->
-> **Resumo do dia:**
-> - Progresso: 75%
-> - Tarefas concluidas: Carpete na sala, Carpete no quarto 1
-> - Problemas: Contrapiso irregular no quarto 2
-> - Fotos: 2 anexos
->
-> Relatorio enviado e disponivel na pagina de Relatorios Diarios e na aba Relatorios do projeto. Bom descanso!"
-
----
-
-## 16. O que um relatorio contem
-
-Cada relatorio gerado pelo Chat inclui:
-
-| Campo | Descricao | Exemplo |
-|-------|-----------|---------|
-| **Projeto** | Nome do projeto | Instalacao Carpete - Rua das Flores 123 |
-| **Data** | Quando o relatorio foi enviado | 15/02/2026 |
-| **Funcionario** | Quem enviou | Joao Silva |
-| **Progresso** | Porcentagem de conclusao | 75% |
-| **Tarefas concluidas** | Lista do que foi feito | Carpete na sala, Carpete no quarto 1 |
-| **Problemas** | Dificuldades encontradas | Contrapiso irregular no quarto 2 |
-| **Notas** | Observacoes adicionais | Faltam quartos menores |
-| **Fotos** | Imagens do progresso | 2 fotos anexadas |
-
-### Onde o relatorio aparece
-
-- **Pagina de Relatorios Diarios** (menu lateral > "Relatorios Diarios")
-- **Aba "Relatorios"** no detalhe do projeto correspondente
-
-### Quem ve o que
-
-| Cargo | Acesso |
-|-------|--------|
-| **Administrador** | Ve **todos** os relatorios de todos os funcionarios |
-| **Funcionario** | Ve apenas **seus proprios** relatorios |
-
-> Para mais detalhes sobre a pagina de Relatorios Diarios, consulte o **Guia de Agendamentos, Relatorios, Configuracoes e Emergencia**.
-
----
-
-## 17. Gerenciar estoque pelo Chat
+## 15. Gerenciar estoque pelo Chat
 
 Voce pode consultar e movimentar o estoque diretamente pelo Chat, sem precisar ir ate a tela de Estoque.
 
@@ -684,7 +610,7 @@ Voce pode consultar e movimentar o estoque diretamente pelo Chat, sem precisar i
 
 ---
 
-## 18. Gerenciar projetos pelo Chat
+## 16. Gerenciar projetos pelo Chat
 
 Administradores podem criar e gerenciar projetos diretamente pelo Chat.
 
@@ -722,7 +648,7 @@ Administradores podem criar e gerenciar projetos diretamente pelo Chat.
 
 ---
 
-## 19. Tipos de entrada aceitos
+## 17. Tipos de entrada aceitos
 
 O Chat aceita **5 tipos de entrada**, e voce pode combinar texto com qualquer um deles:
 
@@ -741,7 +667,6 @@ O Chat aceita **5 tipos de entrada**, e voce pode combinar texto com qualquer um
 | Gerar escopos (Work Orders) | Sim | Sim | Sim | Sim* | **Sim (import)** |
 | Registrar custos | Sim | Sim (OCR) | Sim | - | - |
 | Agendar visitas | Sim | - | Sim | - | - |
-| Relatorios diarios | Sim | Sim | Sim | Sim* | - |
 | Gerenciar estoque | Sim | - | Sim | - | - |
 | Gerenciar projetos | Sim | - | Sim | - | - |
 
@@ -753,7 +678,7 @@ O Chat aceita **5 tipos de entrada**, e voce pode combinar texto com qualquer um
 
 ---
 
-## 19.1 Importando Work Order de PDF externo
+## 17.1 Importando Work Order de PDF externo
 
 Se sua empresa recebe **Work Orders prontas** de outros sistemas (clientes, parceiros, softwares de orcamento), voce pode importa-las direto no SGI atraves do Chat.
 
@@ -810,7 +735,7 @@ Se sua empresa recebe **Work Orders prontas** de outros sistemas (clientes, parc
 
 ---
 
-## 19.2 Como a IA decide a acao certa (masterAgentRouter)
+## 17.2 Como a IA decide a acao certa (masterAgentRouter)
 
 A IA usa um roteador inteligente que detecta a intencao da sua mensagem e envia para o agente especializado certo.
 
@@ -821,14 +746,12 @@ flowchart TB
     C -->|Menciona escopo, WO, categorias| D[workOrderFlow]
     C -->|Menciona valor R$, gastei, nota fiscal| E[costFlow]
     C -->|Menciona agendar, visita, horario| F[schedulingFlow]
-    C -->|Menciona cheguei, progresso, terminei| G[dailyReportingFlow]
     C -->|Menciona estoque, materiais, retirada| H[inventoryFlow]
     C -->|Menciona criar projeto, mudar status| I[projectFlow]
     C -->|Saudacao, duvida geral| J[generalAssistantFlow]
     D --> K[Executa acao via backend]
     E --> K
     F --> K
-    G --> K
     H --> K
     I --> K
     J --> K
@@ -839,7 +762,7 @@ Essa e a razao do **indicador de status** no cabecalho do Chat mudar conforme vo
 
 ---
 
-## 20. Dicas para usar melhor o Chat
+## 18. Dicas para usar melhor o Chat
 
 ### Seja especifico
 
@@ -933,7 +856,7 @@ A IA entende portugues e ingles. Voce pode dizer "Preciso de 100 SF de drywall n
 
 ---
 
-## 21. Resumo rapido
+## 19. Resumo rapido
 
 ### O que dizer no Chat para cada acao
 
@@ -942,15 +865,13 @@ A IA entende portugues e ingles. Voce pode dizer "Preciso de 100 SF de drywall n
 | Gerar escopo | "Preciso gerar um escopo para..." ou envie fotos/audio/video |
 | Adicionar custo | "Gastei R$ X em..." ou envie foto da nota fiscal |
 | Agendar visita | "Agendar visita para o projeto X amanha as 9h" |
-| Iniciar visita | "Cheguei no local" ou "Iniciar visita no projeto X" |
-| Reportar progresso | "Fiz X% do trabalho" ou envie fotos do progresso |
-| Finalizar visita | "Terminei o trabalho" ou "Concluido" |
 | Consultar estoque | "Quanto tem de X no estoque?" |
 | Retirar material | "Retirar X unidades de Y para o projeto Z" |
 | Criar projeto | "Criar projeto de [tipo] no endereco [endereco]" |
 | Mudar status | "Mudar status do projeto X para [status]" |
 | Consultar projetos | "Quais sao meus projetos ativos?" |
 | Ajuda geral | "Como funciona o estoque?" ou "Me ajude com..." |
+| Criar relatorio diario | Nao e pelo Chat — use a pagina [Relatorios Diarios](relatorios-diarios.md) |
 
 ### Atalhos uteis
 

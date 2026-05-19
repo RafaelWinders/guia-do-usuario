@@ -10,77 +10,102 @@ No menu lateral, clique em **"Relatórios Diários"**.
 
 ![Relatórios Diários](images/daily-reports-list.png)
 
-!!! warning "Relatórios são criados SOMENTE pelo Chat"
-    **Não existe botão "Criar Relatório"** nesta página. Todos os relatórios são gerados pelos funcionários através do **[Chat com IA](chat.md)** durante ou após uma visita.
+---
 
-    Esta página é apenas para **visualização, filtro e auditoria** dos relatórios já enviados.
+## 2. Como os relatórios funcionam agora
+
+Diferente de versões anteriores, os relatórios diários agora são preenchidos **diretamente na interface do SGI** — não pelo Chat. O Chat não cria mais relatórios automaticamente.
+
+**O que mudou:**
+- Relatórios são criados e preenchidos pela UI (formulário)
+- Todo relatório é enviado imediatamente ao criar — não existe mais status `draft`
+- Um funcionário pode criar **múltiplos relatórios no mesmo dia** (ex: manhã e tarde)
+- A edição é **sempre permitida** (sem janela de 24h): o próprio criador ou admin/superadmin pode editar a qualquer momento
+- Cards de relatório na lista **abrem o formulário em modo edição** ao clicar
 
 ---
 
-## 2. Entendendo um relatório
+## 3. Estrutura de um relatório
 
-Cada card contém:
+Cada relatório é composto por:
 
-| Campo | Descrição | Exemplo |
-|-------|-----------|---------|
-| **Projeto** | Nome do projeto (título do card) | Instalação Carpete - Rua das Flores 123 |
-| **Status** | Badge do status atual | Enviado |
-| **Data** | Data do relatório | 15/02/2026 |
-| **Funcionário** | Quem enviou | João Silva |
-| **Progresso** | Porcentagem de conclusão | 75% |
-| **Tarefas concluídas** | Lista das atividades realizadas | Preparação de superfície, Primer |
-| **Problemas** | Dificuldades encontradas | Contrapiso irregular no quarto 2 |
-| **Notas** | Observações adicionais | Faltam os quartos menores |
-| **Fotos anexadas** | Imagens do progresso | 2 fotos |
+### Respostas do template (se houver template vinculado)
 
----
+Se o projeto tiver um **Modelo de Relatório** vinculado, o formulário apresenta os campos definidos nesse modelo (texto, número, data, foto, checklist de serviços da WO, etc.).
 
-## 3. Como um relatório é criado (via Chat)
+📖 Veja o [Guia de Modelos de Relatório](modelos-relatorio.md) para entender como os modelos funcionam.
 
-O funcionário, durante a visita, usa o Chat com IA para reportar progresso naturalmente:
+!!! note "Sem template = formulário básico"
+    Se o projeto não tiver um modelo vinculado, o relatório mostra apenas os campos universais: **Notas gerais** e **Fotos gerais**.
 
-> **Funcionário:** "Cheguei no projeto da Rua das Flores"
-> **IA:** "Visita iniciada! Bom trabalho."
->
-> **Funcionário:** "Fiz 40% do carpete, terminei a sala e estou começando os quartos"
-> **IA:** "Progresso atualizado: 40%. Tarefas registradas: sala concluída, quartos iniciados."
->
-> **Funcionário:** [Envia 2 fotos do carpete instalado]
-> **IA:** "Fotos recebidas e anexadas ao relatório."
->
-> **Funcionário:** "Encontrei contrapiso irregular no quarto 2, vai precisar nivelar"
-> **IA:** "Problema registrado."
->
-> **Funcionário:** "Terminei por hoje, 75%"
-> **IA:** "Relatório finalizado e enviado!"
+### Campos sempre presentes
 
-📖 Veja o [Guia do Chat](chat.md) para detalhes completos do fluxo.
+Independente do template, todo relatório tem:
+
+| Campo | Descrição |
+|-------|-----------|
+| **Notas gerais** | Observações livres sobre o dia de trabalho |
+| **Fotos gerais** | Imagens de progresso (fora do template) |
+
+### service_checklist (campo especial)
+
+Se o template incluir um campo do tipo **"Service Checklist"**, o formulário exibe automaticamente os itens da Work Order do projeto. O funcionário marca cada item como concluído.
+
+!!! warning "Items removidos da WO"
+    Se um item da WO for removido depois que o relatório foi criado, ele aparece no checklist com o badge **"Removido do WO"** — o nome original é preservado por snapshot. Isso garante que o histórico permaneça intacto.
 
 ---
 
-## 4. Status de um relatório
+## 4. Criando um relatório
 
-```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> draft: Funcionário inicia visita
-    draft --> submitted: Funcionário finaliza visita
-    submitted --> reviewed: Admin revisa
-    reviewed --> [*]
-```
+1. No menu lateral, clique em **"Relatórios Diários"**
+2. Clique em **"+ Novo Relatório"**
+3. Selecione o **projeto** (se não foi pré-selecionado)
+4. Preencha os campos do template (se houver) e as notas gerais
+5. Adicione fotos se necessário
+6. Clique em **"Enviar"**
 
-| Status | Significado | Quem muda |
-|--------|-------------|-----------|
-| **Rascunho** (`draft`) | Em construção durante a visita | Sistema (via Chat) |
-| **Enviado** (`submitted`) | Funcionário finalizou e enviou | Funcionário (via Chat "Terminei") |
-| **Revisado** (`reviewed`) | Admin já analisou | **Admin** (ação manual) |
+O relatório é salvo e enviado imediatamente.
 
-!!! warning "Após enviado, não dá para editar"
-    Depois que o funcionário marca como **enviado**, ele **não pode mais editar** o relatório. Se precisar corrigir algo, terá que pedir ao admin para ajustar ou criar um novo relatório.
+### Múltiplos relatórios no mesmo dia
+
+Você pode criar mais de um relatório para o mesmo projeto no mesmo dia. Não há restrição de "um por dia". Isso é útil para:
+
+- Relatório de manhã e relatório de tarde
+- Relatar problemas encontrados separadamente do progresso normal
+- Corrigir ou complementar sem editar o original
 
 ---
 
-## 5. Filtros disponíveis
+## 5. Editando um relatório
+
+Para editar um relatório existente:
+
+1. Clique no **card do relatório** na lista
+2. O formulário abre em modo edição
+3. Altere os campos desejados
+4. Salve
+
+!!! note "Quem pode editar"
+    - O **próprio criador** do relatório pode editar a qualquer momento
+    - **Admin e superadmin** podem editar qualquer relatório
+    - Cada edição registra um evento na **timeline do projeto** com os campos que mudaram
+
+!!! warning "Validação only na criação/edição"
+    Campos marcados como "obrigatórios" no template só são validados ao criar ou editar. Se o template for alterado depois que o relatório foi criado (ex: campo removido), o relatório antigo **não é invalidado** — continua válido como está.
+
+---
+
+## 6. Fotos no relatório
+
+Fotos podem ser adicionadas tanto nos campos de foto do template quanto nas **fotos gerais** do relatório.
+
+- As fotos ficam armazenadas em `daily-reports/{userId}/{reportId}/{photoId}` no Storage
+- Ao deletar o relatório, as fotos são removidas automaticamente (cascade delete via trigger)
+
+---
+
+## 7. Filtros disponíveis
 
 | Filtro | Opções | O que faz |
 |--------|--------|-----------|
@@ -94,7 +119,7 @@ stateDiagram-v2
 
 ---
 
-## 6. Relatórios aparecem no detalhe do projeto
+## 8. Relatórios na aba do projeto
 
 Cada relatório também aparece na **aba "Relatórios"** do projeto correspondente, permitindo visualizar todo o histórico de progresso do projeto em um só lugar.
 
@@ -102,48 +127,41 @@ Cada relatório também aparece na **aba "Relatórios"** do projeto corresponden
 
 ## Regras Importantes
 
-### Campos obrigatórios
+### Campos e estrutura
 
-| Campo | Obrigatório | Limites | Observação |
-|-------|:---:|:---:|---|
-| `projectId` | Sim | - | Projeto deve existir |
-| `userId` | Sim | - | Usuário autenticado |
-| `reportDate` | Sim | - | ISO 8601 (YYYY-MM-DD) |
-| `progressPercentage` | Sim | 0-100 | Porcentagem |
-| `tasksCompleted` | Não | Array de strings | Lista de tarefas |
-| `issues` | Não | Array de strings | Lista de problemas |
-| `notes` | Não | Texto livre | Observações |
-| `attachments` | Não | Array | URLs das fotos anexadas |
-| `status` | Sim | draft / submitted / reviewed | Status atual |
+| Campo | Obrigatório | Observação |
+|-------|:---:|---|
+| `projectId` | Sim | Projeto deve existir |
+| `userId` | Sim | Usuário autenticado |
+| `reportDate` | Sim | Preenchido automaticamente (data atual) |
+| `responses[]` | Conforme template | Campos do modelo de relatório |
+| `generalNotes` | Não | Notas livres — sempre presentes |
+| `generalPhotos[]` | Não | Fotos gerais — sempre presentes |
 
 ### Permissões necessárias
 
 | Operação | Super Admin | Admin | Funcionário |
 |----------|:---:|:---:|:---:|
-| Criar via Chat | Sim | Sim | Sim |
+| Criar relatório | Sim | Sim | Sim |
 | Ver próprios relatórios | Sim | Sim | Sim |
 | Ver relatórios de todos | Sim | Sim | **Não** |
 | Filtrar por usuário | Sim | Sim | Não |
-| Marcar como revisado | Sim | Sim | **Não** |
-| Editar relatório `submitted` | Não (ninguém) | Não (ninguém) | Não |
+| Editar qualquer relatório | Sim | Sim | Só os próprios |
+| Deletar relatório | Sim | Sim | Não |
 
 ### Validações que bloqueiam
 
-!!! warning "Relatório submitted é imutável"
-    Uma vez enviado (`submitted`), **nem o funcionário nem o admin podem editar** o conteúdo do relatório. Isso garante a integridade da auditoria.
-
-    Para corrigir algo: criar um novo relatório ou adicionar comentário externo (fora do sistema).
-
-!!! danger "Relatório não pode ser deletado pelo funcionário"
-    Funcionários **não têm permissão** para deletar seus próprios relatórios. Apenas admins conseguem deletar (via Firestore direto).
+!!! warning "Template obrigatório vs. opcional"
+    Campos marcados como `required` no template impedem o envio se não preenchidos. Campos opcionais podem ser deixados em branco.
 
 ### Defaults do sistema
 
 | Configuração | Valor | Observação |
 |---|---|---|
-| Status inicial | `draft` | Automático ao "Cheguei no local" |
-| Transição automática | `draft → submitted` | Ao dizer "Terminei" no Chat |
-| Revisão | Manual | Admin precisa marcar como `reviewed` |
+| Status | Enviado imediatamente | Não existe mais `draft` |
+| Múltiplos por dia | Permitido | Sem restrição de um por dia |
+| Edição | Sempre | Sem janela de tempo |
+| Fotos | Path no Storage | Cascade delete ao remover relatório |
 
 ---
 
@@ -154,5 +172,6 @@ Cada relatório também aparece na **aba "Relatórios"** do projeto corresponden
 | Ver todos os relatórios | Menu "Relatórios Diários" |
 | Ver relatórios de um projeto | Filtrar "Por Projeto" OU ir na aba "Relatórios" do projeto |
 | Ver relatórios de um funcionário | Filtrar "Por Usuário" (admin) |
-| Criar um relatório | **Pelo [Chat com IA](chat.md)** - não há outro caminho |
-| Marcar como revisado | Admin, direto no card do relatório |
+| Criar um relatório | "Relatórios Diários" > "+ Novo Relatório" > preencher > Enviar |
+| Editar um relatório | Clicar no card do relatório |
+| Vincular modelo ao projeto | [Editar projeto](projetos.md) > dropdown "Modelo de relatório" |
